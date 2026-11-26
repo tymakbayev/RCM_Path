@@ -1,0 +1,5468 @@
+{
+ "size": "N10",
+ "rows": 10000000,
+ "ops_sha256": "1bdeb7fbbffdc4111ec5a4903a7d664071a1921760d3c12824ed8b25bd2a313a",
+ "checkpoints": [
+  {
+   "cp": 0,
+   "name": "base",
+   "after_op": 0,
+   "live_keys": 10000000,
+   "deleted_keys": 0,
+   "delta_live_rows": 0,
+   "systems": {
+    "a4_n10": {
+     "errors": {
+      "live": 0,
+      "deleted": 0,
+      "absent": 0
+     },
+     "client_us": {
+      "p50": 183.6,
+      "p95": 295.7,
+      "p99": 4213.803999999999,
+      "mean": 300.94698,
+      "n": 20000
+     },
+     "buffers_by_category": {
+      "base": 1.0
+     },
+     "buffers_equal_mix": 1.0,
+     "buffers_raw_mix": 1.0,
+     "category_counts": {
+      "base": 2000
+     },
+     "buffers_deleted": 0.0,
+     "buffers_absent": 0.008,
+     "statio_live": {
+      "queries": 2000,
+      "heap_per_q": 1.0,
+      "index_per_q": 0.0,
+      "toast_per_q": 0.0
+     },
+     "sizes": {
+      "address_main": 39399098,
+      "address_total": 39399098,
+      "table_bytes": 6251339776,
+      "levels": 2,
+      "runs": [],
+      "tail_committed_keys": 0
+     },
+     "delta_height": null,
+     "address_main_per_live_key": 3.9399098,
+     "address_total_per_live_key": 3.9399098
+    },
+    "c4_n10": {
+     "errors": {
+      "live": 0,
+      "deleted": 0,
+      "absent": 0
+     },
+     "client_us": {
+      "p50": 111.3,
+      "p95": 132.3,
+      "p99": 189.00099999999983,
+      "mean": 114.7166,
+      "n": 20000
+     },
+     "buffers_by_category": {
+      "base": 4.0
+     },
+     "buffers_equal_mix": 4.0,
+     "buffers_raw_mix": 4.0,
+     "category_counts": {
+      "base": 2000
+     },
+     "buffers_deleted": 0.0,
+     "buffers_absent": 3.0,
+     "statio_live": {
+      "queries": 2000,
+      "heap_per_q": 1.0,
+      "index_per_q": 3.0,
+      "toast_per_q": 0.0
+     },
+     "sizes": {
+      "address_main": 315441152,
+      "address_total": 315441152,
+      "table_bytes": 6251339776
+     },
+     "delta_height": null,
+     "address_main_per_live_key": 31.5441152,
+     "address_total_per_live_key": 31.5441152
+    }
+   },
+   "pg_stat_tuples": {}
+  },
+  {
+   "cp": 1,
+   "name": "every_50k",
+   "after_op": 50000,
+   "live_keys": 10015044,
+   "deleted_keys": 9989,
+   "delta_live_rows": 39957,
+   "systems": {
+    "a4_n10": {
+     "errors": {
+      "live": 0,
+      "deleted": 0,
+      "absent": 0
+     },
+     "client_us": {
+      "p50": 212.8,
+      "p95": 849.7199999999998,
+      "p99": 4144.336999999994,
+      "mean": 512.9467599999999,
+      "n": 20000
+     },
+     "buffers_by_category": {
+      "base": 1.0050377833753148,
+      "ins": 1.0,
+      "upd": 1.0
+     },
+     "buffers_equal_mix": 1.0016792611251049,
+     "buffers_raw_mix": 1.005,
+     "category_counts": {
+      "base": 1985,
+      "ins": 9,
+      "upd": 6
+     },
+     "buffers_deleted": 1.004,
+     "buffers_absent": 0.008,
+     "statio_live": {
+      "queries": 2000,
+      "heap_per_q": 1.005,
+      "index_per_q": 0.0,
+      "toast_per_q": 0.0
+     },
+     "sizes": {
+      "address_main": 40554789,
+      "address_total": 40845079,
+      "table_bytes": 6275833856,
+      "levels": 3,
+      "runs": [
+       [
+        1,
+        0,
+        23982
+       ]
+      ],
+      "tail_committed_keys": 19996
+     },
+     "delta_height": null,
+     "address_main_per_live_key": 4.0493870021939,
+     "address_total_per_live_key": 4.078372396566605
+    },
+    "c4_n10": {
+     "errors": {
+      "live": 0,
+      "deleted": 0,
+      "absent": 0
+     },
+     "client_us": {
+      "p50": 110.8,
+      "p95": 4287.844999999999,
+      "p99": 4969.110999999999,
+      "mean": 595.9476500000001,
+      "n": 20000
+     },
+     "buffers_by_category": {
+      "base": 4.0,
+      "ins": 4.0,
+      "upd": 4.0
+     },
+     "buffers_equal_mix": 4.0,
+     "buffers_raw_mix": 4.0,
+     "category_counts": {
+      "base": 1985,
+      "ins": 9,
+      "upd": 6
+     },
+     "buffers_deleted": 3.0,
+     "buffers_absent": 3.0,
+     "statio_live": {
+      "queries": 2000,
+      "heap_per_q": 1.0,
+      "index_per_q": 3.0,
+      "toast_per_q": 0.0
+     },
+     "sizes": {
+      "address_main": 315441152,
+      "address_total": 315441152,
+      "table_bytes": 6275833856
+     },
+     "delta_height": null,
+     "address_main_per_live_key": 31.496731517105665,
+     "address_total_per_live_key": 31.496731517105665
+    }
+   },
+   "pg_stat_tuples": {},
+   "candidates_hist": {
+    "1": 79204,
+    "0": 64679,
+    "2": 306
+   },
+   "peak_rss_mb": 0.0
+  },
+  {
+   "cp": 2,
+   "name": "every_50k",
+   "after_op": 100000,
+   "live_keys": 10029828,
+   "deleted_keys": 20107,
+   "delta_live_rows": 79684,
+   "systems": {
+    "a4_n10": {
+     "errors": {
+      "live": 0,
+      "deleted": 0,
+      "absent": 0
+     },
+     "client_us": {
+      "p50": 250.9,
+      "p95": 887.0899999999987,
+      "p99": 4211.905999999999,
+      "mean": 527.2307400000001,
+      "n": 20000
+     },
+     "buffers_by_category": {
+      "base": 1.0160965794768613,
+      "ins": 1.0,
+      "upd": 1.0
+     },
+     "buffers_equal_mix": 1.0053655264922872,
+     "buffers_raw_mix": 1.016,
+     "category_counts": {
+      "base": 1988,
+      "ins": 5,
+      "upd": 7
+     },
+     "buffers_deleted": 1.016,
+     "buffers_absent": 0.02,
+     "statio_live": {
+      "queries": 2000,
+      "heap_per_q": 1.016,
+      "index_per_q": 0.0,
+      "toast_per_q": 0.0
+     },
+     "sizes": {
+      "address_main": 41412403,
+      "address_total": 41992983,
+      "table_bytes": 6300344320,
+      "levels": 5,
+      "runs": [
+       [
+        3,
+        0,
+        23909
+       ],
+       [
+        2,
+        0,
+        23975
+       ],
+       [
+        1,
+        0,
+        23982
+       ]
+      ],
+      "tail_committed_keys": 9997
+     },
+     "delta_height": null,
+     "address_main_per_live_key": 4.128924543870543,
+     "address_total_per_live_key": 4.186809883479557
+    },
+    "c4_n10": {
+     "errors": {
+      "live": 0,
+      "deleted": 0,
+      "absent": 0
+     },
+     "client_us": {
+      "p50": 111.2,
+      "p95": 3780.064999999999,
+      "p99": 4686.816999999997,
+      "mean": 452.197205,
+      "n": 20000
+     },
+     "buffers_by_category": {
+      "base": 4.0,
+      "ins": 4.0,
+      "upd": 4.0
+     },
+     "buffers_equal_mix": 4.0,
+     "buffers_raw_mix": 4.0,
+     "category_counts": {
+      "base": 1988,
+      "ins": 5,
+      "upd": 7
+     },
+     "buffers_deleted": 3.0,
+     "buffers_absent": 3.0,
+     "statio_live": {
+      "queries": 2000,
+      "heap_per_q": 1.0,
+      "index_per_q": 3.0,
+      "toast_per_q": 0.0
+     },
+     "sizes": {
+      "address_main": 315441152,
+      "address_total": 315441152,
+      "table_bytes": 6300344320
+     },
+     "delta_height": null,
+     "address_main_per_live_key": 31.450305229561266,
+     "address_total_per_live_key": 31.450305229561266
+    }
+   },
+   "pg_stat_tuples": {},
+   "candidates_hist": {
+    "1": 67035,
+    "0": 44339,
+    "2": 1019,
+    "3": 7
+   },
+   "peak_rss_mb": 0.0
+  },
+  {
+   "cp": 3,
+   "name": "every_50k",
+   "after_op": 150000,
+   "live_keys": 10044597,
+   "deleted_keys": 30167,
+   "delta_live_rows": 119380,
+   "systems": {
+    "a4_n10": {
+     "errors": {
+      "live": 0,
+      "deleted": 0,
+      "absent": 0
+     },
+     "client_us": {
+      "p50": 236.5,
+      "p95": 994.1749999999989,
+      "p99": 4327.147999999993,
+      "mean": 520.31806,
+      "n": 20000
+     },
+     "buffers_by_category": {
+      "base": 1.0050581689428426,
+      "ins": 1.0,
+      "upd": 1.0
+     },
+     "buffers_equal_mix": 1.0016860563142809,
+     "buffers_raw_mix": 1.005,
+     "category_counts": {
+      "base": 1977,
+      "ins": 17,
+      "upd": 6
+     },
+     "buffers_deleted": 1.004,
+     "buffers_absent": 0.014,
+     "statio_live": {
+      "queries": 2000,
+      "heap_per_q": 1.005,
+      "index_per_q": 0.0,
+      "toast_per_q": 0.0
+     },
+     "sizes": {
+      "address_main": 42264080,
+      "address_total": 44858303,
+      "table_bytes": 6324674560,
+      "levels": 4,
+      "runs": [
+       [
+        6,
+        0,
+        23936
+       ],
+       [
+        5,
+        1,
+        95667
+       ]
+      ],
+      "tail_committed_keys": 0
+     },
+     "delta_height": null,
+     "address_main_per_live_key": 4.20764317373808,
+     "address_total_per_live_key": 4.465913664828962
+    },
+    "c4_n10": {
+     "errors": {
+      "live": 0,
+      "deleted": 0,
+      "absent": 0
+     },
+     "client_us": {
+      "p50": 111.1,
+      "p95": 753.069999999999,
+      "p99": 4416.402999999999,
+      "mean": 325.281415,
+      "n": 20000
+     },
+     "buffers_by_category": {
+      "base": 4.0,
+      "ins": 4.0,
+      "upd": 4.0
+     },
+     "buffers_equal_mix": 4.0,
+     "buffers_raw_mix": 4.0,
+     "category_counts": {
+      "base": 1977,
+      "ins": 17,
+      "upd": 6
+     },
+     "buffers_deleted": 3.0,
+     "buffers_absent": 3.0,
+     "statio_live": {
+      "queries": 2000,
+      "heap_per_q": 1.0,
+      "index_per_q": 3.0,
+      "toast_per_q": 0.0
+     },
+     "sizes": {
+      "address_main": 315441152,
+      "address_total": 315441152,
+      "table_bytes": 6324674560
+     },
+     "delta_height": null,
+     "address_main_per_live_key": 31.40406250245779,
+     "address_total_per_live_key": 31.40406250245779
+    }
+   },
+   "pg_stat_tuples": {},
+   "candidates_hist": {
+    "1": 67166,
+    "0": 44369,
+    "2": 865
+   },
+   "peak_rss_mb": 0.0
+  },
+  {
+   "cp": 4,
+   "name": "every_50k",
+   "after_op": 200000,
+   "live_keys": 10059829,
+   "deleted_keys": 40130,
+   "delta_live_rows": 159059,
+   "systems": {
+    "a4_n10": {
+     "errors": {
+      "live": 0,
+      "deleted": 0,
+      "absent": 0
+     },
+     "client_us": {
+      "p50": 256.95,
+      "p95": 894.9199999999997,
+      "p99": 4316.818999999997,
+      "mean": 530.551315,
+      "n": 20000
+     },
+     "buffers_by_category": {
+      "base": 1.0096544715447155,
+      "ins": 1.0,
+      "upd": 1.0
+     },
+     "buffers_equal_mix": 1.003218157181572,
+     "buffers_raw_mix": 1.0095,
+     "category_counts": {
+      "base": 1968,
+      "ins": 23,
+      "upd": 9
+     },
+     "buffers_deleted": 1.008,
+     "buffers_absent": 0.022,
+     "statio_live": {
+      "queries": 2000,
+      "heap_per_q": 1.0095,
+      "index_per_q": 0.0,
+      "toast_per_q": 0.0
+     },
+     "sizes": {
+      "address_main": 43420532,
+      "address_total": 44858303,
+      "table_bytes": 6348832768,
+      "levels": 5,
+      "runs": [
+       [
+        7,
+        0,
+        24014
+       ],
+       [
+        6,
+        0,
+        23936
+       ],
+       [
+        5,
+        1,
+        95667
+       ]
+      ],
+      "tail_committed_keys": 19993
+     },
+     "delta_height": null,
+     "address_main_per_live_key": 4.31622962974818,
+     "address_total_per_live_key": 4.459151641643213
+    },
+    "c4_n10": {
+     "errors": {
+      "live": 0,
+      "deleted": 0,
+      "absent": 0
+     },
+     "client_us": {
+      "p50": 111.4,
+      "p95": 760.1199999999998,
+      "p99": 4467.103,
+      "mean": 330.15114500000004,
+      "n": 20000
+     },
+     "buffers_by_category": {
+      "base": 4.0,
+      "ins": 4.0,
+      "upd": 4.0
+     },
+     "buffers_equal_mix": 4.0,
+     "buffers_raw_mix": 4.0,
+     "category_counts": {
+      "base": 1968,
+      "ins": 23,
+      "upd": 9
+     },
+     "buffers_deleted": 3.0,
+     "buffers_absent": 3.0,
+     "statio_live": {
+      "queries": 2000,
+      "heap_per_q": 1.0,
+      "index_per_q": 3.0,
+      "toast_per_q": 0.0
+     },
+     "sizes": {
+      "address_main": 315441152,
+      "address_total": 315441152,
+      "table_bytes": 6348832768
+     },
+     "delta_height": null,
+     "address_main_per_live_key": 31.356512322426155,
+     "address_total_per_live_key": 31.356512322426155
+    }
+   },
+   "pg_stat_tuples": {},
+   "candidates_hist": {
+    "0": 44570,
+    "1": 66558,
+    "2": 1068,
+    "3": 4
+   },
+   "peak_rss_mb": 0.0
+  },
+  {
+   "cp": 5,
+   "name": "every_50k",
+   "after_op": 250000,
+   "live_keys": 10074717,
+   "deleted_keys": 50192,
+   "delta_live_rows": 198550,
+   "systems": {
+    "a4_n10": {
+     "errors": {
+      "live": 0,
+      "deleted": 0,
+      "absent": 0
+     },
+     "client_us": {
+      "p50": 233.05,
+      "p95": 723.6149999999998,
+      "p99": 3305.5089999999987,
+      "mean": 421.90088499999996,
+      "n": 20000
+     },
+     "buffers_by_category": {
+      "base": 1.0081925243215566,
+      "upd": 1.0,
+      "ins": 1.0
+     },
+     "buffers_equal_mix": 1.002730841440519,
+     "buffers_raw_mix": 1.008,
+     "category_counts": {
+      "base": 1953,
+      "upd": 18,
+      "ins": 29
+     },
+     "buffers_deleted": 1.012,
+     "buffers_absent": 0.02,
+     "statio_live": {
+      "queries": 2000,
+      "heap_per_q": 1.008,
+      "index_per_q": 0.0,
+      "toast_per_q": 0.0
+     },
+     "sizes": {
+      "address_main": 44272912,
+      "address_total": 47151546,
+      "table_bytes": 6367854592,
+      "levels": 4,
+      "runs": [
+       [
+        10,
+        1,
+        95719
+       ],
+       [
+        5,
+        1,
+        95667
+       ]
+      ],
+      "tail_committed_keys": 9999
+     },
+     "delta_height": null,
+     "address_main_per_live_key": 4.394457134627206,
+     "address_total_per_live_key": 4.680185656827879
+    },
+    "c4_n10": {
+     "errors": {
+      "live": 0,
+      "deleted": 0,
+      "absent": 0
+     },
+     "client_us": {
+      "p50": 110.7,
+      "p95": 175.2,
+      "p99": 636.3079999999986,
+      "mean": 147.63814,
+      "n": 20000
+     },
+     "buffers_by_category": {
+      "base": 4.0,
+      "upd": 4.0,
+      "ins": 4.0
+     },
+     "buffers_equal_mix": 4.0,
+     "buffers_raw_mix": 4.0,
+     "category_counts": {
+      "base": 1953,
+      "upd": 18,
+      "ins": 29
+     },
+     "buffers_deleted": 3.0,
+     "buffers_absent": 3.0,
+     "statio_live": {
+      "queries": 2000,
+      "heap_per_q": 1.0,
+      "index_per_q": 3.0,
+      "toast_per_q": 0.0
+     },
+     "sizes": {
+      "address_main": 315441152,
+      "address_total": 315441152,
+      "table_bytes": 6367854592
+     },
+     "delta_height": null,
+     "address_main_per_live_key": 31.310174965708715,
+     "address_total_per_live_key": 31.310174965708715
+    }
+   },
+   "pg_stat_tuples": {},
+   "candidates_hist": {
+    "0": 44314,
+    "1": 66930,
+    "2": 1149,
+    "3": 7
+   },
+   "peak_rss_mb": 0.0
+  },
+  {
+   "cp": 6,
+   "name": "every_50k",
+   "after_op": 300000,
+   "live_keys": 10089897,
+   "deleted_keys": 60085,
+   "delta_live_rows": 238111,
+   "systems": {
+    "a4_n10": {
+     "errors": {
+      "live": 0,
+      "deleted": 0,
+      "absent": 0
+     },
+     "client_us": {
+      "p50": 289.0,
+      "p95": 3253.859999999996,
+      "p99": 4879.503999999999,
+      "mean": 644.690505,
+      "n": 20000
+     },
+     "buffers_by_category": {
+      "base": 1.016862544711293,
+      "upd": 1.0666666666666667,
+      "ins": 1.0357142857142858
+     },
+     "buffers_equal_mix": 1.0397478323640819,
+     "buffers_raw_mix": 1.0175,
+     "category_counts": {
+      "base": 1957,
+      "upd": 15,
+      "ins": 28
+     },
+     "buffers_deleted": 1.018,
+     "buffers_absent": 0.012,
+     "statio_live": {
+      "queries": 2000,
+      "heap_per_q": 1.0175,
+      "index_per_q": 0.0,
+      "toast_per_q": 0.0
+     },
+     "sizes": {
+      "address_main": 45135185,
+      "address_total": 47151546,
+      "table_bytes": 6367854592,
+      "levels": 6,
+      "runs": [
+       [
+        12,
+        0,
+        24033
+       ],
+       [
+        11,
+        0,
+        24039
+       ],
+       [
+        10,
+        1,
+        95719
+       ],
+       [
+        5,
+        1,
+        95667
+       ]
+      ],
+      "tail_committed_keys": 0
+     },
+     "delta_height": null,
+     "address_main_per_live_key": 4.4733048315557635,
+     "address_total_per_live_key": 4.673144433486288
+    },
+    "c4_n10": {
+     "errors": {
+      "live": 0,
+      "deleted": 0,
+      "absent": 0
+     },
+     "client_us": {
+      "p50": 116.4,
+      "p95": 3571.1699999999987,
+      "p99": 4907.549999999992,
+      "mean": 432.9965699999999,
+      "n": 20000
+     },
+     "buffers_by_category": {
+      "base": 4.0,
+      "upd": 4.0,
+      "ins": 4.0
+     },
+     "buffers_equal_mix": 4.0,
+     "buffers_raw_mix": 4.0,
+     "category_counts": {
+      "base": 1957,
+      "upd": 15,
+      "ins": 28
+     },
+     "buffers_deleted": 3.0,
+     "buffers_absent": 3.0,
+     "statio_live": {
+      "queries": 2000,
+      "heap_per_q": 1.0,
+      "index_per_q": 3.0,
+      "toast_per_q": 0.0
+     },
+     "sizes": {
+      "address_main": 315441152,
+      "address_total": 315441152,
+      "table_bytes": 6367854592
+     },
+     "delta_height": null,
+     "address_main_per_live_key": 31.263069583366413,
+     "address_total_per_live_key": 31.263069583366413
+    }
+   },
+   "pg_stat_tuples": {},
+   "candidates_hist": {
+    "0": 44333,
+    "1": 66621,
+    "2": 1429,
+    "3": 17
+   },
+   "peak_rss_mb": 0.0
+  },
+  {
+   "cp": 7,
+   "name": "every_50k",
+   "after_op": 350000,
+   "live_keys": 10105011,
+   "deleted_keys": 69967,
+   "delta_live_rows": 277579,
+   "systems": {
+    "a4_n10": {
+     "errors": {
+      "live": 0,
+      "deleted": 0,
+      "absent": 0
+     },
+     "client_us": {
+      "p50": 301.0,
+      "p95": 3091.7049999999986,
+      "p99": 4632.234999999994,
+      "mean": 629.5881400000001,
+      "n": 20000
+     },
+     "buffers_by_category": {
+      "base": 1.022680412371134,
+      "ins": 1.0,
+      "upd": 1.0
+     },
+     "buffers_equal_mix": 1.0075601374570446,
+     "buffers_raw_mix": 1.022,
+     "category_counts": {
+      "base": 1940,
+      "ins": 37,
+      "upd": 23
+     },
+     "buffers_deleted": 1.024,
+     "buffers_absent": 0.022,
+     "statio_live": {
+      "queries": 2000,
+      "heap_per_q": 1.022,
+      "index_per_q": 0.0,
+      "toast_per_q": 0.0
+     },
+     "sizes": {
+      "address_main": 46292354,
+      "address_total": 47151546,
+      "table_bytes": 6367854592,
+      "levels": 7,
+      "runs": [
+       [
+        13,
+        0,
+        24053
+       ],
+       [
+        12,
+        0,
+        24033
+       ],
+       [
+        11,
+        0,
+        24039
+       ],
+       [
+        10,
+        1,
+        95719
+       ],
+       [
+        5,
+        1,
+        95667
+       ]
+      ],
+      "tail_committed_keys": 19993
+     },
+     "delta_height": null,
+     "address_main_per_live_key": 4.5811285113890525,
+     "address_total_per_live_key": 4.666154841395027
+    },
+    "c4_n10": {
+     "errors": {
+      "live": 0,
+      "deleted": 0,
+      "absent": 0
+     },
+     "client_us": {
+      "p50": 117.0,
+      "p95": 4150.969999999998,
+      "p99": 5080.422999999996,
+      "mean": 547.442375,
+      "n": 20000
+     },
+     "buffers_by_category": {
+      "base": 4.0,
+      "ins": 4.0,
+      "upd": 4.0
+     },
+     "buffers_equal_mix": 4.0,
+     "buffers_raw_mix": 4.0,
+     "category_counts": {
+      "base": 1940,
+      "ins": 37,
+      "upd": 23
+     },
+     "buffers_deleted": 3.0,
+     "buffers_absent": 3.0,
+     "statio_live": {
+      "queries": 2000,
+      "heap_per_q": 1.0,
+      "index_per_q": 3.0,
+      "toast_per_q": 0.0
+     },
+     "sizes": {
+      "address_main": 315441152,
+      "address_total": 315441152,
+      "table_bytes": 6367854592
+     },
+     "delta_height": null,
+     "address_main_per_live_key": 31.21630961114243,
+     "address_total_per_live_key": 31.21630961114243
+    }
+   },
+   "pg_stat_tuples": {},
+   "candidates_hist": {
+    "0": 44028,
+    "1": 66373,
+    "2": 1781,
+    "3": 18
+   },
+   "peak_rss_mb": 0.0
+  },
+  {
+   "cp": 8,
+   "name": "every_50k",
+   "after_op": 400000,
+   "live_keys": 10119947,
+   "deleted_keys": 80007,
+   "delta_live_rows": 316822,
+   "systems": {
+    "a4_n10": {
+     "errors": {
+      "live": 0,
+      "deleted": 0,
+      "absent": 0
+     },
+     "client_us": {
+      "p50": 289.1,
+      "p95": 985.7399999999994,
+      "p99": 4343.958999999974,
+      "mean": 553.334695,
+      "n": 20000
+     },
+     "buffers_by_category": {
+      "base": 1.0134089736977823,
+      "ins": 1.0,
+      "upd": 1.0
+     },
+     "buffers_equal_mix": 1.0044696578992607,
+     "buffers_raw_mix": 1.013,
+     "category_counts": {
+      "base": 1939,
+      "ins": 40,
+      "upd": 21
+     },
+     "buffers_deleted": 1.028,
+     "buffers_absent": 0.02,
+     "statio_live": {
+      "queries": 2000,
+      "heap_per_q": 1.013,
+      "index_per_q": 0.0,
+      "toast_per_q": 0.0
+     },
+     "sizes": {
+      "address_main": 47147443,
+      "address_total": 49456300,
+      "table_bytes": 6377758720,
+      "levels": 6,
+      "runs": [
+       [
+        16,
+        0,
+        24018
+       ],
+       [
+        15,
+        1,
+        95986
+       ],
+       [
+        10,
+        1,
+        95719
+       ],
+       [
+        5,
+        1,
+        95667
+       ]
+      ],
+      "tail_committed_keys": 9997
+     },
+     "delta_height": null,
+     "address_main_per_live_key": 4.658862640288532,
+     "address_total_per_live_key": 4.887011760041826
+    },
+    "c4_n10": {
+     "errors": {
+      "live": 0,
+      "deleted": 0,
+      "absent": 0
+     },
+     "client_us": {
+      "p50": 117.1,
+      "p95": 4161.325,
+      "p99": 5030.749999999992,
+      "mean": 550.4795650000001,
+      "n": 20000
+     },
+     "buffers_by_category": {
+      "base": 4.0,
+      "ins": 4.0,
+      "upd": 4.0
+     },
+     "buffers_equal_mix": 4.0,
+     "buffers_raw_mix": 4.0,
+     "category_counts": {
+      "base": 1939,
+      "ins": 40,
+      "upd": 21
+     },
+     "buffers_deleted": 3.0,
+     "buffers_absent": 3.0,
+     "statio_live": {
+      "queries": 2000,
+      "heap_per_q": 1.0,
+      "index_per_q": 3.0,
+      "toast_per_q": 0.0
+     },
+     "sizes": {
+      "address_main": 315441152,
+      "address_total": 315441152,
+      "table_bytes": 6377816064
+     },
+     "delta_height": null,
+     "address_main_per_live_key": 31.170237551639353,
+     "address_total_per_live_key": 31.170237551639353
+    }
+   },
+   "pg_stat_tuples": {},
+   "candidates_hist": {
+    "0": 44196,
+    "1": 66577,
+    "2": 1620,
+    "3": 7
+   },
+   "peak_rss_mb": 0.0
+  },
+  {
+   "cp": 9,
+   "name": "every_50k",
+   "after_op": 450000,
+   "live_keys": 10135070,
+   "deleted_keys": 89944,
+   "delta_live_rows": 356070,
+   "systems": {
+    "a4_n10": {
+     "errors": {
+      "live": 0,
+      "deleted": 0,
+      "absent": 0
+     },
+     "client_us": {
+      "p50": 322.4,
+      "p95": 1026.854999999999,
+      "p99": 4516.605,
+      "mean": 593.0434550000001,
+      "n": 20000
+     },
+     "buffers_by_category": {
+      "base": 1.021376433785193,
+      "upd": 1.0,
+      "ins": 1.0
+     },
+     "buffers_equal_mix": 1.0071254779283976,
+     "buffers_raw_mix": 1.0205,
+     "category_counts": {
+      "base": 1918,
+      "upd": 29,
+      "ins": 53
+     },
+     "buffers_deleted": 1.032,
+     "buffers_absent": 0.03,
+     "statio_live": {
+      "queries": 2000,
+      "heap_per_q": 1.0205,
+      "index_per_q": 0.0,
+      "toast_per_q": 0.0
+     },
+     "sizes": {
+      "address_main": 48007707,
+      "address_total": 49456300,
+      "table_bytes": 6399877120,
+      "levels": 8,
+      "runs": [
+       [
+        18,
+        0,
+        23982
+       ],
+       [
+        17,
+        0,
+        24012
+       ],
+       [
+        16,
+        0,
+        24018
+       ],
+       [
+        15,
+        1,
+        95986
+       ],
+       [
+        10,
+        1,
+        95719
+       ],
+       [
+        5,
+        1,
+        95667
+       ]
+      ],
+      "tail_committed_keys": 0
+     },
+     "delta_height": null,
+     "address_main_per_live_key": 4.736790865775964,
+     "address_total_per_live_key": 4.879719626998136
+    },
+    "c4_n10": {
+     "errors": {
+      "live": 0,
+      "deleted": 0,
+      "absent": 0
+     },
+     "client_us": {
+      "p50": 114.4,
+      "p95": 3984.1099999999997,
+      "p99": 4870.301,
+      "mean": 476.6183899999999,
+      "n": 20000
+     },
+     "buffers_by_category": {
+      "base": 4.0,
+      "upd": 4.0,
+      "ins": 4.0
+     },
+     "buffers_equal_mix": 4.0,
+     "buffers_raw_mix": 4.0,
+     "category_counts": {
+      "base": 1918,
+      "upd": 29,
+      "ins": 53
+     },
+     "buffers_deleted": 3.0,
+     "buffers_absent": 3.0,
+     "statio_live": {
+      "queries": 2000,
+      "heap_per_q": 1.0,
+      "index_per_q": 3.0,
+      "toast_per_q": 0.0
+     },
+     "sizes": {
+      "address_main": 315441152,
+      "address_total": 315441152,
+      "table_bytes": 6399926272
+     },
+     "delta_height": null,
+     "address_main_per_live_key": 31.12372701915231,
+     "address_total_per_live_key": 31.12372701915231
+    }
+   },
+   "pg_stat_tuples": {},
+   "candidates_hist": {
+    "1": 66130,
+    "0": 44069,
+    "2": 2165,
+    "3": 36
+   },
+   "peak_rss_mb": 0.0
+  },
+  {
+   "cp": 10,
+   "name": "every_50k",
+   "after_op": 500000,
+   "live_keys": 10150000,
+   "deleted_keys": 100000,
+   "delta_live_rows": 395141,
+   "systems": {
+    "a4_n10": {
+     "errors": {
+      "live": 0,
+      "deleted": 0,
+      "absent": 0
+     },
+     "client_us": {
+      "p50": 221.0,
+      "p95": 740.8049999999998,
+      "p99": 3671.746999999992,
+      "mean": 425.8455199999999,
+      "n": 20000
+     },
+     "buffers_by_category": {
+      "base": 1.0026041666666667,
+      "ins": 1.0,
+      "upd": 1.0
+     },
+     "buffers_equal_mix": 1.0008680555555556,
+     "buffers_raw_mix": 1.0025,
+     "category_counts": {
+      "base": 1920,
+      "ins": 59,
+      "upd": 21
+     },
+     "buffers_deleted": 1.008,
+     "buffers_absent": 0.01,
+     "statio_live": {
+      "queries": 2000,
+      "heap_per_q": 1.0025,
+      "index_per_q": 0.0,
+      "toast_per_q": 0.0
+     },
+     "sizes": {
+      "address_main": 49106307,
+      "address_total": 58573305,
+      "table_bytes": 6413729792,
+      "levels": 3,
+      "runs": [
+       [
+        21,
+        2,
+        381196
+       ]
+      ],
+      "tail_committed_keys": 19987
+     },
+     "delta_height": null,
+     "address_main_per_live_key": 4.838059802955665,
+     "address_total_per_live_key": 5.770768965517242
+    },
+    "c4_n10": {
+     "errors": {
+      "live": 0,
+      "deleted": 0,
+      "absent": 0
+     },
+     "client_us": {
+      "p50": 113.4,
+      "p95": 185.3,
+      "p99": 646.8129999999978,
+      "mean": 156.43953,
+      "n": 20000
+     },
+     "buffers_by_category": {
+      "base": 4.0,
+      "ins": 4.0,
+      "upd": 4.0
+     },
+     "buffers_equal_mix": 4.0,
+     "buffers_raw_mix": 4.0,
+     "category_counts": {
+      "base": 1920,
+      "ins": 59,
+      "upd": 21
+     },
+     "buffers_deleted": 3.0,
+     "buffers_absent": 3.0,
+     "statio_live": {
+      "queries": 2000,
+      "heap_per_q": 1.0,
+      "index_per_q": 3.0,
+      "toast_per_q": 0.0
+     },
+     "sizes": {
+      "address_main": 315441152,
+      "address_total": 315441152,
+      "table_bytes": 6413942784
+     },
+     "delta_height": null,
+     "address_main_per_live_key": 31.077946009852216,
+     "address_total_per_live_key": 31.077946009852216
+    }
+   },
+   "pg_stat_tuples": {},
+   "candidates_hist": {
+    "0": 44384,
+    "1": 66545,
+    "2": 1265,
+    "3": 6
+   },
+   "peak_rss_mb": 0.0
+  },
+  {
+   "cp": 11,
+   "name": "after_restart",
+   "after_op": 500000,
+   "live_keys": 10150000,
+   "deleted_keys": 100000,
+   "delta_live_rows": 395141,
+   "systems": {
+    "a4_n10": {
+     "errors": {
+      "live": 0,
+      "deleted": 0,
+      "absent": 0
+     },
+     "client_us": {
+      "p50": 203.4,
+      "p95": 262.4049999999999,
+      "p99": 393.2039999999993,
+      "mean": 212.31935500000003,
+      "n": 20000
+     },
+     "buffers_by_category": {
+      "base": 1.0036231884057971,
+      "ins": 1.0,
+      "upd": 1.0
+     },
+     "buffers_equal_mix": 1.001207729468599,
+     "buffers_raw_mix": 1.0035,
+     "category_counts": {
+      "base": 1932,
+      "ins": 44,
+      "upd": 24
+     },
+     "buffers_deleted": 1.004,
+     "buffers_absent": 0.008,
+     "statio_live": {
+      "queries": 2000,
+      "heap_per_q": 1.0035,
+      "index_per_q": 0.0,
+      "toast_per_q": 0.0
+     },
+     "sizes": {
+      "address_main": 49106307,
+      "address_total": 49106307,
+      "table_bytes": 6413729792,
+      "levels": 3,
+      "runs": [
+       [
+        21,
+        2,
+        381196
+       ]
+      ],
+      "tail_committed_keys": 19987
+     },
+     "delta_height": null,
+     "address_main_per_live_key": 4.838059802955665,
+     "address_total_per_live_key": 4.838059802955665
+    },
+    "c4_n10": {
+     "errors": {
+      "live": 0,
+      "deleted": 0,
+      "absent": 0
+     },
+     "client_us": {
+      "p50": 114.0,
+      "p95": 174.20499999999993,
+      "p99": 532.0139999999977,
+      "mean": 135.46022,
+      "n": 20000
+     },
+     "buffers_by_category": {
+      "base": 4.0,
+      "ins": 4.0,
+      "upd": 4.0
+     },
+     "buffers_equal_mix": 4.0,
+     "buffers_raw_mix": 4.0,
+     "category_counts": {
+      "base": 1932,
+      "ins": 44,
+      "upd": 24
+     },
+     "buffers_deleted": 3.0,
+     "buffers_absent": 3.0,
+     "statio_live": {
+      "queries": 2000,
+      "heap_per_q": 1.0,
+      "index_per_q": 3.0,
+      "toast_per_q": 0.0
+     },
+     "sizes": {
+      "address_main": 315441152,
+      "address_total": 315441152,
+      "table_bytes": 6413942784
+     },
+     "delta_height": null,
+     "address_main_per_live_key": 31.077946009852216,
+     "address_total_per_live_key": 31.077946009852216
+    }
+   },
+   "pg_stat_tuples": {}
+  },
+  {
+   "cp": 12,
+   "name": "after_final_major",
+   "after_op": 500000,
+   "live_keys": 10150000,
+   "deleted_keys": 100000,
+   "delta_live_rows": 395141,
+   "systems": {
+    "a4_n10": {
+     "errors": {
+      "live": 0,
+      "deleted": 0,
+      "absent": 0
+     },
+     "client_us": {
+      "p50": 184.8,
+      "p95": 235.3,
+      "p99": 315.18399999998655,
+      "mean": 190.126595,
+      "n": 20000
+     },
+     "buffers_by_category": {
+      "base": 1.0,
+      "upd": 1.0,
+      "ins": 1.0
+     },
+     "buffers_equal_mix": 1.0,
+     "buffers_raw_mix": 1.0,
+     "category_counts": {
+      "base": 1931,
+      "upd": 31,
+      "ins": 38
+     },
+     "buffers_deleted": 0.004,
+     "buffers_absent": 0.008,
+     "statio_live": {
+      "queries": 2000,
+      "heap_per_q": 1.0,
+      "index_per_q": 0.0,
+      "toast_per_q": 0.0
+     },
+     "sizes": {
+      "address_main": 39989955,
+      "address_total": 89096099,
+      "table_bytes": 6413729792,
+      "levels": 2,
+      "runs": [],
+      "tail_committed_keys": 0
+     },
+     "delta_height": null,
+     "address_main_per_live_key": 3.9398970443349755,
+     "address_total_per_live_key": 8.77794078817734
+    },
+    "c4_n10": {
+     "errors": {
+      "live": 0,
+      "deleted": 0,
+      "absent": 0
+     },
+     "client_us": {
+      "p50": 109.9,
+      "p95": 160.4,
+      "p99": 191.6,
+      "mean": 117.10402000000002,
+      "n": 20000
+     },
+     "buffers_by_category": {
+      "base": 4.0,
+      "upd": 4.0,
+      "ins": 4.0
+     },
+     "buffers_equal_mix": 4.0,
+     "buffers_raw_mix": 4.0,
+     "category_counts": {
+      "base": 1931,
+      "upd": 31,
+      "ins": 38
+     },
+     "buffers_deleted": 3.0,
+     "buffers_absent": 3.0,
+     "statio_live": {
+      "queries": 2000,
+      "heap_per_q": 1.0,
+      "index_per_q": 3.0,
+      "toast_per_q": 0.0
+     },
+     "sizes": {
+      "address_main": 315441152,
+      "address_total": 315441152,
+      "table_bytes": 6413942784
+     },
+     "delta_height": null,
+     "address_main_per_live_key": 31.077946009852216,
+     "address_total_per_live_key": 31.077946009852216
+    }
+   },
+   "pg_stat_tuples": {}
+  }
+ ],
+ "batches": [
+  [
+   1000,
+   0.2221,
+   39428127,
+   3.9427,
+   2
+  ],
+  [
+   2000,
+   0.2164,
+   39457156,
+   3.9455,
+   2
+  ],
+  [
+   3000,
+   0.2147,
+   39486185,
+   3.9483,
+   2
+  ],
+  [
+   4000,
+   0.2108,
+   39515214,
+   3.9511,
+   2
+  ],
+  [
+   5000,
+   0.207,
+   39544243,
+   3.9539,
+   2
+  ],
+  [
+   6000,
+   0.2188,
+   39573272,
+   3.9567,
+   2
+  ],
+  [
+   7000,
+   0.2202,
+   39602301,
+   3.9594,
+   2
+  ],
+  [
+   8000,
+   0.2116,
+   39631330,
+   3.9622,
+   2
+  ],
+  [
+   9000,
+   0.2396,
+   39660359,
+   3.965,
+   2
+  ],
+  [
+   10000,
+   0.8223,
+   39689388,
+   3.9678,
+   2
+  ],
+  [
+   11000,
+   0.2434,
+   39718417,
+   3.9706,
+   2
+  ],
+  [
+   12000,
+   0.2357,
+   39747446,
+   3.9734,
+   2
+  ],
+  [
+   13000,
+   0.2169,
+   39776475,
+   3.9761,
+   2
+  ],
+  [
+   14000,
+   0.2345,
+   39805504,
+   3.9789,
+   2
+  ],
+  [
+   15000,
+   0.234,
+   39834533,
+   3.9817,
+   2
+  ],
+  [
+   16000,
+   0.2352,
+   39863562,
+   3.9844,
+   2
+  ],
+  [
+   17000,
+   0.2555,
+   39892591,
+   3.9872,
+   2
+  ],
+  [
+   18000,
+   0.2431,
+   39921620,
+   3.99,
+   2
+  ],
+  [
+   19000,
+   0.2437,
+   39950649,
+   3.9928,
+   2
+  ],
+  [
+   20000,
+   0.2492,
+   39979678,
+   3.9956,
+   2
+  ],
+  [
+   21000,
+   0.2425,
+   40008707,
+   3.9984,
+   2
+  ],
+  [
+   22000,
+   0.2304,
+   40037736,
+   4.0012,
+   2
+  ],
+  [
+   23000,
+   0.2417,
+   40066765,
+   4.0039,
+   2
+  ],
+  [
+   24000,
+   0.2318,
+   40095794,
+   4.0067,
+   2
+  ],
+  [
+   25000,
+   0.2613,
+   40124823,
+   4.0095,
+   2
+  ],
+  [
+   26000,
+   0.2396,
+   40153852,
+   4.0122,
+   2
+  ],
+  [
+   27000,
+   0.2463,
+   40182881,
+   4.015,
+   2
+  ],
+  [
+   28000,
+   0.2381,
+   40211910,
+   4.0178,
+   2
+  ],
+  [
+   29000,
+   0.2365,
+   40240939,
+   4.0206,
+   2
+  ],
+  [
+   30000,
+   0.889,
+   39974209,
+   3.9938,
+   3
+  ],
+  [
+   31000,
+   0.3396,
+   40003238,
+   3.9966,
+   3
+  ],
+  [
+   32000,
+   0.2544,
+   40032267,
+   3.9993,
+   3
+  ],
+  [
+   33000,
+   0.2708,
+   40061296,
+   4.0021,
+   3
+  ],
+  [
+   34000,
+   0.2646,
+   40090325,
+   4.0049,
+   3
+  ],
+  [
+   35000,
+   0.2646,
+   40119354,
+   4.0077,
+   3
+  ],
+  [
+   36000,
+   0.3094,
+   40148383,
+   4.0105,
+   3
+  ],
+  [
+   37000,
+   0.2547,
+   40177412,
+   4.0132,
+   3
+  ],
+  [
+   38000,
+   0.2598,
+   40206441,
+   4.016,
+   3
+  ],
+  [
+   39000,
+   0.2896,
+   40235470,
+   4.0188,
+   3
+  ],
+  [
+   40000,
+   0.2901,
+   40264499,
+   4.0216,
+   3
+  ],
+  [
+   41000,
+   0.6766,
+   40293528,
+   4.0244,
+   3
+  ],
+  [
+   42000,
+   0.3754,
+   40322557,
+   4.0272,
+   3
+  ],
+  [
+   43000,
+   0.2591,
+   40351586,
+   4.0299,
+   3
+  ],
+  [
+   44000,
+   0.2674,
+   40380615,
+   4.0327,
+   3
+  ],
+  [
+   45000,
+   0.2577,
+   40409644,
+   4.0355,
+   3
+  ],
+  [
+   46000,
+   0.2639,
+   40438673,
+   4.0383,
+   3
+  ],
+  [
+   47000,
+   0.2562,
+   40467702,
+   4.041,
+   3
+  ],
+  [
+   48000,
+   0.2566,
+   40496731,
+   4.0438,
+   3
+  ],
+  [
+   49000,
+   0.2714,
+   40525760,
+   4.0466,
+   3
+  ],
+  [
+   50000,
+   0.2546,
+   40554789,
+   4.0494,
+   3
+  ],
+  [
+   51000,
+   0.2296,
+   40583818,
+   4.0522,
+   3
+  ],
+  [
+   52000,
+   0.2345,
+   40612847,
+   4.0549,
+   3
+  ],
+  [
+   53000,
+   0.2417,
+   40641876,
+   4.0577,
+   3
+  ],
+  [
+   54000,
+   0.2298,
+   40670905,
+   4.0605,
+   3
+  ],
+  [
+   55000,
+   0.2314,
+   40699934,
+   4.0633,
+   3
+  ],
+  [
+   56000,
+   0.2408,
+   40728963,
+   4.0661,
+   3
+  ],
+  [
+   57000,
+   0.2317,
+   40757992,
+   4.0688,
+   3
+  ],
+  [
+   58000,
+   0.2331,
+   40787021,
+   4.0716,
+   3
+  ],
+  [
+   59000,
+   0.2484,
+   40816050,
+   4.0744,
+   3
+  ],
+  [
+   60000,
+   0.2968,
+   40548981,
+   4.0476,
+   4
+  ],
+  [
+   61000,
+   0.2599,
+   40578010,
+   4.0504,
+   4
+  ],
+  [
+   62000,
+   0.2784,
+   40607039,
+   4.0532,
+   4
+  ],
+  [
+   63000,
+   0.2819,
+   40636068,
+   4.056,
+   4
+  ],
+  [
+   64000,
+   0.2823,
+   40665097,
+   4.0587,
+   4
+  ],
+  [
+   65000,
+   0.2793,
+   40694126,
+   4.0615,
+   4
+  ],
+  [
+   66000,
+   0.2679,
+   40723155,
+   4.0643,
+   4
+  ],
+  [
+   67000,
+   0.3034,
+   40752184,
+   4.0671,
+   4
+  ],
+  [
+   68000,
+   0.2865,
+   40781213,
+   4.0699,
+   4
+  ],
+  [
+   69000,
+   0.3438,
+   40810242,
+   4.0727,
+   4
+  ],
+  [
+   70000,
+   0.3737,
+   40839271,
+   4.0754,
+   4
+  ],
+  [
+   71000,
+   0.2758,
+   40868300,
+   4.0782,
+   4
+  ],
+  [
+   72000,
+   0.2799,
+   40897329,
+   4.081,
+   4
+  ],
+  [
+   73000,
+   0.2735,
+   40926358,
+   4.0838,
+   4
+  ],
+  [
+   74000,
+   0.2587,
+   40955387,
+   4.0865,
+   4
+  ],
+  [
+   75000,
+   0.2662,
+   40984416,
+   4.0893,
+   4
+  ],
+  [
+   76000,
+   0.2748,
+   41013445,
+   4.0921,
+   4
+  ],
+  [
+   77000,
+   0.2809,
+   41042474,
+   4.0948,
+   4
+  ],
+  [
+   78000,
+   0.2709,
+   41071503,
+   4.0976,
+   4
+  ],
+  [
+   79000,
+   0.2819,
+   41100532,
+   4.1004,
+   4
+  ],
+  [
+   80000,
+   0.2809,
+   41129561,
+   4.1031,
+   4
+  ],
+  [
+   81000,
+   0.2822,
+   41158590,
+   4.1059,
+   4
+  ],
+  [
+   82000,
+   0.2922,
+   41187619,
+   4.1087,
+   4
+  ],
+  [
+   83000,
+   0.2775,
+   41216648,
+   4.1114,
+   4
+  ],
+  [
+   84000,
+   0.281,
+   41245677,
+   4.1142,
+   4
+  ],
+  [
+   85000,
+   0.2849,
+   41274706,
+   4.117,
+   4
+  ],
+  [
+   86000,
+   0.2808,
+   41303735,
+   4.1198,
+   4
+  ],
+  [
+   87000,
+   0.2924,
+   41332764,
+   4.1225,
+   4
+  ],
+  [
+   88000,
+   0.2805,
+   41361793,
+   4.1253,
+   4
+  ],
+  [
+   89000,
+   0.3439,
+   41390822,
+   4.1281,
+   4
+  ],
+  [
+   90000,
+   0.3235,
+   41122113,
+   4.1012,
+   5
+  ],
+  [
+   91000,
+   0.2957,
+   41151142,
+   4.1039,
+   5
+  ],
+  [
+   92000,
+   0.303,
+   41180171,
+   4.1067,
+   5
+  ],
+  [
+   93000,
+   0.3016,
+   41209200,
+   4.1095,
+   5
+  ],
+  [
+   94000,
+   0.3071,
+   41238229,
+   4.1123,
+   5
+  ],
+  [
+   95000,
+   0.3027,
+   41267258,
+   4.1151,
+   5
+  ],
+  [
+   96000,
+   0.6738,
+   41296287,
+   4.1178,
+   5
+  ],
+  [
+   97000,
+   0.3006,
+   41325316,
+   4.1206,
+   5
+  ],
+  [
+   98000,
+   0.3002,
+   41354345,
+   4.1234,
+   5
+  ],
+  [
+   99000,
+   0.2948,
+   41383374,
+   4.1262,
+   5
+  ],
+  [
+   100000,
+   0.3114,
+   41412403,
+   4.1289,
+   5
+  ],
+  [
+   101000,
+   0.2781,
+   41441432,
+   4.1317,
+   5
+  ],
+  [
+   102000,
+   0.4665,
+   41470461,
+   4.1345,
+   5
+  ],
+  [
+   103000,
+   0.3057,
+   41499490,
+   4.1373,
+   5
+  ],
+  [
+   104000,
+   0.2785,
+   41528519,
+   4.1401,
+   5
+  ],
+  [
+   105000,
+   0.2661,
+   41557548,
+   4.1428,
+   5
+  ],
+  [
+   106000,
+   0.2608,
+   41586577,
+   4.1456,
+   5
+  ],
+  [
+   107000,
+   0.269,
+   41615606,
+   4.1484,
+   5
+  ],
+  [
+   108000,
+   0.2695,
+   41644635,
+   4.1511,
+   5
+  ],
+  [
+   109000,
+   0.3007,
+   41673664,
+   4.1539,
+   5
+  ],
+  [
+   110000,
+   0.2932,
+   41702693,
+   4.1567,
+   5
+  ],
+  [
+   111000,
+   0.2868,
+   41731722,
+   4.1594,
+   5
+  ],
+  [
+   112000,
+   0.2981,
+   41760751,
+   4.1622,
+   5
+  ],
+  [
+   113000,
+   0.2999,
+   41789780,
+   4.165,
+   5
+  ],
+  [
+   114000,
+   0.3078,
+   41818809,
+   4.1677,
+   5
+  ],
+  [
+   115000,
+   0.294,
+   41847838,
+   4.1705,
+   5
+  ],
+  [
+   116000,
+   0.3627,
+   41876867,
+   4.1732,
+   5
+  ],
+  [
+   117000,
+   0.297,
+   41905896,
+   4.176,
+   5
+  ],
+  [
+   118000,
+   0.2974,
+   41934925,
+   4.1788,
+   5
+  ],
+  [
+   119000,
+   0.3027,
+   41963954,
+   4.1816,
+   5
+  ],
+  [
+   120000,
+   0.4514,
+   41690216,
+   4.1541,
+   3
+  ],
+  [
+   121000,
+   0.257,
+   41719245,
+   4.1569,
+   3
+  ],
+  [
+   122000,
+   0.2644,
+   41748274,
+   4.1597,
+   3
+  ],
+  [
+   123000,
+   0.264,
+   41777303,
+   4.1624,
+   3
+  ],
+  [
+   124000,
+   0.2626,
+   41806332,
+   4.1652,
+   3
+  ],
+  [
+   125000,
+   0.3116,
+   41835361,
+   4.168,
+   3
+  ],
+  [
+   126000,
+   0.2732,
+   41864390,
+   4.1708,
+   3
+  ],
+  [
+   127000,
+   0.2708,
+   41893419,
+   4.1736,
+   3
+  ],
+  [
+   128000,
+   0.2762,
+   41922448,
+   4.1764,
+   3
+  ],
+  [
+   129000,
+   0.2679,
+   41951477,
+   4.1791,
+   3
+  ],
+  [
+   130000,
+   0.2929,
+   41980506,
+   4.1819,
+   3
+  ],
+  [
+   131000,
+   0.2634,
+   42009535,
+   4.1847,
+   3
+  ],
+  [
+   132000,
+   0.2664,
+   42038564,
+   4.1874,
+   3
+  ],
+  [
+   133000,
+   0.2711,
+   42067593,
+   4.1902,
+   3
+  ],
+  [
+   134000,
+   0.2615,
+   42096622,
+   4.193,
+   3
+  ],
+  [
+   135000,
+   0.2844,
+   42125651,
+   4.1957,
+   3
+  ],
+  [
+   136000,
+   0.2598,
+   42154680,
+   4.1985,
+   3
+  ],
+  [
+   137000,
+   0.2675,
+   42183709,
+   4.2013,
+   3
+  ],
+  [
+   138000,
+   0.2614,
+   42212738,
+   4.204,
+   3
+  ],
+  [
+   139000,
+   0.2596,
+   42241767,
+   4.2068,
+   3
+  ],
+  [
+   140000,
+   0.2933,
+   42270796,
+   4.2095,
+   3
+  ],
+  [
+   141000,
+   0.2551,
+   42299825,
+   4.2123,
+   3
+  ],
+  [
+   142000,
+   0.2642,
+   42328854,
+   4.2151,
+   3
+  ],
+  [
+   143000,
+   0.2702,
+   42357883,
+   4.2178,
+   3
+  ],
+  [
+   144000,
+   0.265,
+   42386912,
+   4.2206,
+   3
+  ],
+  [
+   145000,
+   0.5838,
+   42415941,
+   4.2234,
+   3
+  ],
+  [
+   146000,
+   0.3042,
+   42444970,
+   4.2261,
+   3
+  ],
+  [
+   147000,
+   0.2735,
+   42473999,
+   4.2289,
+   3
+  ],
+  [
+   148000,
+   0.2618,
+   42503028,
+   4.2317,
+   3
+  ],
+  [
+   149000,
+   0.2619,
+   42532057,
+   4.2344,
+   3
+  ],
+  [
+   150000,
+   0.3072,
+   42264080,
+   4.2076,
+   4
+  ],
+  [
+   151000,
+   0.2498,
+   42293109,
+   4.2104,
+   4
+  ],
+  [
+   152000,
+   0.2573,
+   42322138,
+   4.2132,
+   4
+  ],
+  [
+   153000,
+   0.2749,
+   42351167,
+   4.2159,
+   4
+  ],
+  [
+   154000,
+   0.2607,
+   42380196,
+   4.2187,
+   4
+  ],
+  [
+   155000,
+   0.2513,
+   42409225,
+   4.2215,
+   4
+  ],
+  [
+   156000,
+   0.2506,
+   42438254,
+   4.2242,
+   4
+  ],
+  [
+   157000,
+   0.2467,
+   42467283,
+   4.227,
+   4
+  ],
+  [
+   158000,
+   0.249,
+   42496312,
+   4.2298,
+   4
+  ],
+  [
+   159000,
+   0.2772,
+   42525341,
+   4.2325,
+   4
+  ],
+  [
+   160000,
+   0.28,
+   42554370,
+   4.2353,
+   4
+  ],
+  [
+   161000,
+   0.2942,
+   42583399,
+   4.2381,
+   4
+  ],
+  [
+   162000,
+   0.2834,
+   42612428,
+   4.2408,
+   4
+  ],
+  [
+   163000,
+   0.2877,
+   42641457,
+   4.2436,
+   4
+  ],
+  [
+   164000,
+   0.2794,
+   42670486,
+   4.2464,
+   4
+  ],
+  [
+   165000,
+   0.2829,
+   42699515,
+   4.2491,
+   4
+  ],
+  [
+   166000,
+   0.3014,
+   42728544,
+   4.2519,
+   4
+  ],
+  [
+   167000,
+   0.2817,
+   42757573,
+   4.2547,
+   4
+  ],
+  [
+   168000,
+   0.283,
+   42786602,
+   4.2574,
+   4
+  ],
+  [
+   169000,
+   0.2821,
+   42815631,
+   4.2602,
+   4
+  ],
+  [
+   170000,
+   0.2698,
+   42844660,
+   4.2629,
+   4
+  ],
+  [
+   171000,
+   0.3837,
+   42873689,
+   4.2657,
+   4
+  ],
+  [
+   172000,
+   0.284,
+   42902718,
+   4.2684,
+   4
+  ],
+  [
+   173000,
+   0.3135,
+   42931747,
+   4.2712,
+   4
+  ],
+  [
+   174000,
+   0.2712,
+   42960776,
+   4.2739,
+   4
+  ],
+  [
+   175000,
+   0.3332,
+   42989805,
+   4.2767,
+   4
+  ],
+  [
+   176000,
+   0.3404,
+   43018834,
+   4.2794,
+   4
+  ],
+  [
+   177000,
+   0.3214,
+   43047863,
+   4.2822,
+   4
+  ],
+  [
+   178000,
+   0.2811,
+   43076892,
+   4.2849,
+   4
+  ],
+  [
+   179000,
+   0.2818,
+   43105921,
+   4.2877,
+   4
+  ],
+  [
+   180000,
+   0.3267,
+   42839952,
+   4.2611,
+   5
+  ],
+  [
+   181000,
+   0.2954,
+   42868981,
+   4.2639,
+   5
+  ],
+  [
+   182000,
+   0.3026,
+   42898010,
+   4.2666,
+   5
+  ],
+  [
+   183000,
+   0.2948,
+   42927039,
+   4.2694,
+   5
+  ],
+  [
+   184000,
+   0.2891,
+   42956068,
+   4.2722,
+   5
+  ],
+  [
+   185000,
+   0.2935,
+   42985097,
+   4.2749,
+   5
+  ],
+  [
+   186000,
+   0.3027,
+   43014126,
+   4.2777,
+   5
+  ],
+  [
+   187000,
+   0.314,
+   43043155,
+   4.2804,
+   5
+  ],
+  [
+   188000,
+   0.3022,
+   43072184,
+   4.2832,
+   5
+  ],
+  [
+   189000,
+   0.316,
+   43101213,
+   4.286,
+   5
+  ],
+  [
+   190000,
+   0.2994,
+   43130242,
+   4.2887,
+   5
+  ],
+  [
+   191000,
+   0.2992,
+   43159271,
+   4.2915,
+   5
+  ],
+  [
+   192000,
+   0.2959,
+   43188300,
+   4.2942,
+   5
+  ],
+  [
+   193000,
+   0.3072,
+   43217329,
+   4.297,
+   5
+  ],
+  [
+   194000,
+   0.2882,
+   43246358,
+   4.2997,
+   5
+  ],
+  [
+   195000,
+   0.313,
+   43275387,
+   4.3025,
+   5
+  ],
+  [
+   196000,
+   0.3015,
+   43304416,
+   4.3052,
+   5
+  ],
+  [
+   197000,
+   0.2974,
+   43333445,
+   4.308,
+   5
+  ],
+  [
+   198000,
+   0.2991,
+   43362474,
+   4.3107,
+   5
+  ],
+  [
+   199000,
+   0.2889,
+   43391503,
+   4.3135,
+   5
+  ],
+  [
+   200000,
+   0.3172,
+   43420532,
+   4.3162,
+   5
+  ],
+  [
+   201000,
+   0.2674,
+   43449561,
+   4.319,
+   5
+  ],
+  [
+   202000,
+   0.2672,
+   43478590,
+   4.3217,
+   5
+  ],
+  [
+   203000,
+   0.271,
+   43507619,
+   4.3245,
+   5
+  ],
+  [
+   204000,
+   0.2776,
+   43536648,
+   4.3273,
+   5
+  ],
+  [
+   205000,
+   0.2724,
+   43565677,
+   4.33,
+   5
+  ],
+  [
+   206000,
+   0.265,
+   43594706,
+   4.3328,
+   5
+  ],
+  [
+   207000,
+   0.2891,
+   43623735,
+   4.3355,
+   5
+  ],
+  [
+   208000,
+   0.28,
+   43652764,
+   4.3382,
+   5
+  ],
+  [
+   209000,
+   0.9163,
+   43681793,
+   4.341,
+   5
+  ],
+  [
+   210000,
+   0.3445,
+   43415456,
+   4.3144,
+   6
+  ],
+  [
+   211000,
+   0.3061,
+   43444485,
+   4.3172,
+   6
+  ],
+  [
+   212000,
+   0.3232,
+   43473514,
+   4.3199,
+   6
+  ],
+  [
+   213000,
+   0.3181,
+   43502543,
+   4.3227,
+   6
+  ],
+  [
+   214000,
+   0.3111,
+   43531572,
+   4.3254,
+   6
+  ],
+  [
+   215000,
+   0.3179,
+   43560601,
+   4.3282,
+   6
+  ],
+  [
+   216000,
+   0.3211,
+   43589630,
+   4.3309,
+   6
+  ],
+  [
+   217000,
+   0.3371,
+   43618659,
+   4.3337,
+   6
+  ],
+  [
+   218000,
+   0.3206,
+   43647688,
+   4.3364,
+   6
+  ],
+  [
+   219000,
+   0.3079,
+   43676717,
+   4.3392,
+   6
+  ],
+  [
+   220000,
+   0.3212,
+   43705746,
+   4.3419,
+   6
+  ],
+  [
+   221000,
+   0.3184,
+   43734775,
+   4.3447,
+   6
+  ],
+  [
+   222000,
+   0.3258,
+   43763804,
+   4.3475,
+   6
+  ],
+  [
+   223000,
+   0.3105,
+   43792833,
+   4.3502,
+   6
+  ],
+  [
+   224000,
+   0.3379,
+   43821862,
+   4.353,
+   6
+  ],
+  [
+   225000,
+   0.3188,
+   43850891,
+   4.3557,
+   6
+  ],
+  [
+   226000,
+   0.3764,
+   43879920,
+   4.3585,
+   6
+  ],
+  [
+   227000,
+   0.323,
+   43908949,
+   4.3613,
+   6
+  ],
+  [
+   228000,
+   0.3202,
+   43937978,
+   4.364,
+   6
+  ],
+  [
+   229000,
+   0.315,
+   43967007,
+   4.3668,
+   6
+  ],
+  [
+   230000,
+   0.3239,
+   43996036,
+   4.3695,
+   6
+  ],
+  [
+   231000,
+   0.3209,
+   44025065,
+   4.3723,
+   6
+  ],
+  [
+   232000,
+   0.3233,
+   44054094,
+   4.375,
+   6
+  ],
+  [
+   233000,
+   0.3441,
+   44083123,
+   4.3778,
+   6
+  ],
+  [
+   234000,
+   0.3137,
+   44112152,
+   4.3806,
+   6
+  ],
+  [
+   235000,
+   0.3249,
+   44141181,
+   4.3833,
+   6
+  ],
+  [
+   236000,
+   0.3166,
+   44170210,
+   4.3861,
+   6
+  ],
+  [
+   237000,
+   0.3193,
+   44199239,
+   4.3888,
+   6
+  ],
+  [
+   238000,
+   0.3215,
+   44228268,
+   4.3916,
+   6
+  ],
+  [
+   239000,
+   0.3145,
+   44257297,
+   4.3943,
+   6
+  ],
+  [
+   240000,
+   0.4638,
+   43982622,
+   4.3669,
+   4
+  ],
+  [
+   241000,
+   1.5151,
+   44011651,
+   4.3697,
+   4
+  ],
+  [
+   242000,
+   0.3778,
+   44040680,
+   4.3725,
+   4
+  ],
+  [
+   243000,
+   0.4685,
+   44069709,
+   4.3752,
+   4
+  ],
+  [
+   244000,
+   0.4061,
+   44098738,
+   4.378,
+   4
+  ],
+  [
+   245000,
+   0.4687,
+   44127767,
+   4.3807,
+   4
+  ],
+  [
+   246000,
+   0.4061,
+   44156796,
+   4.3835,
+   4
+  ],
+  [
+   247000,
+   0.332,
+   44185825,
+   4.3862,
+   4
+  ],
+  [
+   248000,
+   0.5714,
+   44214854,
+   4.389,
+   4
+  ],
+  [
+   249000,
+   0.3632,
+   44243883,
+   4.3917,
+   4
+  ],
+  [
+   250000,
+   0.4041,
+   44272912,
+   4.3945,
+   4
+  ],
+  [
+   251000,
+   0.3666,
+   44301941,
+   4.3972,
+   4
+  ],
+  [
+   252000,
+   0.4419,
+   44330970,
+   4.4,
+   4
+  ],
+  [
+   253000,
+   0.3326,
+   44359999,
+   4.4027,
+   4
+  ],
+  [
+   254000,
+   0.3561,
+   44389028,
+   4.4054,
+   4
+  ],
+  [
+   255000,
+   0.3024,
+   44418057,
+   4.4082,
+   4
+  ],
+  [
+   256000,
+   0.3992,
+   44447086,
+   4.4109,
+   4
+  ],
+  [
+   257000,
+   0.4048,
+   44476115,
+   4.4136,
+   4
+  ],
+  [
+   258000,
+   0.356,
+   44505144,
+   4.4164,
+   4
+  ],
+  [
+   259000,
+   0.4274,
+   44534173,
+   4.4192,
+   4
+  ],
+  [
+   260000,
+   0.343,
+   44563202,
+   4.4219,
+   4
+  ],
+  [
+   261000,
+   0.4476,
+   44592231,
+   4.4246,
+   4
+  ],
+  [
+   262000,
+   0.4308,
+   44621260,
+   4.4274,
+   4
+  ],
+  [
+   263000,
+   0.4243,
+   44650289,
+   4.4301,
+   4
+  ],
+  [
+   264000,
+   0.3326,
+   44679318,
+   4.4329,
+   4
+  ],
+  [
+   265000,
+   0.3543,
+   44708347,
+   4.4356,
+   4
+  ],
+  [
+   266000,
+   0.3631,
+   44737376,
+   4.4384,
+   4
+  ],
+  [
+   267000,
+   0.5161,
+   44766405,
+   4.4412,
+   4
+  ],
+  [
+   268000,
+   0.3471,
+   44795434,
+   4.4439,
+   4
+  ],
+  [
+   269000,
+   0.3264,
+   44824463,
+   4.4466,
+   4
+  ],
+  [
+   270000,
+   0.38,
+   44558996,
+   4.4202,
+   5
+  ],
+  [
+   271000,
+   0.3512,
+   44588025,
+   4.4229,
+   5
+  ],
+  [
+   272000,
+   0.3583,
+   44617054,
+   4.4256,
+   5
+  ],
+  [
+   273000,
+   0.3942,
+   44646083,
+   4.4284,
+   5
+  ],
+  [
+   274000,
+   0.3411,
+   44675112,
+   4.4311,
+   5
+  ],
+  [
+   275000,
+   0.3829,
+   44704141,
+   4.4339,
+   5
+  ],
+  [
+   276000,
+   0.3736,
+   44733170,
+   4.4366,
+   5
+  ],
+  [
+   277000,
+   0.3532,
+   44762199,
+   4.4393,
+   5
+  ],
+  [
+   278000,
+   0.3637,
+   44791228,
+   4.4421,
+   5
+  ],
+  [
+   279000,
+   0.3921,
+   44820257,
+   4.4448,
+   5
+  ],
+  [
+   280000,
+   0.3482,
+   44849286,
+   4.4476,
+   5
+  ],
+  [
+   281000,
+   0.4407,
+   44878315,
+   4.4503,
+   5
+  ],
+  [
+   282000,
+   0.3633,
+   44907344,
+   4.4531,
+   5
+  ],
+  [
+   283000,
+   0.4183,
+   44936373,
+   4.4558,
+   5
+  ],
+  [
+   284000,
+   0.3645,
+   44965402,
+   4.4586,
+   5
+  ],
+  [
+   285000,
+   0.392,
+   44994431,
+   4.4613,
+   5
+  ],
+  [
+   286000,
+   0.9606,
+   45023460,
+   4.4641,
+   5
+  ],
+  [
+   287000,
+   0.9136,
+   45052489,
+   4.4668,
+   5
+  ],
+  [
+   288000,
+   0.5218,
+   45081518,
+   4.4696,
+   5
+  ],
+  [
+   289000,
+   0.4352,
+   45110547,
+   4.4723,
+   5
+  ],
+  [
+   290000,
+   0.4405,
+   45139576,
+   4.4751,
+   5
+  ],
+  [
+   291000,
+   0.4464,
+   45168605,
+   4.4778,
+   5
+  ],
+  [
+   292000,
+   0.4688,
+   45197634,
+   4.4805,
+   5
+  ],
+  [
+   293000,
+   0.4047,
+   45226663,
+   4.4833,
+   5
+  ],
+  [
+   294000,
+   0.4298,
+   45255692,
+   4.486,
+   5
+  ],
+  [
+   295000,
+   0.4821,
+   45284721,
+   4.4888,
+   5
+  ],
+  [
+   296000,
+   0.4191,
+   45313750,
+   4.4915,
+   5
+  ],
+  [
+   297000,
+   0.3982,
+   45342779,
+   4.4943,
+   5
+  ],
+  [
+   298000,
+   0.4041,
+   45371808,
+   4.497,
+   5
+  ],
+  [
+   299000,
+   0.4077,
+   45400837,
+   4.4997,
+   5
+  ],
+  [
+   300000,
+   0.4767,
+   45135185,
+   4.4733,
+   6
+  ],
+  [
+   301000,
+   0.3481,
+   45164214,
+   4.476,
+   6
+  ],
+  [
+   302000,
+   0.3609,
+   45193243,
+   4.4788,
+   6
+  ],
+  [
+   303000,
+   0.4087,
+   45222272,
+   4.4815,
+   6
+  ],
+  [
+   304000,
+   0.4287,
+   45251301,
+   4.4843,
+   6
+  ],
+  [
+   305000,
+   0.3797,
+   45280330,
+   4.487,
+   6
+  ],
+  [
+   306000,
+   0.3981,
+   45309359,
+   4.4897,
+   6
+  ],
+  [
+   307000,
+   0.4231,
+   45338388,
+   4.4925,
+   6
+  ],
+  [
+   308000,
+   0.3912,
+   45367417,
+   4.4952,
+   6
+  ],
+  [
+   309000,
+   0.4156,
+   45396446,
+   4.4979,
+   6
+  ],
+  [
+   310000,
+   0.4304,
+   45425475,
+   4.5007,
+   6
+  ],
+  [
+   311000,
+   0.416,
+   45454504,
+   4.5034,
+   6
+  ],
+  [
+   312000,
+   0.4125,
+   45483533,
+   4.5062,
+   6
+  ],
+  [
+   313000,
+   0.4087,
+   45512562,
+   4.5089,
+   6
+  ],
+  [
+   314000,
+   0.4279,
+   45541591,
+   4.5117,
+   6
+  ],
+  [
+   315000,
+   0.4386,
+   45570620,
+   4.5144,
+   6
+  ],
+  [
+   316000,
+   0.3787,
+   45599649,
+   4.5171,
+   6
+  ],
+  [
+   317000,
+   0.4029,
+   45628678,
+   4.5199,
+   6
+  ],
+  [
+   318000,
+   0.4006,
+   45657707,
+   4.5226,
+   6
+  ],
+  [
+   319000,
+   0.4041,
+   45686736,
+   4.5254,
+   6
+  ],
+  [
+   320000,
+   0.4231,
+   45715765,
+   4.5281,
+   6
+  ],
+  [
+   321000,
+   0.4028,
+   45744794,
+   4.5308,
+   6
+  ],
+  [
+   322000,
+   0.4213,
+   45773823,
+   4.5336,
+   6
+  ],
+  [
+   323000,
+   0.4068,
+   45802852,
+   4.5363,
+   6
+  ],
+  [
+   324000,
+   0.4137,
+   45831881,
+   4.539,
+   6
+  ],
+  [
+   325000,
+   0.3968,
+   45860910,
+   4.5418,
+   6
+  ],
+  [
+   326000,
+   0.5533,
+   45889939,
+   4.5445,
+   6
+  ],
+  [
+   327000,
+   0.6872,
+   45918968,
+   4.5472,
+   6
+  ],
+  [
+   328000,
+   0.5114,
+   45947997,
+   4.55,
+   6
+  ],
+  [
+   329000,
+   0.3752,
+   45977026,
+   4.5527,
+   6
+  ],
+  [
+   330000,
+   0.448,
+   45711774,
+   4.5263,
+   7
+  ],
+  [
+   331000,
+   0.3819,
+   45740803,
+   4.5291,
+   7
+  ],
+  [
+   332000,
+   0.4227,
+   45769832,
+   4.5318,
+   7
+  ],
+  [
+   333000,
+   0.4555,
+   45798861,
+   4.5346,
+   7
+  ],
+  [
+   334000,
+   0.4168,
+   45827890,
+   4.5373,
+   7
+  ],
+  [
+   335000,
+   0.467,
+   45856919,
+   4.5401,
+   7
+  ],
+  [
+   336000,
+   0.4348,
+   45885948,
+   4.5428,
+   7
+  ],
+  [
+   337000,
+   0.437,
+   45914977,
+   4.5455,
+   7
+  ],
+  [
+   338000,
+   0.4389,
+   45944006,
+   4.5483,
+   7
+  ],
+  [
+   339000,
+   0.4301,
+   45973035,
+   4.551,
+   7
+  ],
+  [
+   340000,
+   0.4352,
+   46002064,
+   4.5538,
+   7
+  ],
+  [
+   341000,
+   0.4285,
+   46031093,
+   4.5565,
+   7
+  ],
+  [
+   342000,
+   0.4403,
+   46060122,
+   4.5592,
+   7
+  ],
+  [
+   343000,
+   0.417,
+   46089151,
+   4.562,
+   7
+  ],
+  [
+   344000,
+   0.4188,
+   46118180,
+   4.5647,
+   7
+  ],
+  [
+   345000,
+   0.4267,
+   46147209,
+   4.5675,
+   7
+  ],
+  [
+   346000,
+   0.4015,
+   46176238,
+   4.5702,
+   7
+  ],
+  [
+   347000,
+   0.4425,
+   46205267,
+   4.5729,
+   7
+  ],
+  [
+   348000,
+   0.3928,
+   46234296,
+   4.5757,
+   7
+  ],
+  [
+   349000,
+   0.7996,
+   46263325,
+   4.5784,
+   7
+  ],
+  [
+   350000,
+   0.7205,
+   46292354,
+   4.5811,
+   7
+  ],
+  [
+   351000,
+   0.3901,
+   46321383,
+   4.5839,
+   7
+  ],
+  [
+   352000,
+   0.353,
+   46350412,
+   4.5866,
+   7
+  ],
+  [
+   353000,
+   0.3679,
+   46379441,
+   4.5894,
+   7
+  ],
+  [
+   354000,
+   0.3959,
+   46408470,
+   4.5921,
+   7
+  ],
+  [
+   355000,
+   0.3681,
+   46437499,
+   4.5949,
+   7
+  ],
+  [
+   356000,
+   0.4264,
+   46466528,
+   4.5976,
+   7
+  ],
+  [
+   357000,
+   0.4194,
+   46495557,
+   4.6003,
+   7
+  ],
+  [
+   358000,
+   0.4386,
+   46524586,
+   4.6031,
+   7
+  ],
+  [
+   359000,
+   0.4131,
+   46553615,
+   4.6058,
+   7
+  ],
+  [
+   360000,
+   0.6453,
+   46281328,
+   4.5787,
+   5
+  ],
+  [
+   361000,
+   0.3766,
+   46310357,
+   4.5815,
+   5
+  ],
+  [
+   362000,
+   0.3889,
+   46339386,
+   4.5842,
+   5
+  ],
+  [
+   363000,
+   0.642,
+   46368415,
+   4.5869,
+   5
+  ],
+  [
+   364000,
+   0.4913,
+   46397444,
+   4.5897,
+   5
+  ],
+  [
+   365000,
+   0.3665,
+   46426473,
+   4.5924,
+   5
+  ],
+  [
+   366000,
+   0.3966,
+   46455502,
+   4.5951,
+   5
+  ],
+  [
+   367000,
+   0.3621,
+   46484531,
+   4.5979,
+   5
+  ],
+  [
+   368000,
+   0.3831,
+   46513560,
+   4.6006,
+   5
+  ],
+  [
+   369000,
+   0.3784,
+   46542589,
+   4.6033,
+   5
+  ],
+  [
+   370000,
+   0.3787,
+   46571618,
+   4.6061,
+   5
+  ],
+  [
+   371000,
+   0.3998,
+   46600647,
+   4.6088,
+   5
+  ],
+  [
+   372000,
+   0.3753,
+   46629676,
+   4.6115,
+   5
+  ],
+  [
+   373000,
+   0.3955,
+   46658705,
+   4.6142,
+   5
+  ],
+  [
+   374000,
+   0.3699,
+   46687734,
+   4.617,
+   5
+  ],
+  [
+   375000,
+   0.4188,
+   46716763,
+   4.6197,
+   5
+  ],
+  [
+   376000,
+   0.4168,
+   46745792,
+   4.6224,
+   5
+  ],
+  [
+   377000,
+   0.3775,
+   46774821,
+   4.6252,
+   5
+  ],
+  [
+   378000,
+   0.3541,
+   46803850,
+   4.6279,
+   5
+  ],
+  [
+   379000,
+   0.3167,
+   46832879,
+   4.6307,
+   5
+  ],
+  [
+   380000,
+   0.3207,
+   46861908,
+   4.6334,
+   5
+  ],
+  [
+   381000,
+   0.3717,
+   46890937,
+   4.6361,
+   5
+  ],
+  [
+   382000,
+   0.3192,
+   46919966,
+   4.6389,
+   5
+  ],
+  [
+   383000,
+   0.3322,
+   46948995,
+   4.6416,
+   5
+  ],
+  [
+   384000,
+   0.3203,
+   46978024,
+   4.6443,
+   5
+  ],
+  [
+   385000,
+   0.3283,
+   47007053,
+   4.6471,
+   5
+  ],
+  [
+   386000,
+   0.3191,
+   47036082,
+   4.6498,
+   5
+  ],
+  [
+   387000,
+   0.3211,
+   47065111,
+   4.6525,
+   5
+  ],
+  [
+   388000,
+   0.3183,
+   47094140,
+   4.6553,
+   5
+  ],
+  [
+   389000,
+   0.3216,
+   47123169,
+   4.658,
+   5
+  ],
+  [
+   390000,
+   0.3593,
+   46857153,
+   4.6315,
+   6
+  ],
+  [
+   391000,
+   0.3474,
+   46886182,
+   4.6343,
+   6
+  ],
+  [
+   392000,
+   0.602,
+   46915211,
+   4.637,
+   6
+  ],
+  [
+   393000,
+   0.4439,
+   46944240,
+   4.6397,
+   6
+  ],
+  [
+   394000,
+   0.3452,
+   46973269,
+   4.6425,
+   6
+  ],
+  [
+   395000,
+   0.3379,
+   47002298,
+   4.6452,
+   6
+  ],
+  [
+   396000,
+   0.3416,
+   47031327,
+   4.648,
+   6
+  ],
+  [
+   397000,
+   0.335,
+   47060356,
+   4.6507,
+   6
+  ],
+  [
+   398000,
+   0.3433,
+   47089385,
+   4.6534,
+   6
+  ],
+  [
+   399000,
+   0.3373,
+   47118414,
+   4.6561,
+   6
+  ],
+  [
+   400000,
+   0.3323,
+   47147443,
+   4.6589,
+   6
+  ],
+  [
+   401000,
+   0.2998,
+   47176472,
+   4.6616,
+   6
+  ],
+  [
+   402000,
+   0.3145,
+   47205501,
+   4.6643,
+   6
+  ],
+  [
+   403000,
+   0.3179,
+   47234530,
+   4.6671,
+   6
+  ],
+  [
+   404000,
+   0.2974,
+   47263559,
+   4.6698,
+   6
+  ],
+  [
+   405000,
+   0.2969,
+   47292588,
+   4.6725,
+   6
+  ],
+  [
+   406000,
+   0.3075,
+   47321617,
+   4.6752,
+   6
+  ],
+  [
+   407000,
+   0.3114,
+   47350646,
+   4.6779,
+   6
+  ],
+  [
+   408000,
+   0.3138,
+   47379675,
+   4.6807,
+   6
+  ],
+  [
+   409000,
+   0.3429,
+   47408704,
+   4.6834,
+   6
+  ],
+  [
+   410000,
+   0.3297,
+   47437733,
+   4.6861,
+   6
+  ],
+  [
+   411000,
+   0.3751,
+   47466762,
+   4.6889,
+   6
+  ],
+  [
+   412000,
+   0.323,
+   47495791,
+   4.6916,
+   6
+  ],
+  [
+   413000,
+   0.3362,
+   47524820,
+   4.6943,
+   6
+  ],
+  [
+   414000,
+   0.3335,
+   47553849,
+   4.697,
+   6
+  ],
+  [
+   415000,
+   0.3301,
+   47582878,
+   4.6998,
+   6
+  ],
+  [
+   416000,
+   0.4258,
+   47611907,
+   4.7025,
+   6
+  ],
+  [
+   417000,
+   0.3547,
+   47640936,
+   4.7052,
+   6
+  ],
+  [
+   418000,
+   0.3541,
+   47669965,
+   4.7079,
+   6
+  ],
+  [
+   419000,
+   0.3239,
+   47698994,
+   4.7106,
+   6
+  ],
+  [
+   420000,
+   0.371,
+   47432858,
+   4.6842,
+   7
+  ],
+  [
+   421000,
+   0.3356,
+   47461887,
+   4.6869,
+   7
+  ],
+  [
+   422000,
+   0.3521,
+   47490916,
+   4.6896,
+   7
+  ],
+  [
+   423000,
+   0.4191,
+   47519945,
+   4.6924,
+   7
+  ],
+  [
+   424000,
+   0.3563,
+   47548974,
+   4.6951,
+   7
+  ],
+  [
+   425000,
+   0.3476,
+   47578003,
+   4.6978,
+   7
+  ],
+  [
+   426000,
+   0.3508,
+   47607032,
+   4.7006,
+   7
+  ],
+  [
+   427000,
+   0.3535,
+   47636061,
+   4.7033,
+   7
+  ],
+  [
+   428000,
+   0.3461,
+   47665090,
+   4.706,
+   7
+  ],
+  [
+   429000,
+   0.3602,
+   47694119,
+   4.7087,
+   7
+  ],
+  [
+   430000,
+   0.3658,
+   47723148,
+   4.7115,
+   7
+  ],
+  [
+   431000,
+   0.3444,
+   47752177,
+   4.7142,
+   7
+  ],
+  [
+   432000,
+   0.3625,
+   47781206,
+   4.7169,
+   7
+  ],
+  [
+   433000,
+   0.3569,
+   47810235,
+   4.7197,
+   7
+  ],
+  [
+   434000,
+   0.3594,
+   47839264,
+   4.7224,
+   7
+  ],
+  [
+   435000,
+   0.3631,
+   47868293,
+   4.7251,
+   7
+  ],
+  [
+   436000,
+   0.3605,
+   47897322,
+   4.7278,
+   7
+  ],
+  [
+   437000,
+   0.3549,
+   47926351,
+   4.7305,
+   7
+  ],
+  [
+   438000,
+   0.3535,
+   47955380,
+   4.7333,
+   7
+  ],
+  [
+   439000,
+   0.3585,
+   47984409,
+   4.736,
+   7
+  ],
+  [
+   440000,
+   0.3614,
+   48013438,
+   4.7387,
+   7
+  ],
+  [
+   441000,
+   0.3585,
+   48042467,
+   4.7415,
+   7
+  ],
+  [
+   442000,
+   0.4021,
+   48071496,
+   4.7442,
+   7
+  ],
+  [
+   443000,
+   0.358,
+   48100525,
+   4.7469,
+   7
+  ],
+  [
+   444000,
+   0.3981,
+   48129554,
+   4.7496,
+   7
+  ],
+  [
+   445000,
+   0.3688,
+   48158583,
+   4.7524,
+   7
+  ],
+  [
+   446000,
+   0.3667,
+   48187612,
+   4.7551,
+   7
+  ],
+  [
+   447000,
+   0.3543,
+   48216641,
+   4.7578,
+   7
+  ],
+  [
+   448000,
+   0.3748,
+   48245670,
+   4.7605,
+   7
+  ],
+  [
+   449000,
+   0.3536,
+   48274699,
+   4.7633,
+   7
+  ],
+  [
+   450000,
+   0.4125,
+   48007707,
+   4.7368,
+   8
+  ],
+  [
+   451000,
+   0.3383,
+   48036736,
+   4.7395,
+   8
+  ],
+  [
+   452000,
+   0.3453,
+   48065765,
+   4.7422,
+   8
+  ],
+  [
+   453000,
+   0.3324,
+   48094794,
+   4.745,
+   8
+  ],
+  [
+   454000,
+   0.3389,
+   48123823,
+   4.7477,
+   8
+  ],
+  [
+   455000,
+   0.3287,
+   48152852,
+   4.7504,
+   8
+  ],
+  [
+   456000,
+   0.336,
+   48181881,
+   4.7532,
+   8
+  ],
+  [
+   457000,
+   0.3268,
+   48210910,
+   4.7559,
+   8
+  ],
+  [
+   458000,
+   0.3251,
+   48239939,
+   4.7586,
+   8
+  ],
+  [
+   459000,
+   0.3605,
+   48268968,
+   4.7613,
+   8
+  ],
+  [
+   460000,
+   0.3589,
+   48297997,
+   4.764,
+   8
+  ],
+  [
+   461000,
+   0.3619,
+   48327026,
+   4.7668,
+   8
+  ],
+  [
+   462000,
+   0.3578,
+   48356055,
+   4.7695,
+   8
+  ],
+  [
+   463000,
+   0.3751,
+   48385084,
+   4.7722,
+   8
+  ],
+  [
+   464000,
+   0.3607,
+   48414113,
+   4.7749,
+   8
+  ],
+  [
+   465000,
+   0.3597,
+   48443142,
+   4.7777,
+   8
+  ],
+  [
+   466000,
+   0.3641,
+   48472171,
+   4.7804,
+   8
+  ],
+  [
+   467000,
+   0.4392,
+   48501200,
+   4.7831,
+   8
+  ],
+  [
+   468000,
+   0.3581,
+   48530229,
+   4.7859,
+   8
+  ],
+  [
+   469000,
+   0.3723,
+   48559258,
+   4.7886,
+   8
+  ],
+  [
+   470000,
+   0.3556,
+   48588287,
+   4.7913,
+   8
+  ],
+  [
+   471000,
+   0.3719,
+   48617316,
+   4.794,
+   8
+  ],
+  [
+   472000,
+   0.3539,
+   48646345,
+   4.7968,
+   8
+  ],
+  [
+   473000,
+   0.3687,
+   48675374,
+   4.7995,
+   8
+  ],
+  [
+   474000,
+   0.3541,
+   48704403,
+   4.8022,
+   8
+  ],
+  [
+   475000,
+   0.3484,
+   48733432,
+   4.8049,
+   8
+  ],
+  [
+   476000,
+   0.3528,
+   48762461,
+   4.8076,
+   8
+  ],
+  [
+   477000,
+   0.3513,
+   48791490,
+   4.8103,
+   8
+  ],
+  [
+   478000,
+   0.3572,
+   48820519,
+   4.8131,
+   8
+  ],
+  [
+   479000,
+   0.3496,
+   48849548,
+   4.8158,
+   8
+  ],
+  [
+   480000,
+   0.9719,
+   48525727,
+   4.7837,
+   3
+  ],
+  [
+   481000,
+   2.5104,
+   48554756,
+   4.7864,
+   3
+  ],
+  [
+   482000,
+   1.5921,
+   48583785,
+   4.7892,
+   3
+  ],
+  [
+   483000,
+   0.4435,
+   48612814,
+   4.7919,
+   3
+  ],
+  [
+   484000,
+   0.8714,
+   48641843,
+   4.7946,
+   3
+  ],
+  [
+   485000,
+   0.4083,
+   48670872,
+   4.7974,
+   3
+  ],
+  [
+   486000,
+   0.3789,
+   48699901,
+   4.8001,
+   3
+  ],
+  [
+   487000,
+   1.0235,
+   48728930,
+   4.8028,
+   3
+  ],
+  [
+   488000,
+   0.9751,
+   48757959,
+   4.8055,
+   3
+  ],
+  [
+   489000,
+   0.3237,
+   48786988,
+   4.8082,
+   3
+  ],
+  [
+   490000,
+   0.3841,
+   48816017,
+   4.8109,
+   3
+  ],
+  [
+   491000,
+   0.3431,
+   48845046,
+   4.8136,
+   3
+  ],
+  [
+   492000,
+   0.793,
+   48874075,
+   4.8164,
+   3
+  ],
+  [
+   493000,
+   0.3317,
+   48903104,
+   4.8191,
+   3
+  ],
+  [
+   494000,
+   0.4227,
+   48932133,
+   4.8218,
+   3
+  ],
+  [
+   495000,
+   0.3981,
+   48961162,
+   4.8245,
+   3
+  ],
+  [
+   496000,
+   0.3592,
+   48990191,
+   4.8272,
+   3
+  ],
+  [
+   497000,
+   0.4118,
+   49019220,
+   4.8299,
+   3
+  ],
+  [
+   498000,
+   0.3354,
+   49048249,
+   4.8327,
+   3
+  ],
+  [
+   499000,
+   0.4087,
+   49077278,
+   4.8354,
+   3
+  ],
+  [
+   500000,
+   0.3329,
+   49106307,
+   4.8381,
+   3
+  ]
+ ],
+ "events": [
+  {
+   "kind": "seal",
+   "after_op": 30000,
+   "run": {
+    "run": 1,
+    "tier": 0,
+    "keys": 23982,
+    "adr_bytes": 95456,
+    "log_bytes": 479640,
+    "build_s": 0.03152620000037132
+   },
+   "merges": [],
+   "pause_s": 0.03841459999966901,
+   "levels": 3,
+   "bytes_before": 40269968,
+   "bytes_after": 39974209,
+   "live": 10009068,
+   "wall_s": 0.03987380000035046,
+   "witness_errors": 0
+  },
+  {
+   "kind": "seal",
+   "after_op": 60000,
+   "run": {
+    "run": 2,
+    "tier": 0,
+    "keys": 23975,
+    "adr_bytes": 95264,
+    "log_bytes": 479500,
+    "build_s": 0.029760299999907147
+   },
+   "merges": [],
+   "pause_s": 0.03652219999639783,
+   "levels": 4,
+   "bytes_before": 40845079,
+   "bytes_after": 40548981,
+   "live": 10018018,
+   "wall_s": 0.03803630000038538,
+   "witness_errors": 0
+  },
+  {
+   "kind": "seal",
+   "after_op": 90000,
+   "run": {
+    "run": 3,
+    "tier": 0,
+    "keys": 23909,
+    "adr_bytes": 94944,
+    "log_bytes": 478180,
+    "build_s": 0.03222459999960847
+   },
+   "merges": [],
+   "pause_s": 0.039150999997218605,
+   "levels": 5,
+   "bytes_before": 41419851,
+   "bytes_after": 41122113,
+   "live": 10026905,
+   "wall_s": 0.04065209999680519,
+   "witness_errors": 0
+  },
+  {
+   "kind": "seal",
+   "after_op": 120000,
+   "run": {
+    "run": 4,
+    "tier": 0,
+    "keys": 23951,
+    "adr_bytes": 95200,
+    "log_bytes": 479020,
+    "build_s": 0.0334316000007675
+   },
+   "merges": [
+    {
+     "tier": 1,
+     "inputs": 4,
+     "keys": 95667,
+     "read_bytes": 1916340,
+     "written_bytes": 2291100,
+     "s": 0.11077059999661287
+    }
+   ],
+   "pause_s": 0.15229589999944437,
+   "levels": 3,
+   "bytes_before": 41992983,
+   "bytes_after": 41690216,
+   "live": 10035805,
+   "wall_s": 0.15415249999932712,
+   "witness_errors": 0
+  },
+  {
+   "kind": "seal",
+   "after_op": 150000,
+   "run": {
+    "run": 6,
+    "tier": 0,
+    "keys": 23936,
+    "adr_bytes": 95136,
+    "log_bytes": 478720,
+    "build_s": 0.03177779999532504
+   },
+   "merges": [],
+   "pause_s": 0.03901900000346359,
+   "levels": 4,
+   "bytes_before": 42561086,
+   "bytes_after": 42264080,
+   "live": 10044597,
+   "wall_s": 0.040452200002619065,
+   "witness_errors": 0
+  },
+  {
+   "kind": "seal",
+   "after_op": 180000,
+   "run": {
+    "run": 7,
+    "tier": 0,
+    "keys": 24014,
+    "adr_bytes": 95584,
+    "log_bytes": 480280,
+    "build_s": 0.03148920000239741
+   },
+   "merges": [],
+   "pause_s": 0.03844989999925019,
+   "levels": 5,
+   "bytes_before": 43134950,
+   "bytes_after": 42839952,
+   "live": 10053722,
+   "wall_s": 0.040002100002311636,
+   "witness_errors": 0
+  },
+  {
+   "kind": "seal",
+   "after_op": 210000,
+   "run": {
+    "run": 8,
+    "tier": 0,
+    "keys": 24002,
+    "adr_bytes": 95456,
+    "log_bytes": 480040,
+    "build_s": 0.03685379999660654
+   },
+   "merges": [],
+   "pause_s": 0.043819800004712306,
+   "levels": 6,
+   "bytes_before": 43710822,
+   "bytes_after": 43415456,
+   "live": 10062926,
+   "wall_s": 0.04547889999957988,
+   "witness_errors": 0
+  },
+  {
+   "kind": "seal",
+   "after_op": 240000,
+   "run": {
+    "run": 9,
+    "tier": 0,
+    "keys": 23894,
+    "adr_bytes": 94944,
+    "log_bytes": 477880,
+    "build_s": 0.03085060000012163
+   },
+   "merges": [
+    {
+     "tier": 1,
+     "inputs": 4,
+     "keys": 95719,
+     "read_bytes": 1916920,
+     "written_bytes": 2292396,
+     "s": 0.10530060000019148
+    }
+   ],
+   "pause_s": 0.1442583000025479,
+   "levels": 4,
+   "bytes_before": 44286326,
+   "bytes_after": 43982622,
+   "live": 10071709,
+   "wall_s": 0.1461741000020993,
+   "witness_errors": 0
+  },
+  {
+   "kind": "seal",
+   "after_op": 270000,
+   "run": {
+    "run": 11,
+    "tier": 0,
+    "keys": 24039,
+    "adr_bytes": 95584,
+    "log_bytes": 480780,
+    "build_s": 0.030791999997745734
+   },
+   "merges": [],
+   "pause_s": 0.03762289999576751,
+   "levels": 5,
+   "bytes_before": 44853492,
+   "bytes_after": 44558996,
+   "live": 10080876,
+   "wall_s": 0.03912659999332391,
+   "witness_errors": 0
+  },
+  {
+   "kind": "seal",
+   "after_op": 300000,
+   "run": {
+    "run": 12,
+    "tier": 0,
+    "keys": 24033,
+    "adr_bytes": 95520,
+    "log_bytes": 480660,
+    "build_s": 0.03610260000277776
+   },
+   "merges": [],
+   "pause_s": 0.04432880000240402,
+   "levels": 6,
+   "bytes_before": 45429866,
+   "bytes_after": 45135185,
+   "live": 10089897,
+   "wall_s": 0.04596119999769144,
+   "witness_errors": 0
+  },
+  {
+   "kind": "seal",
+   "after_op": 330000,
+   "run": {
+    "run": 13,
+    "tier": 0,
+    "keys": 24053,
+    "adr_bytes": 95520,
+    "log_bytes": 481060,
+    "build_s": 0.031986900001356844
+   },
+   "merges": [],
+   "pause_s": 0.039303199999267235,
+   "levels": 7,
+   "bytes_before": 46006055,
+   "bytes_after": 45711774,
+   "live": 10099068,
+   "wall_s": 0.04108119999727933,
+   "witness_errors": 0
+  },
+  {
+   "kind": "seal",
+   "after_op": 360000,
+   "run": {
+    "run": 14,
+    "tier": 0,
+    "keys": 23988,
+    "adr_bytes": 95200,
+    "log_bytes": 479760,
+    "build_s": 0.04231169999548001
+   },
+   "merges": [
+    {
+     "tier": 1,
+     "inputs": 4,
+     "keys": 95986,
+     "read_bytes": 1922260,
+     "written_bytes": 2298696,
+     "s": 0.10868160000245553
+    }
+   ],
+   "pause_s": 0.15959529999963706,
+   "levels": 5,
+   "bytes_before": 46582644,
+   "bytes_after": 46281328,
+   "live": 10107949,
+   "wall_s": 0.1621642999962205,
+   "witness_errors": 0
+  },
+  {
+   "kind": "seal",
+   "after_op": 390000,
+   "run": {
+    "run": 16,
+    "tier": 0,
+    "keys": 24018,
+    "adr_bytes": 95456,
+    "log_bytes": 480360,
+    "build_s": 0.031101300002774224
+   },
+   "merges": [],
+   "pause_s": 0.037914699998509604,
+   "levels": 6,
+   "bytes_before": 47152198,
+   "bytes_after": 46857153,
+   "live": 10116952,
+   "wall_s": 0.03983729999890784,
+   "witness_errors": 0
+  },
+  {
+   "kind": "seal",
+   "after_op": 420000,
+   "run": {
+    "run": 17,
+    "tier": 0,
+    "keys": 24012,
+    "adr_bytes": 95456,
+    "log_bytes": 480240,
+    "build_s": 0.03254980000201613
+   },
+   "merges": [],
+   "pause_s": 0.03975390000414336,
+   "levels": 7,
+   "bytes_before": 47728023,
+   "bytes_after": 47432858,
+   "live": 10126157,
+   "wall_s": 0.041451899996900465,
+   "witness_errors": 0
+  },
+  {
+   "kind": "seal",
+   "after_op": 450000,
+   "run": {
+    "run": 18,
+    "tier": 0,
+    "keys": 23982,
+    "adr_bytes": 95200,
+    "log_bytes": 479640,
+    "build_s": 0.031133599994063843
+   },
+   "merges": [],
+   "pause_s": 0.038490300001285505,
+   "levels": 8,
+   "bytes_before": 48303728,
+   "bytes_after": 48007707,
+   "live": 10135070,
+   "wall_s": 0.04015580000123009,
+   "witness_errors": 0
+  },
+  {
+   "kind": "seal",
+   "after_op": 480000,
+   "run": {
+    "run": 19,
+    "tier": 0,
+    "keys": 23930,
+    "adr_bytes": 95072,
+    "log_bytes": 478600,
+    "build_s": 0.03436340000189375
+   },
+   "merges": [
+    {
+     "tier": 1,
+     "inputs": 4,
+     "keys": 95810,
+     "read_bytes": 1918840,
+     "written_bytes": 2294472,
+     "s": 0.10931709999567829
+    },
+    {
+     "tier": 2,
+     "inputs": 4,
+     "keys": 381196,
+     "read_bytes": 7663640,
+     "written_bytes": 9126608,
+     "s": 0.4461239000011119
+    }
+   ],
+   "pause_s": 0.6061206000013044,
+   "levels": 3,
+   "bytes_before": 48878577,
+   "bytes_after": 48525727,
+   "live": 10143923,
+   "wall_s": 0.6082265000004554,
+   "witness_errors": 0
+  }
+ ],
+ "vacuum": {},
+ "witness_errors": 0,
+ "s3_batch_violations": [],
+ "reopen_s": 0.019839100001263432,
+ "open_probe": {
+  "connect_ms": {
+   "p50": 27.30580000206828,
+   "p95": 131.49060000432655,
+   "p99": 139.9048399995081,
+   "mean": 37.87674285628046,
+   "n": 21
+  },
+  "open_ms": {
+   "p50": 10.91650000307709,
+   "p95": 11.396100002457388,
+   "p99": 11.560980000649579,
+   "mean": 11.009052381615177,
+   "n": 21
+  },
+  "first_answer_ms": {
+   "p50": 26.951599997119047,
+   "p95": 135.64979999500792,
+   "p99": 147.46284000284504,
+   "mean": 47.53866666613335,
+   "n": 21
+  },
+  "found": {
+   "p50": 1.0,
+   "p95": 1.0,
+   "p99": 1.0,
+   "mean": 1.0,
+   "n": 21
+  },
+  "levels": {
+   "p50": 3.0,
+   "p95": 3.0,
+   "p99": 3.0,
+   "mean": 3.0,
+   "n": 21
+  },
+  "tail_records": {
+   "p50": 20020.0,
+   "p95": 20020.0,
+   "p99": 20020.0,
+   "mean": 20020.0,
+   "n": 21
+  }
+ },
+ "final_major": {
+  "kind": "major",
+  "after_op": 500000,
+  "keys": 10150000,
+  "base_bytes": 39989792,
+  "read_bytes": 6411927552,
+  "read_s": 13.57582530000218,
+  "build_s": 4.912349400001403,
+  "pause_s": 18.488175200000114
+ },
+ "ops_time_s": {
+  "a4_n10": 178.6158954999555,
+  "c4_n10": 155.4315623000366
+ },
+ "maintenance_s": 1.562826799985487,
+ "vacuum_s": {
+  "a4_n10": 26.11547960000462,
+  "c4_n10": 51.57272830000147
+ },
+ "errors": {
+  "a4_n10": 0,
+  "c4_n10": 0
+ },
+ "full_cost_us_per_op": {
+  "a4_n10": 412.58840379989124,
+  "c4_n10": 414.00858120007615
+ },
+ "pauses": {
+  "count": 16,
+  "sum_s": 1.562826799985487,
+  "max_s": 0.6082265000004554,
+  "share": 0.007575718491319843
+ },
+ "batch_time_s": {
+  "p50": 0.3326,
+  "p95": 0.5163849999999998,
+  "max": 2.5104
+ },
+ "peak_rss_mb": 0.0,
+ "peak_coexist_bytes": 89096099
+}

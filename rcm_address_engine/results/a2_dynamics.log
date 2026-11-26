@@ -1,0 +1,45 @@
+02:13:59 dynamics: setup
+02:14:01 load dyn_a
+a2_gen: 1000000 records, copies 0..7, span 12797350389000 us
+02:14:40 load dyn_c
+a2_gen: 1000000 records, copies 0..7, span 12797350389000 us
+02:15:27 load dyn_b_src
+a2_gen: 1000000 records, copies 0..7, span 12797350389000 us
+02:17:42 checkpoint 0 base 0 {'dyn_a': ({'live': 0, 'deleted': 0, 'absent': 0}, 3.0, 3.574), 'dyn_b': ({'live': 0, 'deleted': 0, 'absent': 0}, 4.245, 0.283), 'dyn_c': ({'live': 0, 'deleted': 0, 'absent': 0}, 4.0, 31.564)}
+02:18:32 ops 50000 {'dyn_a': 16.7, 'dyn_b': 19.8, 'dyn_c': 11.4}
+02:19:24 ops 100000 {'dyn_a': 32.7, 'dyn_b': 41.2, 'dyn_c': 23.4}
+02:20:33 checkpoint 1 before_reseal 120000 {'dyn_a': ({'live': 0, 'deleted': 0, 'absent': 0}, 4.019, 7.587), 'dyn_b': ({'live': 0, 'deleted': 0, 'absent': 0}, 4.427, 4.418), 'dyn_c': ({'live': 0, 'deleted': 0, 'absent': 0}, 4.013, 32.371)}
+02:20:38 reseal dyn_a {'gen': 2, 'total_s': 4.299348399999872, 'read_bytes': 678100992, 'written_bytes': 3701664}
+02:21:04 reseal dyn_b {'gen': 2, 'total_s': 26.506852799997432, 'read_bytes': 682893312, 'written_bytes': 652260204}
+02:21:46 checkpoint 2 after_reseal 120000 {'dyn_a': ({'live': 0, 'deleted': 0, 'absent': 0}, 3.0, 3.574), 'dyn_b': ({'live': 0, 'deleted': 0, 'absent': 0}, 4.301, 0.274), 'dyn_c': ({'live': 0, 'deleted': 0, 'absent': 0}, 4.0, 32.371)}
+02:22:17 ops 150000 {'dyn_a': 49.2, 'dyn_b': 62.0, 'dyn_c': 35.8}
+02:23:10 ops 200000 {'dyn_a': 65.4, 'dyn_b': 83.3, 'dyn_c': 48.5}
+02:24:10 vacuum after 240000
+02:24:52 checkpoint 3 before_reseal 240000 {'dyn_a': ({'live': 0, 'deleted': 0, 'absent': 0}, 4.0, 7.299), 'dyn_b': ({'live': 0, 'deleted': 0, 'absent': 0}, 4.842, 4.11), 'dyn_c': ({'live': 0, 'deleted': 0, 'absent': 0}, 4.0, 51.329)}
+02:24:54 reseal dyn_a {'gen': 3, 'total_s': 2.57902280000053, 'read_bytes': 724541440, 'written_bytes': 3829664}
+02:25:28 reseal dyn_b {'gen': 3, 'total_s': 34.0102724999997, 'read_bytes': 705765376, 'written_bytes': 674845328}
+02:26:09 checkpoint 4 after_reseal 240000 {'dyn_a': ({'live': 0, 'deleted': 0, 'absent': 0}, 3.0, 3.574), 'dyn_b': ({'live': 0, 'deleted': 0, 'absent': 0}, 4.329, 0.265), 'dyn_c': ({'live': 0, 'deleted': 0, 'absent': 0}, 4.0, 51.329)}
+02:26:20 ops 250000 {'dyn_a': 82.2, 'dyn_b': 104.4, 'dyn_c': 61.6}
+02:27:19 ops 300000 {'dyn_a': 101.6, 'dyn_b': 126.1, 'dyn_c': 75.6}
+02:28:16 ops 350000 {'dyn_a': 120.2, 'dyn_b': 146.4, 'dyn_c': 89.9}
+02:29:13 checkpoint 5 before_reseal 360000 {'dyn_a': ({'live': 0, 'deleted': 0, 'absent': 0}, 4.004, 7.205), 'dyn_b': ({'live': 0, 'deleted': 0, 'absent': 0}, 5.021, 4.027), 'dyn_c': ({'live': 0, 'deleted': 0, 'absent': 0}, 4.0, 53.901)}
+02:29:21 reseal dyn_a {'gen': 4, 'total_s': 8.077476899998146, 'read_bytes': 725868544, 'written_bytes': 3959200}
+02:29:51 reseal dyn_b {'gen': 4, 'total_s': 29.773760199997923, 'read_bytes': 728571904, 'written_bytes': 697684724}
+02:30:33 checkpoint 6 after_reseal 360000 {'dyn_a': ({'live': 0, 'deleted': 0, 'absent': 0}, 3.0, 3.574), 'dyn_b': ({'live': 0, 'deleted': 0, 'absent': 0}, 4.391, 0.256), 'dyn_c': ({'live': 0, 'deleted': 0, 'absent': 0}, 4.003, 53.901)}
+02:31:16 ops 400000 {'dyn_a': 137.2, 'dyn_b': 167.7, 'dyn_c': 102.2}
+02:32:10 ops 450000 {'dyn_a': 153.1, 'dyn_b': 189.7, 'dyn_c': 114.7}
+02:33:03 vacuum after 480000
+02:33:42 checkpoint 7 before_reseal 480000 {'dyn_a': ({'live': 0, 'deleted': 0, 'absent': 0}, 4.0, 7.228), 'dyn_b': ({'live': 0, 'deleted': 0, 'absent': 0}, 5.122, 4.022), 'dyn_c': ({'live': 0, 'deleted': 0, 'absent': 0}, 4.0, 55.078)}
+02:33:45 reseal dyn_a {'gen': 5, 'total_s': 2.754002900001069, 'read_bytes': 770973696, 'written_bytes': 4087008}
+02:34:20 reseal dyn_b {'gen': 5, 'total_s': 35.204572099999496, 'read_bytes': 751509504, 'written_bytes': 720353008}
+02:35:02 checkpoint 8 after_reseal 480000 {'dyn_a': ({'live': 0, 'deleted': 0, 'absent': 0}, 3.0, 3.573), 'dyn_b': ({'live': 0, 'deleted': 0, 'absent': 0}, 4.421, 0.249), 'dyn_c': ({'live': 0, 'deleted': 0, 'absent': 0}, 4.0, 55.078)}
+02:36:04 checkpoint 9 before_reseal 500000 {'dyn_a': ({'live': 0, 'deleted': 0, 'absent': 0}, 3.0, 4.088), 'dyn_b': ({'live': 0, 'deleted': 0, 'absent': 0}, 4.383, 0.782), 'dyn_c': ({'live': 0, 'deleted': 0, 'absent': 0}, 4.0, 54.787)}
+02:36:06 reseal dyn_a {'gen': 6, 'total_s': 2.6817790000022796, 'read_bytes': 770973696, 'written_bytes': 4108896}
+02:36:40 reseal dyn_b {'gen': 6, 'total_s': 34.15040550000049, 'read_bytes': 729686016, 'written_bytes': 724227084}
+02:37:20 checkpoint 10 after_reseal 500000 {'dyn_a': ({'live': 0, 'deleted': 0, 'absent': 0}, 3.0, 3.573), 'dyn_b': ({'live': 0, 'deleted': 0, 'absent': 0}, 4.414, 0.247), 'dyn_c': ({'live': 0, 'deleted': 0, 'absent': 0}, 4.0, 54.787)}
+02:37:20 ops 500000 {'dyn_a': 169.7, 'dyn_b': 211.0, 'dyn_c': 128.6}
+02:37:20 restart
+02:37:58 checkpoint 11 after_restart 500000 {'dyn_a': ({'live': 0, 'deleted': 0, 'absent': 0}, 3.0, 3.573), 'dyn_b': ({'live': 0, 'deleted': 0, 'absent': 0}, 4.438, 0.247), 'dyn_c': ({'live': 0, 'deleted': 0, 'absent': 0}, 4.0, 54.787)}
+02:37:58 scenarios
+a2_gen: 10000 records, copies 0..0, span 12797350389000 us
+02:38:11 dynamics done {'dyn_a': 0, 'dyn_b': 0, 'dyn_c': 0}

@@ -1,0 +1,38 @@
+18:12:07 offline True {'e': True, 'f2': True, 'm': True, 'n': True, 'o': True, 'p': True, 'r': True, 'b': True, 'g': True, 'i': True, 'z': True}
+a2_gen: 10000 records, copies 0..0, span 12797350389000 us
+18:12:26 scenarios ok-run: True [] None
+a2_gen: 10000 records, copies 0..0, span 12797350389000 us
+18:12:44 mutant a caught by its witness None
+a2_gen: 10000 records, copies 0..0, span 12797350389000 us
+18:13:03 mutant b caught by its witness None
+a2_gen: 10000 records, copies 0..0, span 12797350389000 us
+18:13:21 mutant c caught by its witness None
+a2_gen: 10000 records, copies 0..0, span 12797350389000 us
+18:13:39 mutant d caught by its witness None
+a2_gen: 10000 records, copies 0..0, span 12797350389000 us
+18:13:58 mutant e caught by its witness None
+a2_gen: 10000 records, copies 0..0, span 12797350389000 us
+18:14:17 mutant f2 caught by its witness None
+a2_gen: 10000 records, copies 0..0, span 12797350389000 us
+18:14:35 mutant g caught by its witness None
+a2_gen: 10000 records, copies 0..0, span 12797350389000 us
+18:14:54 mutant z caught by its witness None
+a2_gen: 10000 records, copies 0..0, span 12797350389000 us
+18:15:12 mutant i caught by its witness None
+a2_gen: 10000 records, copies 0..0, span 12797350389000 us
+18:15:30 mutant k not caught None
+a2_gen: 10000 records, copies 0..0, span 12797350389000 us
+18:15:49 mutant k2 caught by its witness None
+a2_gen: 10000 records, copies 0..0, span 12797350389000 us
+18:16:07 mutant l caught by its witness None
+a2_gen: 10000 records, copies 0..0, span 12797350389000 us
+18:16:24 mutant m caught by its witness None
+a2_gen: 10000 records, copies 0..0, span 12797350389000 us
+18:16:36 mutant n caught by its witness {'type': 'CheckViolation', 'msg': 'new row for relation "a6_scn_p6" violates partition constraint\nDETAIL:  Failing row contains (10001, 7da61808-f808-5ad9-85aa-feea02cdee11, 1, {"claim":{"confidence_q":12,"modality":"asserted","predicate":"O...).', 'after': 'R2: wrong-partition INSERT and UPDATE of k leaving the leaf are rejected'}
+a2_gen: 10000 records, copies 0..0, span 12797350389000 us
+18:16:54 mutant o caught by its witness None
+a2_gen: 10000 records, copies 0..0, span 12797350389000 us
+18:17:12 mutant p caught by its witness None
+a2_gen: 10000 records, copies 0..0, span 12797350389000 us
+18:17:30 mutant r caught by its witness {'type': 'ValueError', 'msg': 'round step 9 out of range 0..8', 'after': 'restart: every live key after the resumed round'}
+18:17:30 selfcheck all_ok True

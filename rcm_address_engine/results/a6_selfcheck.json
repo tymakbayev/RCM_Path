@@ -1,0 +1,932 @@
+{
+ "impl_sha256": {
+  "a6_lsm.py": "22cac7f0f9df13087b586edf0ef891a91f6c91bdbd9d04ddc4affa97d0cc2b3c",
+  "a6_run.py": "6effa8acef758757e6c0525f6046a0fea182a06e40565a685a360b93381c2188",
+  "a6_pghash.py": "fb56864bcd49fc136dbbd980933b980b4936cde40655e56310ffbf4915dedc0b",
+  "a6_selftest_lsm.py": "bebfa88eefdcd21fb3ba731eca22c72ec56f2c7afc320e0fd345f7c27e42832a",
+  "a5_lsm.py": "114238664ef2837d538ba46f2587b7c77bcca741241c913cbecda55fde62a7eb",
+  "a5_run.py": "950b623148bd6d0f1764f7b79f048bc444779008723bcee114c117f5d7d305d9",
+  "a4_lsm.py": "322da95ceb0403ce82cd14880d2d41722e74a09854530e6a04c8a51d42f8c870",
+  "a4_run.py": "b638699acf91f4ece87525869fb23e9614f60849cf2ce5c9704e35656b5276c2",
+  "a2_core.py": "2bb07e0a4fb9ed478f68a4e4ffabf9decea7cb15bd7f5c3587941d1e5151e3cd",
+  "a2_pg.py": "f992dda35ff0a13eb8822882de5db6ec7addfa68ba026ec2eb02cd73a8845c7c",
+  "a2_dyn.py": "b27fd166cdf6639c2f7a15fe7bece551d5cc1ea0a0e2128b385d3566408160f7",
+  "a2_runs.py": "274a9483701b394618de182038a5a102b5a4dad249c08a3c8dced28df69af658",
+  "a2_gen.py": "ec252c44752f9776eac3058aebc54398dd19a4f27718e0e6e4d27975512e6381",
+  "a2_selftest_core.py": "32761bf3a86a9dea494af752e83cb2ecb589702ca25611e959f2759122141c88",
+  "a2.py": "3992d0e242c50d649904c84bce6775fb53ca4265c8a62e112b2e18ae23a1abf5"
+ },
+ "core_selftest": {
+  "exit": 0,
+  "tail": "ALL OK"
+ },
+ "pghash_selftest": {
+  "n": 20000,
+  "bad_uuid_hash_extended": 0,
+  "bad_numpy_vs_scalar": 0,
+  "bad_routing_S8": 0,
+  "wrong_partition_rejected_S8": "CheckViolation",
+  "bad_routing_S128": 0,
+  "wrong_partition_rejected_S128": "CheckViolation"
+ },
+ "offline_ok": {
+  "mutant": null,
+  "ok": true,
+  "bad_sampled": 0,
+  "bad_final": 0,
+  "rounds": 11,
+  "merges": 20,
+  "checks": 240,
+  "restarts_mid_round": 2,
+  "resumed": {
+   "round_W": 610,
+   "next_step": 4
+  },
+  "stray_files": [],
+  "s5_violations": [],
+  "live": 3758
+ },
+ "offline_mutants": {
+  "e": {
+   "caught": true,
+   "bad_sampled": 1037,
+   "bad_final": 0
+  },
+  "f2": {
+   "caught": true,
+   "bad_sampled": 4305,
+   "bad_final": 302
+  },
+  "m": {
+   "caught": true,
+   "bad_sampled": 83381,
+   "bad_final": 3758
+  },
+  "n": {
+   "caught": true,
+   "bad_sampled": 84275,
+   "bad_final": 3285
+  },
+  "o": {
+   "caught": true,
+   "bad_sampled": 15,
+   "bad_final": 0
+  },
+  "p": {
+   "caught": true,
+   "bad_sampled": 3605,
+   "bad_final": 0
+  },
+  "r": {
+   "caught": true,
+   "bad_sampled": 164,
+   "bad_final": 0
+  },
+  "b": {
+   "caught": true,
+   "bad_sampled": 18,
+   "bad_final": 0
+  },
+  "g": {
+   "caught": true,
+   "exception": "FileNotFoundError: [Errno 2] No such file or directory: 'C:\\\\gams\\\\test\\\\rcm_address_engine\\\\data\\\\a6_selftest_g\\\\r000097.log'"
+  },
+  "i": {
+   "caught": true,
+   "bad_sampled": 211,
+   "bad_final": 0
+  },
+  "z": {
+   "caught": true,
+   "bad_sampled": 211,
+   "bad_final": 0
+  }
+ },
+ "ok": {
+  "mutant": null,
+  "all_ok": true,
+  "results": [
+   {
+    "scenario": "partition function: all rows and fresh keys",
+    "ok": true,
+    "rows": 10000,
+    "bad_numpy": 0,
+    "scalar_checked": 10000,
+    "bad_scalar": 0,
+    "insert_keys": 8000,
+    "bad_insert_keys": 0,
+    "scalar_us_per_key": 8.28137499956938,
+    "insert_scalar_checked": 8000,
+    "bad_insert_scalar_vs_numpy": 0,
+    "s": 0.23317549999046605
+   },
+   {
+    "scenario": "R2: wrong-partition INSERT and UPDATE of k leaving the leaf are rejected",
+    "ok": true,
+    "rejected": [
+     true,
+     true
+    ]
+   },
+   {
+    "scenario": "R1: INSERT + COMMIT (tail only)",
+    "ok": true,
+    "outcomes": [
+     "ins",
+     "ins"
+    ]
+   },
+   {
+    "scenario": "R1: UPDATE moved to another page, then ROLLBACK",
+    "ok": true,
+    "checked": 1,
+    "bad": 0,
+    "moved_page_differs": true
+   },
+   {
+    "scenario": "R1: DELETE, then ROLLBACK",
+    "ok": true,
+    "outcomes": [
+     "del"
+    ]
+   },
+   {
+    "scenario": "tail: UPDATE twice",
+    "ok": true,
+    "outcomes": [
+     "upd",
+     "upd"
+    ]
+   },
+   {
+    "scenario": "tail: three UPDATEs -> v = 4",
+    "ok": true,
+    "outcomes": [
+     "upd",
+     "upd",
+     "upd"
+    ]
+   },
+   {
+    "scenario": "tail: UPDATE -> DELETE",
+    "ok": true,
+    "outcomes": [
+     "upd",
+     "del"
+    ]
+   },
+   {
+    "scenario": "tail: DELETE -> INSERT same key",
+    "ok": true,
+    "outcomes": [
+     "del",
+     "ins"
+    ]
+   },
+   {
+    "scenario": "tail: repeated DELETE",
+    "ok": true,
+    "outcomes": [
+     "del",
+     "none"
+    ]
+   },
+   {
+    "scenario": "tail: UPDATE of an absent key",
+    "ok": true,
+    "outcomes": [
+     "none"
+    ]
+   },
+   {
+    "scenario": "tail: DELETE 100 + UPDATE 100",
+    "ok": true,
+    "outcomes": [
+     "del",
+     "del",
+     "del",
+     "del",
+     "del"
+    ]
+   },
+   {
+    "scenario": "tail: after VACUUM: INSERT 120 + UPDATE 50",
+    "ok": true,
+    "outcomes": [
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins"
+    ]
+   },
+   {
+    "scenario": "tail: R1 keys",
+    "ok": true,
+    "checked": 2,
+    "bad": 0
+   },
+   {
+    "scenario": "after_seal: UPDATE twice",
+    "ok": true,
+    "outcomes": [
+     "upd",
+     "upd"
+    ]
+   },
+   {
+    "scenario": "after_seal: three UPDATEs -> v = 4",
+    "ok": true,
+    "outcomes": [
+     "upd",
+     "upd",
+     "upd"
+    ]
+   },
+   {
+    "scenario": "after_seal: UPDATE -> DELETE",
+    "ok": true,
+    "outcomes": [
+     "upd",
+     "del"
+    ]
+   },
+   {
+    "scenario": "after_seal: DELETE -> INSERT same key",
+    "ok": true,
+    "outcomes": [
+     "del",
+     "ins"
+    ]
+   },
+   {
+    "scenario": "after_seal: repeated DELETE",
+    "ok": true,
+    "outcomes": [
+     "del",
+     "none"
+    ]
+   },
+   {
+    "scenario": "after_seal: UPDATE of an absent key",
+    "ok": true,
+    "outcomes": [
+     "none"
+    ]
+   },
+   {
+    "scenario": "after_seal: DELETE 100 + UPDATE 100",
+    "ok": true,
+    "outcomes": [
+     "del",
+     "del",
+     "del",
+     "del",
+     "del"
+    ]
+   },
+   {
+    "scenario": "after_seal: after VACUUM: INSERT 120 + UPDATE 50",
+    "ok": true,
+    "outcomes": [
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins"
+    ]
+   },
+   {
+    "scenario": "after_seal: R1 keys",
+    "ok": true,
+    "checked": 2,
+    "bad": 0
+   },
+   {
+    "scenario": "tier merge",
+    "ok": true,
+    "runs": [
+     [
+      5,
+      4,
+      1
+     ]
+    ]
+   },
+   {
+    "scenario": "after_merge: UPDATE twice",
+    "ok": true,
+    "outcomes": [
+     "upd",
+     "upd"
+    ]
+   },
+   {
+    "scenario": "after_merge: three UPDATEs -> v = 4",
+    "ok": true,
+    "outcomes": [
+     "upd",
+     "upd",
+     "upd"
+    ]
+   },
+   {
+    "scenario": "after_merge: UPDATE -> DELETE",
+    "ok": true,
+    "outcomes": [
+     "upd",
+     "del"
+    ]
+   },
+   {
+    "scenario": "after_merge: DELETE -> INSERT same key",
+    "ok": true,
+    "outcomes": [
+     "del",
+     "ins"
+    ]
+   },
+   {
+    "scenario": "after_merge: repeated DELETE",
+    "ok": true,
+    "outcomes": [
+     "del",
+     "none"
+    ]
+   },
+   {
+    "scenario": "after_merge: UPDATE of an absent key",
+    "ok": true,
+    "outcomes": [
+     "none"
+    ]
+   },
+   {
+    "scenario": "after_merge: DELETE 100 + UPDATE 100",
+    "ok": true,
+    "outcomes": [
+     "del",
+     "del",
+     "del",
+     "del",
+     "del"
+    ]
+   },
+   {
+    "scenario": "after_merge: after VACUUM: INSERT 120 + UPDATE 50",
+    "ok": true,
+    "outcomes": [
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins"
+    ]
+   },
+   {
+    "scenario": "after_merge: R1 keys",
+    "ok": true,
+    "checked": 2,
+    "bad": 0
+   },
+   {
+    "scenario": "witness after a tier merge (3 versions on different pages)",
+    "ok": true,
+    "checked": 1,
+    "bad": 0,
+    "distinct_pages": true
+   },
+   {
+    "scenario": "precondition: (b) witness had 4 distinct pages",
+    "ok": true
+   },
+   {
+    "scenario": "lookup during a tier merge (ready + not-ready sections)",
+    "ok": true,
+    "checked": 280,
+    "bad": 0,
+    "sections": 2
+   },
+   {
+    "scenario": "R2: reader opened and closed during an active merge deletes nothing",
+    "ok": true,
+    "job_files": [
+     "r000015.log.part",
+     "r000015_s0000.adr"
+    ]
+   },
+   {
+    "scenario": "after the multi-section merge",
+    "ok": true,
+    "checked": 280,
+    "bad": 0
+   },
+   {
+    "scenario": "R2: after the old merge finished",
+    "ok": true,
+    "checked": 1,
+    "bad": 0
+   },
+   {
+    "scenario": "R2: after the next merge",
+    "ok": true,
+    "checked": 1,
+    "bad": 0
+   },
+   {
+    "scenario": "R2: after the tier-2 merge",
+    "ok": true,
+    "checked": 1,
+    "bad": 0,
+    "distinct": true
+   },
+   {
+    "scenario": "precondition: (k') witness on 2 distinct pages",
+    "ok": true
+   },
+   {
+    "scenario": "A5 R4: collisions of h (6-bit h), merge by full key",
+    "ok": true,
+    "changed": 944,
+    "bad_merged": 0,
+    "bad_candidates": 0
+   },
+   {
+    "scenario": "precondition: (p) moved key whose current page number also holds a row of partition g+1",
+    "ok": true
+   },
+   {
+    "scenario": "precondition: (p) the base does not point to the current page",
+    "ok": true
+   },
+   {
+    "scenario": "same page number in two partitions, found through a run",
+    "ok": true,
+    "checked": 2,
+    "bad": 0,
+    "page": 156,
+    "parts": [
+     1,
+     2
+    ]
+   },
+   {
+    "scenario": "precondition: (e)/(f2) moved pre-W witnesses in every partition",
+    "ok": true,
+    "parts": [
+     0,
+     1,
+     2,
+     3,
+     4,
+     5,
+     6,
+     7
+    ]
+   },
+   {
+    "scenario": "round started",
+    "ok": true
+   },
+   {
+    "scenario": "after the first publication: pre-W moved keys of other partitions",
+    "ok": true,
+    "checked": 42,
+    "bad": 0
+   },
+   {
+    "scenario": "after the first publication: every live key of partitions 0 and 1",
+    "ok": true,
+    "checked": 2504,
+    "bad": 0
+   },
+   {
+    "scenario": "mid-round: pre-W changes (sections partly rebuilt)",
+    "ok": true,
+    "checked": 68,
+    "bad": 0
+   },
+   {
+    "scenario": "empty partition: empty section",
+    "ok": true,
+    "rows": 0
+   },
+   {
+    "scenario": "INSERT into the emptied partition after its step",
+    "ok": true,
+    "outcomes": [
+     "ins"
+    ]
+   },
+   {
+    "scenario": "after the round: pre-W moved, sealed, all partitions (incl. the last)",
+    "ok": true,
+    "checked": 48,
+    "bad": 0
+   },
+   {
+    "scenario": "after the round: pre-W in the tail at W",
+    "ok": true,
+    "checked": 20,
+    "bad": 0
+   },
+   {
+    "scenario": "after the round: moved inside rebuilt partitions",
+    "ok": true,
+    "checked": 21,
+    "bad": 0
+   },
+   {
+    "scenario": "after the round: moved inside partitions before their step",
+    "ok": true,
+    "checked": 21,
+    "bad": 0
+   },
+   {
+    "scenario": "after the round: inserted into rebuilt partitions (incl. after VACUUM)",
+    "ok": true,
+    "checked": 15,
+    "bad": 0
+   },
+   {
+    "scenario": "after the round: deleted during the round",
+    "ok": true,
+    "checked": 14,
+    "bad": 0
+   },
+   {
+    "scenario": "after the round: post-W sealed",
+    "ok": true,
+    "checked": 40,
+    "bad": 0
+   },
+   {
+    "scenario": "after the round: post-W in the tail",
+    "ok": true,
+    "checked": 10,
+    "bad": 0
+   },
+   {
+    "scenario": "after the round: keys on the first and last page of partitions",
+    "ok": true,
+    "checked": 78,
+    "bad": 0
+   },
+   {
+    "scenario": "after the round: untouched base keys",
+    "ok": true,
+    "checked": 1500,
+    "bad": 0
+   },
+   {
+    "scenario": "after the round: every live key of the emptied partition",
+    "ok": true,
+    "checked": 1,
+    "bad": 0
+   },
+   {
+    "scenario": "S5: no stray files, step files accounted",
+    "ok": true,
+    "violations": [],
+    "stray": []
+   },
+   {
+    "scenario": "precondition: (r) moved pre-W witnesses in every partition",
+    "ok": true,
+    "parts": [
+     0,
+     1,
+     2,
+     3,
+     4,
+     5,
+     7
+    ],
+    "emptied": 6
+   },
+   {
+    "scenario": "precondition: (o) moved witnesses in rebuilt partitions",
+    "ok": true,
+    "n": 16
+   },
+   {
+    "scenario": "restart mid-round + mid-merge: right after reopening",
+    "ok": true,
+    "checked": 651,
+    "bad": 0,
+    "state_before": {
+     "job": true,
+     "round_next": 4
+    },
+    "resumed": {
+     "round_W": 3255,
+     "next_step": 4
+    },
+    "abandoned": []
+   },
+   {
+    "scenario": "restart: after the resumed round finished",
+    "ok": true,
+    "checked": 1851,
+    "bad": 0
+   },
+   {
+    "scenario": "restart: every live key after the resumed round",
+    "ok": true,
+    "checked": 8767,
+    "bad": 0
+   },
+   {
+    "scenario": "stop after the last publication: the reopened round only finishes",
+    "ok": true,
+    "checked": 321,
+    "bad": 0,
+    "state": {
+     "stopped": true,
+     "round_next": 8
+    },
+    "kinds": [
+     "round_end_only"
+    ]
+   },
+   {
+    "scenario": "n_live recount after a writer reopen",
+    "ok": true,
+    "n_live": 8767,
+    "model": 8767
+   },
+   {
+    "scenario": "writer INSERT after the reader opened",
+    "ok": true,
+    "outcomes": [
+     "ins"
+    ]
+   },
+   {
+    "scenario": "reader sees a key committed after it opened",
+    "ok": true
+   },
+   {
+    "scenario": "refuse to open with a batch without outcome",
+    "ok": true
+   },
+   {
+    "scenario": "refuse to open with a torn record",
+    "ok": true
+   }
+  ],
+  "failed": [],
+  "exception": null
+ },
+ "mutant_a": {
+  "witness": "R1: UPDATE moved to another page, then ROLLBACK",
+  "witness_failed": true,
+  "preconditions_unmet": [],
+  "failed": [
+   "R1: UPDATE moved to another page, then ROLLBACK",
+   "R1: DELETE, then ROLLBACK",
+   "tail: R1 keys",
+   "after_seal: R1 keys",
+   "after_merge: R1 keys"
+  ],
+  "exception": null,
+  "caught": true,
+  "outcome": "caught by its witness"
+ },
+ "mutant_b": {
+  "witness": "witness after a tier merge (3 versions on different pages)",
+  "witness_failed": true,
+  "preconditions_unmet": [],
+  "failed": [
+   "witness after a tier merge (3 versions on different pages)",
+   "R2: after the tier-2 merge",
+   "A5 R4: collisions of h (6-bit h), merge by full key"
+  ],
+  "exception": null,
+  "caught": true,
+  "outcome": "caught by its witness"
+ },
+ "mutant_c": {
+  "witness": "reader sees a key committed after it opened",
+  "witness_failed": true,
+  "preconditions_unmet": [],
+  "failed": [
+   "reader sees a key committed after it opened"
+  ],
+  "exception": null,
+  "caught": true,
+  "outcome": "caught by its witness"
+ },
+ "mutant_d": {
+  "witness": "refuse to open with a batch without outcome",
+  "witness_failed": true,
+  "preconditions_unmet": [],
+  "failed": [
+   "refuse to open with a batch without outcome"
+  ],
+  "exception": null,
+  "caught": true,
+  "outcome": "caught by its witness"
+ },
+ "mutant_e": {
+  "witness": "after the first publication: pre-W moved keys of other partitions",
+  "witness_failed": true,
+  "preconditions_unmet": [],
+  "failed": [
+   "after the first publication: pre-W moved keys of other partitions",
+   "after the first publication: every live key of partitions 0 and 1",
+   "mid-round: pre-W changes (sections partly rebuilt)",
+   "restart mid-round + mid-merge: right after reopening"
+  ],
+  "exception": null,
+  "caught": true,
+  "outcome": "caught by its witness"
+ },
+ "mutant_f2": {
+  "witness": "after the round: pre-W moved, sealed, all partitions (incl. the last)",
+  "witness_failed": true,
+  "preconditions_unmet": [],
+  "failed": [
+   "after the round: pre-W moved, sealed, all partitions (incl. the last)",
+   "restart: after the resumed round finished",
+   "restart: every live key after the resumed round",
+   "stop after the last publication: the reopened round only finishes"
+  ],
+  "exception": null,
+  "caught": true,
+  "outcome": "caught by its witness"
+ },
+ "mutant_g": {
+  "witness": "after the round: post-W sealed",
+  "witness_failed": true,
+  "preconditions_unmet": [],
+  "failed": [
+   "after the round: moved inside rebuilt partitions",
+   "after the round: inserted into rebuilt partitions (incl. after VACUUM)",
+   "after the round: post-W sealed",
+   "restart mid-round + mid-merge: right after reopening",
+   "restart: after the resumed round finished",
+   "restart: every live key after the resumed round"
+  ],
+  "exception": null,
+  "caught": true,
+  "outcome": "caught by its witness"
+ },
+ "mutant_z": {
+  "witness": "lookup during a tier merge (ready + not-ready sections)",
+  "witness_failed": true,
+  "preconditions_unmet": [],
+  "failed": [
+   "lookup during a tier merge (ready + not-ready sections)"
+  ],
+  "exception": null,
+  "caught": true,
+  "outcome": "caught by its witness"
+ },
+ "mutant_i": {
+  "witness": "after the round: post-W in the tail",
+  "witness_failed": true,
+  "preconditions_unmet": [],
+  "failed": [
+   "after the round: moved inside rebuilt partitions",
+   "after the round: inserted into rebuilt partitions (incl. after VACUUM)",
+   "after the round: post-W in the tail",
+   "after the round: every live key of the emptied partition"
+  ],
+  "exception": null,
+  "caught": true,
+  "outcome": "caught by its witness"
+ },
+ "mutant_k": {
+  "witness": null,
+  "witness_failed": false,
+  "preconditions_unmet": [],
+  "failed": [],
+  "exception": null,
+  "caught": false,
+  "outcome": "not caught"
+ },
+ "mutant_k2": {
+  "witness": "R2: after the tier-2 merge",
+  "witness_failed": true,
+  "preconditions_unmet": [],
+  "failed": [
+   "R2: after the tier-2 merge"
+  ],
+  "exception": null,
+  "caught": true,
+  "outcome": "caught by its witness"
+ },
+ "mutant_l": {
+  "witness": "A5 R4: collisions of h (6-bit h), merge by full key",
+  "witness_failed": true,
+  "preconditions_unmet": [],
+  "failed": [
+   "A5 R4: collisions of h (6-bit h), merge by full key"
+  ],
+  "exception": null,
+  "caught": true,
+  "outcome": "caught by its witness"
+ },
+ "mutant_m": {
+  "witness": "after the first publication: every live key of partitions 0 and 1",
+  "witness_failed": true,
+  "preconditions_unmet": [],
+  "failed": [
+   "after the first publication: every live key of partitions 0 and 1",
+   "after the round: pre-W moved, sealed, all partitions (incl. the last)",
+   "after the round: pre-W in the tail at W",
+   "after the round: moved inside rebuilt partitions",
+   "after the round: moved inside partitions before their step",
+   "after the round: deleted during the round",
+   "after the round: post-W sealed",
+   "after the round: post-W in the tail",
+   "after the round: keys on the first and last page of partitions",
+   "after the round: untouched base keys",
+   "precondition: (r) moved pre-W witnesses in every partition",
+   "precondition: (o) moved witnesses in rebuilt partitions",
+   "restart mid-round + mid-merge: right after reopening",
+   "restart: after the resumed round finished",
+   "restart: every live key after the resumed round",
+   "stop after the last publication: the reopened round only finishes"
+  ],
+  "exception": null,
+  "caught": true,
+  "outcome": "caught by its witness"
+ },
+ "mutant_n": {
+  "witness": "partition function: all rows and fresh keys",
+  "witness_failed": true,
+  "preconditions_unmet": [],
+  "failed": [
+   "partition function: all rows and fresh keys"
+  ],
+  "exception": {
+   "type": "CheckViolation",
+   "msg": "new row for relation \"a6_scn_p6\" violates partition constraint\nDETAIL:  Failing row contains (10001, 7da61808-f808-5ad9-85aa-feea02cdee11, 1, {\"claim\":{\"confidence_q\":12,\"modality\":\"asserted\",\"predicate\":\"O...).",
+   "after": "R2: wrong-partition INSERT and UPDATE of k leaving the leaf are rejected"
+  },
+  "caught": true,
+  "outcome": "caught by its witness"
+ },
+ "mutant_o": {
+  "witness": "restart: after the resumed round finished",
+  "witness_failed": true,
+  "preconditions_unmet": [],
+  "failed": [
+   "restart: after the resumed round finished",
+   "restart: every live key after the resumed round"
+  ],
+  "exception": null,
+  "caught": true,
+  "outcome": "caught by its witness"
+ },
+ "mutant_p": {
+  "witness": "same page number in two partitions, found through a run",
+  "witness_failed": true,
+  "preconditions_unmet": [],
+  "failed": [
+   "after_seal: R1 keys",
+   "after_merge: R1 keys",
+   "witness after a tier merge (3 versions on different pages)",
+   "precondition: (b) witness had 4 distinct pages",
+   "lookup during a tier merge (ready + not-ready sections)",
+   "after the multi-section merge",
+   "R2: after the old merge finished",
+   "R2: after the next merge",
+   "R2: after the tier-2 merge",
+   "same page number in two partitions, found through a run",
+   "after the first publication: pre-W moved keys of other partitions",
+   "after the first publication: every live key of partitions 0 and 1",
+   "mid-round: pre-W changes (sections partly rebuilt)",
+   "empty partition: empty section",
+   "after the round: moved inside rebuilt partitions",
+   "after the round: inserted into rebuilt partitions (incl. after VACUUM)",
+   "after the round: post-W sealed",
+   "restart mid-round + mid-merge: right after reopening",
+   "restart: after the resumed round finished",
+   "restart: every live key after the resumed round"
+  ],
+  "exception": null,
+  "caught": true,
+  "outcome": "caught by its witness"
+ },
+ "mutant_r": {
+  "witness": "restart: after the resumed round finished",
+  "witness_failed": true,
+  "preconditions_unmet": [],
+  "failed": [
+   "restart: after the resumed round finished",
+   "restart: every live key after the resumed round"
+  ],
+  "exception": {
+   "type": "ValueError",
+   "msg": "round step 9 out of range 0..8",
+   "after": "restart: every live key after the resumed round"
+  },
+  "caught": true,
+  "outcome": "caught by its witness"
+ },
+ "mutant_k_note": "equivalent under one-merge-at-a-time (A5 addendum §1); reported, not required",
+ "all_ok": true
+}

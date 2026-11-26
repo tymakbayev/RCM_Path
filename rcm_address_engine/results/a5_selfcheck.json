@@ -1,0 +1,528 @@
+{
+ "core_selftest": {
+  "exit": 0,
+  "tail": "ALL OK"
+ },
+ "ok": {
+  "mutant": null,
+  "all_ok": true,
+  "results": [
+   {
+    "scenario": "R1: INSERT + COMMIT (tail only)",
+    "ok": true,
+    "outcomes": [
+     "ins",
+     "ins"
+    ]
+   },
+   {
+    "scenario": "R1: UPDATE moved to another page, then ROLLBACK",
+    "ok": true,
+    "checked": 1,
+    "bad": 0,
+    "moved_page_differs": true
+   },
+   {
+    "scenario": "R1: DELETE, then ROLLBACK",
+    "ok": true,
+    "outcomes": [
+     "del"
+    ]
+   },
+   {
+    "scenario": "tail: UPDATE twice",
+    "ok": true,
+    "outcomes": [
+     "upd",
+     "upd"
+    ]
+   },
+   {
+    "scenario": "tail: three UPDATEs -> v = 4",
+    "ok": true,
+    "outcomes": [
+     "upd",
+     "upd",
+     "upd"
+    ]
+   },
+   {
+    "scenario": "tail: UPDATE -> DELETE",
+    "ok": true,
+    "outcomes": [
+     "upd",
+     "del"
+    ]
+   },
+   {
+    "scenario": "tail: DELETE -> INSERT same key",
+    "ok": true,
+    "outcomes": [
+     "del",
+     "ins"
+    ]
+   },
+   {
+    "scenario": "tail: repeated DELETE",
+    "ok": true,
+    "outcomes": [
+     "del",
+     "none"
+    ]
+   },
+   {
+    "scenario": "tail: UPDATE of an absent key",
+    "ok": true,
+    "outcomes": [
+     "none"
+    ]
+   },
+   {
+    "scenario": "tail: DELETE 100 + UPDATE 100",
+    "ok": true,
+    "outcomes": [
+     "del",
+     "del",
+     "del",
+     "del",
+     "del"
+    ]
+   },
+   {
+    "scenario": "tail: after VACUUM: INSERT 120 + UPDATE 50",
+    "ok": true,
+    "outcomes": [
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins"
+    ]
+   },
+   {
+    "scenario": "tail: R1 keys",
+    "ok": true,
+    "checked": 2,
+    "bad": 0
+   },
+   {
+    "scenario": "after_seal: UPDATE twice",
+    "ok": true,
+    "outcomes": [
+     "upd",
+     "upd"
+    ]
+   },
+   {
+    "scenario": "after_seal: three UPDATEs -> v = 4",
+    "ok": true,
+    "outcomes": [
+     "upd",
+     "upd",
+     "upd"
+    ]
+   },
+   {
+    "scenario": "after_seal: UPDATE -> DELETE",
+    "ok": true,
+    "outcomes": [
+     "upd",
+     "del"
+    ]
+   },
+   {
+    "scenario": "after_seal: DELETE -> INSERT same key",
+    "ok": true,
+    "outcomes": [
+     "del",
+     "ins"
+    ]
+   },
+   {
+    "scenario": "after_seal: repeated DELETE",
+    "ok": true,
+    "outcomes": [
+     "del",
+     "none"
+    ]
+   },
+   {
+    "scenario": "after_seal: UPDATE of an absent key",
+    "ok": true,
+    "outcomes": [
+     "none"
+    ]
+   },
+   {
+    "scenario": "after_seal: DELETE 100 + UPDATE 100",
+    "ok": true,
+    "outcomes": [
+     "del",
+     "del",
+     "del",
+     "del",
+     "del"
+    ]
+   },
+   {
+    "scenario": "after_seal: after VACUUM: INSERT 120 + UPDATE 50",
+    "ok": true,
+    "outcomes": [
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins"
+    ]
+   },
+   {
+    "scenario": "after_seal: R1 keys",
+    "ok": true,
+    "checked": 2,
+    "bad": 0
+   },
+   {
+    "scenario": "tier merge",
+    "ok": true,
+    "runs": [
+     [
+      5,
+      4,
+      1
+     ]
+    ]
+   },
+   {
+    "scenario": "after_merge: UPDATE twice",
+    "ok": true,
+    "outcomes": [
+     "upd",
+     "upd"
+    ]
+   },
+   {
+    "scenario": "after_merge: three UPDATEs -> v = 4",
+    "ok": true,
+    "outcomes": [
+     "upd",
+     "upd",
+     "upd"
+    ]
+   },
+   {
+    "scenario": "after_merge: UPDATE -> DELETE",
+    "ok": true,
+    "outcomes": [
+     "upd",
+     "del"
+    ]
+   },
+   {
+    "scenario": "after_merge: DELETE -> INSERT same key",
+    "ok": true,
+    "outcomes": [
+     "del",
+     "ins"
+    ]
+   },
+   {
+    "scenario": "after_merge: repeated DELETE",
+    "ok": true,
+    "outcomes": [
+     "del",
+     "none"
+    ]
+   },
+   {
+    "scenario": "after_merge: UPDATE of an absent key",
+    "ok": true,
+    "outcomes": [
+     "none"
+    ]
+   },
+   {
+    "scenario": "after_merge: DELETE 100 + UPDATE 100",
+    "ok": true,
+    "outcomes": [
+     "del",
+     "del",
+     "del",
+     "del",
+     "del"
+    ]
+   },
+   {
+    "scenario": "after_merge: after VACUUM: INSERT 120 + UPDATE 50",
+    "ok": true,
+    "outcomes": [
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins"
+    ]
+   },
+   {
+    "scenario": "after_merge: R1 keys",
+    "ok": true,
+    "checked": 2,
+    "bad": 0
+   },
+   {
+    "scenario": "witness after a tier merge (3 versions on different pages)",
+    "ok": true,
+    "checked": 1,
+    "bad": 0,
+    "pages": [
+     270,
+     777,
+     778,
+     779
+    ],
+    "distinct_pages": true,
+    "merged_points_to_newest": true
+   },
+   {
+    "scenario": "lookup during a tier merge (ready + not-ready sections)",
+    "ok": true,
+    "checked": 280,
+    "bad": 0,
+    "sections": 2,
+    "done": 1
+   },
+   {
+    "scenario": "after the multi-section merge",
+    "ok": true,
+    "checked": 280,
+    "bad": 0
+   },
+   {
+    "scenario": "R2: after the old merge finished",
+    "ok": true,
+    "checked": 1,
+    "bad": 0
+   },
+   {
+    "scenario": "R2: after the next merge",
+    "ok": true,
+    "checked": 1,
+    "bad": 0
+   },
+   {
+    "scenario": "R2: after the tier-2 merge",
+    "ok": true,
+    "checked": 1,
+    "bad": 0,
+    "era_pages": [
+     1130,
+     1341
+    ],
+    "distinct": true,
+    "tier2_points_to_newest": true
+   },
+   {
+    "scenario": "R4: collisions of h (6-bit h), merge by full key",
+    "ok": true,
+    "changed": 944,
+    "bad_merged": 0,
+    "bad_candidates": 0,
+    "distinct_h": 64
+   },
+   {
+    "scenario": "round started",
+    "ok": true,
+    "P0": 1402
+   },
+   {
+    "scenario": "mid-round: pre-W changes (sections partly rebuilt)",
+    "ok": true,
+    "checked": 60,
+    "bad": 0
+   },
+   {
+    "scenario": "after the round: pre-W changes",
+    "ok": true,
+    "checked": 60,
+    "bad": 0
+   },
+   {
+    "scenario": "after the round: moved during the scan",
+    "ok": true,
+    "checked": 64,
+    "bad": 0,
+    "seen_0_times": 25,
+    "seen_2_times": 1
+   },
+   {
+    "scenario": "after the round: inserted during the round",
+    "ok": true,
+    "checked": 60,
+    "bad": 0,
+    "on_pages_ge_P0": 40
+   },
+   {
+    "scenario": "after the round: deleted during the round",
+    "ok": true,
+    "checked": 24,
+    "bad": 0
+   },
+   {
+    "scenario": "after the round: post-W sealed",
+    "ok": true,
+    "checked": 90,
+    "bad": 0
+   },
+   {
+    "scenario": "after the round: post-W in the tail",
+    "ok": true,
+    "checked": 20,
+    "bad": 0
+   },
+   {
+    "scenario": "after the round: keys on slice edge pages",
+    "ok": true,
+    "checked": 95,
+    "bad": 0
+   },
+   {
+    "scenario": "after the round: untouched base keys",
+    "ok": true,
+    "checked": 1500,
+    "bad": 0
+   },
+   {
+    "scenario": "round coverage (descriptive)",
+    "ok": true,
+    "moves": 64,
+    "seen_0_times": 25,
+    "seen_2_times": 1,
+    "inserts_on_pages_ge_P0": 40
+   },
+   {
+    "scenario": "R3: after restart mid-round + mid-merge",
+    "ok": true,
+    "checked": 950,
+    "bad": 0,
+    "state_before": {
+     "job": true,
+     "round": true
+    },
+    "abandoned": [
+     "merge",
+     "round"
+    ]
+   },
+   {
+    "scenario": "R3: after the next full round",
+    "ok": true,
+    "checked": 1950,
+    "bad": 0
+   },
+   {
+    "scenario": "writer INSERT after the reader opened",
+    "ok": true,
+    "outcomes": [
+     "ins"
+    ]
+   },
+   {
+    "scenario": "reader sees a key committed after it opened",
+    "ok": true
+   },
+   {
+    "scenario": "refuse to open with a batch without outcome",
+    "ok": true
+   },
+   {
+    "scenario": "refuse to open with a torn record",
+    "ok": true
+   }
+  ],
+  "failed": []
+ },
+ "mutant_a": {
+  "caught": true,
+  "failed": [
+   "R1: UPDATE moved to another page, then ROLLBACK",
+   "R1: DELETE, then ROLLBACK",
+   "tail: R1 keys",
+   "after_seal: R1 keys",
+   "after_merge: R1 keys"
+  ]
+ },
+ "mutant_b": {
+  "caught": true,
+  "failed": [
+   "witness after a tier merge (3 versions on different pages)",
+   "R2: after the tier-2 merge",
+   "R4: collisions of h (6-bit h), merge by full key"
+  ]
+ },
+ "mutant_c": {
+  "caught": true,
+  "failed": [
+   "reader sees a key committed after it opened"
+  ]
+ },
+ "mutant_d": {
+  "caught": true,
+  "failed": [
+   "refuse to open with a batch without outcome"
+  ]
+ },
+ "mutant_e": {
+  "caught": true,
+  "failed": [
+   "mid-round: pre-W changes (sections partly rebuilt)",
+   "R3: after restart mid-round + mid-merge"
+  ]
+ },
+ "mutant_f": {
+  "caught": true,
+  "failed": [
+   "after the round: pre-W changes",
+   "R3: after restart mid-round + mid-merge",
+   "R3: after the next full round"
+  ]
+ },
+ "mutant_g": {
+  "caught": true,
+  "failed": [
+   "after the round: moved during the scan",
+   "after the round: inserted during the round",
+   "after the round: post-W sealed",
+   "R3: after restart mid-round + mid-merge"
+  ]
+ },
+ "mutant_i": {
+  "caught": true,
+  "failed": [
+   "after the round: post-W in the tail",
+   "R3: after restart mid-round + mid-merge"
+  ]
+ },
+ "mutant_k": {
+  "caught": false,
+  "failed": []
+ },
+ "mutant_k2": {
+  "caught": true,
+  "failed": [
+   "R2: after the tier-2 merge"
+  ]
+ },
+ "mutant_l": {
+  "caught": true,
+  "failed": [
+   "R4: collisions of h (6-bit h), merge by full key"
+  ]
+ },
+ "mutant_z": {
+  "caught": true,
+  "failed": [
+   "lookup during a tier merge (ready + not-ready sections)"
+  ]
+ },
+ "mutant_k_note": "equivalent under §2.2 (addendum §1); reported, not required",
+ "all_ok": true
+}

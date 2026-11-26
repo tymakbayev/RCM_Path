@@ -1,0 +1,71 @@
+01:26:07 calc selftest True N6 variant ok: False
+a2_gen: 100000 records, copies 0..0, span 12797350389000 us
+01:26:23 small load {'copy_s': 13.962280899999314, 'post_s7_s': 0.2769996999995783, 'post_p7_s': 0.5990948999969987, 'post_a7_s': 0.6653111000050558, 'layout_p7_a7': {'same': 100000, 'total': 100000, 'share': 1.0}, 'rows': {'s7_s8': 100000, 'p7_s8': 100000, 'a7_s8': 100000}} {'s7': 7688, 'p7_sum': 7904, 'a7_sum': 7904}
+01:26:44 C7 0 0 {'s': 0, 'par': 0, 'dir': 0, 'a7': 0} {'s': 90.5, 'par': 130.5, 'dir': 94.6, 'a7': 143.4} prep violations 0
+01:26:51 small round start at op 10000
+01:27:13 C7 1 10000 {'s': 0, 'par': 0, 'dir': 0, 'a7': 0} {'s': 90.3, 'par': 133.6, 'dir': 100.5, 'a7': 215.9} prep violations 0
+01:27:44 C7 2 20000 {'s': 0, 'par': 0, 'dir': 0, 'a7': 0} {'s': 91.3, 'par': 140.7, 'dir': 94.9, 'a7': 201.4} prep violations 0
+01:27:44 small D1 {'defined': True, 'lookup_ud_us': {'s': 107.84820781312928, 'dir': 102.37381902860945}, 'a_ratio': 1.0534744999890056, 'a_cond': False, 'b_ratios': [0.6761512542119056, 0.6488983653162758], 'b_cond': False, 'repeated': False, 'ops_between': [10000, 20000]}
+01:27:44 stage B block 1
+01:27:52 stage B block 2a
+01:27:56 stage B block 2b
+01:28:00 stage B block 3
+01:28:33 stage B block 4
+01:28:34 normal checks {'p1_correct': True, 'p1_track_io_timing': True, 'p1_prepared_rule': True, 'p1_activity': True, 'p1_quotas': True, 'p2_zero_read_valid': True, 'p2_evicted_reads': True, 'p3b_journal': True, 'p3b_publication': True, 'p4_abba': True, 'p6_memory': True, 'p6_evict': True} attribution поддержана
+01:28:34 stage B block 1
+01:28:41 stage B block 2a
+01:28:45 stage B block 2b
+01:28:49 stage B block 3
+01:29:23 stage B block 4
+01:29:24 mutant N1 caught None
+01:29:24 stage B block 1
+01:29:31 stage B block 2a
+01:29:36 stage B block 2b
+01:29:40 stage B block 3
+01:30:14 stage B block 4
+01:30:14 mutant N2 caught None
+01:30:14 stage B block 1
+01:30:21 stage B block 2a
+01:30:26 stage B block 2b
+01:30:30 stage B block 3
+01:31:03 stage B block 4
+01:31:04 mutant N3 caught None
+01:31:04 stage B block 1
+01:31:11 stage B block 2a
+01:31:15 stage B block 2b
+01:31:19 stage B block 3
+01:31:52 stage B block 4
+01:31:53 mutant N4 caught None
+01:31:53 stage B block 1
+01:32:01 stage B block 2a
+01:32:05 stage B block 2b
+01:32:09 stage B block 3
+01:32:42 stage B block 4
+01:32:43 mutant N5 caught None
+01:32:43 mutant N6 caught None
+01:32:43 stage B block 1
+01:32:50 stage B block 2a
+01:32:54 stage B block 2b
+01:32:58 stage B block 3
+01:33:32 stage B block 4
+01:33:32 mutant N7 caught None
+01:33:32 mutant N8 caught None
+01:33:32 stage B block 1
+01:33:40 stage B block 2a
+01:33:44 stage B block 2b
+01:33:48 stage B block 3
+01:34:21 stage B block 4
+01:34:22 mutant N9 caught None
+01:34:22 stage B block 1
+01:34:29 stage B block 2a
+01:34:33 stage B block 2b
+01:34:37 stage B block 3
+01:35:11 stage B block 4
+01:35:12 mutant N10 caught None
+01:35:12 stage B block 1
+01:35:19 stage B block 2a
+01:35:23 stage B block 2b
+01:35:27 stage B block 3
+01:36:01 stage B block 4
+01:36:01 mutant N11 caught None
+01:36:02 selfcheck all_ok True  

@@ -1,0 +1,22 @@
+18:03:13 N1 load A6 table
+a2_gen: 1000000 records, copies 0..7, span 12797350389000 us
+18:04:10 N1 partition function check
+18:04:23 N1 function check {'rows': 1000000, 'bad_numpy': 0, 'bad_scalar': 0, 'bad_insert_keys': 0, 'ok': True}
+18:04:23 N1 fill control table on the server
+18:04:59 N1 control layout share 0.942359
+18:05:00 N1 stream sha256 1f685ebefc15933071387ce022540a44d73507dbec55a3740f20db3d9ce247d5 matches A4: True partitions 8 btree heights [3]
+18:05:19 checkpoint 0 base 0 {'a6_n1_smoke': ({'live': 0, 'deleted': 0, 'absent': 0}, 1.0, 3.198), 'c6_n1_smoke': ({'live': 0, 'deleted': 0, 'absent': 0}, 4.0, 31.744)}
+18:06:12 checkpoint 1 every_50k 50000 {'a6_n1_smoke': ({'live': 0, 'deleted': 0, 'absent': 0}, 1.002, 4.268), 'c6_n1_smoke': ({'live': 0, 'deleted': 0, 'absent': 0}, 4.0, 31.274)}
+18:06:12 N1 ops 50000 {'a6_n1_smoke': 13.3, 'c6_n1_smoke': 13.7} maint 0.0 levels 3 max pause 0.04
+18:06:44 N1 round start at op 100000
+18:07:17 checkpoint 2 every_50k 100000 {'a6_n1_smoke': ({'live': 0, 'deleted': 0, 'absent': 0}, 1.011, 4.896), 'c6_n1_smoke': ({'live': 0, 'deleted': 0, 'absent': 0}, 4.01, 30.96)}
+18:07:17 N1 ops 100000 {'a6_n1_smoke': 29.5, 'c6_n1_smoke': 28.2} maint 0.2 levels 6 max pause 0.042
+18:07:48 checkpoint 3 mid_round 104000 {'a6_n1_smoke': ({'live': 0, 'deleted': 0, 'absent': 0}, 1.008, 5.051), 'c6_n1_smoke': ({'live': 0, 'deleted': 0, 'absent': 0}, 4.014, 30.928)}
+18:07:49 N1 client restart mid-round {'round_next': 4, 'job': False, 'resumed': {'round_W': 100000, 'next_step': 4}, 'abandoned': {}, 's': 0.4613543000014033, 'op': 104000}
+18:08:15 checkpoint 4 after_resume 104000 {'a6_n1_smoke': ({'live': 0, 'deleted': 0, 'absent': 0}, 1.004, 5.051), 'c6_n1_smoke': ({'live': 0, 'deleted': 0, 'absent': 0}, 4.0, 30.928)}
+18:08:19 N1 round end at op 108000 {'rows': 1031107, 'max_rows': 129305, 'steps': 8, 'window_ops': 8000}
+18:08:26 N1 restart
+18:08:47 checkpoint 5 after_restart 120000 {'a6_n1_smoke': ({'live': 0, 'deleted': 0, 'absent': 0}, 1.0, 3.743), 'c6_n1_smoke': ({'live': 0, 'deleted': 0, 'absent': 0}, 4.0, 30.955)}
+18:08:56 N1 open probe {'p50': 12.831100000767037, 'p95': 13.229299991508015, 'p99': 13.513380000949837, 'mean': 12.845623808624666, 'n': 21}
+18:09:19 checkpoint 6 after_final_round 120000 {'a6_n1_smoke': ({'live': 0, 'deleted': 0, 'absent': 0}, 1.0, 3.197), 'c6_n1_smoke': ({'live': 0, 'deleted': 0, 'absent': 0}, 4.01, 30.955)}
+18:09:20 N1 done errors {'a6_n1_smoke': 0, 'c6_n1_smoke': 0} witness 0 S3 batch violations 0 max pause 0.374 stray 0

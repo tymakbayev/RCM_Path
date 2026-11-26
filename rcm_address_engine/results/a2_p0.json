@@ -1,0 +1,233 @@
+{
+ "protocol_sha256": "e68edb6cfb5101a9dbd23baae02eb22a50a19a086dbe8462865b79e457150c36",
+ "settings": {
+  "jit": "on",
+  "max_wal_size": "1024",
+  "server_version": "18.7",
+  "shared_buffers": "16384",
+  "wal_level": "replica",
+  "work_mem": "4096"
+ },
+ "load": {
+  "copy_s": 11.057070200000453,
+  "vacuum_s": 0.13268750000133878
+ },
+ "table": {
+  "oid": 24587,
+  "relfilenode": 24587,
+  "pages": 7688,
+  "main_bytes": 62980096,
+  "table_bytes": 63029248,
+  "toast_bytes": 0,
+  "toast_rows": 0,
+  "rows_per_page": 13.007284079084288,
+  "payload_len": {
+   "min": 514,
+   "p50": 522.0,
+   "p99": 579.0,
+   "max": 596
+  }
+ },
+ "sidecar_a": {
+  "bytes": 307296,
+  "sha256": "5c10bba387a8542e5f58db4f50209a50b4625d4711400a75c8a42d67d8a07d74",
+  "levels": 12,
+  "exceptions": 0,
+  "blocks": 693,
+  "d_bytes": 262512,
+  "read_s": 0.12758970000140835,
+  "build_s": 0.031560600000375416,
+  "r_bits": 13,
+  "rows": 100000,
+  "pages": 7688,
+  "bytes_per_row": 3.07296,
+  "keys_match_ref": true,
+  "c1_errors": 0
+ },
+ "plans": {
+  "static_A": {
+   "buffers": 1,
+   "read": 1,
+   "exec_ms": 0.11,
+   "planning_buffers": 19,
+   "serialize_buffers": 0,
+   "nodes": [
+    [
+     0,
+     "Tid Range Scan",
+     1,
+     1.0
+    ]
+   ]
+  },
+  "update_by_ctid": {
+   "buffers": 26,
+   "read": 0,
+   "exec_ms": 0.197,
+   "planning_buffers": 5,
+   "serialize_buffers": 0,
+   "nodes": [
+    [
+     0,
+     "ModifyTable",
+     1,
+     0.0
+    ],
+    [
+     1,
+     "Tid Scan",
+     1,
+     1.0
+    ]
+   ]
+  },
+  "lookup_updated": {
+   "buffers": 3,
+   "read": 0,
+   "exec_ms": 0.031,
+   "planning_buffers": 0,
+   "serialize_buffers": 0,
+   "nodes": [
+    [
+     0,
+     "Limit",
+     1,
+     1.0
+    ],
+    [
+     1,
+     "Append",
+     1,
+     1.0
+    ],
+    [
+     2,
+     "Index Scan",
+     1,
+     1.0
+    ],
+    [
+     2,
+     "Tid Range Scan",
+     0,
+     0
+    ]
+   ]
+  },
+  "lookup_unchanged": {
+   "buffers": 3,
+   "read": 2,
+   "exec_ms": 0.091,
+   "planning_buffers": 0,
+   "serialize_buffers": 0,
+   "nodes": [
+    [
+     0,
+     "Limit",
+     1,
+     1.0
+    ],
+    [
+     1,
+     "Append",
+     1,
+     1.0
+    ],
+    [
+     2,
+     "Index Scan",
+     1,
+     0.0
+    ],
+    [
+     2,
+     "Tid Range Scan",
+     1,
+     1.0
+    ]
+   ]
+  },
+  "lookup_absent_fp_miss": {
+   "buffers": 2,
+   "read": 1,
+   "exec_ms": 0.046,
+   "planning_buffers": 0,
+   "serialize_buffers": 0,
+   "nodes": [
+    [
+     0,
+     "Index Scan",
+     1,
+     0.0
+    ]
+   ]
+  },
+  "delete_by_ctid": {
+   "buffers": 3,
+   "read": 0,
+   "exec_ms": 0.033,
+   "planning_buffers": 0,
+   "serialize_buffers": 0,
+   "nodes": [
+    [
+     0,
+     "ModifyTable",
+     1,
+     0.0
+    ],
+    [
+     1,
+     "Tid Scan",
+     1,
+     1.0
+    ]
+   ]
+  },
+  "answers": {
+   "updated_v": 2,
+   "deleted_found": false
+  }
+ },
+ "statio_A": {
+  "queries": 2000,
+  "heap_per_q": 1.0,
+  "index_per_q": 0.0,
+  "toast_per_q": 0.0
+ },
+ "statio_btree": {
+  "queries": 2000,
+  "heap_per_q": 1.0,
+  "index_per_q": 3.0005,
+  "toast_per_q": 0.0
+ },
+ "btree_size": {
+  "main_bytes": 3178496,
+  "total_bytes": 3178496,
+  "reloptions": null,
+  "create_s": 0.1518419999993057
+ },
+ "explain_btree_mean_buffers": 4.0,
+ "explain_A_mean_buffers": 1.0,
+ "load_b": {
+  "load_s": 1.654645900001924
+ },
+ "sidecar_b": {
+  "b": 13,
+  "invariant_violations": 391,
+  "bytes_per_row": 0.32868328683286835,
+  "pages_per_bucket": {
+   "mean": 1.937744140625,
+   "p99": 3.0,
+   "max": 12
+  }
+ },
+ "lookup_us_p50": 132.1,
+ "n10_estimate": {
+  "load_s": 1105.7070200000453,
+  "vacuum_s": 13.268750000133878,
+  "read_build_s": 15.915030000178376,
+  "load_b_s": 165.4645900001924,
+  "btree_s": 15.18419999993057,
+  "lookups_s_per_100k_per_method": 26.419999999999998
+ }
+}

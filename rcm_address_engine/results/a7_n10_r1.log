@@ -1,0 +1,18 @@
+22:15:17 N10 r1 load three tables, partitions 128
+a2_gen: 10000000 records, copies 0..72, span 12797350389000 us
+23:20:31 N10 load {'copy_s': 3601.871508000011, 'post_s7_s': 66.64703839999856, 'post_p7_s': 113.23502449999796, 'post_a7_s': 101.553668499997, 'layout_p7_a7': {'same': 10000000, 'total': 10000000, 'share': 1.0}, 'rows': {'s7_n10': 10000000, 'p7_n10': 10000000, 'a7_n10': 10000000}} {'s7': 762888, 'p7_sum': 768448, 'a7_sum': 768448}
+23:22:29 N10 function check {'rows': 10000000, 'bad_numpy': 0, 'bad_scalar': 0, 'bad_insert_keys': 0, 'ok': True}
+23:23:15 C7 0 0 {'s': 0, 'par': 0, 'dir': 0, 'a7': 0} {'s': 124.7, 'par': 166.0, 'dir': 130.4, 'a7': 211.6} prep violations 0
+23:26:34 C7 1 100000 {'s': 0, 'par': 0, 'dir': 0, 'a7': 0} {'s': 419.6, 'par': 170.7, 'dir': 155.2, 'a7': 276.7} prep violations 0
+23:26:34 N10 ops 100000 {'t_s': 53.3, 't_p': 43.7, 't_a7': 40.7} maint 0.1
+23:27:42 N10 forced round requested at op 150000
+23:27:42 N10 round start at op 150000
+23:29:57 C7 2 200000 {'s': 0, 'par': 0, 'dir': 0, 'a7': 0} {'s': 387.2, 'par': 168.4, 'dir': 136.6, 'a7': 273.4} prep violations 0
+23:29:57 N10 ops 200000 {'t_s': 107.2, 't_p': 84.9, 't_a7': 79.8} maint 12.1
+23:35:51 C7 3 300000 {'s': 0, 'par': 0, 'dir': 0, 'a7': 0} {'s': 385.8, 'par': 165.0, 'dir': 135.5, 'a7': 251.3} prep violations 0
+23:35:51 N10 ops 300000 {'t_s': 166.2, 't_p': 129.0, 't_a7': 126.5} maint 29.3
+23:39:20 C7 4 400000 {'s': 0, 'par': 0, 'dir': 0, 'a7': 0} {'s': 381.2, 'par': 158.9, 'dir': 130.8, 'a7': 252.4} prep violations 0
+23:39:20 N10 ops 400000 {'t_s': 227.8, 't_p': 178.7, 't_a7': 174.7} maint 29.6
+23:45:34 C7 5 500000 {'s': 0, 'par': 0, 'dir': 0, 'a7': 0} {'s': 373.1, 'par': 161.1, 'dir': 127.9, 'a7': 309.3} prep violations 0
+23:45:34 N10 ops 500000 {'t_s': 285.3, 't_p': 222.7, 't_a7': 218.8} maint 29.7
+23:45:46 N10 r1 done {'K_par': 0.807, 'K_dir': 0.754, 'K_route': 1.071, 'K_par_m': 0.791, 'K_dir_m': 0.77, 'a7_s': 0.767} {'F_a7/F_s': 0.853, 'F_p_mix/F_s': 0.858, 'F_a7/F_par_hat': 0.972}

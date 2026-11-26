@@ -1,0 +1,9241 @@
+{
+ "size": "N1",
+ "rows": 1000000,
+ "ops_sha256": "1f685ebefc15933071387ce022540a44d73507dbec55a3740f20db3d9ce247d5",
+ "partitions": 8,
+ "load_s": 44.8708587000001,
+ "function_check": {
+  "rows": 1000000,
+  "bad_numpy": 0,
+  "scalar_checked": 1000000,
+  "bad_scalar": 0,
+  "insert_keys": 250000,
+  "bad_insert_keys": 0,
+  "scalar_us_per_key": 8.301906000007875,
+  "insert_scalar_checked": 250000,
+  "bad_insert_scalar_vs_numpy": 0,
+  "s": 13.513269000002765,
+  "ok": true
+ },
+ "control_setup": {
+  "fill_s": 11.666107800003374,
+  "layout_same": 942359,
+  "layout_total": 1000000,
+  "layout_share": 0.942359,
+  "s": 29.238370699997176
+ },
+ "partitions_start": {
+  "a6": [
+   [
+    0,
+    9600,
+    125077
+   ],
+   [
+    1,
+    9600,
+    124720
+   ],
+   [
+    2,
+    9600,
+    125047
+   ],
+   [
+    3,
+    9568,
+    124675
+   ],
+   [
+    4,
+    9632,
+    125431
+   ],
+   [
+    5,
+    9600,
+    125114
+   ],
+   [
+    6,
+    9632,
+    124928
+   ],
+   [
+    7,
+    9600,
+    125008
+   ]
+  ],
+  "c6": [
+   [
+    0,
+    9598,
+    125077
+   ],
+   [
+    1,
+    9572,
+    124720
+   ],
+   [
+    2,
+    9595,
+    125047
+   ],
+   [
+    3,
+    9566,
+    124675
+   ],
+   [
+    4,
+    9623,
+    125431
+   ],
+   [
+    5,
+    9599,
+    125114
+   ],
+   [
+    6,
+    9583,
+    124928
+   ],
+   [
+    7,
+    9591,
+    125008
+   ]
+  ]
+ },
+ "btree_heights": [
+  3,
+  3,
+  3,
+  3,
+  3,
+  3,
+  3,
+  3
+ ],
+ "checkpoints": [
+  {
+   "cp": 0,
+   "name": "base",
+   "after_op": 0,
+   "live_keys": 1000000,
+   "deleted_keys": 0,
+   "systems": {
+    "a6_n1": {
+     "errors": {
+      "live": 0,
+      "deleted": 0,
+      "absent": 0
+     },
+     "client_us": {
+      "p50": 231.5,
+      "p95": 615.0,
+      "p99": 659.8019999999997,
+      "mean": 370.66020499999996,
+      "n": 20000
+     },
+     "buffers_by_category": {
+      "base": 1.0
+     },
+     "buffers_equal_mix": 1.0,
+     "buffers_raw_mix": 1.0,
+     "planning_buffers": 0.0,
+     "buffers_generic_plan_200": 1.0,
+     "category_counts": {
+      "base": 2000
+     },
+     "buffers_deleted": 0.0,
+     "buffers_absent": 0.0,
+     "statio_live": {
+      "queries": 2000,
+      "heap_per_q": 1.0,
+      "index_per_q": 0.0,
+      "toast_per_q": 0.0
+     },
+     "sizes": {
+      "address_main": 3198139,
+      "address_total": 3198139,
+      "table_bytes": 629866496,
+      "levels": 2,
+      "runs": [],
+      "tail_committed_keys": 0,
+      "job": null,
+      "round": null
+     },
+     "address_main_per_live_key": 3.198139
+    },
+    "c6_n1": {
+     "errors": {
+      "live": 0,
+      "deleted": 0,
+      "absent": 0
+     },
+     "client_us": {
+      "p50": 146.4,
+      "p95": 196.8,
+      "p99": 223.5,
+      "mean": 152.65252,
+      "n": 20000
+     },
+     "buffers_by_category": {
+      "base": 4.0
+     },
+     "buffers_equal_mix": 4.0,
+     "buffers_raw_mix": 4.0,
+     "planning_buffers": 0.0,
+     "buffers_generic_plan_200": 4.0,
+     "category_counts": {
+      "base": 2000
+     },
+     "buffers_deleted": 0.0,
+     "buffers_absent": 3.0,
+     "statio_live": {
+      "queries": 2000,
+      "heap_per_q": 1.0,
+      "index_per_q": 3.0,
+      "toast_per_q": 0.0
+     },
+     "sizes": {
+      "address_main": 31744000,
+      "address_total": 31744000,
+      "table_bytes": 629006336
+     },
+     "address_main_per_live_key": 31.744,
+     "direct_diagnostic": {
+      "client_us_cold_g": {
+       "p50": 94.9,
+       "p95": 137.1,
+       "p99": 175.70399999999998,
+       "mean": 100.60405,
+       "n": 2000
+      },
+      "client_us_warm_g": {
+       "p50": 83.0,
+       "p95": 95.02499999999998,
+       "p99": 140.22299999999996,
+       "mean": 85.44014999999999,
+       "n": 2000
+      },
+      "buffers": 4.0,
+      "planning_buffers": 0.0
+     }
+    }
+   }
+  },
+  {
+   "cp": 1,
+   "name": "every_50k",
+   "after_op": 50000,
+   "live_keys": 1015044,
+   "deleted_keys": 9989,
+   "systems": {
+    "a6_n1": {
+     "errors": {
+      "live": 0,
+      "deleted": 0,
+      "absent": 0
+     },
+     "client_us": {
+      "p50": 242.0,
+      "p95": 672.7,
+      "p99": 720.8,
+      "mean": 343.365545,
+      "n": 20000
+     },
+     "buffers_by_category": {
+      "ins": 1.0,
+      "base": 1.0067814293166406,
+      "upd": 1.0
+     },
+     "buffers_equal_mix": 1.0022604764388803,
+     "buffers_raw_mix": 1.0065,
+     "planning_buffers": 0.0,
+     "buffers_generic_plan_200": 1.005,
+     "category_counts": {
+      "ins": 60,
+      "base": 1917,
+      "upd": 23
+     },
+     "buffers_deleted": 1.006,
+     "buffers_absent": 0.01,
+     "statio_live": {
+      "queries": 2000,
+      "heap_per_q": 1.0065,
+      "index_per_q": 0.0,
+      "toast_per_q": 0.0
+     },
+     "sizes": {
+      "address_main": 4332191,
+      "address_total": 4332191,
+      "table_bytes": 652943360,
+      "levels": 3,
+      "runs": [
+       [
+        1,
+        1,
+        0,
+        23830,
+        false
+       ]
+      ],
+      "tail_committed_keys": 19930,
+      "job": null,
+      "round": null
+     },
+     "address_main_per_live_key": 4.267983456874776
+    },
+    "c6_n1": {
+     "errors": {
+      "live": 0,
+      "deleted": 0,
+      "absent": 0
+     },
+     "client_us": {
+      "p50": 161.3,
+      "p95": 667.4499999999992,
+      "p99": 954.6009999999999,
+      "mean": 300.21317999999997,
+      "n": 20000
+     },
+     "buffers_by_category": {
+      "ins": 4.0,
+      "base": 4.0,
+      "upd": 4.0
+     },
+     "buffers_equal_mix": 4.0,
+     "buffers_raw_mix": 4.0,
+     "planning_buffers": 0.0,
+     "buffers_generic_plan_200": 4.0,
+     "category_counts": {
+      "ins": 60,
+      "base": 1917,
+      "upd": 23
+     },
+     "buffers_deleted": 3.0,
+     "buffers_absent": 3.0,
+     "statio_live": {
+      "queries": 2000,
+      "heap_per_q": 1.0,
+      "index_per_q": 3.0,
+      "toast_per_q": 0.0
+     },
+     "sizes": {
+      "address_main": 31744000,
+      "address_total": 31744000,
+      "table_bytes": 652935168
+     },
+     "address_main_per_live_key": 31.273521147851717,
+     "direct_diagnostic": {
+      "client_us_cold_g": {
+       "p50": 94.65,
+       "p95": 120.33499999999997,
+       "p99": 158.607,
+       "mean": 98.047,
+       "n": 2000
+      },
+      "client_us_warm_g": {
+       "p50": 83.6,
+       "p95": 131.54499999999996,
+       "p99": 150.30200000000002,
+       "mean": 89.68289999999999,
+       "n": 2000
+      },
+      "buffers": 4.0,
+      "planning_buffers": 0.0
+     }
+    }
+   },
+   "candidates_hist": {
+    "1": 78739,
+    "0": 64733,
+    "2": 716,
+    "3": 1
+   },
+   "rss": {
+    "peak_mb": 966.64453125,
+    "current_mb": 932.578125
+   }
+  },
+  {
+   "cp": 2,
+   "name": "every_50k",
+   "after_op": 100000,
+   "live_keys": 1029828,
+   "deleted_keys": 20107,
+   "systems": {
+    "a6_n1": {
+     "errors": {
+      "live": 0,
+      "deleted": 0,
+      "absent": 0
+     },
+     "client_us": {
+      "p50": 301.3,
+      "p95": 713.2049999999999,
+      "p99": 780.3,
+      "mean": 393.01248499999997,
+      "n": 20000
+     },
+     "buffers_by_category": {
+      "base": 1.0186097427476737,
+      "ins": 1.0,
+      "upd": 1.0153846153846153
+     },
+     "buffers_equal_mix": 1.011331452710763,
+     "buffers_raw_mix": 1.0175,
+     "planning_buffers": 0.0,
+     "buffers_generic_plan_200": 1.025,
+     "category_counts": {
+      "base": 1827,
+      "ins": 108,
+      "upd": 65
+     },
+     "buffers_deleted": 1.022,
+     "buffers_absent": 0.008,
+     "statio_live": {
+      "queries": 2000,
+      "heap_per_q": 1.0175,
+      "index_per_q": 0.0,
+      "toast_per_q": 0.0
+     },
+     "sizes": {
+      "address_main": 5041733,
+      "address_total": 5041733,
+      "table_bytes": 674791424,
+      "levels": 6,
+      "runs": [
+       [
+        4,
+        4,
+        0,
+        7952,
+        true
+       ],
+       [
+        3,
+        3,
+        0,
+        23755,
+        true
+       ],
+       [
+        2,
+        2,
+        0,
+        23817,
+        true
+       ],
+       [
+        1,
+        1,
+        0,
+        23830,
+        true
+       ]
+      ],
+      "tail_committed_keys": 0,
+      "job": null,
+      "round": 0
+     },
+     "address_main_per_live_key": 4.895703942794331
+    },
+    "c6_n1": {
+     "errors": {
+      "live": 0,
+      "deleted": 0,
+      "absent": 0
+     },
+     "client_us": {
+      "p50": 160.6,
+      "p95": 608.1,
+      "p99": 908.5009999999999,
+      "mean": 264.31856500000004,
+      "n": 20000
+     },
+     "buffers_by_category": {
+      "base": 4.0,
+      "ins": 4.0,
+      "upd": 4.030769230769231
+     },
+     "buffers_equal_mix": 4.01025641025641,
+     "buffers_raw_mix": 4.001,
+     "planning_buffers": 0.0,
+     "buffers_generic_plan_200": 4.0,
+     "category_counts": {
+      "base": 1827,
+      "ins": 108,
+      "upd": 65
+     },
+     "buffers_deleted": 3.0,
+     "buffers_absent": 3.0,
+     "statio_live": {
+      "queries": 2000,
+      "heap_per_q": 1.0005,
+      "index_per_q": 3.0005,
+      "toast_per_q": 0.0
+     },
+     "sizes": {
+      "address_main": 31866880,
+      "address_total": 31866880,
+      "table_bytes": 674783232
+     },
+     "address_main_per_live_key": 30.94388577510031,
+     "direct_diagnostic": {
+      "client_us_cold_g": {
+       "p50": 94.8,
+       "p95": 127.71,
+       "p99": 167.707,
+       "mean": 98.69005,
+       "n": 2000
+      },
+      "client_us_warm_g": {
+       "p50": 83.5,
+       "p95": 103.405,
+       "p99": 148.10299999999998,
+       "mean": 86.63435000000001,
+       "n": 2000
+      },
+      "buffers": 4.0,
+      "planning_buffers": 0.0
+     }
+    }
+   },
+   "candidates_hist": {
+    "1": 66173,
+    "0": 44375,
+    "2": 2028,
+    "3": 23,
+    "4": 1
+   },
+   "rss": {
+    "peak_mb": 1002.76953125,
+    "current_mb": 967.19140625
+   }
+  },
+  {
+   "cp": 3,
+   "name": "mid_round",
+   "after_op": 104000,
+   "live_keys": 1030884,
+   "deleted_keys": 20955,
+   "systems": {
+    "a6_n1": {
+     "errors": {
+      "live": 0,
+      "deleted": 0,
+      "absent": 0
+     },
+     "client_us": {
+      "p50": 283.8,
+      "p95": 680.3,
+      "p99": 763.0009999999999,
+      "mean": 331.639745,
+      "n": 20000
+     },
+     "buffers_by_category": {
+      "base": 1.0146739130434783,
+      "ins": 1.009009009009009,
+      "upd": 1.0
+     },
+     "buffers_equal_mix": 1.007894307350829,
+     "buffers_raw_mix": 1.014,
+     "planning_buffers": 0.0,
+     "buffers_generic_plan_200": 1.01,
+     "category_counts": {
+      "base": 1840,
+      "ins": 111,
+      "upd": 49
+     },
+     "buffers_deleted": 0.526,
+     "buffers_absent": 0.012,
+     "statio_live": {
+      "queries": 2000,
+      "heap_per_q": 1.014,
+      "index_per_q": 0.0,
+      "toast_per_q": 0.0
+     },
+     "sizes": {
+      "address_main": 5207143,
+      "address_total": 5207143,
+      "table_bytes": 676421632,
+      "levels": 6,
+      "runs": [
+       [
+        4,
+        4,
+        0,
+        7952,
+        true
+       ],
+       [
+        3,
+        3,
+        0,
+        23755,
+        true
+       ],
+       [
+        2,
+        2,
+        0,
+        23817,
+        true
+       ],
+       [
+        1,
+        1,
+        0,
+        23830,
+        true
+       ]
+      ],
+      "tail_committed_keys": 3998,
+      "job": null,
+      "round": 4
+     },
+     "address_main_per_live_key": 5.051143484620966
+    },
+    "c6_n1": {
+     "errors": {
+      "live": 0,
+      "deleted": 0,
+      "absent": 0
+     },
+     "client_us": {
+      "p50": 146.7,
+      "p95": 209.60499999999993,
+      "p99": 558.8019999999997,
+      "mean": 161.298675,
+      "n": 20000
+     },
+     "buffers_by_category": {
+      "base": 4.0,
+      "ins": 4.0,
+      "upd": 4.0
+     },
+     "buffers_equal_mix": 4.0,
+     "buffers_raw_mix": 4.0,
+     "planning_buffers": 0.0,
+     "buffers_generic_plan_200": 4.0,
+     "category_counts": {
+      "base": 1840,
+      "ins": 111,
+      "upd": 49
+     },
+     "buffers_deleted": 3.0,
+     "buffers_absent": 3.0,
+     "statio_live": {
+      "queries": 2000,
+      "heap_per_q": 1.0,
+      "index_per_q": 3.0,
+      "toast_per_q": 0.0
+     },
+     "sizes": {
+      "address_main": 31866880,
+      "address_total": 31866880,
+      "table_bytes": 676421632
+     },
+     "address_main_per_live_key": 30.912187986233175,
+     "direct_diagnostic": {
+      "client_us_cold_g": {
+       "p50": 94.7,
+       "p95": 117.4,
+       "p99": 163.80200000000002,
+       "mean": 98.15709999999999,
+       "n": 2000
+      },
+      "client_us_warm_g": {
+       "p50": 83.9,
+       "p95": 107.1,
+       "p99": 140.405,
+       "mean": 86.7285,
+       "n": 2000
+      },
+      "buffers": 4.0,
+      "planning_buffers": 0.0
+     }
+    }
+   }
+  },
+  {
+   "cp": 4,
+   "name": "after_resume",
+   "after_op": 104000,
+   "live_keys": 1030884,
+   "deleted_keys": 20955,
+   "systems": {
+    "a6_n1": {
+     "errors": {
+      "live": 0,
+      "deleted": 0,
+      "absent": 0
+     },
+     "client_us": {
+      "p50": 275.2,
+      "p95": 365.6,
+      "p99": 657.7019999999998,
+      "mean": 289.08306,
+      "n": 20000
+     },
+     "buffers_by_category": {
+      "base": 1.0122994652406416,
+      "ins": 1.0,
+      "upd": 1.0
+     },
+     "buffers_equal_mix": 1.0040998217468806,
+     "buffers_raw_mix": 1.0115,
+     "planning_buffers": 0.0,
+     "buffers_generic_plan_200": 1.015,
+     "category_counts": {
+      "base": 1870,
+      "ins": 91,
+      "upd": 39
+     },
+     "buffers_deleted": 0.556,
+     "buffers_absent": 0.016,
+     "statio_live": {
+      "queries": 2000,
+      "heap_per_q": 1.0115,
+      "index_per_q": 0.0,
+      "toast_per_q": 0.0
+     },
+     "sizes": {
+      "address_main": 5207143,
+      "address_total": 5207143,
+      "table_bytes": 676421632,
+      "levels": 6,
+      "runs": [
+       [
+        4,
+        4,
+        0,
+        7952,
+        true
+       ],
+       [
+        3,
+        3,
+        0,
+        23755,
+        true
+       ],
+       [
+        2,
+        2,
+        0,
+        23817,
+        true
+       ],
+       [
+        1,
+        1,
+        0,
+        23830,
+        true
+       ]
+      ],
+      "tail_committed_keys": 3998,
+      "job": null,
+      "round": 4
+     },
+     "address_main_per_live_key": 5.051143484620966
+    },
+    "c6_n1": {
+     "errors": {
+      "live": 0,
+      "deleted": 0,
+      "absent": 0
+     },
+     "client_us": {
+      "p50": 145.4,
+      "p95": 196.4,
+      "p99": 225.0,
+      "mean": 151.14510500000003,
+      "n": 20000
+     },
+     "buffers_by_category": {
+      "base": 4.0,
+      "ins": 4.0,
+      "upd": 4.0
+     },
+     "buffers_equal_mix": 4.0,
+     "buffers_raw_mix": 4.0,
+     "planning_buffers": 0.0,
+     "buffers_generic_plan_200": 4.0,
+     "category_counts": {
+      "base": 1870,
+      "ins": 91,
+      "upd": 39
+     },
+     "buffers_deleted": 3.0,
+     "buffers_absent": 3.0,
+     "statio_live": {
+      "queries": 2000,
+      "heap_per_q": 1.0,
+      "index_per_q": 3.0,
+      "toast_per_q": 0.0
+     },
+     "sizes": {
+      "address_main": 31866880,
+      "address_total": 31866880,
+      "table_bytes": 676421632
+     },
+     "address_main_per_live_key": 30.912187986233175,
+     "direct_diagnostic": {
+      "client_us_cold_g": {
+       "p50": 94.3,
+       "p95": 121.73499999999997,
+       "p99": 166.612,
+       "mean": 98.17905,
+       "n": 2000
+      },
+      "client_us_warm_g": {
+       "p50": 82.9,
+       "p95": 89.4,
+       "p99": 132.837,
+       "mean": 84.68310000000001,
+       "n": 2000
+      },
+      "buffers": 4.0,
+      "planning_buffers": 0.0
+     }
+    }
+   }
+  },
+  {
+   "cp": 5,
+   "name": "every_50k",
+   "after_op": 150000,
+   "live_keys": 1044597,
+   "deleted_keys": 30167,
+   "systems": {
+    "a6_n1": {
+     "errors": {
+      "live": 0,
+      "deleted": 0,
+      "absent": 0
+     },
+     "client_us": {
+      "p50": 244.25,
+      "p95": 669.3,
+      "p99": 727.8019999999997,
+      "mean": 334.01246499999996,
+      "n": 20000
+     },
+     "buffers_by_category": {
+      "base": 1.0039931545921277,
+      "upd": 1.0,
+      "ins": 1.0
+     },
+     "buffers_equal_mix": 1.0013310515307092,
+     "buffers_raw_mix": 1.0035,
+     "planning_buffers": 0.0,
+     "buffers_generic_plan_200": 1.0,
+     "category_counts": {
+      "base": 1753,
+      "upd": 91,
+      "ins": 156
+     },
+     "buffers_deleted": 0.316,
+     "buffers_absent": 0.002,
+     "statio_live": {
+      "queries": 2000,
+      "heap_per_q": 1.0035,
+      "index_per_q": 0.0,
+      "toast_per_q": 0.0
+     },
+     "sizes": {
+      "address_main": 4430180,
+      "address_total": 4430180,
+      "table_bytes": 695197696,
+      "levels": 3,
+      "runs": [
+       [
+        5,
+        5,
+        0,
+        23801,
+        false
+       ]
+      ],
+      "tail_committed_keys": 19930,
+      "job": null,
+      "round": null
+     },
+     "address_main_per_live_key": 4.241042239255904
+    },
+    "c6_n1": {
+     "errors": {
+      "live": 0,
+      "deleted": 0,
+      "absent": 0
+     },
+     "client_us": {
+      "p50": 159.0,
+      "p95": 607.0,
+      "p99": 922.8069999999989,
+      "mean": 256.90545,
+      "n": 20000
+     },
+     "buffers_by_category": {
+      "base": 4.0,
+      "upd": 4.021978021978022,
+      "ins": 4.0
+     },
+     "buffers_equal_mix": 4.007326007326007,
+     "buffers_raw_mix": 4.001,
+     "planning_buffers": 0.0,
+     "buffers_generic_plan_200": 4.0,
+     "category_counts": {
+      "base": 1753,
+      "upd": 91,
+      "ins": 156
+     },
+     "buffers_deleted": 3.0,
+     "buffers_absent": 3.0,
+     "statio_live": {
+      "queries": 2000,
+      "heap_per_q": 1.0005,
+      "index_per_q": 3.0005,
+      "toast_per_q": 0.0
+     },
+     "sizes": {
+      "address_main": 33964032,
+      "address_total": 33964032,
+      "table_bytes": 695164928
+     },
+     "address_main_per_live_key": 32.514004922472495,
+     "direct_diagnostic": {
+      "client_us_cold_g": {
+       "p50": 95.4,
+       "p95": 146.92,
+       "p99": 169.111,
+       "mean": 103.0661,
+       "n": 2000
+      },
+      "client_us_warm_g": {
+       "p50": 83.8,
+       "p95": 103.405,
+       "p99": 136.909,
+       "mean": 86.23735,
+       "n": 2000
+      },
+      "buffers": 4.004,
+      "planning_buffers": 0.0
+     }
+    }
+   },
+   "candidates_hist": {
+    "1": 118922,
+    "0": 116500,
+    "2": 2152,
+    "3": 22
+   },
+   "rss": {
+    "peak_mb": 1056.5703125,
+    "current_mb": 1021.12109375
+   }
+  },
+  {
+   "cp": 6,
+   "name": "every_50k",
+   "after_op": 200000,
+   "live_keys": 1059829,
+   "deleted_keys": 40130,
+   "systems": {
+    "a6_n1": {
+     "errors": {
+      "live": 0,
+      "deleted": 0,
+      "absent": 0
+     },
+     "client_us": {
+      "p50": 288.7,
+      "p95": 710.7049999999999,
+      "p99": 776.0019999999997,
+      "mean": 395.43842,
+      "n": 20000
+     },
+     "buffers_by_category": {
+      "ins": 1.005,
+      "base": 1.0100890207715134,
+      "upd": 1.0
+     },
+     "buffers_equal_mix": 1.0050296735905044,
+     "buffers_raw_mix": 1.009,
+     "planning_buffers": 0.0,
+     "buffers_generic_plan_200": 1.01,
+     "category_counts": {
+      "ins": 200,
+      "base": 1685,
+      "upd": 115
+     },
+     "buffers_deleted": 0.49,
+     "buffers_absent": 0.012,
+     "statio_live": {
+      "queries": 2000,
+      "heap_per_q": 1.009,
+      "index_per_q": 0.0,
+      "toast_per_q": 0.0
+     },
+     "sizes": {
+      "address_main": 5246724,
+      "address_total": 5246724,
+      "table_bytes": 714686464,
+      "levels": 5,
+      "runs": [
+       [
+        7,
+        7,
+        0,
+        23877,
+        false
+       ],
+       [
+        6,
+        6,
+        0,
+        23775,
+        false
+       ],
+       [
+        5,
+        5,
+        0,
+        23801,
+        false
+       ]
+      ],
+      "tail_committed_keys": 9982,
+      "job": null,
+      "round": null
+     },
+     "address_main_per_live_key": 4.950538247207804
+    },
+    "c6_n1": {
+     "errors": {
+      "live": 0,
+      "deleted": 0,
+      "absent": 0
+     },
+     "client_us": {
+      "p50": 163.5,
+      "p95": 629.7049999999999,
+      "p99": 937.4039999999993,
+      "mean": 271.71979000000005,
+      "n": 20000
+     },
+     "buffers_by_category": {
+      "ins": 4.0,
+      "base": 4.0,
+      "upd": 4.139130434782609
+     },
+     "buffers_equal_mix": 4.046376811594203,
+     "buffers_raw_mix": 4.008,
+     "planning_buffers": 0.0,
+     "buffers_generic_plan_200": 4.0,
+     "category_counts": {
+      "ins": 200,
+      "base": 1685,
+      "upd": 115
+     },
+     "buffers_deleted": 3.0,
+     "buffers_absent": 3.0,
+     "statio_live": {
+      "queries": 2000,
+      "heap_per_q": 1.004,
+      "index_per_q": 3.004,
+      "toast_per_q": 0.0
+     },
+     "sizes": {
+      "address_main": 42344448,
+      "address_total": 42344448,
+      "table_bytes": 714653696
+     },
+     "address_main_per_live_key": 39.954037868373106,
+     "direct_diagnostic": {
+      "client_us_cold_g": {
+       "p50": 95.0,
+       "p95": 130.73499999999996,
+       "p99": 168.20499999999998,
+       "mean": 99.05760000000001,
+       "n": 2000
+      },
+      "client_us_warm_g": {
+       "p50": 82.7,
+       "p95": 89.10999999999999,
+       "p99": 128.507,
+       "mean": 84.43785000000001,
+       "n": 2000
+      },
+      "buffers": 4.004,
+      "planning_buffers": 0.0
+     }
+    }
+   },
+   "candidates_hist": {
+    "0": 54935,
+    "1": 56296,
+    "2": 1158,
+    "3": 11
+   },
+   "rss": {
+    "peak_mb": 1080.74609375,
+    "current_mb": 1028.3828125
+   }
+  },
+  {
+   "cp": 7,
+   "name": "mid_round",
+   "after_op": 208000,
+   "live_keys": 1062311,
+   "deleted_keys": 41727,
+   "systems": {
+    "a6_n1": {
+     "errors": {
+      "live": 0,
+      "deleted": 0,
+      "absent": 0
+     },
+     "client_us": {
+      "p50": 285.0,
+      "p95": 657.8049999999998,
+      "p99": 740.8009999999998,
+      "mean": 320.661435,
+      "n": 20000
+     },
+     "buffers_by_category": {
+      "base": 1.0159480212640284,
+      "ins": 1.0257731958762886,
+      "upd": 1.0
+     },
+     "buffers_equal_mix": 1.0139070723801058,
+     "buffers_raw_mix": 1.016,
+     "planning_buffers": 0.0,
+     "buffers_generic_plan_200": 1.02,
+     "category_counts": {
+      "base": 1693,
+      "ins": 194,
+      "upd": 113
+     },
+     "buffers_deleted": 0.296,
+     "buffers_absent": 0.02,
+     "statio_live": {
+      "queries": 2000,
+      "heap_per_q": 1.016,
+      "index_per_q": 0.0,
+      "toast_per_q": 0.0
+     },
+     "sizes": {
+      "address_main": 5382597,
+      "address_total": 5382597,
+      "table_bytes": 717750272,
+      "levels": 6,
+      "runs": [
+       [
+        8,
+        8,
+        0,
+        11179,
+        true
+       ],
+       [
+        7,
+        7,
+        0,
+        23877,
+        true
+       ],
+       [
+        6,
+        6,
+        0,
+        23775,
+        true
+       ],
+       [
+        5,
+        5,
+        0,
+        23801,
+        true
+       ]
+      ],
+      "tail_committed_keys": 3999,
+      "job": null,
+      "round": 4
+     },
+     "address_main_per_live_key": 5.066874954697824
+    },
+    "c6_n1": {
+     "errors": {
+      "live": 0,
+      "deleted": 0,
+      "absent": 0
+     },
+     "client_us": {
+      "p50": 153.0,
+      "p95": 532.6099999999999,
+      "p99": 611.0,
+      "mean": 190.70322,
+      "n": 20000
+     },
+     "buffers_by_category": {
+      "base": 4.0,
+      "ins": 4.0,
+      "upd": 4.053097345132743
+     },
+     "buffers_equal_mix": 4.017699115044247,
+     "buffers_raw_mix": 4.003,
+     "planning_buffers": 0.0,
+     "buffers_generic_plan_200": 4.0,
+     "category_counts": {
+      "base": 1693,
+      "ins": 194,
+      "upd": 113
+     },
+     "buffers_deleted": 3.0,
+     "buffers_absent": 3.0,
+     "statio_live": {
+      "queries": 2000,
+      "heap_per_q": 1.0015,
+      "index_per_q": 3.0015,
+      "toast_per_q": 0.0
+     },
+     "sizes": {
+      "address_main": 43155456,
+      "address_total": 43155456,
+      "table_bytes": 717733888
+     },
+     "address_main_per_live_key": 40.624126079839144,
+     "direct_diagnostic": {
+      "client_us_cold_g": {
+       "p50": 94.9,
+       "p95": 131.20499999999998,
+       "p99": 168.201,
+       "mean": 99.32154999999999,
+       "n": 2000
+      },
+      "client_us_warm_g": {
+       "p50": 83.0,
+       "p95": 88.405,
+       "p99": 130.91,
+       "mean": 84.63495000000002,
+       "n": 2000
+      },
+      "buffers": 4.004,
+      "planning_buffers": 0.0
+     }
+    }
+   }
+  },
+  {
+   "cp": 8,
+   "name": "every_50k",
+   "after_op": 250000,
+   "live_keys": 1074717,
+   "deleted_keys": 50192,
+   "systems": {
+    "a6_n1": {
+     "errors": {
+      "live": 0,
+      "deleted": 0,
+      "absent": 0
+     },
+     "client_us": {
+      "p50": 250.3,
+      "p95": 662.9,
+      "p99": 721.0019999999997,
+      "mean": 340.470055,
+      "n": 20000
+     },
+     "buffers_by_category": {
+      "base": 1.0029691211401426,
+      "ins": 1.010752688172043,
+      "upd": 1.0076923076923077
+     },
+     "buffers_equal_mix": 1.0071380390014977,
+     "buffers_raw_mix": 1.004,
+     "planning_buffers": 0.0,
+     "buffers_generic_plan_200": 1.0,
+     "category_counts": {
+      "base": 1684,
+      "ins": 186,
+      "upd": 130
+     },
+     "buffers_deleted": 0.16,
+     "buffers_absent": 0.006,
+     "statio_live": {
+      "queries": 2000,
+      "heap_per_q": 1.004,
+      "index_per_q": 0.0,
+      "toast_per_q": 0.0
+     },
+     "sizes": {
+      "address_main": 4413819,
+      "address_total": 4413819,
+      "table_bytes": 729604096,
+      "levels": 3,
+      "runs": [
+       [
+        9,
+        9,
+        0,
+        23835,
+        false
+       ]
+      ],
+      "tail_committed_keys": 15939,
+      "job": null,
+      "round": null
+     },
+     "address_main_per_live_key": 4.106959320453663
+    },
+    "c6_n1": {
+     "errors": {
+      "live": 0,
+      "deleted": 0,
+      "absent": 0
+     },
+     "client_us": {
+      "p50": 147.7,
+      "p95": 303.5299999999996,
+      "p99": 579.6049999999992,
+      "mean": 174.19165499999997,
+      "n": 20000
+     },
+     "buffers_by_category": {
+      "base": 4.0,
+      "ins": 4.0,
+      "upd": 4.0
+     },
+     "buffers_equal_mix": 4.0,
+     "buffers_raw_mix": 4.0,
+     "planning_buffers": 0.0,
+     "buffers_generic_plan_200": 4.0,
+     "category_counts": {
+      "base": 1684,
+      "ins": 186,
+      "upd": 130
+     },
+     "buffers_deleted": 3.0,
+     "buffers_absent": 3.0,
+     "statio_live": {
+      "queries": 2000,
+      "heap_per_q": 1.0,
+      "index_per_q": 3.0,
+      "toast_per_q": 0.0
+     },
+     "sizes": {
+      "address_main": 48570368,
+      "address_total": 48570368,
+      "table_bytes": 729595904
+     },
+     "address_main_per_live_key": 45.1936351616286,
+     "direct_diagnostic": {
+      "client_us_cold_g": {
+       "p50": 94.5,
+       "p95": 128.93999999999997,
+       "p99": 164.904,
+       "mean": 99.16585,
+       "n": 2000
+      },
+      "client_us_warm_g": {
+       "p50": 83.2,
+       "p95": 113.61999999999998,
+       "p99": 140.32399999999998,
+       "mean": 87.02335000000001,
+       "n": 2000
+      },
+      "buffers": 4.0,
+      "planning_buffers": 0.0
+     }
+    }
+   },
+   "candidates_hist": {
+    "0": 95499,
+    "1": 79242,
+    "2": 1048,
+    "3": 4
+   },
+   "rss": {
+    "peak_mb": 1080.74609375,
+    "current_mb": 1047.56640625
+   }
+  },
+  {
+   "cp": 9,
+   "name": "every_50k",
+   "after_op": 300000,
+   "live_keys": 1089897,
+   "deleted_keys": 60085,
+   "systems": {
+    "a6_n1": {
+     "errors": {
+      "live": 0,
+      "deleted": 0,
+      "absent": 0
+     },
+     "client_us": {
+      "p50": 297.3,
+      "p95": 716.7,
+      "p99": 770.2039999999994,
+      "mean": 397.884225,
+      "n": 20000
+     },
+     "buffers_by_category": {
+      "base": 1.008248730964467,
+      "upd": 1.0063694267515924,
+      "ins": 1.0074906367041199
+     },
+     "buffers_equal_mix": 1.0073695981400597,
+     "buffers_raw_mix": 1.008,
+     "planning_buffers": 0.0,
+     "buffers_generic_plan_200": 1.005,
+     "category_counts": {
+      "base": 1576,
+      "upd": 157,
+      "ins": 267
+     },
+     "buffers_deleted": 0.316,
+     "buffers_absent": 0.012,
+     "statio_live": {
+      "queries": 2000,
+      "heap_per_q": 1.008,
+      "index_per_q": 0.0,
+      "toast_per_q": 0.0
+     },
+     "sizes": {
+      "address_main": 5233031,
+      "address_total": 5233031,
+      "table_bytes": 729604096,
+      "levels": 5,
+      "runs": [
+       [
+        11,
+        11,
+        0,
+        23911,
+        false
+       ],
+       [
+        10,
+        10,
+        0,
+        23855,
+        false
+       ],
+       [
+        9,
+        9,
+        0,
+        23835,
+        false
+       ]
+      ],
+      "tail_committed_keys": 5996,
+      "job": null,
+      "round": null
+     },
+     "address_main_per_live_key": 4.801399581795344
+    },
+    "c6_n1": {
+     "errors": {
+      "live": 0,
+      "deleted": 0,
+      "absent": 0
+     },
+     "client_us": {
+      "p50": 160.2,
+      "p95": 630.1049999999999,
+      "p99": 923.2019999999998,
+      "mean": 278.01676499999996,
+      "n": 20000
+     },
+     "buffers_by_category": {
+      "base": 4.0,
+      "upd": 4.0,
+      "ins": 4.0
+     },
+     "buffers_equal_mix": 4.0,
+     "buffers_raw_mix": 4.0,
+     "planning_buffers": 0.0,
+     "buffers_generic_plan_200": 4.0,
+     "category_counts": {
+      "base": 1576,
+      "upd": 157,
+      "ins": 267
+     },
+     "buffers_deleted": 3.0,
+     "buffers_absent": 3.0,
+     "statio_live": {
+      "queries": 2000,
+      "heap_per_q": 1.0,
+      "index_per_q": 3.0,
+      "toast_per_q": 0.0
+     },
+     "sizes": {
+      "address_main": 49954816,
+      "address_total": 49954816,
+      "table_bytes": 729595904
+     },
+     "address_main_per_live_key": 45.83443756611863,
+     "direct_diagnostic": {
+      "client_us_cold_g": {
+       "p50": 94.5,
+       "p95": 123.4,
+       "p99": 164.501,
+       "mean": 98.0245,
+       "n": 2000
+      },
+      "client_us_warm_g": {
+       "p50": 83.2,
+       "p95": 94.71499999999999,
+       "p99": 133.01899999999998,
+       "mean": 85.31264999999999,
+       "n": 2000
+      },
+      "buffers": 4.0,
+      "planning_buffers": 0.0
+     }
+    }
+   },
+   "candidates_hist": {
+    "0": 58330,
+    "1": 53212,
+    "2": 853,
+    "3": 5
+   },
+   "rss": {
+    "peak_mb": 1101.296875,
+    "current_mb": 1059.98828125
+   }
+  },
+  {
+   "cp": 10,
+   "name": "mid_round",
+   "after_op": 315000,
+   "live_keys": 1094525,
+   "deleted_keys": 63047,
+   "systems": {
+    "a6_n1": {
+     "errors": {
+      "live": 0,
+      "deleted": 0,
+      "absent": 0
+     },
+     "client_us": {
+      "p50": 283.5,
+      "p95": 658.1099999999999,
+      "p99": 746.7019999999998,
+      "mean": 316.065575,
+      "n": 20000
+     },
+     "buffers_by_category": {
+      "ins": 1.0147058823529411,
+      "base": 1.0108211330362826,
+      "upd": 1.0127388535031847
+     },
+     "buffers_equal_mix": 1.0127552896308027,
+     "buffers_raw_mix": 1.0115,
+     "planning_buffers": 0.0,
+     "buffers_generic_plan_200": 1.01,
+     "category_counts": {
+      "ins": 272,
+      "base": 1571,
+      "upd": 157
+     },
+     "buffers_deleted": 0.214,
+     "buffers_absent": 0.012,
+     "statio_live": {
+      "queries": 2000,
+      "heap_per_q": 1.0115,
+      "index_per_q": 0.0,
+      "toast_per_q": 0.0
+     },
+     "sizes": {
+      "address_main": 5542374,
+      "address_total": 5542374,
+      "table_bytes": 729604096,
+      "levels": 6,
+      "runs": [
+       [
+        12,
+        12,
+        0,
+        13589,
+        true
+       ],
+       [
+        11,
+        11,
+        0,
+        23911,
+        true
+       ],
+       [
+        10,
+        10,
+        0,
+        23855,
+        true
+       ],
+       [
+        9,
+        9,
+        0,
+        23835,
+        true
+       ]
+      ],
+      "tail_committed_keys": 3999,
+      "job": null,
+      "round": 4
+     },
+     "address_main_per_live_key": 5.063725360316119
+    },
+    "c6_n1": {
+     "errors": {
+      "live": 0,
+      "deleted": 0,
+      "absent": 0
+     },
+     "client_us": {
+      "p50": 155.3,
+      "p95": 571.7049999999999,
+      "p99": 816.2,
+      "mean": 216.308685,
+      "n": 20000
+     },
+     "buffers_by_category": {
+      "ins": 4.0,
+      "base": 4.0,
+      "upd": 4.025477707006369
+     },
+     "buffers_equal_mix": 4.008492569002123,
+     "buffers_raw_mix": 4.002,
+     "planning_buffers": 0.0,
+     "buffers_generic_plan_200": 4.0,
+     "category_counts": {
+      "ins": 272,
+      "base": 1571,
+      "upd": 157
+     },
+     "buffers_deleted": 3.0,
+     "buffers_absent": 3.0,
+     "statio_live": {
+      "queries": 2000,
+      "heap_per_q": 1.001,
+      "index_per_q": 3.001,
+      "toast_per_q": 0.0
+     },
+     "sizes": {
+      "address_main": 51191808,
+      "address_total": 51191808,
+      "table_bytes": 729595904
+     },
+     "address_main_per_live_key": 46.77079829149631,
+     "direct_diagnostic": {
+      "client_us_cold_g": {
+       "p50": 94.8,
+       "p95": 115.31499999999998,
+       "p99": 153.911,
+       "mean": 97.95225,
+       "n": 2000
+      },
+      "client_us_warm_g": {
+       "p50": 83.9,
+       "p95": 101.4,
+       "p99": 140.92,
+       "mean": 86.4546,
+       "n": 2000
+      },
+      "buffers": 4.004,
+      "planning_buffers": 0.0
+     }
+    }
+   }
+  },
+  {
+   "cp": 11,
+   "name": "every_50k",
+   "after_op": 350000,
+   "live_keys": 1105011,
+   "deleted_keys": 69967,
+   "systems": {
+    "a6_n1": {
+     "errors": {
+      "live": 0,
+      "deleted": 0,
+      "absent": 0
+     },
+     "client_us": {
+      "p50": 256.9,
+      "p95": 676.6,
+      "p99": 730.9,
+      "mean": 371.92488000000003,
+      "n": 20000
+     },
+     "buffers_by_category": {
+      "upd": 1.0,
+      "ins": 1.0068493150684932,
+      "base": 1.0019518542615484
+     },
+     "buffers_equal_mix": 1.002933723110014,
+     "buffers_raw_mix": 1.0025,
+     "planning_buffers": 0.0,
+     "buffers_generic_plan_200": 1.0,
+     "category_counts": {
+      "upd": 171,
+      "ins": 292,
+      "base": 1537
+     },
+     "buffers_deleted": 0.094,
+     "buffers_absent": 0.002,
+     "statio_live": {
+      "queries": 2000,
+      "heap_per_q": 1.0025,
+      "index_per_q": 0.0,
+      "toast_per_q": 0.0
+     },
+     "sizes": {
+      "address_main": 4313110,
+      "address_total": 4313110,
+      "table_bytes": 729604096,
+      "levels": 3,
+      "runs": [
+       [
+        13,
+        13,
+        0,
+        23798,
+        false
+       ]
+      ],
+      "tail_committed_keys": 8986,
+      "job": null,
+      "round": null
+     },
+     "address_main_per_live_key": 3.903228112661322
+    },
+    "c6_n1": {
+     "errors": {
+      "live": 0,
+      "deleted": 0,
+      "absent": 0
+     },
+     "client_us": {
+      "p50": 160.3,
+      "p95": 608.2,
+      "p99": 921.3009999999998,
+      "mean": 241.25999000000004,
+      "n": 20000
+     },
+     "buffers_by_category": {
+      "upd": 4.011695906432749,
+      "ins": 4.0,
+      "base": 4.0
+     },
+     "buffers_equal_mix": 4.003898635477583,
+     "buffers_raw_mix": 4.001,
+     "planning_buffers": 0.0,
+     "buffers_generic_plan_200": 4.0,
+     "category_counts": {
+      "upd": 171,
+      "ins": 292,
+      "base": 1537
+     },
+     "buffers_deleted": 3.0,
+     "buffers_absent": 3.0,
+     "statio_live": {
+      "queries": 2000,
+      "heap_per_q": 1.0005,
+      "index_per_q": 3.0005,
+      "toast_per_q": 0.0
+     },
+     "sizes": {
+      "address_main": 55533568,
+      "address_total": 55533568,
+      "table_bytes": 729595904
+     },
+     "address_main_per_live_key": 50.2561223372437,
+     "direct_diagnostic": {
+      "client_us_cold_g": {
+       "p50": 95.9,
+       "p95": 131.11999999999998,
+       "p99": 166.701,
+       "mean": 100.2531,
+       "n": 2000
+      },
+      "client_us_warm_g": {
+       "p50": 84.4,
+       "p95": 116.60999999999999,
+       "p99": 150.605,
+       "mean": 88.0107,
+       "n": 2000
+      },
+      "buffers": 4.0,
+      "planning_buffers": 0.0
+     }
+    }
+   },
+   "candidates_hist": {
+    "0": 98445,
+    "1": 76285,
+    "2": 1064,
+    "3": 6
+   },
+   "rss": {
+    "peak_mb": 1111.51171875,
+    "current_mb": 1069.859375
+   }
+  },
+  {
+   "cp": 12,
+   "name": "every_50k",
+   "after_op": 400000,
+   "live_keys": 1119947,
+   "deleted_keys": 80007,
+   "systems": {
+    "a6_n1": {
+     "errors": {
+      "live": 0,
+      "deleted": 0,
+      "absent": 0
+     },
+     "client_us": {
+      "p50": 285.85,
+      "p95": 696.2,
+      "p99": 759.5009999999999,
+      "mean": 395.14172,
+      "n": 20000
+     },
+     "buffers_by_category": {
+      "base": 1.0053404539385848,
+      "ins": 1.0,
+      "upd": 1.005586592178771
+     },
+     "buffers_equal_mix": 1.0036423487057853,
+     "buffers_raw_mix": 1.0045,
+     "planning_buffers": 0.0,
+     "buffers_generic_plan_200": 1.01,
+     "category_counts": {
+      "base": 1498,
+      "ins": 323,
+      "upd": 179
+     },
+     "buffers_deleted": 0.21,
+     "buffers_absent": 0.008,
+     "statio_live": {
+      "queries": 2000,
+      "heap_per_q": 1.0045,
+      "index_per_q": 0.0,
+      "toast_per_q": 0.0
+     },
+     "sizes": {
+      "address_main": 5448977,
+      "address_total": 5448977,
+      "table_bytes": 742817792,
+      "levels": 4,
+      "runs": [
+       [
+        14,
+        14,
+        0,
+        23905,
+        false
+       ],
+       [
+        13,
+        13,
+        0,
+        23798,
+        false
+       ]
+      ],
+      "tail_committed_keys": 28850,
+      "job": null,
+      "round": null
+     },
+     "address_main_per_live_key": 4.865388272837911
+    },
+    "c6_n1": {
+     "errors": {
+      "live": 0,
+      "deleted": 0,
+      "absent": 0
+     },
+     "client_us": {
+      "p50": 165.5,
+      "p95": 692.3349999999995,
+      "p99": 939.4009999999998,
+      "mean": 279.04751,
+      "n": 20000
+     },
+     "buffers_by_category": {
+      "base": 4.0,
+      "ins": 4.0,
+      "upd": 4.011173184357542
+     },
+     "buffers_equal_mix": 4.003724394785848,
+     "buffers_raw_mix": 4.001,
+     "planning_buffers": 0.0,
+     "buffers_generic_plan_200": 4.0,
+     "category_counts": {
+      "base": 1498,
+      "ins": 323,
+      "upd": 179
+     },
+     "buffers_deleted": 3.0,
+     "buffers_absent": 3.0,
+     "statio_live": {
+      "queries": 2000,
+      "heap_per_q": 1.0005,
+      "index_per_q": 3.0005,
+      "toast_per_q": 0.0
+     },
+     "sizes": {
+      "address_main": 60547072,
+      "address_total": 60547072,
+      "table_bytes": 744235008
+     },
+     "address_main_per_live_key": 54.06244402636911,
+     "direct_diagnostic": {
+      "client_us_cold_g": {
+       "p50": 95.3,
+       "p95": 137.34499999999997,
+       "p99": 173.901,
+       "mean": 100.91354999999999,
+       "n": 2000
+      },
+      "client_us_warm_g": {
+       "p50": 84.1,
+       "p95": 114.61999999999998,
+       "p99": 150.101,
+       "mean": 87.32900000000001,
+       "n": 2000
+      },
+      "buffers": 4.0,
+      "planning_buffers": 0.0
+     }
+    }
+   },
+   "candidates_hist": {
+    "0": 60162,
+    "1": 51191,
+    "2": 843,
+    "3": 4
+   },
+   "rss": {
+    "peak_mb": 1128.95703125,
+    "current_mb": 1090.92578125
+   }
+  },
+  {
+   "cp": 13,
+   "name": "mid_round",
+   "after_op": 425000,
+   "live_keys": 1127658,
+   "deleted_keys": 84929,
+   "systems": {
+    "a6_n1": {
+     "errors": {
+      "live": 0,
+      "deleted": 0,
+      "absent": 0
+     },
+     "client_us": {
+      "p50": 289.6,
+      "p95": 663.3,
+      "p99": 744.4079999999987,
+      "mean": 321.21501,
+      "n": 20000
+     },
+     "buffers_by_category": {
+      "ins": 1.0115273775216138,
+      "base": 1.0117810117810118,
+      "upd": 1.0142857142857142
+     },
+     "buffers_equal_mix": 1.01253136786278,
+     "buffers_raw_mix": 1.012,
+     "planning_buffers": 0.0,
+     "buffers_generic_plan_200": 1.01,
+     "category_counts": {
+      "ins": 347,
+      "base": 1443,
+      "upd": 210
+     },
+     "buffers_deleted": 0.142,
+     "buffers_absent": 0.016,
+     "statio_live": {
+      "queries": 2000,
+      "heap_per_q": 1.012,
+      "index_per_q": 0.0,
+      "toast_per_q": 0.0
+     },
+     "sizes": {
+      "address_main": 5701500,
+      "address_total": 5701500,
+      "table_bytes": 752861184,
+      "levels": 6,
+      "runs": [
+       [
+        16,
+        16,
+        0,
+        16027,
+        true
+       ],
+       [
+        15,
+        15,
+        0,
+        23813,
+        true
+       ],
+       [
+        14,
+        14,
+        0,
+        23905,
+        true
+       ],
+       [
+        13,
+        13,
+        0,
+        23798,
+        true
+       ]
+      ],
+      "tail_committed_keys": 3996,
+      "job": null,
+      "round": 4
+     },
+     "address_main_per_live_key": 5.056054229207792
+    },
+    "c6_n1": {
+     "errors": {
+      "live": 0,
+      "deleted": 0,
+      "absent": 0
+     },
+     "client_us": {
+      "p50": 159.5,
+      "p95": 581.7,
+      "p99": 853.2079999999987,
+      "mean": 222.954035,
+      "n": 20000
+     },
+     "buffers_by_category": {
+      "ins": 4.0,
+      "base": 4.0,
+      "upd": 4.0285714285714285
+     },
+     "buffers_equal_mix": 4.0095238095238095,
+     "buffers_raw_mix": 4.003,
+     "planning_buffers": 0.0,
+     "buffers_generic_plan_200": 4.0,
+     "category_counts": {
+      "ins": 347,
+      "base": 1443,
+      "upd": 210
+     },
+     "buffers_deleted": 3.0,
+     "buffers_absent": 3.0,
+     "statio_live": {
+      "queries": 2000,
+      "heap_per_q": 1.0015,
+      "index_per_q": 3.0015,
+      "toast_per_q": 0.0
+     },
+     "sizes": {
+      "address_main": 61603840,
+      "address_total": 61603840,
+      "table_bytes": 754180096
+     },
+     "address_main_per_live_key": 54.62989665306325,
+     "direct_diagnostic": {
+      "client_us_cold_g": {
+       "p50": 95.0,
+       "p95": 128.12999999999997,
+       "p99": 171.0,
+       "mean": 98.87920000000001,
+       "n": 2000
+      },
+      "client_us_warm_g": {
+       "p50": 83.3,
+       "p95": 99.41999999999999,
+       "p99": 147.6,
+       "mean": 85.94839999999999,
+       "n": 2000
+      },
+      "buffers": 4.0,
+      "planning_buffers": 0.0
+     }
+    }
+   }
+  },
+  {
+   "cp": 14,
+   "name": "every_50k",
+   "after_op": 450000,
+   "live_keys": 1135070,
+   "deleted_keys": 89944,
+   "systems": {
+    "a6_n1": {
+     "errors": {
+      "live": 0,
+      "deleted": 0,
+      "absent": 0
+     },
+     "client_us": {
+      "p50": 228.5,
+      "p95": 643.8,
+      "p99": 690.7,
+      "mean": 331.87183999999996,
+      "n": 20000
+     },
+     "buffers_by_category": {
+      "upd": 1.0,
+      "base": 1.0,
+      "ins": 1.0
+     },
+     "buffers_equal_mix": 1.0,
+     "buffers_raw_mix": 1.0,
+     "planning_buffers": 0.0,
+     "buffers_generic_plan_200": 1.0,
+     "category_counts": {
+      "upd": 210,
+      "base": 1422,
+      "ins": 368
+     },
+     "buffers_deleted": 0.06,
+     "buffers_absent": 0.008,
+     "statio_live": {
+      "queries": 2000,
+      "heap_per_q": 1.0,
+      "index_per_q": 0.0,
+      "toast_per_q": 0.0
+     },
+     "sizes": {
+      "address_main": 4447044,
+      "address_total": 4447044,
+      "table_bytes": 762552320,
+      "levels": 2,
+      "runs": [],
+      "tail_committed_keys": 28846,
+      "job": null,
+      "round": null
+     },
+     "address_main_per_live_key": 3.917858810469839
+    },
+    "c6_n1": {
+     "errors": {
+      "live": 0,
+      "deleted": 0,
+      "absent": 0
+     },
+     "client_us": {
+      "p50": 155.9,
+      "p95": 540.7,
+      "p99": 765.3559999999751,
+      "mean": 195.333935,
+      "n": 20000
+     },
+     "buffers_by_category": {
+      "upd": 4.0285714285714285,
+      "base": 4.0,
+      "ins": 4.0
+     },
+     "buffers_equal_mix": 4.0095238095238095,
+     "buffers_raw_mix": 4.003,
+     "planning_buffers": 0.0,
+     "buffers_generic_plan_200": 4.0,
+     "category_counts": {
+      "upd": 210,
+      "base": 1422,
+      "ins": 368
+     },
+     "buffers_deleted": 3.0,
+     "buffers_absent": 3.0,
+     "statio_live": {
+      "queries": 2000,
+      "heap_per_q": 1.0015,
+      "index_per_q": 3.0015,
+      "toast_per_q": 0.0
+     },
+     "sizes": {
+      "address_main": 62234624,
+      "address_total": 62234624,
+      "table_bytes": 763813888
+     },
+     "address_main_per_live_key": 54.82888632419146,
+     "direct_diagnostic": {
+      "client_us_cold_g": {
+       "p50": 95.2,
+       "p95": 134.51,
+       "p99": 171.907,
+       "mean": 100.79795,
+       "n": 2000
+      },
+      "client_us_warm_g": {
+       "p50": 82.9,
+       "p95": 95.205,
+       "p99": 144.903,
+       "mean": 86.16095,
+       "n": 2000
+      },
+      "buffers": 4.0,
+      "planning_buffers": 0.0
+     }
+    }
+   },
+   "candidates_hist": {
+    "1": 74617,
+    "0": 100189,
+    "2": 977,
+    "3": 11
+   },
+   "rss": {
+    "peak_mb": 1149.640625,
+    "current_mb": 1110.54296875
+   }
+  },
+  {
+   "cp": 15,
+   "name": "every_50k",
+   "after_op": 500000,
+   "live_keys": 1150000,
+   "deleted_keys": 100000,
+   "systems": {
+    "a6_n1": {
+     "errors": {
+      "live": 0,
+      "deleted": 0,
+      "absent": 0
+     },
+     "client_us": {
+      "p50": 276.6,
+      "p95": 690.4049999999999,
+      "p99": 755.0009999999999,
+      "mean": 379.07007000000004,
+      "n": 20000
+     },
+     "buffers_by_category": {
+      "base": 1.0065741417092768,
+      "ins": 1.0102827763496145,
+      "upd": 1.012396694214876
+     },
+     "buffers_equal_mix": 1.0097512040912557,
+     "buffers_raw_mix": 1.008,
+     "planning_buffers": 0.0,
+     "buffers_generic_plan_200": 1.005,
+     "category_counts": {
+      "base": 1369,
+      "ins": 389,
+      "upd": 242
+     },
+     "buffers_deleted": 0.166,
+     "buffers_absent": 0.01,
+     "statio_live": {
+      "queries": 2000,
+      "heap_per_q": 1.008,
+      "index_per_q": 0.0,
+      "toast_per_q": 0.0
+     },
+     "sizes": {
+      "address_main": 5261975,
+      "address_total": 5261975,
+      "table_bytes": 773914624,
+      "levels": 4,
+      "runs": [
+       [
+        18,
+        18,
+        0,
+        23766,
+        false
+       ],
+       [
+        17,
+        17,
+        0,
+        23815,
+        false
+       ]
+      ],
+      "tail_committed_keys": 18940,
+      "job": null,
+      "round": null
+     },
+     "address_main_per_live_key": 4.5756304347826084
+    },
+    "c6_n1": {
+     "errors": {
+      "live": 0,
+      "deleted": 0,
+      "absent": 0
+     },
+     "client_us": {
+      "p50": 150.7,
+      "p95": 545.6,
+      "p99": 631.2019999999998,
+      "mean": 194.55065,
+      "n": 20000
+     },
+     "buffers_by_category": {
+      "base": 4.0,
+      "ins": 4.0,
+      "upd": 4.0
+     },
+     "buffers_equal_mix": 4.0,
+     "buffers_raw_mix": 4.0,
+     "planning_buffers": 0.0,
+     "buffers_generic_plan_200": 4.0,
+     "category_counts": {
+      "base": 1369,
+      "ins": 389,
+      "upd": 242
+     },
+     "buffers_deleted": 3.0,
+     "buffers_absent": 3.0,
+     "statio_live": {
+      "queries": 2000,
+      "heap_per_q": 1.0,
+      "index_per_q": 3.0,
+      "toast_per_q": 0.0
+     },
+     "sizes": {
+      "address_main": 62660608,
+      "address_total": 62660608,
+      "table_bytes": 775135232
+     },
+     "address_main_per_live_key": 54.4874852173913,
+     "direct_diagnostic": {
+      "client_us_cold_g": {
+       "p50": 94.35,
+       "p95": 130.12499999999997,
+       "p99": 169.905,
+       "mean": 98.5335,
+       "n": 2000
+      },
+      "client_us_warm_g": {
+       "p50": 82.8,
+       "p95": 90.43999999999997,
+       "p99": 140.012,
+       "mean": 84.97685,
+       "n": 2000
+      },
+      "buffers": 4.0,
+      "planning_buffers": 0.0
+     }
+    }
+   },
+   "candidates_hist": {
+    "0": 61404,
+    "1": 50341,
+    "2": 654,
+    "3": 1
+   },
+   "rss": {
+    "peak_mb": 1166.79296875,
+    "current_mb": 1126.63671875
+   }
+  },
+  {
+   "cp": 16,
+   "name": "after_restart",
+   "after_op": 500000,
+   "live_keys": 1150000,
+   "deleted_keys": 100000,
+   "systems": {
+    "a6_n1": {
+     "errors": {
+      "live": 0,
+      "deleted": 0,
+      "absent": 0
+     },
+     "client_us": {
+      "p50": 237.9,
+      "p95": 313.5,
+      "p99": 356.00099999999986,
+      "mean": 244.26831,
+      "n": 20000
+     },
+     "buffers_by_category": {
+      "base": 1.0073367571533383,
+      "upd": 1.015748031496063,
+      "ins": 1.0052219321148825
+     },
+     "buffers_equal_mix": 1.0094355735880944,
+     "buffers_raw_mix": 1.008,
+     "planning_buffers": 0.0,
+     "buffers_generic_plan_200": 1.005,
+     "category_counts": {
+      "base": 1363,
+      "upd": 254,
+      "ins": 383
+     },
+     "buffers_deleted": 0.144,
+     "buffers_absent": 0.01,
+     "statio_live": {
+      "queries": 2000,
+      "heap_per_q": 1.008,
+      "index_per_q": 0.0,
+      "toast_per_q": 0.0
+     },
+     "sizes": {
+      "address_main": 5261975,
+      "address_total": 5261975,
+      "table_bytes": 773914624,
+      "levels": 4,
+      "runs": [
+       [
+        18,
+        18,
+        0,
+        23766,
+        false
+       ],
+       [
+        17,
+        17,
+        0,
+        23815,
+        false
+       ]
+      ],
+      "tail_committed_keys": 18940,
+      "job": null,
+      "round": null
+     },
+     "address_main_per_live_key": 4.5756304347826084
+    },
+    "c6_n1": {
+     "errors": {
+      "live": 0,
+      "deleted": 0,
+      "absent": 0
+     },
+     "client_us": {
+      "p50": 149.7,
+      "p95": 205.5,
+      "p99": 233.50199999999967,
+      "mean": 155.89134,
+      "n": 20000
+     },
+     "buffers_by_category": {
+      "base": 4.0,
+      "upd": 4.0,
+      "ins": 4.0
+     },
+     "buffers_equal_mix": 4.0,
+     "buffers_raw_mix": 4.0,
+     "planning_buffers": 0.0,
+     "buffers_generic_plan_200": 4.0,
+     "category_counts": {
+      "base": 1363,
+      "upd": 254,
+      "ins": 383
+     },
+     "buffers_deleted": 3.0,
+     "buffers_absent": 3.0,
+     "statio_live": {
+      "queries": 2000,
+      "heap_per_q": 1.0,
+      "index_per_q": 3.0,
+      "toast_per_q": 0.0
+     },
+     "sizes": {
+      "address_main": 62660608,
+      "address_total": 62660608,
+      "table_bytes": 775135232
+     },
+     "address_main_per_live_key": 54.4874852173913,
+     "direct_diagnostic": {
+      "client_us_cold_g": {
+       "p50": 94.9,
+       "p95": 130.005,
+       "p99": 180.1,
+       "mean": 99.46709999999999,
+       "n": 2000
+      },
+      "client_us_warm_g": {
+       "p50": 83.6,
+       "p95": 103.5,
+       "p99": 149.601,
+       "mean": 86.52114999999999,
+       "n": 2000
+      },
+      "buffers": 4.0,
+      "planning_buffers": 0.0
+     }
+    }
+   }
+  },
+  {
+   "cp": 17,
+   "name": "after_final_round",
+   "after_op": 500000,
+   "live_keys": 1150000,
+   "deleted_keys": 100000,
+   "systems": {
+    "a6_n1": {
+     "errors": {
+      "live": 0,
+      "deleted": 0,
+      "absent": 0
+     },
+     "client_us": {
+      "p50": 201.6,
+      "p95": 264.0,
+      "p99": 597.0029999999995,
+      "mean": 211.745595,
+      "n": 20000
+     },
+     "buffers_by_category": {
+      "base": 1.0,
+      "upd": 1.0,
+      "ins": 1.0
+     },
+     "buffers_equal_mix": 1.0,
+     "buffers_raw_mix": 1.0,
+     "planning_buffers": 0.0,
+     "buffers_generic_plan_200": 1.0,
+     "category_counts": {
+      "base": 1388,
+      "upd": 232,
+      "ins": 380
+     },
+     "buffers_deleted": 0.006,
+     "buffers_absent": 0.004,
+     "statio_live": {
+      "queries": 2000,
+      "heap_per_q": 1.0,
+      "index_per_q": 0.0,
+      "toast_per_q": 0.0
+     },
+     "sizes": {
+      "address_main": 3675664,
+      "address_total": 3675664,
+      "table_bytes": 773914624,
+      "levels": 2,
+      "runs": [],
+      "tail_committed_keys": 0,
+      "job": null,
+      "round": null
+     },
+     "address_main_per_live_key": 3.1962295652173913
+    },
+    "c6_n1": {
+     "errors": {
+      "live": 0,
+      "deleted": 0,
+      "absent": 0
+     },
+     "client_us": {
+      "p50": 146.0,
+      "p95": 200.5,
+      "p99": 228.0,
+      "mean": 152.05036,
+      "n": 20000
+     },
+     "buffers_by_category": {
+      "base": 4.0,
+      "upd": 4.0,
+      "ins": 4.0
+     },
+     "buffers_equal_mix": 4.0,
+     "buffers_raw_mix": 4.0,
+     "planning_buffers": 0.0,
+     "buffers_generic_plan_200": 4.0,
+     "category_counts": {
+      "base": 1388,
+      "upd": 232,
+      "ins": 380
+     },
+     "buffers_deleted": 3.0,
+     "buffers_absent": 3.0,
+     "statio_live": {
+      "queries": 2000,
+      "heap_per_q": 1.0,
+      "index_per_q": 3.0,
+      "toast_per_q": 0.0
+     },
+     "sizes": {
+      "address_main": 62660608,
+      "address_total": 62660608,
+      "table_bytes": 775135232
+     },
+     "address_main_per_live_key": 54.4874852173913,
+     "direct_diagnostic": {
+      "client_us_cold_g": {
+       "p50": 94.6,
+       "p95": 129.82,
+       "p99": 176.001,
+       "mean": 98.864,
+       "n": 2000
+      },
+      "client_us_warm_g": {
+       "p50": 83.0,
+       "p95": 118.73999999999997,
+       "p99": 154.70499999999998,
+       "mean": 87.38870000000001,
+       "n": 2000
+      },
+      "buffers": 4.0,
+      "planning_buffers": 0.0
+     }
+    }
+   }
+  }
+ ],
+ "batches": [
+  [
+   1000,
+   0.2514382000081241,
+   1.679999695625156e-05,
+   3227168,
+   3.226361409647588,
+   2,
+   ""
+  ],
+  [
+   2000,
+   0.23273909999988973,
+   1.2199991033412516e-05,
+   3256197,
+   3.2544461079938993,
+   2,
+   ""
+  ],
+  [
+   3000,
+   0.23415129999921191,
+   1.2699994840659201e-05,
+   3285226,
+   3.2825277621794884,
+   2,
+   ""
+  ],
+  [
+   4000,
+   0.22706699999980628,
+   1.170000177808106e-05,
+   3314255,
+   3.310540573476559,
+   2,
+   ""
+  ],
+  [
+   5000,
+   0.23106520000146702,
+   1.1399999493733048e-05,
+   3343284,
+   3.3385332671608303,
+   2,
+   ""
+  ],
+  [
+   6000,
+   0.23231510000186972,
+   1.1800002539530396e-05,
+   3372313,
+   3.366586436471562,
+   2,
+   ""
+  ],
+  [
+   7000,
+   0.2313888000062434,
+   1.2200005585327744e-05,
+   3401342,
+   3.394464814286256,
+   2,
+   ""
+  ],
+  [
+   8000,
+   0.23170450000907294,
+   1.0700008715502918e-05,
+   3430371,
+   3.4224582764648135,
+   2,
+   ""
+  ],
+  [
+   9000,
+   0.22269569999480154,
+   1.1199997970834374e-05,
+   3459400,
+   3.4504598585066093,
+   2,
+   ""
+  ],
+  [
+   10000,
+   0.23592969999299385,
+   1.0500007192604244e-05,
+   3488429,
+   3.478362618581824,
+   2,
+   ""
+  ],
+  [
+   11000,
+   0.24279469999601133,
+   1.1199997970834374e-05,
+   3517458,
+   3.5063009503759037,
+   2,
+   ""
+  ],
+  [
+   12000,
+   0.2310083000047598,
+   1.1199997970834374e-05,
+   3546487,
+   3.5340858926028567,
+   2,
+   ""
+  ],
+  [
+   13000,
+   0.23669400000653695,
+   1.1600001016631722e-05,
+   3575516,
+   3.5618349917965095,
+   2,
+   ""
+  ],
+  [
+   14000,
+   0.24461670000164304,
+   1.170000177808106e-05,
+   3604545,
+   3.589733758512378,
+   2,
+   ""
+  ],
+  [
+   15000,
+   0.2283059999899706,
+   1.1099997209385037e-05,
+   3633574,
+   3.617378994242775,
+   2,
+   ""
+  ],
+  [
+   16000,
+   0.24219859999720939,
+   1.0900010238401592e-05,
+   3662603,
+   3.645157277270981,
+   2,
+   ""
+  ],
+  [
+   17000,
+   0.2286621999955969,
+   1.1399999493733048e-05,
+   3691632,
+   3.672944060619568,
+   2,
+   ""
+  ],
+  [
+   18000,
+   0.249468900001375,
+   1.1399999493733048e-05,
+   3720661,
+   3.7007951317328582,
+   2,
+   ""
+  ],
+  [
+   19000,
+   0.2298088999959873,
+   1.1199997970834374e-05,
+   3749690,
+   3.7286788944298874,
+   2,
+   ""
+  ],
+  [
+   20000,
+   0.23460239999985788,
+   1.1299998732283711e-05,
+   3778719,
+   3.7565627926489564,
+   2,
+   ""
+  ],
+  [
+   21000,
+   0.2524014999944484,
+   1.2799995602108538e-05,
+   3807748,
+   3.784289191303112,
+   2,
+   ""
+  ],
+  [
+   22000,
+   0.2292989999987185,
+   1.1299998732283711e-05,
+   3836777,
+   3.8119043242840465,
+   2,
+   ""
+  ],
+  [
+   23000,
+   0.2453329000127269,
+   1.1500000255182385e-05,
+   3865806,
+   3.839547335770664,
+   2,
+   ""
+  ],
+  [
+   24000,
+   0.24946130000171252,
+   1.1500000255182385e-05,
+   3894835,
+   3.8671078368100718,
+   2,
+   ""
+  ],
+  [
+   25000,
+   0.23828429999412037,
+   1.2299991794861853e-05,
+   3923864,
+   3.8946695570007224,
+   2,
+   ""
+  ],
+  [
+   26000,
+   0.23689010000089183,
+   1.1600001016631722e-05,
+   3952893,
+   3.9221044798333087,
+   2,
+   ""
+  ],
+  [
+   27000,
+   0.2433320999989519,
+   1.3100012438371778e-05,
+   3981922,
+   3.94981004433952,
+   2,
+   ""
+  ],
+  [
+   28000,
+   0.23875299999781419,
+   1.1000010999850929e-05,
+   4010951,
+   3.977445003292266,
+   2,
+   ""
+  ],
+  [
+   29000,
+   0.26932019999367185,
+   1.1600001016631722e-05,
+   4039980,
+   4.00482564052745,
+   2,
+   ""
+  ],
+  [
+   30000,
+   0.2490516999969259,
+   0.03922150000289548,
+   3751611,
+   3.717897109015448,
+   3,
+   "seal"
+  ],
+  [
+   31000,
+   0.266756400000304,
+   1.340000017080456e-05,
+   3780640,
+   3.745566515152116,
+   3,
+   ""
+  ],
+  [
+   32000,
+   0.2495892000006279,
+   1.3900003978051245e-05,
+   3809669,
+   3.773017904079769,
+   3,
+   ""
+  ],
+  [
+   33000,
+   0.2839218000008259,
+   1.4200006262399256e-05,
+   3838698,
+   3.8007174307148666,
+   3,
+   ""
+  ],
+  [
+   34000,
+   0.2627941999962786,
+   1.410000550094992e-05,
+   3867727,
+   3.8284812388208476,
+   3,
+   ""
+  ],
+  [
+   35000,
+   0.26217849999375176,
+   1.3900003978051245e-05,
+   3896756,
+   3.856009547115629,
+   3,
+   ""
+  ],
+  [
+   36000,
+   0.26067699999839533,
+   1.550000160932541e-05,
+   3925785,
+   3.8835552205319357,
+   3,
+   ""
+  ],
+  [
+   37000,
+   0.2595793000073172,
+   1.4899997040629387e-05,
+   3954814,
+   3.910921725474994,
+   3,
+   ""
+  ],
+  [
+   38000,
+   0.26526519999606535,
+   1.309999788645655e-05,
+   3983843,
+   3.9385847229485975,
+   3,
+   ""
+  ],
+  [
+   39000,
+   0.26573020000068936,
+   1.579998934175819e-05,
+   4012872,
+   3.9662095447065275,
+   3,
+   ""
+  ],
+  [
+   40000,
+   0.2631009000033373,
+   1.4699995517730713e-05,
+   4041901,
+   3.9938746572466095,
+   3,
+   ""
+  ],
+  [
+   41000,
+   0.25700649998907465,
+   1.3899989426136017e-05,
+   4070930,
+   4.021275292685915,
+   3,
+   ""
+  ],
+  [
+   42000,
+   0.2570763999974588,
+   1.4899997040629387e-05,
+   4099959,
+   4.048682436936203,
+   3,
+   ""
+  ],
+  [
+   43000,
+   0.2552278000075603,
+   1.4999997802078724e-05,
+   4128988,
+   4.076016094831569,
+   3,
+   ""
+  ],
+  [
+   44000,
+   0.26052969999727793,
+   1.4999997802078724e-05,
+   4158017,
+   4.103518175116281,
+   3,
+   ""
+  ],
+  [
+   45000,
+   0.2559495000023162,
+   1.4499993994832039e-05,
+   4187046,
+   4.130968107934785,
+   3,
+   ""
+  ],
+  [
+   46000,
+   0.2799761999922339,
+   1.4599994756281376e-05,
+   4216075,
+   4.158393917963922,
+   3,
+   ""
+  ],
+  [
+   47000,
+   0.31213649999699555,
+   1.4500008546747267e-05,
+   4245104,
+   4.185799591389197,
+   3,
+   ""
+  ],
+  [
+   48000,
+   0.2617063999932725,
+   1.3999990187585354e-05,
+   4274133,
+   4.213151840264018,
+   3,
+   ""
+  ],
+  [
+   49000,
+   0.2609842999954708,
+   1.5199999324977398e-05,
+   4303162,
+   4.240541917504215,
+   3,
+   ""
+  ],
+  [
+   50000,
+   0.2532346999942092,
+   1.440000778529793e-05,
+   4332191,
+   4.267983456874776,
+   3,
+   ""
+  ],
+  [
+   51000,
+   0.2596725999901537,
+   1.4499993994832039e-05,
+   4361220,
+   4.29527887865489,
+   3,
+   ""
+  ],
+  [
+   52000,
+   0.3224167000007583,
+   1.4000004739500582e-05,
+   4390249,
+   4.322613073242968,
+   3,
+   ""
+  ],
+  [
+   53000,
+   0.29176019999431446,
+   1.3600001693703234e-05,
+   4419278,
+   4.350106949397628,
+   3,
+   ""
+  ],
+  [
+   54000,
+   0.26999899999646004,
+   1.410000550094992e-05,
+   4448307,
+   4.377406152547193,
+   3,
+   ""
+  ],
+  [
+   55000,
+   0.3318557000020519,
+   1.4299992471933365e-05,
+   4477336,
+   4.4046244594238315,
+   3,
+   ""
+  ],
+  [
+   56000,
+   0.345344399989699,
+   1.3999990187585354e-05,
+   4506365,
+   4.4319786700026755,
+   3,
+   ""
+  ],
+  [
+   57000,
+   0.2816499000036856,
+   1.4000004739500582e-05,
+   4535394,
+   4.459050594766994,
+   3,
+   ""
+  ],
+  [
+   58000,
+   0.2702831999922637,
+   1.4200006262399256e-05,
+   4564423,
+   4.4862853677499,
+   3,
+   ""
+  ],
+  [
+   59000,
+   0.2708227999974042,
+   1.3800003216601908e-05,
+   4593452,
+   4.513557518367379,
+   3,
+   ""
+  ],
+  [
+   60000,
+   0.2682702000020072,
+   0.039136799998232163,
+   4304816,
+   4.228624641214595,
+   4,
+   "seal"
+  ],
+  [
+   61000,
+   0.28692909999517724,
+   1.4399993233382702e-05,
+   4333845,
+   4.255923300294901,
+   4,
+   ""
+  ],
+  [
+   62000,
+   0.2969794999953592,
+   1.5199999324977398e-05,
+   4362874,
+   4.28332410472701,
+   4,
+   ""
+  ],
+  [
+   63000,
+   0.2947518000000855,
+   1.5400000847876072e-05,
+   4391903,
+   4.310583835935085,
+   4,
+   ""
+  ],
+  [
+   64000,
+   0.29324099999212194,
+   2.5500004994682968e-05,
+   4420932,
+   4.337934302981063,
+   4,
+   ""
+  ],
+  [
+   65000,
+   0.30165649999980815,
+   1.5099998563528061e-05,
+   4449961,
+   4.3652575426425635,
+   4,
+   ""
+  ],
+  [
+   66000,
+   0.28681890000007115,
+   1.5300000086426735e-05,
+   4478990,
+   4.392467181459609,
+   4,
+   ""
+  ],
+  [
+   67000,
+   0.3018675999919651,
+   1.4999997802078724e-05,
+   4508019,
+   4.419713131630032,
+   4,
+   ""
+  ],
+  [
+   68000,
+   0.28967250000278,
+   1.4999997802078724e-05,
+   4537048,
+   4.44695273753749,
+   4,
+   ""
+  ],
+  [
+   69000,
+   0.2786201999988407,
+   1.4999997802078724e-05,
+   4566077,
+   4.474080947556346,
+   4,
+   ""
+  ],
+  [
+   70000,
+   0.28592560000834055,
+   1.4499993994832039e-05,
+   4595106,
+   4.501329796352587,
+   4,
+   ""
+  ],
+  [
+   71000,
+   0.2884234999946784,
+   1.4999997802078724e-05,
+   4624135,
+   4.528435571076441,
+   4,
+   ""
+  ],
+  [
+   72000,
+   0.29098040000826586,
+   1.4900011592544615e-05,
+   4653164,
+   4.555476364832531,
+   4,
+   ""
+  ],
+  [
+   73000,
+   0.28335209999931976,
+   1.6000005416572094e-05,
+   4682193,
+   4.582599367936633,
+   4,
+   ""
+  ],
+  [
+   74000,
+   0.29852899999241345,
+   1.4700010069645941e-05,
+   4711222,
+   4.6098062622309195,
+   4,
+   ""
+  ],
+  [
+   75000,
+   0.27794299999368377,
+   1.4900011592544615e-05,
+   4740251,
+   4.636672375797069,
+   4,
+   ""
+  ],
+  [
+   76000,
+   0.28821429998788517,
+   1.4700010069645941e-05,
+   4769280,
+   4.66363012318927,
+   4,
+   ""
+  ],
+  [
+   77000,
+   0.2904731000016909,
+   1.4900011592544615e-05,
+   4798309,
+   4.6905804390561965,
+   4,
+   ""
+  ],
+  [
+   78000,
+   0.28323609998915344,
+   1.3999990187585354e-05,
+   4827338,
+   4.717412845865639,
+   4,
+   ""
+  ],
+  [
+   79000,
+   0.29513880000740755,
+   1.4600009308196604e-05,
+   4856367,
+   4.744408449410804,
+   4,
+   ""
+  ],
+  [
+   80000,
+   0.295009299996309,
+   1.5400000847876072e-05,
+   4885396,
+   4.771253307133446,
+   4,
+   ""
+  ],
+  [
+   81000,
+   0.2965152999968268,
+   1.5300000086426735e-05,
+   4914425,
+   4.798193559221421,
+   4,
+   ""
+  ],
+  [
+   82000,
+   0.29367590000038035,
+   1.7099999240599573e-05,
+   4943454,
+   4.82493431352263,
+   4,
+   ""
+  ],
+  [
+   83000,
+   0.2917027999938,
+   1.4500008546747267e-05,
+   4972483,
+   4.851808811246673,
+   4,
+   ""
+  ],
+  [
+   84000,
+   0.2983122000005096,
+   1.479999627918005e-05,
+   5001512,
+   4.878633849239212,
+   4,
+   ""
+  ],
+  [
+   85000,
+   0.28598580000107177,
+   1.4999997802078724e-05,
+   5030541,
+   4.905571564396987,
+   4,
+   ""
+  ],
+  [
+   86000,
+   0.3469626000005519,
+   1.5399986295960844e-05,
+   5059570,
+   4.932518196299712,
+   4,
+   ""
+  ],
+  [
+   87000,
+   0.29711179999867454,
+   1.3800003216601908e-05,
+   5088599,
+   4.959425795724558,
+   4,
+   ""
+  ],
+  [
+   88000,
+   0.2891632000100799,
+   1.4599994756281376e-05,
+   5117628,
+   4.986172546971639,
+   4,
+   ""
+  ],
+  [
+   89000,
+   0.28814950000378303,
+   1.4000004739500582e-05,
+   5146657,
+   5.013078510021955,
+   4,
+   ""
+  ],
+  [
+   90000,
+   0.29656239999167155,
+   0.0393742000014754,
+   4856525,
+   4.729283624093758,
+   5,
+   "seal"
+  ],
+  [
+   91000,
+   0.32879939999838825,
+   1.4699995517730713e-05,
+   4885554,
+   4.756157966367019,
+   5,
+   ""
+  ],
+  [
+   92000,
+   0.3091402999998536,
+   1.4699995517730713e-05,
+   4914583,
+   4.783160871884112,
+   5,
+   ""
+  ],
+  [
+   93000,
+   0.3230482000071788,
+   1.4200006262399256e-05,
+   4943612,
+   4.810060665619086,
+   5,
+   ""
+  ],
+  [
+   94000,
+   0.3135485999955563,
+   1.4899997040629387e-05,
+   4972641,
+   4.837086488253193,
+   5,
+   ""
+  ],
+  [
+   95000,
+   0.3099886999989394,
+   1.440000778529793e-05,
+   5001670,
+   4.863994631942857,
+   5,
+   ""
+  ],
+  [
+   96000,
+   0.3104918000026373,
+   1.4999997802078724e-05,
+   5030699,
+   4.8907929761249695,
+   5,
+   ""
+  ],
+  [
+   97000,
+   0.31230730000243057,
+   1.4600009308196604e-05,
+   5059728,
+   4.917647333247804,
+   5,
+   ""
+  ],
+  [
+   98000,
+   0.32488179999927524,
+   1.4500008546747267e-05,
+   5088757,
+   4.944453135247793,
+   5,
+   ""
+  ],
+  [
+   99000,
+   0.30647090000275057,
+   1.4099990949034691e-05,
+   5117786,
+   4.971137445361826,
+   5,
+   ""
+  ],
+  [
+   100000,
+   0.3107831000088481,
+   0.02287820000492502,
+   5041733,
+   4.895703942794331,
+   6,
+   "round_start"
+  ],
+  [
+   101000,
+   0.32542100000137,
+   0.2907982000033371,
+   5082359,
+   4.933878849891369,
+   6,
+   "round_step"
+  ],
+  [
+   102000,
+   0.32836529999622144,
+   0.2578669000067748,
+   5123676,
+   4.972627468031088,
+   6,
+   "round_step"
+  ],
+  [
+   103000,
+   0.33730199999990873,
+   0.25539459999708924,
+   5164993,
+   5.011539655741204,
+   6,
+   "round_step"
+  ],
+  [
+   104000,
+   0.3270150000025751,
+   0.26152830000501126,
+   5207143,
+   5.051143484620966,
+   6,
+   "round_step"
+  ],
+  [
+   105000,
+   0.33315990000846796,
+   0.20094339999195654,
+   5248332,
+   5.089405145520821,
+   6,
+   "round_step"
+  ],
+  [
+   106000,
+   0.31313480000244454,
+   0.20022660000540782,
+   5289777,
+   5.128018775738117,
+   6,
+   "round_step"
+  ],
+  [
+   107000,
+   0.3196433999983128,
+   0.2034025000029942,
+   5331350,
+   5.166847896665949,
+   6,
+   "round_step"
+  ],
+  [
+   108000,
+   0.31889400001091417,
+   0.2033547000028193,
+   3528952,
+   3.4191328713065063,
+   2,
+   "round_step"
+  ],
+  [
+   109000,
+   0.24203779999515973,
+   1.2200005585327744e-05,
+   3557981,
+   3.4462000550155167,
+   2,
+   ""
+  ],
+  [
+   110000,
+   0.2442789999913657,
+   1.1600001016631722e-05,
+   3587010,
+   3.4732371700216023,
+   2,
+   ""
+  ],
+  [
+   111000,
+   0.233852500008652,
+   1.170000177808106e-05,
+   3616039,
+   3.50025070662485,
+   2,
+   ""
+  ],
+  [
+   112000,
+   0.24416119999659713,
+   1.1399999493733048e-05,
+   3645068,
+   3.527383891236671,
+   2,
+   ""
+  ],
+  [
+   113000,
+   0.24137999999220483,
+   1.170000177808106e-05,
+   3674097,
+   3.554436882355502,
+   2,
+   ""
+  ],
+  [
+   114000,
+   0.23692880000453442,
+   1.1699987226165831e-05,
+   3703126,
+   3.5814498236899572,
+   2,
+   ""
+  ],
+  [
+   115000,
+   0.26343289999931585,
+   1.2200005585327744e-05,
+   3732155,
+   3.608422202670431,
+   2,
+   ""
+  ],
+  [
+   116000,
+   0.24311670000315644,
+   1.1600001016631722e-05,
+   3761184,
+   3.6353991880920162,
+   2,
+   ""
+  ],
+  [
+   117000,
+   0.25349719999940135,
+   1.1000010999850929e-05,
+   3790213,
+   3.6623954005217896,
+   2,
+   ""
+  ],
+  [
+   118000,
+   0.24567660001048353,
+   3.750000905711204e-05,
+   3819242,
+   3.689457938111067,
+   2,
+   ""
+  ],
+  [
+   119000,
+   0.25363199999264907,
+   1.1100011761300266e-05,
+   3848271,
+   3.7163731988013415,
+   2,
+   ""
+  ],
+  [
+   120000,
+   0.25152710000111256,
+   1.1099997209385037e-05,
+   3877300,
+   3.743272140991789,
+   2,
+   ""
+  ],
+  [
+   121000,
+   0.2374186999950325,
+   1.1399999493733048e-05,
+   3906329,
+   3.770183889563956,
+   2,
+   ""
+  ],
+  [
+   122000,
+   0.24527809998835437,
+   1.2999997125007212e-05,
+   3935358,
+   3.797072419552324,
+   2,
+   ""
+  ],
+  [
+   123000,
+   0.24519279999367427,
+   1.1399999493733048e-05,
+   3964387,
+   3.823996612370058,
+   2,
+   ""
+  ],
+  [
+   124000,
+   0.25692880000860896,
+   1.170000177808106e-05,
+   3993416,
+   3.850886971414024,
+   2,
+   ""
+  ],
+  [
+   125000,
+   0.26197880000108853,
+   1.3299999409355223e-05,
+   4022445,
+   3.8778552877412786,
+   2,
+   ""
+  ],
+  [
+   126000,
+   0.25729799999680836,
+   1.1299998732283711e-05,
+   4051474,
+   3.9048357047784545,
+   2,
+   ""
+  ],
+  [
+   127000,
+   0.26161829999182373,
+   1.2900010915473104e-05,
+   4080503,
+   3.9318590679366547,
+   2,
+   ""
+  ],
+  [
+   128000,
+   0.26311629998963326,
+   1.3199998647905886e-05,
+   4109532,
+   3.958949400598823,
+   2,
+   ""
+  ],
+  [
+   129000,
+   0.25924250000389293,
+   1.1200012522749603e-05,
+   4138561,
+   3.985778151882057,
+   2,
+   ""
+  ],
+  [
+   130000,
+   0.27046129999507684,
+   0.037837099996977486,
+   3849600,
+   3.7064388012997953,
+   3,
+   "seal"
+  ],
+  [
+   131000,
+   0.2764093000005232,
+   1.5099998563528061e-05,
+   3878629,
+   3.733417717863692,
+   3,
+   ""
+  ],
+  [
+   132000,
+   0.27281070000026375,
+   1.4899997040629387e-05,
+   3907658,
+   3.7602668214015242,
+   3,
+   ""
+  ],
+  [
+   133000,
+   0.2747125000023516,
+   1.410000550094992e-05,
+   3936687,
+   3.787074822078949,
+   3,
+   ""
+  ],
+  [
+   134000,
+   0.2715881000040099,
+   1.4600009308196604e-05,
+   3965716,
+   3.8138412151310512,
+   3,
+   ""
+  ],
+  [
+   135000,
+   0.28430549999757204,
+   1.5199999324977398e-05,
+   3994745,
+   3.8406799639270313,
+   3,
+   ""
+  ],
+  [
+   136000,
+   0.2745755000069039,
+   1.4700010069645941e-05,
+   4023774,
+   3.8674070001691607,
+   3,
+   ""
+  ],
+  [
+   137000,
+   0.3553879999963101,
+   1.410000550094992e-05,
+   4052803,
+   3.8942561493898893,
+   3,
+   ""
+  ],
+  [
+   138000,
+   0.2723459999979241,
+   1.3699987903237343e-05,
+   4081832,
+   3.9209213103447613,
+   3,
+   ""
+  ],
+  [
+   139000,
+   0.27468069999304134,
+   1.3599987141788006e-05,
+   4110861,
+   3.9476001025584884,
+   3,
+   ""
+  ],
+  [
+   140000,
+   0.2801319999998668,
+   1.3700002455152571e-05,
+   4139890,
+   3.9743427280075725,
+   3,
+   ""
+  ],
+  [
+   141000,
+   0.2723208999959752,
+   1.479999627918005e-05,
+   4168919,
+   4.000985630145887,
+   3,
+   ""
+  ],
+  [
+   142000,
+   0.28669490000174847,
+   1.4500008546747267e-05,
+   4197948,
+   4.027766797281272,
+   3,
+   ""
+  ],
+  [
+   143000,
+   0.2663524999952642,
+   1.4699995517730713e-05,
+   4226977,
+   4.0543430719944755,
+   3,
+   ""
+  ],
+  [
+   144000,
+   0.28255009998974856,
+   1.4199991710484028e-05,
+   4256006,
+   4.0811295967780605,
+   3,
+   ""
+  ],
+  [
+   145000,
+   0.27112140000099316,
+   1.4899997040629387e-05,
+   4285035,
+   4.107713235068561,
+   3,
+   ""
+  ],
+  [
+   146000,
+   0.27226889999292325,
+   4.050000279676169e-05,
+   4314064,
+   4.134245013152914,
+   3,
+   ""
+  ],
+  [
+   147000,
+   0.28414340000017546,
+   1.4600009308196604e-05,
+   4343093,
+   4.1609634680404035,
+   3,
+   ""
+  ],
+  [
+   148000,
+   0.27410380000947043,
+   1.6999998479150236e-05,
+   4372122,
+   4.18758356735385,
+   3,
+   ""
+  ],
+  [
+   149000,
+   0.26899430000048596,
+   1.4499993994832039e-05,
+   4401151,
+   4.214289407664171,
+   3,
+   ""
+  ],
+  [
+   150000,
+   0.27383770000596996,
+   1.4500008546747267e-05,
+   4430180,
+   4.241042239255904,
+   3,
+   ""
+  ],
+  [
+   151000,
+   0.26494439999805763,
+   1.4999997802078724e-05,
+   4459209,
+   4.267573607170029,
+   3,
+   ""
+  ],
+  [
+   152000,
+   0.25778460000583436,
+   1.5199999324977398e-05,
+   4488238,
+   4.294155073158457,
+   3,
+   ""
+  ],
+  [
+   153000,
+   0.2668283999955747,
+   1.4700010069645941e-05,
+   4517267,
+   4.3206968947723325,
+   3,
+   ""
+  ],
+  [
+   154000,
+   0.27650169999105856,
+   1.440000778529793e-05,
+   4546296,
+   4.347356613987326,
+   3,
+   ""
+  ],
+  [
+   155000,
+   0.28617589999339543,
+   1.3900003978051245e-05,
+   4575325,
+   4.374094770101482,
+   3,
+   ""
+  ],
+  [
+   156000,
+   0.26940839999588206,
+   1.5400000847876072e-05,
+   4604354,
+   4.400378839283837,
+   3,
+   ""
+  ],
+  [
+   157000,
+   0.26354020000144374,
+   1.5900004655122757e-05,
+   4633383,
+   4.426789175947697,
+   3,
+   ""
+  ],
+  [
+   158000,
+   0.26891149999573827,
+   1.4599994756281376e-05,
+   4662412,
+   4.4532899569133075,
+   3,
+   ""
+  ],
+  [
+   159000,
+   0.26936550000391435,
+   1.440000778529793e-05,
+   4691441,
+   4.47966056703295,
+   3,
+   ""
+  ],
+  [
+   160000,
+   0.2733396999974502,
+   0.03703430001041852,
+   4401837,
+   4.201922149875379,
+   4,
+   "seal"
+  ],
+  [
+   161000,
+   0.2977944999875035,
+   1.5300000086426735e-05,
+   4430866,
+   4.228514659485005,
+   4,
+   ""
+  ],
+  [
+   162000,
+   0.2954639999952633,
+   1.5600002370774746e-05,
+   4459895,
+   4.254946969328361,
+   4,
+   ""
+  ],
+  [
+   163000,
+   0.29148619998886716,
+   1.5199999324977398e-05,
+   4488924,
+   4.2815962641033245,
+   4,
+   ""
+  ],
+  [
+   164000,
+   0.2988584999984596,
+   1.5199999324977398e-05,
+   4517953,
+   4.308055900419749,
+   4,
+   ""
+  ],
+  [
+   165000,
+   0.2982343000039691,
+   1.4899997040629387e-05,
+   4546982,
+   4.334562433389323,
+   4,
+   ""
+  ],
+  [
+   166000,
+   0.28692539999610744,
+   1.5399986295960844e-05,
+   4576011,
+   4.361025524708448,
+   4,
+   ""
+  ],
+  [
+   167000,
+   0.35416000000259373,
+   1.5600002370774746e-05,
+   4605040,
+   4.387427960583041,
+   4,
+   ""
+  ],
+  [
+   168000,
+   0.29521979999844916,
+   1.4499993994832039e-05,
+   4634069,
+   4.413735332215788,
+   4,
+   ""
+  ],
+  [
+   169000,
+   0.34280269998998847,
+   1.4299992471933365e-05,
+   4663098,
+   4.440187278078619,
+   4,
+   ""
+  ],
+  [
+   170000,
+   0.30278110000654124,
+   1.4300007023848593e-05,
+   4692127,
+   4.4663826230815875,
+   4,
+   ""
+  ],
+  [
+   171000,
+   0.2908942000067327,
+   1.440000778529793e-05,
+   4721156,
+   4.492706373608387,
+   4,
+   ""
+  ],
+  [
+   172000,
+   0.29388230000040494,
+   1.9500002963468432e-05,
+   4750185,
+   4.519053490190706,
+   4,
+   ""
+  ],
+  [
+   173000,
+   0.28182240000751335,
+   1.479999627918005e-05,
+   4779214,
+   4.545247390570389,
+   4,
+   ""
+  ],
+  [
+   174000,
+   0.2859046999947168,
+   1.3800003216601908e-05,
+   4808243,
+   4.571307557963209,
+   4,
+   ""
+  ],
+  [
+   175000,
+   0.29382399999303743,
+   1.6099991626106203e-05,
+   4837272,
+   4.597498652762479,
+   4,
+   ""
+  ],
+  [
+   176000,
+   0.2824740999931237,
+   1.4699995517730713e-05,
+   4866301,
+   4.6236429696659895,
+   4,
+   ""
+  ],
+  [
+   177000,
+   0.29096039998694323,
+   1.510001311544329e-05,
+   4895330,
+   4.649793029295046,
+   4,
+   ""
+  ],
+  [
+   178000,
+   0.3045717000059085,
+   1.5200013876892626e-05,
+   4924359,
+   4.675949198813057,
+   4,
+   ""
+  ],
+  [
+   179000,
+   0.3061241999967024,
+   1.579998934175819e-05,
+   4953388,
+   4.702089527302828,
+   4,
+   ""
+  ],
+  [
+   180000,
+   0.30600379999668803,
+   1.4199991710484028e-05,
+   4982417,
+   4.7283980025092,
+   4,
+   ""
+  ],
+  [
+   181000,
+   0.2981718000082765,
+   1.5400000847876072e-05,
+   5011446,
+   4.754647489113006,
+   4,
+   ""
+  ],
+  [
+   182000,
+   0.2959728999994695,
+   1.6000005416572094e-05,
+   5040475,
+   4.780864496131089,
+   4,
+   ""
+  ],
+  [
+   183000,
+   0.2943362999940291,
+   1.650000922381878e-05,
+   5069504,
+   4.807044194049112,
+   4,
+   ""
+  ],
+  [
+   184000,
+   0.2928637000004528,
+   1.5099998563528061e-05,
+   5098533,
+   4.833291622348746,
+   4,
+   ""
+  ],
+  [
+   185000,
+   0.2914240999962203,
+   1.7300000763498247e-05,
+   5127562,
+   4.859359377857889,
+   4,
+   ""
+  ],
+  [
+   186000,
+   0.29121999999915715,
+   1.5099998563528061e-05,
+   5156591,
+   4.885504145949551,
+   4,
+   ""
+  ],
+  [
+   187000,
+   0.29638790000171866,
+   1.5700003132224083e-05,
+   5185620,
+   4.911541262906053,
+   4,
+   ""
+  ],
+  [
+   188000,
+   0.3071174000069732,
+   1.4699995517730713e-05,
+   5214649,
+   4.93758154896157,
+   4,
+   ""
+  ],
+  [
+   189000,
+   0.29884689999744296,
+   1.510001311544329e-05,
+   5243678,
+   4.96378505225831,
+   4,
+   ""
+  ],
+  [
+   190000,
+   0.28581619999022223,
+   0.04145050000806805,
+   4956434,
+   4.690448070801016,
+   5,
+   "seal"
+  ],
+  [
+   191000,
+   0.3148462999961339,
+   1.550000160932541e-05,
+   4985463,
+   4.716624818590007,
+   5,
+   ""
+  ],
+  [
+   192000,
+   0.3167825999989873,
+   1.5999990864656866e-05,
+   5014492,
+   4.742710949063894,
+   5,
+   ""
+  ],
+  [
+   193000,
+   0.310861300007673,
+   1.5199999324977398e-05,
+   5043521,
+   4.768808989358987,
+   5,
+   ""
+  ],
+  [
+   194000,
+   0.2996016000106465,
+   1.4999997802078724e-05,
+   5072550,
+   4.794701824000968,
+   5,
+   ""
+  ],
+  [
+   195000,
+   0.31204649999563117,
+   1.5400000847876072e-05,
+   5101579,
+   4.820842082185981,
+   5,
+   ""
+  ],
+  [
+   196000,
+   0.31642410000495147,
+   1.6000005416572094e-05,
+   5130608,
+   4.846826319021303,
+   5,
+   ""
+  ],
+  [
+   197000,
+   0.3241297000058694,
+   1.5199999324977398e-05,
+   5159637,
+   4.872799648680426,
+   5,
+   ""
+  ],
+  [
+   198000,
+   0.3108311000105459,
+   1.550000160932541e-05,
+   5188666,
+   4.898725154292868,
+   5,
+   ""
+  ],
+  [
+   199000,
+   0.32239929999923334,
+   1.5700003132224083e-05,
+   5217695,
+   4.924616309568641,
+   5,
+   ""
+  ],
+  [
+   200000,
+   0.3146594999998342,
+   1.5700003132224083e-05,
+   5246724,
+   4.950538247207804,
+   5,
+   ""
+  ],
+  [
+   201000,
+   0.3026006000000052,
+   1.5300000086426735e-05,
+   5275753,
+   4.976557392976839,
+   5,
+   ""
+  ],
+  [
+   202000,
+   0.298645500006387,
+   1.4499993994832039e-05,
+   5304782,
+   5.002524469055215,
+   5,
+   ""
+  ],
+  [
+   203000,
+   0.3016295999987051,
+   1.4700010069645941e-05,
+   5333811,
+   5.028329901805511,
+   5,
+   ""
+  ],
+  [
+   204000,
+   0.31914779999351595,
+   0.028191299992613494,
+   5216676,
+   4.916605719714391,
+   6,
+   "round_start"
+  ],
+  [
+   205000,
+   0.3273309999931371,
+   0.30476420000195503,
+   5258390,
+   4.954598776046697,
+   6,
+   "round_step"
+  ],
+  [
+   206000,
+   0.3130165000038687,
+   0.31921909999800846,
+   5300283,
+   4.992434510762831,
+   6,
+   "round_step"
+  ],
+  [
+   207000,
+   0.3825953000050504,
+   0.28565920000255574,
+   5341536,
+   5.0298038469759705,
+   6,
+   "round_step"
+  ],
+  [
+   208000,
+   0.32098670001141727,
+   0.3522616999980528,
+   5382597,
+   5.066874954697824,
+   6,
+   "round_step"
+  ],
+  [
+   209000,
+   0.31471479999891017,
+   0.27180780000344384,
+   5423850,
+   5.104045802173232,
+   6,
+   "round_step"
+  ],
+  [
+   210000,
+   0.33636259999184404,
+   0.26302949999808334,
+   5464975,
+   5.141444465560161,
+   6,
+   "round_step"
+  ],
+  [
+   211000,
+   0.32845449999149423,
+   0.26304560000426136,
+   5506356,
+   5.179055245641212,
+   6,
+   "round_step"
+  ],
+  [
+   212000,
+   0.32250730000669137,
+   0.3512500000069849,
+   3628088,
+   3.4115468845941552,
+   2,
+   "round_step"
+  ],
+  [
+   213000,
+   0.2570072000089567,
+   1.1399999493733048e-05,
+   3657117,
+   3.4379898414739736,
+   2,
+   ""
+  ],
+  [
+   214000,
+   0.23552980000386015,
+   1.1600001016631722e-05,
+   3686146,
+   3.464185257966324,
+   2,
+   ""
+  ],
+  [
+   215000,
+   0.23567480000201613,
+   1.1900003300979733e-05,
+   3715175,
+   3.4903444615117225,
+   2,
+   ""
+  ],
+  [
+   216000,
+   0.24441339999611955,
+   1.2200005585327744e-05,
+   3744204,
+   3.516671816782364,
+   2,
+   ""
+  ],
+  [
+   217000,
+   0.24426409999432508,
+   1.2299991794861853e-05,
+   3773233,
+   3.5428619448951384,
+   2,
+   ""
+  ],
+  [
+   218000,
+   0.24797490000491962,
+   1.1500000255182385e-05,
+   3802262,
+   3.569046242340502,
+   2,
+   ""
+  ],
+  [
+   219000,
+   0.24979020000318997,
+   1.239999255631119e-05,
+   3831291,
+   3.595241804109394,
+   2,
+   ""
+  ],
+  [
+   220000,
+   0.24668630000087433,
+   1.2200005585327744e-05,
+   3860320,
+   3.6214661969782966,
+   2,
+   ""
+  ],
+  [
+   221000,
+   0.25677259999793023,
+   1.2100004823878407e-05,
+   3889349,
+   3.647720355904528,
+   2,
+   ""
+  ],
+  [
+   222000,
+   0.23351959999126848,
+   1.1900003300979733e-05,
+   3918378,
+   3.6739122077819792,
+   2,
+   ""
+  ],
+  [
+   223000,
+   0.26580639999883715,
+   1.3100012438371778e-05,
+   3947407,
+   3.7000858608866167,
+   2,
+   ""
+  ],
+  [
+   224000,
+   0.25467209999624174,
+   1.340000017080456e-05,
+   3976436,
+   3.726314586041159,
+   2,
+   ""
+  ],
+  [
+   225000,
+   0.251303299999563,
+   1.1999989510513842e-05,
+   4005465,
+   3.7524943461487297,
+   2,
+   ""
+  ],
+  [
+   226000,
+   0.2617119999922579,
+   1.1500000255182385e-05,
+   4034494,
+   3.778670452991565,
+   2,
+   ""
+  ],
+  [
+   227000,
+   0.26373720000265166,
+   1.1900003300979733e-05,
+   4063523,
+   3.8049749520108618,
+   2,
+   ""
+  ],
+  [
+   228000,
+   0.2709104999958072,
+   1.340000017080456e-05,
+   4092552,
+   3.8311094302601845,
+   2,
+   ""
+  ],
+  [
+   229000,
+   0.25806619999639224,
+   1.1600001016631722e-05,
+   4121581,
+   3.8571935268926687,
+   2,
+   ""
+  ],
+  [
+   230000,
+   0.26011440000729635,
+   1.2699994840659201e-05,
+   4150610,
+   3.8833173813259534,
+   2,
+   ""
+  ],
+  [
+   231000,
+   0.25472920000902377,
+   1.1199997970834374e-05,
+   4179639,
+   3.9093101996913435,
+   2,
+   ""
+  ],
+  [
+   232000,
+   0.2644951999973273,
+   1.1600001016631722e-05,
+   4208668,
+   3.9354052646392446,
+   2,
+   ""
+  ],
+  [
+   233000,
+   0.27090759998827707,
+   1.239999255631119e-05,
+   4237697,
+   3.9615937253142253,
+   2,
+   ""
+  ],
+  [
+   234000,
+   0.26200190000236034,
+   0.03959169999870937,
+   3949355,
+   3.6910998189663795,
+   3,
+   "seal"
+  ],
+  [
+   235000,
+   0.2728108000010252,
+   1.550000160932541e-05,
+   3978384,
+   3.7171431774862653,
+   3,
+   ""
+  ],
+  [
+   236000,
+   0.2747541000135243,
+   1.6400008462369442e-05,
+   4007413,
+   3.743241236235175,
+   3,
+   ""
+  ],
+  [
+   237000,
+   0.2852526000060607,
+   1.4699995517730713e-05,
+   4036442,
+   3.7695080564878682,
+   3,
+   ""
+  ],
+  [
+   238000,
+   0.28517079999437556,
+   1.5300000086426735e-05,
+   4065471,
+   3.7955149959155094,
+   3,
+   ""
+  ],
+  [
+   239000,
+   0.2706430999969598,
+   1.5099998563528061e-05,
+   4094500,
+   3.8215603390263957,
+   3,
+   ""
+  ],
+  [
+   240000,
+   0.3456942000048002,
+   1.479999627918005e-05,
+   4123529,
+   3.8476200162544125,
+   3,
+   ""
+  ],
+  [
+   241000,
+   0.29658560000825673,
+   1.5400000847876072e-05,
+   4152558,
+   3.873723508159193,
+   3,
+   ""
+  ],
+  [
+   242000,
+   0.38138760000583716,
+   1.4699995517730713e-05,
+   4181587,
+   3.8996937384242636,
+   3,
+   ""
+  ],
+  [
+   243000,
+   0.29571069999656174,
+   1.5400000847876072e-05,
+   4210616,
+   3.925711419445185,
+   3,
+   ""
+  ],
+  [
+   244000,
+   0.3307296000130009,
+   1.4300007023848593e-05,
+   4239645,
+   3.9516341002382362,
+   3,
+   ""
+  ],
+  [
+   245000,
+   1.0368299999972805,
+   1.4299992471933365e-05,
+   4268674,
+   3.977560336529726,
+   3,
+   ""
+  ],
+  [
+   246000,
+   0.2743973000033293,
+   1.4699995517730713e-05,
+   4297703,
+   4.003412171288577,
+   3,
+   ""
+  ],
+  [
+   247000,
+   0.4689423999952851,
+   1.440000778529793e-05,
+   4326732,
+   4.029278568255663,
+   3,
+   ""
+  ],
+  [
+   248000,
+   0.5168127000069944,
+   1.610000617802143e-05,
+   4355761,
+   4.055209172202232,
+   3,
+   ""
+  ],
+  [
+   249000,
+   0.38650519998918753,
+   1.5400000847876072e-05,
+   4384790,
+   4.081159868130804,
+   3,
+   ""
+  ],
+  [
+   250000,
+   0.3511488000076497,
+   1.5199999324977398e-05,
+   4413819,
+   4.106959320453663,
+   3,
+   ""
+  ],
+  [
+   251000,
+   0.28440749998844694,
+   1.580000389367342e-05,
+   4442848,
+   4.1327549944978434,
+   3,
+   ""
+  ],
+  [
+   252000,
+   0.2984742999979062,
+   1.5099998563528061e-05,
+   4471877,
+   4.158612852438649,
+   3,
+   ""
+  ],
+  [
+   253000,
+   0.29428180000104476,
+   1.5400000847876072e-05,
+   4500906,
+   4.184191958114443,
+   3,
+   ""
+  ],
+  [
+   254000,
+   0.2946395000035409,
+   1.6299993149004877e-05,
+   4529935,
+   4.209867215351274,
+   3,
+   ""
+  ],
+  [
+   255000,
+   0.32738989999052137,
+   1.5699988580308855e-05,
+   4558964,
+   4.235613063146345,
+   3,
+   ""
+  ],
+  [
+   256000,
+   0.3094160000036936,
+   1.3600001693703234e-05,
+   4587993,
+   4.2612687417628194,
+   3,
+   ""
+  ],
+  [
+   257000,
+   0.31633750000037253,
+   1.550000160932541e-05,
+   4617022,
+   4.287020057067142,
+   3,
+   ""
+  ],
+  [
+   258000,
+   0.30672840001352597,
+   1.5400000847876072e-05,
+   4646051,
+   4.312780859112111,
+   3,
+   ""
+  ],
+  [
+   259000,
+   0.29639429999224376,
+   1.4000004739500582e-05,
+   4675080,
+   4.338680414093278,
+   3,
+   ""
+  ],
+  [
+   260000,
+   0.3031161999970209,
+   1.4000004739500582e-05,
+   4704109,
+   4.364296171495052,
+   3,
+   ""
+  ],
+  [
+   261000,
+   0.29787490000308026,
+   1.4300007023848593e-05,
+   4733138,
+   4.389985966923492,
+   3,
+   ""
+  ],
+  [
+   262000,
+   0.3110096999880625,
+   1.649999467190355e-05,
+   4762167,
+   4.415710364779407,
+   3,
+   ""
+  ],
+  [
+   263000,
+   0.31539849999535363,
+   1.5300000086426735e-05,
+   4791196,
+   4.441359031784406,
+   3,
+   ""
+  ],
+  [
+   264000,
+   0.31465169999864884,
+   0.041601899996749125,
+   4503450,
+   4.173574819816522,
+   4,
+   "seal"
+  ],
+  [
+   265000,
+   0.32864400000835303,
+   1.589999010320753e-05,
+   4532479,
+   4.1992827137915,
+   4,
+   ""
+  ],
+  [
+   266000,
+   0.3313786000071559,
+   2.130000211764127e-05,
+   4561508,
+   4.225144265058678,
+   4,
+   ""
+  ],
+  [
+   267000,
+   0.31585009999980684,
+   1.4599994756281376e-05,
+   4590537,
+   4.251016790941115,
+   4,
+   ""
+  ],
+  [
+   268000,
+   0.3384390999999596,
+   1.5199999324977398e-05,
+   4619566,
+   4.27666314873447,
+   4,
+   ""
+  ],
+  [
+   269000,
+   0.33559190000232775,
+   1.4899997040629387e-05,
+   4648595,
+   4.302143392594375,
+   4,
+   ""
+  ],
+  [
+   270000,
+   0.3875689999986207,
+   1.6400008462369442e-05,
+   4677624,
+   4.3276231501115765,
+   4,
+   ""
+  ],
+  [
+   271000,
+   0.3249167000030866,
+   1.4299992471933365e-05,
+   4706653,
+   4.353167123257264,
+   4,
+   ""
+  ],
+  [
+   272000,
+   0.3364581000059843,
+   1.5300000086426735e-05,
+   4735682,
+   4.378764524817593,
+   4,
+   ""
+  ],
+  [
+   273000,
+   0.3584317000058945,
+   1.5700003132224083e-05,
+   4764711,
+   4.404408373043201,
+   4,
+   ""
+  ],
+  [
+   274000,
+   0.33129469999403227,
+   1.6200006939470768e-05,
+   4793740,
+   4.4299441282960705,
+   4,
+   ""
+  ],
+  [
+   275000,
+   0.3379900999862002,
+   1.8600010662339628e-05,
+   4822769,
+   4.455448462413264,
+   4,
+   ""
+  ],
+  [
+   276000,
+   0.31090840000251774,
+   1.5099998563528061e-05,
+   4851798,
+   4.48105355322073,
+   4,
+   ""
+  ],
+  [
+   277000,
+   0.3017186000070069,
+   1.579998934175819e-05,
+   4880827,
+   4.506411777468989,
+   4,
+   ""
+  ],
+  [
+   278000,
+   0.3147765000030631,
+   1.4999997802078724e-05,
+   4909856,
+   4.531916798582235,
+   4,
+   ""
+  ],
+  [
+   279000,
+   0.3246134999935748,
+   1.5199999324977398e-05,
+   4938885,
+   4.557499748542702,
+   4,
+   ""
+  ],
+  [
+   280000,
+   0.31613849999848753,
+   1.5400000847876072e-05,
+   4967914,
+   4.583005684575262,
+   4,
+   ""
+  ],
+  [
+   281000,
+   0.32331940000585746,
+   1.579998934175819e-05,
+   4996943,
+   4.60873964243815,
+   4,
+   ""
+  ],
+  [
+   282000,
+   0.3354094999958761,
+   1.579998934175819e-05,
+   5025972,
+   4.634137166060888,
+   4,
+   ""
+  ],
+  [
+   283000,
+   0.37529060000088066,
+   1.479999627918005e-05,
+   5055001,
+   4.659592629088204,
+   4,
+   ""
+  ],
+  [
+   284000,
+   0.3218226000026334,
+   1.4999997802078724e-05,
+   5084030,
+   4.685206483314349,
+   4,
+   ""
+  ],
+  [
+   285000,
+   0.3206721999886213,
+   1.6600009985268116e-05,
+   5113059,
+   4.710616869028305,
+   4,
+   ""
+  ],
+  [
+   286000,
+   0.31362410000292584,
+   1.5400000847876072e-05,
+   5142088,
+   4.735956085857307,
+   4,
+   ""
+  ],
+  [
+   287000,
+   0.31352359999436885,
+   1.4300007023848593e-05,
+   5171117,
+   4.761499483898651,
+   4,
+   ""
+  ],
+  [
+   288000,
+   0.33325779999722727,
+   1.4200006262399256e-05,
+   5200146,
+   4.786911111397499,
+   4,
+   ""
+  ],
+  [
+   289000,
+   0.3455874999926891,
+   1.5099998563528061e-05,
+   5229175,
+   4.812131613698794,
+   4,
+   ""
+  ],
+  [
+   290000,
+   0.33262059999105986,
+   1.479999627918005e-05,
+   5258204,
+   4.83762121184242,
+   4,
+   ""
+  ],
+  [
+   291000,
+   0.3260281999973813,
+   1.4999997802078724e-05,
+   5287233,
+   4.862798243693908,
+   4,
+   ""
+  ],
+  [
+   292000,
+   0.31322799999907147,
+   1.5300000086426735e-05,
+   5316262,
+   4.88806730415594,
+   4,
+   ""
+  ],
+  [
+   293000,
+   0.31885979999788105,
+   1.649999467190355e-05,
+   5345291,
+   4.913434501370999,
+   4,
+   ""
+  ],
+  [
+   294000,
+   0.3283131000061985,
+   0.03975260000152048,
+   5058857,
+   4.648983976679986,
+   5,
+   "seal"
+  ],
+  [
+   295000,
+   0.36825210000097286,
+   1.649999467190355e-05,
+   5087886,
+   4.6745226376731965,
+   5,
+   ""
+  ],
+  [
+   296000,
+   0.3625946000101976,
+   2.2899999748915434e-05,
+   5116915,
+   4.6998071182548795,
+   5,
+   ""
+  ],
+  [
+   297000,
+   0.3474434999952791,
+   1.5400000847876072e-05,
+   5145944,
+   4.725120080509724,
+   5,
+   ""
+  ],
+  [
+   298000,
+   0.37912579999829177,
+   1.4900011592544615e-05,
+   5174973,
+   4.7506322734395585,
+   5,
+   ""
+  ],
+  [
+   299000,
+   0.36457289999816567,
+   1.410000550094992e-05,
+   5204002,
+   4.775908652063625,
+   5,
+   ""
+  ],
+  [
+   300000,
+   0.35463159999926575,
+   1.619999238755554e-05,
+   5233031,
+   4.801399581795344,
+   5,
+   ""
+  ],
+  [
+   301000,
+   0.3271249999961583,
+   1.6400008462369442e-05,
+   5262060,
+   4.826466565955913,
+   5,
+   ""
+  ],
+  [
+   302000,
+   0.31045049999374896,
+   1.580000389367342e-05,
+   5291089,
+   4.851868731236119,
+   5,
+   ""
+  ],
+  [
+   303000,
+   0.3319647000025725,
+   1.6000005416572094e-05,
+   5320118,
+   4.877262559589292,
+   5,
+   ""
+  ],
+  [
+   304000,
+   0.32986569999775384,
+   1.579998934175819e-05,
+   5349147,
+   4.9023740438846195,
+   5,
+   ""
+  ],
+  [
+   305000,
+   0.33839269999589305,
+   1.5300000086426735e-05,
+   5378176,
+   4.927406956779865,
+   5,
+   ""
+  ],
+  [
+   306000,
+   0.3436216999980388,
+   1.6099991626106203e-05,
+   5407205,
+   4.9525146316666815,
+   5,
+   ""
+  ],
+  [
+   307000,
+   0.3696670999925118,
+   1.6400008462369442e-05,
+   5436234,
+   4.977775865052775,
+   5,
+   ""
+  ],
+  [
+   308000,
+   0.32755319999705534,
+   1.5199999324977398e-05,
+   5465263,
+   5.002968681916214,
+   5,
+   ""
+  ],
+  [
+   309000,
+   0.402001399997971,
+   1.5699988580308855e-05,
+   5494292,
+   5.027986478052459,
+   5,
+   ""
+  ],
+  [
+   310000,
+   0.34632959999726154,
+   1.5699988580308855e-05,
+   5523321,
+   5.053192209588706,
+   5,
+   ""
+  ],
+  [
+   311000,
+   0.36129190000065137,
+   0.03288240000256337,
+   5374981,
+   4.916273058545473,
+   6,
+   "round_start"
+  ],
+  [
+   312000,
+   0.3475629000022309,
+   0.4697361999860732,
+   5417271,
+   4.953685313611026,
+   6,
+   "round_step"
+  ],
+  [
+   313000,
+   0.34228640000219457,
+   0.4295826999878045,
+   5459164,
+   4.990514741641893,
+   6,
+   "round_step"
+  ],
+  [
+   314000,
+   0.3658766000007745,
+   0.5703019999928074,
+   5500737,
+   5.027172338537435,
+   6,
+   "round_step"
+  ],
+  [
+   315000,
+   0.37468430001172237,
+   0.5037527000094997,
+   5542374,
+   5.063725360316119,
+   6,
+   "round_step"
+  ],
+  [
+   316000,
+   0.35837690001062583,
+   0.46124359998793807,
+   5584267,
+   5.1006629448709,
+   6,
+   "round_step"
+  ],
+  [
+   317000,
+   0.36991439999837894,
+   0.4307452000066405,
+   5626160,
+   5.137707840215072,
+   6,
+   "round_step"
+  ],
+  [
+   318000,
+   0.3578665999957593,
+   0.47932480000599753,
+   5668757,
+   5.175009357226974,
+   6,
+   "round_step"
+  ],
+  [
+   319000,
+   0.34820150000450667,
+   0.45291870000073686,
+   3731259,
+   3.4052971465389943,
+   2,
+   "round_step"
+  ],
+  [
+   320000,
+   0.29461820000142325,
+   1.3199998647905886e-05,
+   3760288,
+   3.430816407900127,
+   2,
+   ""
+  ],
+  [
+   321000,
+   0.2808355000015581,
+   1.200000406242907e-05,
+   3789317,
+   3.4562896655642246,
+   2,
+   ""
+  ],
+  [
+   322000,
+   0.26904019998619333,
+   1.2199991033412516e-05,
+   3818346,
+   3.4817797595437074,
+   2,
+   ""
+  ],
+  [
+   323000,
+   0.2865915000002133,
+   1.170000177808106e-05,
+   3847375,
+   3.5072937671610007,
+   2,
+   ""
+  ],
+  [
+   324000,
+   0.2808216999983415,
+   1.170000177808106e-05,
+   3876404,
+   3.532684405407105,
+   2,
+   ""
+  ],
+  [
+   325000,
+   0.2555302000109805,
+   1.1800002539530396e-05,
+   3905433,
+   3.558075845575675,
+   2,
+   ""
+  ],
+  [
+   326000,
+   0.2669219000090379,
+   1.1600001016631722e-05,
+   3934462,
+   3.58344558747854,
+   2,
+   ""
+  ],
+  [
+   327000,
+   0.2838610999897355,
+   1.1900003300979733e-05,
+   3963491,
+   3.6088789458971955,
+   2,
+   ""
+  ],
+  [
+   328000,
+   0.29601210000691935,
+   1.479999627918005e-05,
+   3992520,
+   3.6344370860927153,
+   2,
+   ""
+  ],
+  [
+   329000,
+   0.2876894000073662,
+   1.2099990271963179e-05,
+   4021549,
+   3.660006261478619,
+   2,
+   ""
+  ],
+  [
+   330000,
+   0.31887750000169035,
+   1.1900003300979733e-05,
+   4050578,
+   3.6854662313887765,
+   2,
+   ""
+  ],
+  [
+   331000,
+   0.2842071000050055,
+   1.2499993317760527e-05,
+   4079607,
+   3.710926456542502,
+   2,
+   ""
+  ],
+  [
+   332000,
+   0.2776381000003312,
+   1.09999964479357e-05,
+   4108636,
+   3.736390612453132,
+   2,
+   ""
+  ],
+  [
+   333000,
+   0.26506269999663346,
+   1.1199997970834374e-05,
+   4137665,
+   3.761800901159725,
+   2,
+   ""
+  ],
+  [
+   334000,
+   0.26547779999964405,
+   1.1799987987615168e-05,
+   4166694,
+   3.7872012826712136,
+   2,
+   ""
+  ],
+  [
+   335000,
+   0.34907559999555815,
+   1.1800002539530396e-05,
+   4195723,
+   3.812512153411951,
+   2,
+   ""
+  ],
+  [
+   336000,
+   1.0128401000110898,
+   1.1099997209385037e-05,
+   4224752,
+   3.837725099196256,
+   2,
+   ""
+  ],
+  [
+   337000,
+   0.27359480000450276,
+   1.200000406242907e-05,
+   4253781,
+   3.862985894925733,
+   2,
+   ""
+  ],
+  [
+   338000,
+   0.26513660000637174,
+   1.1599986464716494e-05,
+   4282810,
+   3.8883628113302278,
+   2,
+   ""
+  ],
+  [
+   339000,
+   0.29703829999198206,
+   1.1299998732283711e-05,
+   4311839,
+   3.9138050285921757,
+   2,
+   ""
+  ],
+  [
+   340000,
+   0.2698341000068467,
+   1.239999255631119e-05,
+   4340868,
+   3.939238953279441,
+   2,
+   ""
+  ],
+  [
+   341000,
+   0.27247019999776967,
+   0.03960910000023432,
+   4051849,
+   3.6759200121930418,
+   3,
+   "seal"
+  ],
+  [
+   342000,
+   0.30355680000502616,
+   1.4999997802078724e-05,
+   4080878,
+   3.701161080143734,
+   3,
+   ""
+  ],
+  [
+   343000,
+   0.3109917999972822,
+   1.4200006262399256e-05,
+   4109907,
+   3.726600094119183,
+   3,
+   ""
+  ],
+  [
+   344000,
+   0.3298869999998715,
+   1.479999627918005e-05,
+   4138936,
+   3.7518161101250747,
+   3,
+   ""
+  ],
+  [
+   345000,
+   0.3442598999972688,
+   1.680001150816679e-05,
+   4167965,
+   3.777184994807233,
+   3,
+   ""
+  ],
+  [
+   346000,
+   0.3170500999985961,
+   1.440000778529793e-05,
+   4196994,
+   3.802375831459473,
+   3,
+   ""
+  ],
+  [
+   347000,
+   0.3095391999959247,
+   1.5400000847876072e-05,
+   4226023,
+   3.8276212179123728,
+   3,
+   ""
+  ],
+  [
+   348000,
+   0.299442600007751,
+   1.6099991626106203e-05,
+   4255052,
+   3.852755025723956,
+   3,
+   ""
+  ],
+  [
+   349000,
+   0.30623309999646153,
+   1.5300000086426735e-05,
+   4284081,
+   3.8780703072525062,
+   3,
+   ""
+  ],
+  [
+   350000,
+   0.2963041999901179,
+   1.4500008546747267e-05,
+   4313110,
+   3.903228112661322,
+   3,
+   ""
+  ],
+  [
+   351000,
+   0.29948549999971874,
+   1.5300000086426735e-05,
+   4342139,
+   3.9286664947590806,
+   3,
+   ""
+  ],
+  [
+   352000,
+   0.2962888999900315,
+   1.5300000086426735e-05,
+   4371168,
+   3.953822288352909,
+   3,
+   ""
+  ],
+  [
+   353000,
+   0.3030912999965949,
+   1.4999997802078724e-05,
+   4400197,
+   3.979115102507363,
+   3,
+   ""
+  ],
+  [
+   354000,
+   0.3065740000020014,
+   1.4699995517730713e-05,
+   4429226,
+   4.00441014133608,
+   3,
+   ""
+  ],
+  [
+   355000,
+   0.3089228000026196,
+   1.4999997802078724e-05,
+   4458255,
+   4.029441803293505,
+   3,
+   ""
+  ],
+  [
+   356000,
+   0.3394820000103209,
+   1.6300007700920105e-05,
+   4487284,
+   4.0545170171413805,
+   3,
+   ""
+  ],
+  [
+   357000,
+   0.30922880000434816,
+   1.5600002370774746e-05,
+   4516313,
+   4.079872698003747,
+   3,
+   ""
+  ],
+  [
+   358000,
+   0.2956359999952838,
+   1.4099990949034691e-05,
+   4545342,
+   4.105032146892196,
+   3,
+   ""
+  ],
+  [
+   359000,
+   0.3084524000005331,
+   1.4500008546747267e-05,
+   4574371,
+   4.129969736476213,
+   3,
+   ""
+  ],
+  [
+   360000,
+   0.32081400000606664,
+   1.4899997040629387e-05,
+   4603400,
+   4.1548843854726165,
+   3,
+   ""
+  ],
+  [
+   361000,
+   0.302107800001977,
+   1.5099998563528061e-05,
+   4632429,
+   4.180085254292041,
+   3,
+   ""
+  ],
+  [
+   362000,
+   0.3014222000056179,
+   1.4599994756281376e-05,
+   4661458,
+   4.205122329883385,
+   3,
+   ""
+  ],
+  [
+   363000,
+   0.31545949999417644,
+   1.4600009308196604e-05,
+   4690487,
+   4.230206672390531,
+   3,
+   ""
+  ],
+  [
+   364000,
+   0.3131741000106558,
+   1.4500008546747267e-05,
+   4719516,
+   4.255112970409506,
+   3,
+   ""
+  ],
+  [
+   365000,
+   0.3075699000037275,
+   1.4399993233382702e-05,
+   4748545,
+   4.280239694756948,
+   3,
+   ""
+  ],
+  [
+   366000,
+   0.3589317000005394,
+   1.4600009308196604e-05,
+   4777574,
+   4.305148526450008,
+   3,
+   ""
+  ],
+  [
+   367000,
+   0.3066555999976117,
+   1.4899997040629387e-05,
+   4806603,
+   4.330163743617278,
+   3,
+   ""
+  ],
+  [
+   368000,
+   0.2863664000033168,
+   1.4699995517730713e-05,
+   4835632,
+   4.355059855108489,
+   3,
+   ""
+  ],
+  [
+   369000,
+   0.2915690999943763,
+   1.4399993233382702e-05,
+   4864661,
+   4.380201908514481,
+   3,
+   ""
+  ],
+  [
+   370000,
+   0.27508800000941847,
+   1.4899997040629387e-05,
+   4893690,
+   4.405074708282587,
+   3,
+   ""
+  ],
+  [
+   371000,
+   0.28256880000117235,
+   0.04247159999795258,
+   4607136,
+   4.145934008973743,
+   4,
+   "seal"
+  ],
+  [
+   372000,
+   0.2976515000045765,
+   1.5199999324977398e-05,
+   4636165,
+   4.170810940162329,
+   4,
+   ""
+  ],
+  [
+   373000,
+   0.2972956999874441,
+   1.4999997802078724e-05,
+   4665194,
+   4.195661695336579,
+   4,
+   ""
+  ],
+  [
+   374000,
+   0.30520289999549277,
+   1.7099999240599573e-05,
+   4694223,
+   4.220736552773334,
+   4,
+   ""
+  ],
+  [
+   375000,
+   0.29628900000534486,
+   1.650000922381878e-05,
+   4723252,
+   4.245619775280899,
+   4,
+   ""
+  ],
+  [
+   376000,
+   0.3203421999933198,
+   1.5900004655122757e-05,
+   4752281,
+   4.270646076755651,
+   4,
+   ""
+  ],
+  [
+   377000,
+   0.29478739999467507,
+   1.5400000847876072e-05,
+   4781310,
+   4.295590409981727,
+   4,
+   ""
+  ],
+  [
+   378000,
+   0.3137100999883842,
+   1.5900004655122757e-05,
+   4810339,
+   4.320769851235869,
+   4,
+   ""
+  ],
+  [
+   379000,
+   0.30783139998675324,
+   1.619999238755554e-05,
+   4839368,
+   4.345634401804571,
+   4,
+   ""
+  ],
+  [
+   380000,
+   0.29907209999510087,
+   1.580000389367342e-05,
+   4868397,
+   4.370402721134847,
+   4,
+   ""
+  ],
+  [
+   381000,
+   0.30459630000405014,
+   1.5199999324977398e-05,
+   4897426,
+   4.395325941116551,
+   4,
+   ""
+  ],
+  [
+   382000,
+   0.3023904000001494,
+   1.5300000086426735e-05,
+   4926455,
+   4.420117302631638,
+   4,
+   ""
+  ],
+  [
+   383000,
+   0.30378520001249854,
+   1.5199999324977398e-05,
+   4955484,
+   4.444814784584323,
+   4,
+   ""
+  ],
+  [
+   384000,
+   0.310419000001275,
+   2.2499996703118086e-05,
+   4984513,
+   4.469809918118712,
+   4,
+   ""
+  ],
+  [
+   385000,
+   0.3178143999975873,
+   1.5300000086426735e-05,
+   5013542,
+   4.494599980815073,
+   4,
+   ""
+  ],
+  [
+   386000,
+   0.3056974000064656,
+   1.4800010831095278e-05,
+   5042571,
+   4.519481671821686,
+   4,
+   ""
+  ],
+  [
+   387000,
+   0.31410080000932794,
+   1.5900004655122757e-05,
+   5071600,
+   4.544269351628925,
+   4,
+   ""
+  ],
+  [
+   388000,
+   0.2923838999995496,
+   1.5900004655122757e-05,
+   5100629,
+   4.569039527171683,
+   4,
+   ""
+  ],
+  [
+   389000,
+   0.29853369999909773,
+   1.440000778529793e-05,
+   5129658,
+   4.593796260060234,
+   4,
+   ""
+  ],
+  [
+   390000,
+   0.3054967999923974,
+   1.5700003132224083e-05,
+   5158687,
+   4.618539561234503,
+   4,
+   ""
+  ],
+  [
+   391000,
+   0.3028198000101838,
+   1.6000005416572094e-05,
+   5187716,
+   4.6432029471811225,
+   4,
+   ""
+  ],
+  [
+   392000,
+   0.3181036000023596,
+   1.4800010831095278e-05,
+   5216745,
+   4.668073629776911,
+   4,
+   ""
+  ],
+  [
+   393000,
+   0.30036229999677744,
+   1.4699995517730713e-05,
+   5245774,
+   4.692764547436447,
+   4,
+   ""
+  ],
+  [
+   394000,
+   0.3736388999968767,
+   1.5099998563528061e-05,
+   5274803,
+   4.717522112813358,
+   4,
+   ""
+  ],
+  [
+   395000,
+   0.3033292000036454,
+   1.4700010069645941e-05,
+   5303832,
+   4.7422627318229855,
+   4,
+   ""
+  ],
+  [
+   396000,
+   0.30734640000446234,
+   1.6600009985268116e-05,
+   5332861,
+   4.766999134713025,
+   4,
+   ""
+  ],
+  [
+   397000,
+   0.30471620000025723,
+   1.4900011592544615e-05,
+   5361890,
+   4.791675789387141,
+   4,
+   ""
+  ],
+  [
+   398000,
+   0.29467380000278354,
+   1.5300000086426735e-05,
+   5390919,
+   4.816141418545148,
+   4,
+   ""
+  ],
+  [
+   399000,
+   0.3096652999956859,
+   1.5399986295960844e-05,
+   5419948,
+   4.840721756752291,
+   4,
+   ""
+  ],
+  [
+   400000,
+   0.29460029999609105,
+   1.4700010069645941e-05,
+   5448977,
+   4.865388272837911,
+   4,
+   ""
+  ],
+  [
+   401000,
+   0.2874460999883013,
+   0.037728099996456876,
+   5160199,
+   4.6063992558631135,
+   5,
+   "seal"
+  ],
+  [
+   402000,
+   0.3053035000048112,
+   1.4699995517730713e-05,
+   5189228,
+   4.630961018284754,
+   5,
+   ""
+  ],
+  [
+   403000,
+   0.3183431999932509,
+   1.5599987818859518e-05,
+   5218257,
+   4.6558365951432865,
+   5,
+   ""
+  ],
+  [
+   404000,
+   0.3068885000102455,
+   1.6200006939470768e-05,
+   5247286,
+   4.680275324689225,
+   5,
+   ""
+  ],
+  [
+   405000,
+   0.30445189999591094,
+   1.5300000086426735e-05,
+   5276315,
+   4.704698800444762,
+   5,
+   ""
+  ],
+  [
+   406000,
+   0.3116599000059068,
+   1.5199999324977398e-05,
+   5305344,
+   4.729317818967569,
+   5,
+   ""
+  ],
+  [
+   407000,
+   0.32313380000414327,
+   1.9500002963468432e-05,
+   5334373,
+   4.753741505085809,
+   5,
+   ""
+  ],
+  [
+   408000,
+   0.3242337999981828,
+   1.510001311544329e-05,
+   5363402,
+   4.77840994134124,
+   5,
+   ""
+  ],
+  [
+   409000,
+   0.32958309999958146,
+   1.6999998479150236e-05,
+   5392431,
+   4.803053150905533,
+   5,
+   ""
+  ],
+  [
+   410000,
+   0.3115871000045445,
+   1.5200013876892626e-05,
+   5421460,
+   4.827511900797305,
+   5,
+   ""
+  ],
+  [
+   411000,
+   0.3188227999926312,
+   1.619999238755554e-05,
+   5450489,
+   4.852150867878438,
+   5,
+   ""
+  ],
+  [
+   412000,
+   0.3153483000060078,
+   1.720000000204891e-05,
+   5479518,
+   4.876612627621855,
+   5,
+   ""
+  ],
+  [
+   413000,
+   0.3139755000011064,
+   1.5300000086426735e-05,
+   5508547,
+   4.901213170035101,
+   5,
+   ""
+  ],
+  [
+   414000,
+   0.3163024000095902,
+   1.5700003132224083e-05,
+   5537576,
+   4.925735603484393,
+   5,
+   ""
+  ],
+  [
+   415000,
+   0.31057590000273194,
+   1.889999839477241e-05,
+   5566605,
+   4.950187812799015,
+   5,
+   ""
+  ],
+  [
+   416000,
+   0.31996320000325795,
+   1.4699995517730713e-05,
+   5595634,
+   4.9745159397613925,
+   5,
+   ""
+  ],
+  [
+   417000,
+   0.35653230000752956,
+   1.4899997040629387e-05,
+   5624663,
+   4.998953933990302,
+   5,
+   ""
+  ],
+  [
+   418000,
+   0.3341985000006389,
+   1.479999627918005e-05,
+   5653692,
+   5.02344550366472,
+   5,
+   ""
+  ],
+  [
+   419000,
+   0.30615129999932833,
+   1.4399993233382702e-05,
+   5682721,
+   5.047677714425804,
+   5,
+   ""
+  ],
+  [
+   420000,
+   0.3097354999918025,
+   1.4999997802078724e-05,
+   5711750,
+   5.0718949489280805,
+   5,
+   ""
+  ],
+  [
+   421000,
+   0.3173105000023497,
+   0.05583230000047479,
+   5532763,
+   4.911606820261934,
+   6,
+   "round_start"
+  ],
+  [
+   422000,
+   0.32643410000309814,
+   0.4653606999927433,
+   5575373,
+   4.9480054881468805,
+   6,
+   "round_step"
+  ],
+  [
+   423000,
+   0.3445554999925662,
+   0.6169271999970078,
+   5617010,
+   4.983749828093322,
+   6,
+   "round_step"
+  ],
+  [
+   424000,
+   0.33003900000767317,
+   0.6226749000052223,
+   5659159,
+   5.019890947507733,
+   6,
+   "round_step"
+  ],
+  [
+   425000,
+   0.3270621999981813,
+   0.6089829999982612,
+   5701500,
+   5.056054229207792,
+   6,
+   "round_step"
+  ],
+  [
+   426000,
+   0.32144159999734256,
+   0.4726933000056306,
+   5743457,
+   5.092028679059268,
+   6,
+   "round_step"
+  ],
+  [
+   427000,
+   0.3319816000002902,
+   0.4844465000060154,
+   5786118,
+   5.128605173705133,
+   6,
+   "round_step"
+  ],
+  [
+   428000,
+   0.3163518000073964,
+   0.4773894000099972,
+   5829035,
+   5.165143597927575,
+   6,
+   "round_step"
+  ],
+  [
+   429000,
+   0.3479054999916116,
+   0.4596602000092389,
+   3837435,
+   3.3994769810538514,
+   2,
+   "round_step"
+  ],
+  [
+   430000,
+   0.2567281999945408,
+   1.1199997970834374e-05,
+   3866464,
+   3.424261693433398,
+   2,
+   ""
+  ],
+  [
+   431000,
+   0.23453400000289548,
+   1.200000406242907e-05,
+   3895493,
+   3.449011556046649,
+   2,
+   ""
+  ],
+  [
+   432000,
+   0.2532711000094423,
+   1.1399999493733048e-05,
+   3924522,
+   3.4738983302897983,
+   2,
+   ""
+  ],
+  [
+   433000,
+   0.24697599999490194,
+   1.0799994925037026e-05,
+   3953551,
+   3.4987084105086446,
+   2,
+   ""
+  ],
+  [
+   434000,
+   0.24152369999501389,
+   1.1600001016631722e-05,
+   3982580,
+   3.523437354851895,
+   2,
+   ""
+  ],
+  [
+   435000,
+   0.25444839999545366,
+   1.2699994840659201e-05,
+   4011609,
+   3.548112029378259,
+   2,
+   ""
+  ],
+  [
+   436000,
+   0.25467070000013337,
+   1.1299998732283711e-05,
+   4040638,
+   3.572845357360756,
+   2,
+   ""
+  ],
+  [
+   437000,
+   0.24336430001130793,
+   1.1500000255182385e-05,
+   4069667,
+   3.5975147713490636,
+   2,
+   ""
+  ],
+  [
+   438000,
+   0.2555802999995649,
+   1.2400007108226418e-05,
+   4098696,
+   3.6222313150496803,
+   2,
+   ""
+  ],
+  [
+   439000,
+   0.25510950000898447,
+   1.1099997209385037e-05,
+   4127725,
+   3.646825424872865,
+   2,
+   ""
+  ],
+  [
+   440000,
+   0.3102714999986347,
+   1.679999695625156e-05,
+   4156754,
+   3.671606301368653,
+   2,
+   ""
+  ],
+  [
+   441000,
+   0.26896089999354444,
+   1.1299998732283711e-05,
+   4185783,
+   3.6962579849846082,
+   2,
+   ""
+  ],
+  [
+   442000,
+   0.26659189999918453,
+   1.1800002539530396e-05,
+   4214812,
+   3.7208800560761195,
+   2,
+   ""
+  ],
+  [
+   443000,
+   0.26257049999549054,
+   1.2400007108226418e-05,
+   4243841,
+   3.745614360256166,
+   2,
+   ""
+  ],
+  [
+   444000,
+   0.24959069999749772,
+   1.2099990271963179e-05,
+   4272870,
+   3.7702437276871192,
+   2,
+   ""
+  ],
+  [
+   445000,
+   0.26508739999553654,
+   1.0799994925037026e-05,
+   4301899,
+   3.794880231756007,
+   2,
+   ""
+  ],
+  [
+   446000,
+   0.25067710000439547,
+   1.1800002539530396e-05,
+   4330928,
+   3.819514152544989,
+   2,
+   ""
+  ],
+  [
+   447000,
+   0.2582077999977628,
+   1.200000406242907e-05,
+   4359957,
+   3.8441219621438423,
+   2,
+   ""
+  ],
+  [
+   448000,
+   0.259705300006317,
+   1.1999989510513842e-05,
+   4388986,
+   3.86871365081156,
+   2,
+   ""
+  ],
+  [
+   449000,
+   0.25906700000632554,
+   1.4399993233382702e-05,
+   4418015,
+   3.893306320564836,
+   2,
+   ""
+  ],
+  [
+   450000,
+   0.2742569999973057,
+   1.2500007869675756e-05,
+   4447044,
+   3.917858810469839,
+   2,
+   ""
+  ],
+  [
+   451000,
+   0.2514089000032982,
+   0.038516700005857274,
+   4158429,
+   3.6626588265551483,
+   3,
+   "seal"
+  ],
+  [
+   452000,
+   0.2666992000013124,
+   1.5199999324977398e-05,
+   4187458,
+   3.687239689273745,
+   3,
+   ""
+  ],
+  [
+   453000,
+   0.2712144000106491,
+   1.550000160932541e-05,
+   4216487,
+   3.711833536099046,
+   3,
+   ""
+  ],
+  [
+   454000,
+   0.2794560000038473,
+   1.4700010069645941e-05,
+   4245516,
+   3.736460606914032,
+   3,
+   ""
+  ],
+  [
+   455000,
+   0.265185999989626,
+   1.4200006262399256e-05,
+   4274545,
+   3.760986107946072,
+   3,
+   ""
+  ],
+  [
+   456000,
+   0.27682610000192653,
+   1.4299992471933365e-05,
+   4303574,
+   3.7856114930719267,
+   3,
+   ""
+  ],
+  [
+   457000,
+   0.2637010000034934,
+   1.3699987903237343e-05,
+   4332603,
+   3.810117743690041,
+   3,
+   ""
+  ],
+  [
+   458000,
+   0.277086899994174,
+   1.4999997802078724e-05,
+   4361632,
+   3.834792822828526,
+   3,
+   ""
+  ],
+  [
+   459000,
+   0.26571000000694767,
+   1.4899997040629387e-05,
+   4390661,
+   3.8591753682804204,
+   3,
+   ""
+  ],
+  [
+   460000,
+   0.28717919999326114,
+   1.9400002202019095e-05,
+   4419690,
+   3.8836697805572666,
+   3,
+   ""
+  ],
+  [
+   461000,
+   0.28352019999874756,
+   1.440000778529793e-05,
+   4448719,
+   3.908038030449308,
+   3,
+   ""
+  ],
+  [
+   462000,
+   0.2817190999921877,
+   1.4200006262399256e-05,
+   4477748,
+   3.932516398848809,
+   3,
+   ""
+  ],
+  [
+   463000,
+   0.26800969999749213,
+   1.4900011592544615e-05,
+   4506777,
+   3.956992466679544,
+   3,
+   ""
+  ],
+  [
+   464000,
+   0.26052729999355506,
+   1.7400001524947584e-05,
+   4535806,
+   3.9815118629725506,
+   3,
+   ""
+  ],
+  [
+   465000,
+   0.2782205999974394,
+   1.6099991626106203e-05,
+   4564835,
+   4.005941996426553,
+   3,
+   ""
+  ],
+  [
+   466000,
+   0.2802790000132518,
+   1.4600009308196604e-05,
+   4593864,
+   4.030447714052588,
+   3,
+   ""
+  ],
+  [
+   467000,
+   0.2815790000022389,
+   1.6399993910454214e-05,
+   4622893,
+   4.055016345874673,
+   3,
+   ""
+  ],
+  [
+   468000,
+   0.2831902999896556,
+   2.710000262595713e-05,
+   4651922,
+   4.079359428108416,
+   3,
+   ""
+  ],
+  [
+   469000,
+   0.27826740000455175,
+   1.7499987734481692e-05,
+   4680951,
+   4.103779093214009,
+   3,
+   ""
+  ],
+  [
+   470000,
+   0.281168899993645,
+   1.410000550094992e-05,
+   4709980,
+   4.128168338830277,
+   3,
+   ""
+  ],
+  [
+   471000,
+   0.29395279999880586,
+   1.4599994756281376e-05,
+   4739009,
+   4.152585086648575,
+   3,
+   ""
+  ],
+  [
+   472000,
+   0.2760441999998875,
+   1.4700010069645941e-05,
+   4768038,
+   4.176956837872642,
+   3,
+   ""
+  ],
+  [
+   473000,
+   0.279527099992265,
+   1.5400000847876072e-05,
+   4797067,
+   4.201224179515968,
+   3,
+   ""
+  ],
+  [
+   474000,
+   0.27960159999202006,
+   1.4699995517730713e-05,
+   4826096,
+   4.2254115010156195,
+   3,
+   ""
+  ],
+  [
+   475000,
+   0.27275730000110343,
+   1.5099998563528061e-05,
+   4855125,
+   4.249692550756478,
+   3,
+   ""
+  ],
+  [
+   476000,
+   0.2872149000031641,
+   1.5099998563528061e-05,
+   4884154,
+   4.273971859530421,
+   3,
+   ""
+  ],
+  [
+   477000,
+   0.27878880000207573,
+   1.4999997802078724e-05,
+   4913183,
+   4.29815185479384,
+   3,
+   ""
+  ],
+  [
+   478000,
+   0.3038749999977881,
+   1.4999997802078724e-05,
+   4942212,
+   4.322552488072383,
+   3,
+   ""
+  ],
+  [
+   479000,
+   0.27602619999379385,
+   1.479999627918005e-05,
+   4971241,
+   4.3469266943098335,
+   3,
+   ""
+  ],
+  [
+   480000,
+   0.28048989998933394,
+   1.5400000847876072e-05,
+   5000270,
+   4.371159597280586,
+   3,
+   ""
+  ],
+  [
+   481000,
+   0.4454965000040829,
+   0.046317400003317744,
+   4710424,
+   4.1167082233239904,
+   4,
+   "seal"
+  ],
+  [
+   482000,
+   0.3421665000059875,
+   1.650000922381878e-05,
+   4739453,
+   4.141075825383705,
+   4,
+   ""
+  ],
+  [
+   483000,
+   0.3160397000028752,
+   1.6299993149004877e-05,
+   4768482,
+   4.165427996394055,
+   4,
+   ""
+  ],
+  [
+   484000,
+   0.3252601999993203,
+   1.68999977177009e-05,
+   4797511,
+   4.189790297000649,
+   4,
+   ""
+  ],
+  [
+   485000,
+   0.31344589999935124,
+   1.580000389367342e-05,
+   4826540,
+   4.21406007987134,
+   4,
+   ""
+  ],
+  [
+   486000,
+   0.34653690000413917,
+   1.5700003132224083e-05,
+   4855569,
+   4.238250815691299,
+   4,
+   ""
+  ],
+  [
+   487000,
+   0.3318264999979874,
+   1.5300000086426735e-05,
+   4884598,
+   4.26242465969788,
+   4,
+   ""
+  ],
+  [
+   488000,
+   0.6981307999958517,
+   1.4899997040629387e-05,
+   4913627,
+   4.286675053391215,
+   4,
+   ""
+  ],
+  [
+   489000,
+   0.3216203000047244,
+   1.6000005416572094e-05,
+   4942656,
+   4.310751551559933,
+   4,
+   ""
+  ],
+  [
+   490000,
+   0.36147770000388846,
+   1.649999467190355e-05,
+   4971685,
+   4.3348934823380265,
+   4,
+   ""
+  ],
+  [
+   491000,
+   0.3356923999963328,
+   1.750000228639692e-05,
+   5000714,
+   4.359064120523118,
+   4,
+   ""
+  ],
+  [
+   492000,
+   0.32661069999448955,
+   1.5199999324977398e-05,
+   5029743,
+   4.383233579899189,
+   4,
+   ""
+  ],
+  [
+   493000,
+   0.3348001000122167,
+   1.720000000204891e-05,
+   5058772,
+   4.407355972545788,
+   4,
+   ""
+  ],
+  [
+   494000,
+   0.31820900000457186,
+   1.5199999324977398e-05,
+   5087801,
+   4.431353575400845,
+   4,
+   ""
+  ],
+  [
+   495000,
+   0.4205277000000933,
+   1.6099991626106203e-05,
+   5116830,
+   4.455531154923887,
+   4,
+   ""
+  ],
+  [
+   496000,
+   0.3233075000025565,
+   1.5700003132224083e-05,
+   5145859,
+   4.479482260032975,
+   4,
+   ""
+  ],
+  [
+   497000,
+   0.3316233999939868,
+   1.550000160932541e-05,
+   5174888,
+   4.503673946095731,
+   4,
+   ""
+  ],
+  [
+   498000,
+   0.32051800000772346,
+   1.6099991626106203e-05,
+   5203917,
+   4.527747688018939,
+   4,
+   ""
+  ],
+  [
+   499000,
+   0.3347980000107782,
+   1.4999997802078724e-05,
+   5232946,
+   4.551666250607779,
+   4,
+   ""
+  ],
+  [
+   500000,
+   0.40536689999862574,
+   1.589999010320753e-05,
+   5261975,
+   4.5756304347826084,
+   4,
+   ""
+  ]
+ ],
+ "events": [
+  {
+   "kind": "seal",
+   "forced": false,
+   "after_op": 30000,
+   "run": {
+    "run": 1,
+    "tier": 0,
+    "keys": 23830,
+    "sections": 1,
+    "adr_bytes": 76832,
+    "log_bytes": 476600,
+    "build_s": 0.02634270000271499
+   },
+   "s": 0.03697689999535214,
+   "witness_errors": 0,
+   "witnesses": 200
+  },
+  {
+   "kind": "seal",
+   "forced": false,
+   "after_op": 60000,
+   "run": {
+    "run": 2,
+    "tier": 0,
+    "keys": 23817,
+    "sections": 1,
+    "adr_bytes": 76832,
+    "log_bytes": 476340,
+    "build_s": 0.026138300003367476
+   },
+   "s": 0.03701310000906233,
+   "witness_errors": 0,
+   "witnesses": 200
+  },
+  {
+   "kind": "seal",
+   "forced": false,
+   "after_op": 90000,
+   "run": {
+    "run": 3,
+    "tier": 0,
+    "keys": 23755,
+    "sections": 1,
+    "adr_bytes": 76576,
+    "log_bytes": 475100,
+    "build_s": 0.026204299996607006
+   },
+   "s": 0.037167399990721606,
+   "witness_errors": 0,
+   "witnesses": 200
+  },
+  {
+   "kind": "round_start",
+   "after_op": 100000,
+   "seal": {
+    "kind": "seal",
+    "forced": true,
+    "after_op": 100000,
+    "run": {
+     "run": 4,
+     "tier": 0,
+     "keys": 7952,
+     "sections": 1,
+     "adr_bytes": 26016,
+     "log_bytes": 159040,
+     "build_s": 0.015383899997686967
+    },
+    "s": 0.020944200005033053
+   },
+   "s": 0.02286630000162404,
+   "forced_round": false,
+   "published_bytes": 5146815,
+   "witness_errors": 0,
+   "witnesses": 200
+  },
+  {
+   "kind": "round_step",
+   "part": 0,
+   "section": 0,
+   "rows": 128793,
+   "adr_bytes": 411616,
+   "pair_bytes": 2575860,
+   "max_live_page": 10303,
+   "s_read": 0.24522399999841582,
+   "s_build": 0.044904999987920746,
+   "last": false,
+   "files_written": [
+    "c:\\gams\\test\\rcm_address_engine\\data\\a6_n1\\a6.manifest.json",
+    "c:\\gams\\test\\rcm_address_engine\\data\\a6_n1\\a6.manifest.tmp",
+    "c:\\gams\\test\\rcm_address_engine\\data\\a6_n1\\b0000_g0002.adr",
+    "c:\\gams\\test\\rcm_address_engine\\data\\a6_n1\\b0000_g0002.tmp"
+   ],
+   "files_removed": [
+    "c:\\gams\\test\\rcm_address_engine\\data\\a6_n1\\a6.manifest.tmp",
+    "c:\\gams\\test\\rcm_address_engine\\data\\a6_n1\\b0000_g0001.adr",
+    "c:\\gams\\test\\rcm_address_engine\\data\\a6_n1\\b0000_g0002.tmp"
+   ],
+   "read_bytes": 84410368,
+   "pages": 10304,
+   "writes_since_read": 10128,
+   "s5_bad_files": [],
+   "s": 0.29077289999986533,
+   "after_op": 101000,
+   "batches_since_vacuum": 101,
+   "witness_errors": 0,
+   "witnesses": 172
+  },
+  {
+   "kind": "round_step",
+   "part": 1,
+   "section": 1,
+   "rows": 128478,
+   "adr_bytes": 410912,
+   "pair_bytes": 2569560,
+   "max_live_page": 10279,
+   "s_read": 0.21804980000888463,
+   "s_build": 0.0390761000016937,
+   "last": false,
+   "files_written": [
+    "c:\\gams\\test\\rcm_address_engine\\data\\a6_n1\\a6.manifest.json",
+    "c:\\gams\\test\\rcm_address_engine\\data\\a6_n1\\a6.manifest.tmp",
+    "c:\\gams\\test\\rcm_address_engine\\data\\a6_n1\\b0001_g0002.adr",
+    "c:\\gams\\test\\rcm_address_engine\\data\\a6_n1\\b0001_g0002.tmp"
+   ],
+   "files_removed": [
+    "c:\\gams\\test\\rcm_address_engine\\data\\a6_n1\\a6.manifest.tmp",
+    "c:\\gams\\test\\rcm_address_engine\\data\\a6_n1\\b0001_g0001.adr",
+    "c:\\gams\\test\\rcm_address_engine\\data\\a6_n1\\b0001_g0002.tmp"
+   ],
+   "read_bytes": 84213760,
+   "pages": 10280,
+   "writes_since_read": 10165,
+   "s5_bad_files": [],
+   "s": 0.2578424000093946,
+   "after_op": 102000,
+   "batches_since_vacuum": 102,
+   "witness_errors": 0,
+   "witnesses": 174
+  },
+  {
+   "kind": "round_step",
+   "part": 2,
+   "section": 2,
+   "rows": 128964,
+   "adr_bytes": 412256,
+   "pair_bytes": 2579280,
+   "max_live_page": 10310,
+   "s_read": 0.21591600000101607,
+   "s_build": 0.038774199987528846,
+   "last": false,
+   "files_written": [
+    "c:\\gams\\test\\rcm_address_engine\\data\\a6_n1\\a6.manifest.json",
+    "c:\\gams\\test\\rcm_address_engine\\data\\a6_n1\\a6.manifest.tmp",
+    "c:\\gams\\test\\rcm_address_engine\\data\\a6_n1\\b0002_g0002.adr",
+    "c:\\gams\\test\\rcm_address_engine\\data\\a6_n1\\b0002_g0002.tmp"
+   ],
+   "files_removed": [
+    "c:\\gams\\test\\rcm_address_engine\\data\\a6_n1\\a6.manifest.tmp",
+    "c:\\gams\\test\\rcm_address_engine\\data\\a6_n1\\b0002_g0001.adr",
+    "c:\\gams\\test\\rcm_address_engine\\data\\a6_n1\\b0002_g0002.tmp"
+   ],
+   "read_bytes": 84467712,
+   "pages": 10311,
+   "writes_since_read": 10299,
+   "s5_bad_files": [],
+   "s": 0.2553729000064777,
+   "after_op": 103000,
+   "batches_since_vacuum": 103,
+   "witness_errors": 0,
+   "witnesses": 175
+  },
+  {
+   "kind": "round_step",
+   "part": 3,
+   "section": 3,
+   "rows": 128773,
+   "adr_bytes": 411808,
+   "pair_bytes": 2575460,
+   "max_live_page": 10304,
+   "s_read": 0.2215888999926392,
+   "s_build": 0.039208500005770475,
+   "last": false,
+   "files_written": [
+    "c:\\gams\\test\\rcm_address_engine\\data\\a6_n1\\a6.manifest.json",
+    "c:\\gams\\test\\rcm_address_engine\\data\\a6_n1\\a6.manifest.tmp",
+    "c:\\gams\\test\\rcm_address_engine\\data\\a6_n1\\b0003_g0002.adr",
+    "c:\\gams\\test\\rcm_address_engine\\data\\a6_n1\\b0003_g0002.tmp"
+   ],
+   "files_removed": [
+    "c:\\gams\\test\\rcm_address_engine\\data\\a6_n1\\a6.manifest.tmp",
+    "c:\\gams\\test\\rcm_address_engine\\data\\a6_n1\\b0003_g0001.adr",
+    "c:\\gams\\test\\rcm_address_engine\\data\\a6_n1\\b0003_g0002.tmp"
+   ],
+   "read_bytes": 84418560,
+   "pages": 10305,
+   "writes_since_read": 10524,
+   "s5_bad_files": [],
+   "s": 0.2614982999948552,
+   "after_op": 104000,
+   "batches_since_vacuum": 104,
+   "witness_errors": 0,
+   "witnesses": 175
+  },
+  {
+   "kind": "round_step",
+   "part": 4,
+   "section": 4,
+   "rows": 129305,
+   "adr_bytes": 413344,
+   "pair_bytes": 2586100,
+   "max_live_page": 10349,
+   "s_read": 0.1631201999989571,
+   "s_build": 0.03714249999029562,
+   "last": false,
+   "files_written": [
+    "c:\\gams\\test\\rcm_address_engine\\data\\a6_n1\\a6.manifest.json",
+    "c:\\gams\\test\\rcm_address_engine\\data\\a6_n1\\a6.manifest.tmp",
+    "c:\\gams\\test\\rcm_address_engine\\data\\a6_n1\\b0004_g0002.adr",
+    "c:\\gams\\test\\rcm_address_engine\\data\\a6_n1\\b0004_g0002.tmp"
+   ],
+   "files_removed": [
+    "c:\\gams\\test\\rcm_address_engine\\data\\a6_n1\\a6.manifest.tmp",
+    "c:\\gams\\test\\rcm_address_engine\\data\\a6_n1\\b0004_g0001.adr",
+    "c:\\gams\\test\\rcm_address_engine\\data\\a6_n1\\b0004_g0002.tmp"
+   ],
+   "read_bytes": 84787200,
+   "pages": 10350,
+   "writes_since_read": 10445,
+   "s5_bad_files": [],
+   "s": 0.20091319999482948,
+   "after_op": 105000,
+   "batches_since_vacuum": 105,
+   "witness_errors": 0,
+   "witnesses": 175
+  },
+  {
+   "kind": "round_step",
+   "part": 5,
+   "section": 5,
+   "rows": 128952,
+   "adr_bytes": 412384,
+   "pair_bytes": 2579040,
+   "max_live_page": 10326,
+   "s_read": 0.16128859999298584,
+   "s_build": 0.03828490000159945,
+   "last": false,
+   "files_written": [
+    "c:\\gams\\test\\rcm_address_engine\\data\\a6_n1\\a6.manifest.json",
+    "c:\\gams\\test\\rcm_address_engine\\data\\a6_n1\\a6.manifest.tmp",
+    "c:\\gams\\test\\rcm_address_engine\\data\\a6_n1\\b0005_g0002.adr",
+    "c:\\gams\\test\\rcm_address_engine\\data\\a6_n1\\b0005_g0002.tmp"
+   ],
+   "files_removed": [
+    "c:\\gams\\test\\rcm_address_engine\\data\\a6_n1\\a6.manifest.tmp",
+    "c:\\gams\\test\\rcm_address_engine\\data\\a6_n1\\b0005_g0001.adr",
+    "c:\\gams\\test\\rcm_address_engine\\data\\a6_n1\\b0005_g0002.tmp"
+   ],
+   "read_bytes": 84598784,
+   "pages": 10327,
+   "writes_since_read": 10437,
+   "s5_bad_files": [],
+   "s": 0.20019659999525174,
+   "after_op": 106000,
+   "batches_since_vacuum": 106,
+   "witness_errors": 0,
+   "witnesses": 175
+  },
+  {
+   "kind": "round_step",
+   "part": 6,
+   "section": 6,
+   "rows": 128953,
+   "adr_bytes": 411872,
+   "pair_bytes": 2579060,
+   "max_live_page": 10328,
+   "s_read": 0.16369699999631848,
+   "s_build": 0.0390146999998251,
+   "last": false,
+   "files_written": [
+    "c:\\gams\\test\\rcm_address_engine\\data\\a6_n1\\a6.manifest.json",
+    "c:\\gams\\test\\rcm_address_engine\\data\\a6_n1\\a6.manifest.tmp",
+    "c:\\gams\\test\\rcm_address_engine\\data\\a6_n1\\b0006_g0002.adr",
+    "c:\\gams\\test\\rcm_address_engine\\data\\a6_n1\\b0006_g0002.tmp"
+   ],
+   "files_removed": [
+    "c:\\gams\\test\\rcm_address_engine\\data\\a6_n1\\a6.manifest.tmp",
+    "c:\\gams\\test\\rcm_address_engine\\data\\a6_n1\\b0006_g0001.adr",
+    "c:\\gams\\test\\rcm_address_engine\\data\\a6_n1\\b0006_g0002.tmp"
+   ],
+   "read_bytes": 84615168,
+   "pages": 10329,
+   "writes_since_read": 10740,
+   "s5_bad_files": [],
+   "s": 0.20337909999943804,
+   "after_op": 107000,
+   "batches_since_vacuum": 107,
+   "witness_errors": 0,
+   "witnesses": 175
+  },
+  {
+   "kind": "round_step",
+   "part": 7,
+   "section": 7,
+   "rows": 128889,
+   "adr_bytes": 412128,
+   "pair_bytes": 2577780,
+   "max_live_page": 10337,
+   "s_read": 0.16365919999952894,
+   "s_build": 0.03683110000565648,
+   "last": true,
+   "files_written": [
+    "c:\\gams\\test\\rcm_address_engine\\data\\a6_n1\\a6.manifest.json",
+    "c:\\gams\\test\\rcm_address_engine\\data\\a6_n1\\a6.manifest.tmp",
+    "c:\\gams\\test\\rcm_address_engine\\data\\a6_n1\\b0007_g0002.adr",
+    "c:\\gams\\test\\rcm_address_engine\\data\\a6_n1\\b0007_g0002.tmp"
+   ],
+   "files_removed": [
+    "c:\\gams\\test\\rcm_address_engine\\data\\a6_n1\\a6.manifest.tmp",
+    "c:\\gams\\test\\rcm_address_engine\\data\\a6_n1\\b0007_g0001.adr",
+    "c:\\gams\\test\\rcm_address_engine\\data\\a6_n1\\b0007_g0002.tmp"
+   ],
+   "read_bytes": 84688896,
+   "pages": 10338,
+   "writes_since_read": 10770,
+   "s5_bad_files": [],
+   "round_end": {
+    "W": 100000,
+    "rows": 1031107,
+    "max_rows": 129305,
+    "steps": 8,
+    "n0": 1032119,
+    "base_keys_sum": 1031107,
+    "window_ops": 8000,
+    "s": 0.0019504999945638701,
+    "s5_bad_files": [],
+    "live_rows": 1032119
+   },
+   "s": 0.2033314000000246,
+   "after_op": 108000,
+   "batches_since_vacuum": 108,
+   "witness_errors": 0,
+   "witnesses": 175
+  },
+  {
+   "kind": "seal",
+   "forced": false,
+   "after_op": 130000,
+   "run": {
+    "run": 5,
+    "tier": 0,
+    "keys": 23801,
+    "sections": 1,
+    "adr_bytes": 76832,
+    "log_bytes": 476020,
+    "build_s": 0.02517239999724552
+   },
+   "s": 0.03577870001026895,
+   "witness_errors": 0,
+   "witnesses": 200
+  },
+  {
+   "kind": "seal",
+   "forced": false,
+   "after_op": 160000,
+   "run": {
+    "run": 6,
+    "tier": 0,
+    "keys": 23775,
+    "sections": 1,
+    "adr_bytes": 76704,
+    "log_bytes": 475500,
+    "build_s": 0.02420200000051409
+   },
+   "s": 0.03490400000009686,
+   "witness_errors": 0,
+   "witnesses": 200
+  },
+  {
+   "kind": "seal",
+   "forced": false,
+   "after_op": 190000,
+   "run": {
+    "run": 7,
+    "tier": 0,
+    "keys": 23877,
+    "sections": 1,
+    "adr_bytes": 77024,
+    "log_bytes": 477540,
+    "build_s": 0.028601600002730265
+   },
+   "s": 0.03931659999943804,
+   "witness_errors": 0,
+   "witnesses": 200
+  },
+  {
+   "kind": "round_start",
+   "after_op": 204000,
+   "seal": {
+    "kind": "seal",
+    "forced": true,
+    "after_op": 204000,
+    "run": {
+     "run": 8,
+     "tier": 0,
+     "keys": 11179,
+     "sections": 1,
+     "adr_bytes": 36512,
+     "log_bytes": 223580,
+     "build_s": 0.01796390001254622
+    },
+    "s": 0.025873000005958602
+   },
+   "s": 0.02818009999464266,
+   "forced_round": false,
+   "published_bytes": 5362840,
+   "witness_errors": 0,
+   "witnesses": 200
+  },
+  {
+   "kind": "round_step",
+   "part": 0,
+   "section": 0,
+   "rows": 132735,
+   "adr_bytes": 424288,
+   "pair_bytes": 2654700,
+   "max_live_page": 10941,
+   "s_read": 0.25240079998911824,
+   "s_build": 0.05172580000362359,
+   "last": false,
+   "files_written": [
+    "c:\\gams\\test\\rcm_address_engine\\data\\a6_n1\\a6.manifest.json",
+    "c:\\gams\\test\\rcm_address_engine\\data\\a6_n1\\a6.manifest.tmp",
+    "c:\\gams\\test\\rcm_address_engine\\data\\a6_n1\\b0000_g0003.adr",
+    "c:\\gams\\test\\rcm_address_engine\\data\\a6_n1\\b0000_g0003.tmp"
+   ],
+   "files_removed": [
+    "c:\\gams\\test\\rcm_address_engine\\data\\a6_n1\\a6.manifest.tmp",
+    "c:\\gams\\test\\rcm_address_engine\\data\\a6_n1\\b0000_g0002.adr",
+    "c:\\gams\\test\\rcm_address_engine\\data\\a6_n1\\b0000_g0003.tmp"
+   ],
+   "read_bytes": 89636864,
+   "pages": 10942,
+   "writes_since_read": 10479,
+   "s5_bad_files": [],
+   "s": 0.30474059999687597,
+   "after_op": 205000,
+   "batches_since_vacuum": 205,
+   "witness_errors": 0,
+   "witnesses": 173
+  },
+  {
+   "kind": "round_step",
+   "part": 1,
+   "section": 1,
+   "rows": 132577,
+   "adr_bytes": 423776,
+   "pair_bytes": 2651540,
+   "max_live_page": 10924,
+   "s_read": 0.2685122999973828,
+   "s_build": 0.05008169999928214,
+   "last": false,
+   "files_written": [
+    "c:\\gams\\test\\rcm_address_engine\\data\\a6_n1\\a6.manifest.json",
+    "c:\\gams\\test\\rcm_address_engine\\data\\a6_n1\\a6.manifest.tmp",
+    "c:\\gams\\test\\rcm_address_engine\\data\\a6_n1\\b0001_g0003.adr",
+    "c:\\gams\\test\\rcm_address_engine\\data\\a6_n1\\b0001_g0003.tmp"
+   ],
+   "files_removed": [
+    "c:\\gams\\test\\rcm_address_engine\\data\\a6_n1\\a6.manifest.tmp",
+    "c:\\gams\\test\\rcm_address_engine\\data\\a6_n1\\b0001_g0002.adr",
+    "c:\\gams\\test\\rcm_address_engine\\data\\a6_n1\\b0001_g0003.tmp"
+   ],
+   "read_bytes": 89497600,
+   "pages": 10925,
+   "writes_since_read": 10619,
+   "s5_bad_files": [],
+   "s": 0.31919560000824276,
+   "after_op": 206000,
+   "batches_since_vacuum": 206,
+   "witness_errors": 0,
+   "witnesses": 173
+  },
+  {
+   "kind": "round_step",
+   "part": 2,
+   "section": 2,
+   "rows": 132869,
+   "adr_bytes": 424480,
+   "pair_bytes": 2657380,
+   "max_live_page": 10941,
+   "s_read": 0.23503640000126325,
+   "s_build": 0.04994679999072105,
+   "last": false,
+   "files_written": [
+    "c:\\gams\\test\\rcm_address_engine\\data\\a6_n1\\a6.manifest.json",
+    "c:\\gams\\test\\rcm_address_engine\\data\\a6_n1\\a6.manifest.tmp",
+    "c:\\gams\\test\\rcm_address_engine\\data\\a6_n1\\b0002_g0003.adr",
+    "c:\\gams\\test\\rcm_address_engine\\data\\a6_n1\\b0002_g0003.tmp"
+   ],
+   "files_removed": [
+    "c:\\gams\\test\\rcm_address_engine\\data\\a6_n1\\a6.manifest.tmp",
+    "c:\\gams\\test\\rcm_address_engine\\data\\a6_n1\\b0002_g0002.adr",
+    "c:\\gams\\test\\rcm_address_engine\\data\\a6_n1\\b0002_g0003.tmp"
+   ],
+   "read_bytes": 89636864,
+   "pages": 10942,
+   "writes_since_read": 10332,
+   "s5_bad_files": [],
+   "s": 0.28563470000517555,
+   "after_op": 207000,
+   "batches_since_vacuum": 207,
+   "witness_errors": 0,
+   "witnesses": 175
+  },
+  {
+   "kind": "round_step",
+   "part": 3,
+   "section": 3,
+   "rows": 132666,
+   "adr_bytes": 423840,
+   "pair_bytes": 2653320,
+   "max_live_page": 10941,
+   "s_read": 0.29866729999776,
+   "s_build": 0.052963699999963865,
+   "last": false,
+   "files_written": [
+    "c:\\gams\\test\\rcm_address_engine\\data\\a6_n1\\a6.manifest.json",
+    "c:\\gams\\test\\rcm_address_engine\\data\\a6_n1\\a6.manifest.tmp",
+    "c:\\gams\\test\\rcm_address_engine\\data\\a6_n1\\b0003_g0003.adr",
+    "c:\\gams\\test\\rcm_address_engine\\data\\a6_n1\\b0003_g0003.tmp"
+   ],
+   "files_removed": [
+    "c:\\gams\\test\\rcm_address_engine\\data\\a6_n1\\a6.manifest.tmp",
+    "c:\\gams\\test\\rcm_address_engine\\data\\a6_n1\\b0003_g0002.adr",
+    "c:\\gams\\test\\rcm_address_engine\\data\\a6_n1\\b0003_g0003.tmp"
+   ],
+   "read_bytes": 89636864,
+   "pages": 10942,
+   "writes_since_read": 10428,
+   "s5_bad_files": [],
+   "s": 0.35223769998992793,
+   "after_op": 208000,
+   "batches_since_vacuum": 208,
+   "witness_errors": 0,
+   "witnesses": 175
+  },
+  {
+   "kind": "round_step",
+   "part": 4,
+   "section": 4,
+   "rows": 133191,
+   "adr_bytes": 425568,
+   "pair_bytes": 2663820,
+   "max_live_page": 10967,
+   "s_read": 0.22061899999971502,
+   "s_build": 0.050513999987742864,
+   "last": false,
+   "files_written": [
+    "c:\\gams\\test\\rcm_address_engine\\data\\a6_n1\\a6.manifest.json",
+    "c:\\gams\\test\\rcm_address_engine\\data\\a6_n1\\a6.manifest.tmp",
+    "c:\\gams\\test\\rcm_address_engine\\data\\a6_n1\\b0004_g0003.adr",
+    "c:\\gams\\test\\rcm_address_engine\\data\\a6_n1\\b0004_g0003.tmp"
+   ],
+   "files_removed": [
+    "c:\\gams\\test\\rcm_address_engine\\data\\a6_n1\\a6.manifest.tmp",
+    "c:\\gams\\test\\rcm_address_engine\\data\\a6_n1\\b0004_g0002.adr",
+    "c:\\gams\\test\\rcm_address_engine\\data\\a6_n1\\b0004_g0003.tmp"
+   ],
+   "read_bytes": 89849856,
+   "pages": 10968,
+   "writes_since_read": 10188,
+   "s5_bad_files": [],
+   "s": 0.2717841999983648,
+   "after_op": 209000,
+   "batches_since_vacuum": 209,
+   "witness_errors": 0,
+   "witnesses": 174
+  },
+  {
+   "kind": "round_step",
+   "part": 5,
+   "section": 5,
+   "rows": 132789,
+   "adr_bytes": 424480,
+   "pair_bytes": 2655780,
+   "max_live_page": 10945,
+   "s_read": 0.21247749999747612,
+   "s_build": 0.04988149998825975,
+   "last": false,
+   "files_written": [
+    "c:\\gams\\test\\rcm_address_engine\\data\\a6_n1\\a6.manifest.json",
+    "c:\\gams\\test\\rcm_address_engine\\data\\a6_n1\\a6.manifest.tmp",
+    "c:\\gams\\test\\rcm_address_engine\\data\\a6_n1\\b0005_g0003.adr",
+    "c:\\gams\\test\\rcm_address_engine\\data\\a6_n1\\b0005_g0003.tmp"
+   ],
+   "files_removed": [
+    "c:\\gams\\test\\rcm_address_engine\\data\\a6_n1\\a6.manifest.tmp",
+    "c:\\gams\\test\\rcm_address_engine\\data\\a6_n1\\b0005_g0002.adr",
+    "c:\\gams\\test\\rcm_address_engine\\data\\a6_n1\\b0005_g0003.tmp"
+   ],
+   "read_bytes": 89669632,
+   "pages": 10946,
+   "writes_since_read": 10288,
+   "s5_bad_files": [],
+   "s": 0.2630065999983344,
+   "after_op": 210000,
+   "batches_since_vacuum": 210,
+   "witness_errors": 0,
+   "witnesses": 175
+  },
+  {
+   "kind": "round_step",
+   "part": 6,
+   "section": 6,
+   "rows": 132734,
+   "adr_bytes": 424224,
+   "pair_bytes": 2654680,
+   "max_live_page": 10952,
+   "s_read": 0.21189089999825228,
+   "s_build": 0.050571699990541674,
+   "last": false,
+   "files_written": [
+    "c:\\gams\\test\\rcm_address_engine\\data\\a6_n1\\a6.manifest.json",
+    "c:\\gams\\test\\rcm_address_engine\\data\\a6_n1\\a6.manifest.tmp",
+    "c:\\gams\\test\\rcm_address_engine\\data\\a6_n1\\b0006_g0003.adr",
+    "c:\\gams\\test\\rcm_address_engine\\data\\a6_n1\\b0006_g0003.tmp"
+   ],
+   "files_removed": [
+    "c:\\gams\\test\\rcm_address_engine\\data\\a6_n1\\a6.manifest.tmp",
+    "c:\\gams\\test\\rcm_address_engine\\data\\a6_n1\\b0006_g0002.adr",
+    "c:\\gams\\test\\rcm_address_engine\\data\\a6_n1\\b0006_g0003.tmp"
+   ],
+   "read_bytes": 89726976,
+   "pages": 10953,
+   "writes_since_read": 10362,
+   "s5_bad_files": [],
+   "s": 0.2630210000061197,
+   "after_op": 211000,
+   "batches_since_vacuum": 211,
+   "witness_errors": 0,
+   "witnesses": 175
+  },
+  {
+   "kind": "round_step",
+   "part": 7,
+   "section": 7,
+   "rows": 132887,
+   "adr_bytes": 424800,
+   "pair_bytes": 2657740,
+   "max_live_page": 10964,
+   "s_read": 0.2969427999923937,
+   "s_build": 0.051417499998933636,
+   "last": true,
+   "files_written": [
+    "c:\\gams\\test\\rcm_address_engine\\data\\a6_n1\\a6.manifest.json",
+    "c:\\gams\\test\\rcm_address_engine\\data\\a6_n1\\a6.manifest.tmp",
+    "c:\\gams\\test\\rcm_address_engine\\data\\a6_n1\\b0007_g0003.adr",
+    "c:\\gams\\test\\rcm_address_engine\\data\\a6_n1\\b0007_g0003.tmp"
+   ],
+   "files_removed": [
+    "c:\\gams\\test\\rcm_address_engine\\data\\a6_n1\\a6.manifest.tmp",
+    "c:\\gams\\test\\rcm_address_engine\\data\\a6_n1\\b0007_g0002.adr",
+    "c:\\gams\\test\\rcm_address_engine\\data\\a6_n1\\b0007_g0003.tmp"
+   ],
+   "read_bytes": 89825280,
+   "pages": 10965,
+   "writes_since_read": 10481,
+   "s5_bad_files": [],
+   "round_end": {
+    "W": 204000,
+    "rows": 1062448,
+    "max_rows": 133191,
+    "steps": 8,
+    "n0": 1063473,
+    "base_keys_sum": 1062448,
+    "window_ops": 8000,
+    "s": 0.002057500008959323,
+    "s5_bad_files": [],
+    "live_rows": 1063473
+   },
+   "s": 0.3512256999965757,
+   "after_op": 212000,
+   "batches_since_vacuum": 212,
+   "witness_errors": 0,
+   "witnesses": 173
+  },
+  {
+   "kind": "seal",
+   "forced": false,
+   "after_op": 234000,
+   "run": {
+    "run": 9,
+    "tier": 0,
+    "keys": 23835,
+    "sections": 1,
+    "adr_bytes": 76768,
+    "log_bytes": 476700,
+    "build_s": 0.02708969998639077
+   },
+   "s": 0.03723570000147447,
+   "witness_errors": 0,
+   "witnesses": 200
+  },
+  {
+   "kind": "seal",
+   "forced": false,
+   "after_op": 264000,
+   "run": {
+    "run": 10,
+    "tier": 0,
+    "keys": 23855,
+    "sections": 1,
+    "adr_bytes": 76960,
+    "log_bytes": 477100,
+    "build_s": 0.02813439999590628
+   },
+   "s": 0.039463299995986745,
+   "witness_errors": 0,
+   "witnesses": 200
+  },
+  {
+   "kind": "seal",
+   "forced": false,
+   "after_op": 294000,
+   "run": {
+    "run": 11,
+    "tier": 0,
+    "keys": 23911,
+    "sections": 1,
+    "adr_bytes": 77152,
+    "log_bytes": 478220,
+    "build_s": 0.02549699999508448
+   },
+   "s": 0.037517699995078146,
+   "witness_errors": 0,
+   "witnesses": 200
+  },
+  {
+   "kind": "round_start",
+   "after_op": 311000,
+   "seal": {
+    "kind": "seal",
+    "forced": true,
+    "after_op": 311000,
+    "run": {
+     "run": 12,
+     "tier": 0,
+     "keys": 13589,
+     "sections": 1,
+     "adr_bytes": 44192,
+     "log_bytes": 271780,
+     "build_s": 0.022584300008020364
+    },
+    "s": 0.030491600002278574
+   },
+   "s": 0.03287110000383109,
+   "forced_round": false,
+   "published_bytes": 5552350,
+   "witness_errors": 0,
+   "witnesses": 200
+  },
+  {
+   "kind": "round_step",
+   "part": 0,
+   "section": 0,
+   "rows": 136874,
+   "adr_bytes": 437536,
+   "pair_bytes": 2737480,
+   "max_live_page": 11142,
+   "s_read": 0.41871520000859164,
+   "s_build": 0.050369300006423146,
+   "last": false,
+   "files_written": [
+    "c:\\gams\\test\\rcm_address_engine\\data\\a6_n1\\a6.manifest.json",
+    "c:\\gams\\test\\rcm_address_engine\\data\\a6_n1\\a6.manifest.tmp",
+    "c:\\gams\\test\\rcm_address_engine\\data\\a6_n1\\b0000_g0004.adr",
+    "c:\\gams\\test\\rcm_address_engine\\data\\a6_n1\\b0000_g0004.tmp"
+   ],
+   "files_removed": [
+    "c:\\gams\\test\\rcm_address_engine\\data\\a6_n1\\a6.manifest.tmp",
+    "c:\\gams\\test\\rcm_address_engine\\data\\a6_n1\\b0000_g0003.adr",
+    "c:\\gams\\test\\rcm_address_engine\\data\\a6_n1\\b0000_g0004.tmp"
+   ],
+   "read_bytes": 91283456,
+   "pages": 11143,
+   "writes_since_read": 10702,
+   "s5_bad_files": [],
+   "s": 0.4697108000109438,
+   "after_op": 312000,
+   "batches_since_vacuum": 72,
+   "witness_errors": 0,
+   "witnesses": 175
+  },
+  {
+   "kind": "round_step",
+   "part": 1,
+   "section": 1,
+   "rows": 136586,
+   "adr_bytes": 436640,
+   "pair_bytes": 2731720,
+   "max_live_page": 11118,
+   "s_read": 0.37758499999472406,
+   "s_build": 0.05129740000120364,
+   "last": false,
+   "files_written": [
+    "c:\\gams\\test\\rcm_address_engine\\data\\a6_n1\\a6.manifest.json",
+    "c:\\gams\\test\\rcm_address_engine\\data\\a6_n1\\a6.manifest.tmp",
+    "c:\\gams\\test\\rcm_address_engine\\data\\a6_n1\\b0001_g0004.adr",
+    "c:\\gams\\test\\rcm_address_engine\\data\\a6_n1\\b0001_g0004.tmp"
+   ],
+   "files_removed": [
+    "c:\\gams\\test\\rcm_address_engine\\data\\a6_n1\\a6.manifest.tmp",
+    "c:\\gams\\test\\rcm_address_engine\\data\\a6_n1\\b0001_g0003.adr",
+    "c:\\gams\\test\\rcm_address_engine\\data\\a6_n1\\b0001_g0004.tmp"
+   ],
+   "read_bytes": 91086848,
+   "pages": 11119,
+   "writes_since_read": 10779,
+   "s5_bad_files": [],
+   "s": 0.4295593999995617,
+   "after_op": 313000,
+   "batches_since_vacuum": 73,
+   "witness_errors": 0,
+   "witnesses": 175
+  },
+  {
+   "kind": "round_step",
+   "part": 2,
+   "section": 2,
+   "rows": 136715,
+   "adr_bytes": 437024,
+   "pair_bytes": 2734300,
+   "max_live_page": 11114,
+   "s_read": 0.5158722000051057,
+   "s_build": 0.053805400006240234,
+   "last": false,
+   "files_written": [
+    "c:\\gams\\test\\rcm_address_engine\\data\\a6_n1\\a6.manifest.json",
+    "c:\\gams\\test\\rcm_address_engine\\data\\a6_n1\\a6.manifest.tmp",
+    "c:\\gams\\test\\rcm_address_engine\\data\\a6_n1\\b0002_g0004.adr",
+    "c:\\gams\\test\\rcm_address_engine\\data\\a6_n1\\b0002_g0004.tmp"
+   ],
+   "files_removed": [
+    "c:\\gams\\test\\rcm_address_engine\\data\\a6_n1\\a6.manifest.tmp",
+    "c:\\gams\\test\\rcm_address_engine\\data\\a6_n1\\b0002_g0003.adr",
+    "c:\\gams\\test\\rcm_address_engine\\data\\a6_n1\\b0002_g0004.tmp"
+   ],
+   "read_bytes": 91054080,
+   "pages": 11115,
+   "writes_since_read": 10553,
+   "s5_bad_files": [],
+   "s": 0.5702785000030417,
+   "after_op": 314000,
+   "batches_since_vacuum": 74,
+   "witness_errors": 0,
+   "witnesses": 175
+  },
+  {
+   "kind": "round_step",
+   "part": 3,
+   "section": 3,
+   "rows": 136588,
+   "adr_bytes": 436448,
+   "pair_bytes": 2731760,
+   "max_live_page": 11120,
+   "s_read": 0.45244030001049396,
+   "s_build": 0.050573799991980195,
+   "last": false,
+   "files_written": [
+    "c:\\gams\\test\\rcm_address_engine\\data\\a6_n1\\a6.manifest.json",
+    "c:\\gams\\test\\rcm_address_engine\\data\\a6_n1\\a6.manifest.tmp",
+    "c:\\gams\\test\\rcm_address_engine\\data\\a6_n1\\b0003_g0004.adr",
+    "c:\\gams\\test\\rcm_address_engine\\data\\a6_n1\\b0003_g0004.tmp"
+   ],
+   "files_removed": [
+    "c:\\gams\\test\\rcm_address_engine\\data\\a6_n1\\a6.manifest.tmp",
+    "c:\\gams\\test\\rcm_address_engine\\data\\a6_n1\\b0003_g0003.adr",
+    "c:\\gams\\test\\rcm_address_engine\\data\\a6_n1\\b0003_g0004.tmp"
+   ],
+   "read_bytes": 91103232,
+   "pages": 11121,
+   "writes_since_read": 10620,
+   "s5_bad_files": [],
+   "s": 0.5037280000105966,
+   "after_op": 315000,
+   "batches_since_vacuum": 75,
+   "witness_errors": 0,
+   "witnesses": 175
+  },
+  {
+   "kind": "round_step",
+   "part": 4,
+   "section": 4,
+   "rows": 137149,
+   "adr_bytes": 438432,
+   "pair_bytes": 2742980,
+   "max_live_page": 11144,
+   "s_read": 0.4089135000103852,
+   "s_build": 0.05169910000404343,
+   "last": false,
+   "files_written": [
+    "c:\\gams\\test\\rcm_address_engine\\data\\a6_n1\\a6.manifest.json",
+    "c:\\gams\\test\\rcm_address_engine\\data\\a6_n1\\a6.manifest.tmp",
+    "c:\\gams\\test\\rcm_address_engine\\data\\a6_n1\\b0004_g0004.adr",
+    "c:\\gams\\test\\rcm_address_engine\\data\\a6_n1\\b0004_g0004.tmp"
+   ],
+   "files_removed": [
+    "c:\\gams\\test\\rcm_address_engine\\data\\a6_n1\\a6.manifest.tmp",
+    "c:\\gams\\test\\rcm_address_engine\\data\\a6_n1\\b0004_g0003.adr",
+    "c:\\gams\\test\\rcm_address_engine\\data\\a6_n1\\b0004_g0004.tmp"
+   ],
+   "read_bytes": 91299840,
+   "pages": 11145,
+   "writes_since_read": 10732,
+   "s5_bad_files": [],
+   "s": 0.461218700002064,
+   "after_op": 316000,
+   "batches_since_vacuum": 76,
+   "witness_errors": 0,
+   "witnesses": 175
+  },
+  {
+   "kind": "round_step",
+   "part": 5,
+   "section": 5,
+   "rows": 136814,
+   "adr_bytes": 437344,
+   "pair_bytes": 2736280,
+   "max_live_page": 11115,
+   "s_read": 0.37885359999199864,
+   "s_build": 0.05122609999671113,
+   "last": false,
+   "files_written": [
+    "c:\\gams\\test\\rcm_address_engine\\data\\a6_n1\\a6.manifest.json",
+    "c:\\gams\\test\\rcm_address_engine\\data\\a6_n1\\a6.manifest.tmp",
+    "c:\\gams\\test\\rcm_address_engine\\data\\a6_n1\\b0005_g0004.adr",
+    "c:\\gams\\test\\rcm_address_engine\\data\\a6_n1\\b0005_g0004.tmp"
+   ],
+   "files_removed": [
+    "c:\\gams\\test\\rcm_address_engine\\data\\a6_n1\\a6.manifest.tmp",
+    "c:\\gams\\test\\rcm_address_engine\\data\\a6_n1\\b0005_g0003.adr",
+    "c:\\gams\\test\\rcm_address_engine\\data\\a6_n1\\b0005_g0004.tmp"
+   ],
+   "read_bytes": 91062272,
+   "pages": 11116,
+   "writes_since_read": 10563,
+   "s5_bad_files": [],
+   "s": 0.4307193999993615,
+   "after_op": 317000,
+   "batches_since_vacuum": 77,
+   "witness_errors": 0,
+   "witnesses": 175
+  },
+  {
+   "kind": "round_step",
+   "part": 6,
+   "section": 6,
+   "rows": 137089,
+   "adr_bytes": 437792,
+   "pair_bytes": 2741780,
+   "max_live_page": 11122,
+   "s_read": 0.4243191999994451,
+   "s_build": 0.05433420000190381,
+   "last": false,
+   "files_written": [
+    "c:\\gams\\test\\rcm_address_engine\\data\\a6_n1\\a6.manifest.json",
+    "c:\\gams\\test\\rcm_address_engine\\data\\a6_n1\\a6.manifest.tmp",
+    "c:\\gams\\test\\rcm_address_engine\\data\\a6_n1\\b0006_g0004.adr",
+    "c:\\gams\\test\\rcm_address_engine\\data\\a6_n1\\b0006_g0004.tmp"
+   ],
+   "files_removed": [
+    "c:\\gams\\test\\rcm_address_engine\\data\\a6_n1\\a6.manifest.tmp",
+    "c:\\gams\\test\\rcm_address_engine\\data\\a6_n1\\b0006_g0003.adr",
+    "c:\\gams\\test\\rcm_address_engine\\data\\a6_n1\\b0006_g0004.tmp"
+   ],
+   "read_bytes": 91119616,
+   "pages": 11123,
+   "writes_since_read": 11053,
+   "s5_bad_files": [],
+   "s": 0.47929909999947995,
+   "after_op": 318000,
+   "batches_since_vacuum": 78,
+   "witness_errors": 0,
+   "witnesses": 175
+  },
+  {
+   "kind": "round_step",
+   "part": 7,
+   "section": 7,
+   "rows": 136867,
+   "adr_bytes": 437408,
+   "pair_bytes": 2737340,
+   "max_live_page": 11124,
+   "s_read": 0.39770539999881294,
+   "s_build": 0.05233720000251196,
+   "last": true,
+   "files_written": [
+    "c:\\gams\\test\\rcm_address_engine\\data\\a6_n1\\a6.manifest.json",
+    "c:\\gams\\test\\rcm_address_engine\\data\\a6_n1\\a6.manifest.tmp",
+    "c:\\gams\\test\\rcm_address_engine\\data\\a6_n1\\b0007_g0004.adr",
+    "c:\\gams\\test\\rcm_address_engine\\data\\a6_n1\\b0007_g0004.tmp"
+   ],
+   "files_removed": [
+    "c:\\gams\\test\\rcm_address_engine\\data\\a6_n1\\a6.manifest.tmp",
+    "c:\\gams\\test\\rcm_address_engine\\data\\a6_n1\\b0007_g0003.adr",
+    "c:\\gams\\test\\rcm_address_engine\\data\\a6_n1\\b0007_g0004.tmp"
+   ],
+   "read_bytes": 91136000,
+   "pages": 11125,
+   "writes_since_read": 10657,
+   "s5_bad_files": [],
+   "round_end": {
+    "W": 311000,
+    "rows": 1094682,
+    "max_rows": 137149,
+    "steps": 8,
+    "n0": 1095722,
+    "base_keys_sum": 1094682,
+    "window_ops": 8000,
+    "s": 0.002023900000494905,
+    "s5_bad_files": [],
+    "live_rows": 1095722
+   },
+   "s": 0.4528942000033567,
+   "after_op": 319000,
+   "batches_since_vacuum": 79,
+   "witness_errors": 0,
+   "witnesses": 175
+  },
+  {
+   "kind": "seal",
+   "forced": false,
+   "after_op": 341000,
+   "run": {
+    "run": 13,
+    "tier": 0,
+    "keys": 23798,
+    "sections": 1,
+    "adr_bytes": 76832,
+    "log_bytes": 475960,
+    "build_s": 0.02445159999479074
+   },
+   "s": 0.037339199989219196,
+   "witness_errors": 0,
+   "witnesses": 200
+  },
+  {
+   "kind": "seal",
+   "forced": false,
+   "after_op": 371000,
+   "run": {
+    "run": 14,
+    "tier": 0,
+    "keys": 23905,
+    "sections": 1,
+    "adr_bytes": 77152,
+    "log_bytes": 478100,
+    "build_s": 0.027648300005239435
+   },
+   "s": 0.04031339999346528,
+   "witness_errors": 0,
+   "witnesses": 200
+  },
+  {
+   "kind": "seal",
+   "forced": false,
+   "after_op": 401000,
+   "run": {
+    "run": 15,
+    "tier": 0,
+    "keys": 23813,
+    "sections": 1,
+    "adr_bytes": 76768,
+    "log_bytes": 476260,
+    "build_s": 0.02451630000723526
+   },
+   "s": 0.035546699989936315,
+   "witness_errors": 0,
+   "witnesses": 200
+  },
+  {
+   "kind": "round_start",
+   "after_op": 421000,
+   "seal": {
+    "kind": "seal",
+    "forced": true,
+    "after_op": 421000,
+    "run": {
+     "run": 16,
+     "tier": 0,
+     "keys": 16027,
+     "sections": 1,
+     "adr_bytes": 51872,
+     "log_bytes": 320540,
+     "build_s": 0.044391599993105046
+    },
+    "s": 0.0532690999971237
+   },
+   "s": 0.05582209999556653,
+   "forced_round": false,
+   "published_bytes": 5740779,
+   "witness_errors": 0,
+   "witnesses": 200
+  },
+  {
+   "kind": "round_step",
+   "part": 0,
+   "section": 0,
+   "rows": 141206,
+   "adr_bytes": 451104,
+   "pair_bytes": 2824120,
+   "max_live_page": 11491,
+   "s_read": 0.41206039999087807,
+   "s_build": 0.05263510000077076,
+   "last": false,
+   "files_written": [
+    "c:\\gams\\test\\rcm_address_engine\\data\\a6_n1\\a6.manifest.json",
+    "c:\\gams\\test\\rcm_address_engine\\data\\a6_n1\\a6.manifest.tmp",
+    "c:\\gams\\test\\rcm_address_engine\\data\\a6_n1\\b0000_g0005.adr",
+    "c:\\gams\\test\\rcm_address_engine\\data\\a6_n1\\b0000_g0005.tmp"
+   ],
+   "files_removed": [
+    "c:\\gams\\test\\rcm_address_engine\\data\\a6_n1\\a6.manifest.tmp",
+    "c:\\gams\\test\\rcm_address_engine\\data\\a6_n1\\b0000_g0004.adr",
+    "c:\\gams\\test\\rcm_address_engine\\data\\a6_n1\\b0000_g0005.tmp"
+   ],
+   "read_bytes": 94142464,
+   "pages": 11492,
+   "writes_since_read": 11280,
+   "s5_bad_files": [],
+   "s": 0.4653372000029776,
+   "after_op": 422000,
+   "batches_since_vacuum": 182,
+   "witness_errors": 0,
+   "witnesses": 172
+  },
+  {
+   "kind": "round_step",
+   "part": 1,
+   "section": 1,
+   "rows": 140554,
+   "adr_bytes": 449248,
+   "pair_bytes": 2811080,
+   "max_live_page": 11443,
+   "s_read": 0.562173599988455,
+   "s_build": 0.05403420000220649,
+   "last": false,
+   "files_written": [
+    "c:\\gams\\test\\rcm_address_engine\\data\\a6_n1\\a6.manifest.json",
+    "c:\\gams\\test\\rcm_address_engine\\data\\a6_n1\\a6.manifest.tmp",
+    "c:\\gams\\test\\rcm_address_engine\\data\\a6_n1\\b0001_g0005.adr",
+    "c:\\gams\\test\\rcm_address_engine\\data\\a6_n1\\b0001_g0005.tmp"
+   ],
+   "files_removed": [
+    "c:\\gams\\test\\rcm_address_engine\\data\\a6_n1\\a6.manifest.tmp",
+    "c:\\gams\\test\\rcm_address_engine\\data\\a6_n1\\b0001_g0004.adr",
+    "c:\\gams\\test\\rcm_address_engine\\data\\a6_n1\\b0001_g0005.tmp"
+   ],
+   "read_bytes": 93749248,
+   "pages": 11444,
+   "writes_since_read": 10779,
+   "s5_bad_files": [],
+   "s": 0.6168996999913361,
+   "after_op": 423000,
+   "batches_since_vacuum": 183,
+   "witness_errors": 0,
+   "witnesses": 173
+  },
+  {
+   "kind": "round_step",
+   "part": 2,
+   "section": 2,
+   "rows": 140825,
+   "adr_bytes": 450144,
+   "pair_bytes": 2816500,
+   "max_live_page": 11466,
+   "s_read": 0.567786999992677,
+   "s_build": 0.05410269999993034,
+   "last": false,
+   "files_written": [
+    "c:\\gams\\test\\rcm_address_engine\\data\\a6_n1\\a6.manifest.json",
+    "c:\\gams\\test\\rcm_address_engine\\data\\a6_n1\\a6.manifest.tmp",
+    "c:\\gams\\test\\rcm_address_engine\\data\\a6_n1\\b0002_g0005.adr",
+    "c:\\gams\\test\\rcm_address_engine\\data\\a6_n1\\b0002_g0005.tmp"
+   ],
+   "files_removed": [
+    "c:\\gams\\test\\rcm_address_engine\\data\\a6_n1\\a6.manifest.tmp",
+    "c:\\gams\\test\\rcm_address_engine\\data\\a6_n1\\b0002_g0004.adr",
+    "c:\\gams\\test\\rcm_address_engine\\data\\a6_n1\\b0002_g0005.tmp"
+   ],
+   "read_bytes": 93937664,
+   "pages": 11467,
+   "writes_since_read": 10871,
+   "s5_bad_files": [],
+   "s": 0.6226477000018349,
+   "after_op": 424000,
+   "batches_since_vacuum": 184,
+   "witness_errors": 0,
+   "witnesses": 175
+  },
+  {
+   "kind": "round_step",
+   "part": 3,
+   "section": 3,
+   "rows": 140700,
+   "adr_bytes": 449760,
+   "pair_bytes": 2814000,
+   "max_live_page": 11468,
+   "s_read": 0.5555706000013743,
+   "s_build": 0.052743499996722676,
+   "last": false,
+   "files_written": [
+    "c:\\gams\\test\\rcm_address_engine\\data\\a6_n1\\a6.manifest.json",
+    "c:\\gams\\test\\rcm_address_engine\\data\\a6_n1\\a6.manifest.tmp",
+    "c:\\gams\\test\\rcm_address_engine\\data\\a6_n1\\b0003_g0005.adr",
+    "c:\\gams\\test\\rcm_address_engine\\data\\a6_n1\\b0003_g0005.tmp"
+   ],
+   "files_removed": [
+    "c:\\gams\\test\\rcm_address_engine\\data\\a6_n1\\a6.manifest.tmp",
+    "c:\\gams\\test\\rcm_address_engine\\data\\a6_n1\\b0003_g0004.adr",
+    "c:\\gams\\test\\rcm_address_engine\\data\\a6_n1\\b0003_g0005.tmp"
+   ],
+   "read_bytes": 93954048,
+   "pages": 11469,
+   "writes_since_read": 11099,
+   "s5_bad_files": [],
+   "s": 0.6089582999993581,
+   "after_op": 425000,
+   "batches_since_vacuum": 185,
+   "witness_errors": 0,
+   "witnesses": 175
+  },
+  {
+   "kind": "round_step",
+   "part": 4,
+   "section": 4,
+   "rows": 141128,
+   "adr_bytes": 451360,
+   "pair_bytes": 2822560,
+   "max_live_page": 11494,
+   "s_read": 0.4193885999993654,
+   "s_build": 0.05258279999543447,
+   "last": false,
+   "files_written": [
+    "c:\\gams\\test\\rcm_address_engine\\data\\a6_n1\\a6.manifest.json",
+    "c:\\gams\\test\\rcm_address_engine\\data\\a6_n1\\a6.manifest.tmp",
+    "c:\\gams\\test\\rcm_address_engine\\data\\a6_n1\\b0004_g0005.adr",
+    "c:\\gams\\test\\rcm_address_engine\\data\\a6_n1\\b0004_g0005.tmp"
+   ],
+   "files_removed": [
+    "c:\\gams\\test\\rcm_address_engine\\data\\a6_n1\\a6.manifest.tmp",
+    "c:\\gams\\test\\rcm_address_engine\\data\\a6_n1\\b0004_g0004.adr",
+    "c:\\gams\\test\\rcm_address_engine\\data\\a6_n1\\b0004_g0005.tmp"
+   ],
+   "read_bytes": 94167040,
+   "pages": 11495,
+   "writes_since_read": 10867,
+   "s5_bad_files": [],
+   "s": 0.47266870000748895,
+   "after_op": 426000,
+   "batches_since_vacuum": 186,
+   "witness_errors": 0,
+   "witnesses": 174
+  },
+  {
+   "kind": "round_step",
+   "part": 5,
+   "section": 5,
+   "rows": 140992,
+   "adr_bytes": 450976,
+   "pair_bytes": 2819840,
+   "max_live_page": 11480,
+   "s_read": 0.4292849999910686,
+   "s_build": 0.05446509999455884,
+   "last": false,
+   "files_written": [
+    "c:\\gams\\test\\rcm_address_engine\\data\\a6_n1\\a6.manifest.json",
+    "c:\\gams\\test\\rcm_address_engine\\data\\a6_n1\\a6.manifest.tmp",
+    "c:\\gams\\test\\rcm_address_engine\\data\\a6_n1\\b0005_g0005.adr",
+    "c:\\gams\\test\\rcm_address_engine\\data\\a6_n1\\b0005_g0005.tmp"
+   ],
+   "files_removed": [
+    "c:\\gams\\test\\rcm_address_engine\\data\\a6_n1\\a6.manifest.tmp",
+    "c:\\gams\\test\\rcm_address_engine\\data\\a6_n1\\b0005_g0004.adr",
+    "c:\\gams\\test\\rcm_address_engine\\data\\a6_n1\\b0005_g0005.tmp"
+   ],
+   "read_bytes": 94052352,
+   "pages": 11481,
+   "writes_since_read": 10978,
+   "s5_bad_files": [],
+   "s": 0.484422599998652,
+   "after_op": 427000,
+   "batches_since_vacuum": 187,
+   "witness_errors": 0,
+   "witnesses": 175
+  },
+  {
+   "kind": "round_step",
+   "part": 6,
+   "section": 6,
+   "rows": 141339,
+   "adr_bytes": 451680,
+   "pair_bytes": 2826780,
+   "max_live_page": 11517,
+   "s_read": 0.42512310000893194,
+   "s_build": 0.0516669000062393,
+   "last": false,
+   "files_written": [
+    "c:\\gams\\test\\rcm_address_engine\\data\\a6_n1\\a6.manifest.json",
+    "c:\\gams\\test\\rcm_address_engine\\data\\a6_n1\\a6.manifest.tmp",
+    "c:\\gams\\test\\rcm_address_engine\\data\\a6_n1\\b0006_g0005.adr",
+    "c:\\gams\\test\\rcm_address_engine\\data\\a6_n1\\b0006_g0005.tmp"
+   ],
+   "files_removed": [
+    "c:\\gams\\test\\rcm_address_engine\\data\\a6_n1\\a6.manifest.tmp",
+    "c:\\gams\\test\\rcm_address_engine\\data\\a6_n1\\b0006_g0004.adr",
+    "c:\\gams\\test\\rcm_address_engine\\data\\a6_n1\\b0006_g0005.tmp"
+   ],
+   "read_bytes": 94355456,
+   "pages": 11518,
+   "writes_since_read": 11213,
+   "s5_bad_files": [],
+   "s": 0.4773665999964578,
+   "after_op": 428000,
+   "batches_since_vacuum": 188,
+   "witness_errors": 0,
+   "witnesses": 175
+  },
+  {
+   "kind": "round_step",
+   "part": 7,
+   "section": 7,
+   "rows": 140986,
+   "adr_bytes": 450528,
+   "pair_bytes": 2819720,
+   "max_live_page": 11498,
+   "s_read": 0.40543819998856634,
+   "s_build": 0.051340699996217154,
+   "last": true,
+   "files_written": [
+    "c:\\gams\\test\\rcm_address_engine\\data\\a6_n1\\a6.manifest.json",
+    "c:\\gams\\test\\rcm_address_engine\\data\\a6_n1\\a6.manifest.tmp",
+    "c:\\gams\\test\\rcm_address_engine\\data\\a6_n1\\b0007_g0005.adr",
+    "c:\\gams\\test\\rcm_address_engine\\data\\a6_n1\\b0007_g0005.tmp"
+   ],
+   "files_removed": [
+    "c:\\gams\\test\\rcm_address_engine\\data\\a6_n1\\a6.manifest.tmp",
+    "c:\\gams\\test\\rcm_address_engine\\data\\a6_n1\\b0007_g0004.adr",
+    "c:\\gams\\test\\rcm_address_engine\\data\\a6_n1\\b0007_g0005.tmp"
+   ],
+   "read_bytes": 94199808,
+   "pages": 11499,
+   "writes_since_read": 11021,
+   "s5_bad_files": [],
+   "round_end": {
+    "W": 421000,
+    "rows": 1127730,
+    "max_rows": 141339,
+    "steps": 8,
+    "n0": 1128831,
+    "base_keys_sum": 1127730,
+    "window_ops": 8000,
+    "s": 0.002008600000408478,
+    "s5_bad_files": [],
+    "live_rows": 1128831
+   },
+   "s": 0.4596364999888465,
+   "after_op": 429000,
+   "batches_since_vacuum": 189,
+   "witness_errors": 0,
+   "witnesses": 175
+  },
+  {
+   "kind": "seal",
+   "forced": false,
+   "after_op": 451000,
+   "run": {
+    "run": 17,
+    "tier": 0,
+    "keys": 23815,
+    "sections": 1,
+    "adr_bytes": 76896,
+    "log_bytes": 476300,
+    "build_s": 0.025593500002287328
+   },
+   "s": 0.03636109999206383,
+   "witness_errors": 0,
+   "witnesses": 200
+  },
+  {
+   "kind": "seal",
+   "forced": false,
+   "after_op": 481000,
+   "run": {
+    "run": 18,
+    "tier": 0,
+    "keys": 23766,
+    "sections": 1,
+    "adr_bytes": 76640,
+    "log_bytes": 475320,
+    "build_s": 0.03091370000038296
+   },
+   "s": 0.04334849999577273,
+   "witness_errors": 0,
+   "witnesses": 200
+  }
+ ],
+ "witness_errors": 0,
+ "s3_batch_violations": [],
+ "stray_file_boundaries": [],
+ "vacuum": {},
+ "client_stops": {
+  "vacuum_s": [
+   [
+    240000,
+    "a6_n1",
+    3.680819100001827
+   ],
+   [
+    240000,
+    "c6_n1",
+    6.345956900011515
+   ],
+   [
+    480000,
+    "a6_n1",
+    6.047852100004093
+   ],
+   [
+    480000,
+    "c6_n1",
+    8.62544699999853
+   ]
+  ],
+  "pg_restart_s": 1.4776636000024155,
+  "client_restart_mid_round_s": 0.41441879999183584,
+  "restart_total_s": 2.5683061000017915
+ },
+ "stream_matches_a4": true,
+ "restart_mid_round": {
+  "round_next": 4,
+  "job": false,
+  "resumed": {
+   "round_W": 100000,
+   "next_step": 4
+  },
+  "abandoned": {},
+  "s": 0.41441879999183584,
+  "op": 104000
+ },
+ "reopen_s": 1.0607744000008097,
+ "restart_state": {
+  "job": false,
+  "round": false,
+  "resumed": {},
+  "abandoned": {}
+ },
+ "open_probe": {
+  "connect_ms": {
+   "p50": 29.430099995806813,
+   "p95": 30.30090000538621,
+   "p99": 115.21745999634739,
+   "mean": 34.18314761767674,
+   "n": 21
+  },
+  "open_ms": {
+   "p50": 12.738299992633983,
+   "p95": 13.099800009513274,
+   "p99": 13.163720007287338,
+   "mean": 12.763857142999768,
+   "n": 21
+  },
+  "first_answer_ms": {
+   "p50": 1.7523999995319173,
+   "p95": 2.8409999940777197,
+   "p99": 3.0373999994480982,
+   "mean": 1.9727809516812809,
+   "n": 21
+  },
+  "found": {
+   "p50": 1.0,
+   "p95": 1.0,
+   "p99": 1.0,
+   "mean": 1.0,
+   "n": 21
+  },
+  "levels": {
+   "p50": 4.0,
+   "p95": 4.0,
+   "p99": 4.0,
+   "mean": 4.0,
+   "n": 21
+  },
+  "files": {
+   "p50": 10.0,
+   "p95": 10.0,
+   "p99": 10.0,
+   "mean": 10.0,
+   "n": 21
+  },
+  "tail_records": {
+   "p50": 19019.0,
+   "p95": 19019.0,
+   "p99": 19019.0,
+   "mean": 19019.0,
+   "n": 21
+  }
+ },
+ "final_round_continuous_s": 4.3598185000009835,
+ "final_round_memory": {
+  "retained_after_round_bytes": 384072
+ },
+ "final_events": [
+  {
+   "kind": "round_start",
+   "after_op": 500000,
+   "seal": {
+    "kind": "seal",
+    "forced": true,
+    "after_op": 500000,
+    "run": {
+     "run": 19,
+     "tier": 0,
+     "keys": 15144,
+     "sections": 1,
+     "adr_bytes": 49120,
+     "log_bytes": 302880,
+     "build_s": 0.0250199000001885
+    },
+    "s": 0.035008699996978976
+   },
+   "s": 0.039474500008509494,
+   "witness_errors": 0,
+   "witnesses": 200,
+   "final": true,
+   "published_bytes": 5261975
+  },
+  {
+   "kind": "round_step",
+   "part": 0,
+   "section": 0,
+   "rows": 144141,
+   "adr_bytes": 460832,
+   "pair_bytes": 2882820,
+   "max_live_page": 11832,
+   "s_read": 0.48776860001089517,
+   "s_build": 0.061407500004861504,
+   "last": false,
+   "files_written": [
+    "c:\\gams\\test\\rcm_address_engine\\data\\a6_n1\\a6.manifest.json",
+    "c:\\gams\\test\\rcm_address_engine\\data\\a6_n1\\a6.manifest.tmp",
+    "c:\\gams\\test\\rcm_address_engine\\data\\a6_n1\\b0000_g0006.adr",
+    "c:\\gams\\test\\rcm_address_engine\\data\\a6_n1\\b0000_g0006.tmp"
+   ],
+   "files_removed": [
+    "c:\\gams\\test\\rcm_address_engine\\data\\a6_n1\\a6.manifest.tmp",
+    "c:\\gams\\test\\rcm_address_engine\\data\\a6_n1\\b0000_g0005.adr",
+    "c:\\gams\\test\\rcm_address_engine\\data\\a6_n1\\b0000_g0006.tmp"
+   ],
+   "read_bytes": 96935936,
+   "pages": 11833,
+   "writes_since_read": 7781,
+   "s5_bad_files": [],
+   "mem_peak_bytes": 26377878,
+   "s": 0.5504466999991564,
+   "after_op": 500000,
+   "witness_errors": 0,
+   "witnesses": 150
+  },
+  {
+   "kind": "round_step",
+   "part": 1,
+   "section": 1,
+   "rows": 143535,
+   "adr_bytes": 458656,
+   "pair_bytes": 2870700,
+   "max_live_page": 11778,
+   "s_read": 0.47724639999796636,
+   "s_build": 0.05708740001136903,
+   "last": false,
+   "files_written": [
+    "c:\\gams\\test\\rcm_address_engine\\data\\a6_n1\\a6.manifest.json",
+    "c:\\gams\\test\\rcm_address_engine\\data\\a6_n1\\a6.manifest.tmp",
+    "c:\\gams\\test\\rcm_address_engine\\data\\a6_n1\\b0001_g0006.adr",
+    "c:\\gams\\test\\rcm_address_engine\\data\\a6_n1\\b0001_g0006.tmp"
+   ],
+   "files_removed": [
+    "c:\\gams\\test\\rcm_address_engine\\data\\a6_n1\\a6.manifest.tmp",
+    "c:\\gams\\test\\rcm_address_engine\\data\\a6_n1\\b0001_g0005.adr",
+    "c:\\gams\\test\\rcm_address_engine\\data\\a6_n1\\b0001_g0006.tmp"
+   ],
+   "read_bytes": 96493568,
+   "pages": 11779,
+   "writes_since_read": 7770,
+   "s5_bad_files": [],
+   "mem_peak_bytes": 26246543,
+   "s": 0.5356635999924038,
+   "after_op": 500000,
+   "witness_errors": 0,
+   "witnesses": 150
+  },
+  {
+   "kind": "round_step",
+   "part": 2,
+   "section": 2,
+   "rows": 143589,
+   "adr_bytes": 458848,
+   "pair_bytes": 2871780,
+   "max_live_page": 11800,
+   "s_read": 0.4829071999993175,
+   "s_build": 0.05288689999724738,
+   "last": false,
+   "files_written": [
+    "c:\\gams\\test\\rcm_address_engine\\data\\a6_n1\\a6.manifest.json",
+    "c:\\gams\\test\\rcm_address_engine\\data\\a6_n1\\a6.manifest.tmp",
+    "c:\\gams\\test\\rcm_address_engine\\data\\a6_n1\\b0002_g0006.adr",
+    "c:\\gams\\test\\rcm_address_engine\\data\\a6_n1\\b0002_g0006.tmp"
+   ],
+   "files_removed": [
+    "c:\\gams\\test\\rcm_address_engine\\data\\a6_n1\\a6.manifest.tmp",
+    "c:\\gams\\test\\rcm_address_engine\\data\\a6_n1\\b0002_g0005.adr",
+    "c:\\gams\\test\\rcm_address_engine\\data\\a6_n1\\b0002_g0006.tmp"
+   ],
+   "read_bytes": 96673792,
+   "pages": 11801,
+   "writes_since_read": 7515,
+   "s5_bad_files": [],
+   "mem_peak_bytes": 26259199,
+   "s": 0.5371406000049319,
+   "after_op": 500000,
+   "witness_errors": 0,
+   "witnesses": 150
+  },
+  {
+   "kind": "round_step",
+   "part": 3,
+   "section": 3,
+   "rows": 143449,
+   "adr_bytes": 458336,
+   "pair_bytes": 2868980,
+   "max_live_page": 11782,
+   "s_read": 0.4853150999988429,
+   "s_build": 0.05574660000274889,
+   "last": false,
+   "files_written": [
+    "c:\\gams\\test\\rcm_address_engine\\data\\a6_n1\\a6.manifest.json",
+    "c:\\gams\\test\\rcm_address_engine\\data\\a6_n1\\a6.manifest.tmp",
+    "c:\\gams\\test\\rcm_address_engine\\data\\a6_n1\\b0003_g0006.adr",
+    "c:\\gams\\test\\rcm_address_engine\\data\\a6_n1\\b0003_g0006.tmp"
+   ],
+   "files_removed": [
+    "c:\\gams\\test\\rcm_address_engine\\data\\a6_n1\\a6.manifest.tmp",
+    "c:\\gams\\test\\rcm_address_engine\\data\\a6_n1\\b0003_g0005.adr",
+    "c:\\gams\\test\\rcm_address_engine\\data\\a6_n1\\b0003_g0006.tmp"
+   ],
+   "read_bytes": 96526336,
+   "pages": 11783,
+   "writes_since_read": 7422,
+   "s5_bad_files": [],
+   "mem_peak_bytes": 26229126,
+   "s": 0.5423245999991195,
+   "after_op": 500000,
+   "witness_errors": 0,
+   "witnesses": 150
+  },
+  {
+   "kind": "round_step",
+   "part": 4,
+   "section": 4,
+   "rows": 143783,
+   "adr_bytes": 459616,
+   "pair_bytes": 2875660,
+   "max_live_page": 11803,
+   "s_read": 0.4799586000008276,
+   "s_build": 0.05865279999852646,
+   "last": false,
+   "files_written": [
+    "c:\\gams\\test\\rcm_address_engine\\data\\a6_n1\\a6.manifest.json",
+    "c:\\gams\\test\\rcm_address_engine\\data\\a6_n1\\a6.manifest.tmp",
+    "c:\\gams\\test\\rcm_address_engine\\data\\a6_n1\\b0004_g0006.adr",
+    "c:\\gams\\test\\rcm_address_engine\\data\\a6_n1\\b0004_g0006.tmp"
+   ],
+   "files_removed": [
+    "c:\\gams\\test\\rcm_address_engine\\data\\a6_n1\\a6.manifest.tmp",
+    "c:\\gams\\test\\rcm_address_engine\\data\\a6_n1\\b0004_g0005.adr",
+    "c:\\gams\\test\\rcm_address_engine\\data\\a6_n1\\b0004_g0006.tmp"
+   ],
+   "read_bytes": 96698368,
+   "pages": 11804,
+   "writes_since_read": 7303,
+   "s5_bad_files": [],
+   "mem_peak_bytes": 26303021,
+   "s": 0.5400215000117896,
+   "after_op": 500000,
+   "witness_errors": 0,
+   "witnesses": 150
+  },
+  {
+   "kind": "round_step",
+   "part": 5,
+   "section": 5,
+   "rows": 143733,
+   "adr_bytes": 459232,
+   "pair_bytes": 2874660,
+   "max_live_page": 11789,
+   "s_read": 0.4789998000051128,
+   "s_build": 0.056529900000896305,
+   "last": false,
+   "files_written": [
+    "c:\\gams\\test\\rcm_address_engine\\data\\a6_n1\\a6.manifest.json",
+    "c:\\gams\\test\\rcm_address_engine\\data\\a6_n1\\a6.manifest.tmp",
+    "c:\\gams\\test\\rcm_address_engine\\data\\a6_n1\\b0005_g0006.adr",
+    "c:\\gams\\test\\rcm_address_engine\\data\\a6_n1\\b0005_g0006.tmp"
+   ],
+   "files_removed": [
+    "c:\\gams\\test\\rcm_address_engine\\data\\a6_n1\\a6.manifest.tmp",
+    "c:\\gams\\test\\rcm_address_engine\\data\\a6_n1\\b0005_g0005.adr",
+    "c:\\gams\\test\\rcm_address_engine\\data\\a6_n1\\b0005_g0006.tmp"
+   ],
+   "read_bytes": 96583680,
+   "pages": 11790,
+   "writes_since_read": 7356,
+   "s5_bad_files": [],
+   "mem_peak_bytes": 26276508,
+   "s": 0.5368688000016846,
+   "after_op": 500000,
+   "witness_errors": 0,
+   "witnesses": 150
+  },
+  {
+   "kind": "round_step",
+   "part": 6,
+   "section": 6,
+   "rows": 144022,
+   "adr_bytes": 460320,
+   "pair_bytes": 2880440,
+   "max_live_page": 11820,
+   "s_read": 0.48117630000342615,
+   "s_build": 0.05708690000756178,
+   "last": false,
+   "files_written": [
+    "c:\\gams\\test\\rcm_address_engine\\data\\a6_n1\\a6.manifest.json",
+    "c:\\gams\\test\\rcm_address_engine\\data\\a6_n1\\a6.manifest.tmp",
+    "c:\\gams\\test\\rcm_address_engine\\data\\a6_n1\\b0006_g0006.adr",
+    "c:\\gams\\test\\rcm_address_engine\\data\\a6_n1\\b0006_g0006.tmp"
+   ],
+   "files_removed": [
+    "c:\\gams\\test\\rcm_address_engine\\data\\a6_n1\\a6.manifest.tmp",
+    "c:\\gams\\test\\rcm_address_engine\\data\\a6_n1\\b0006_g0005.adr",
+    "c:\\gams\\test\\rcm_address_engine\\data\\a6_n1\\b0006_g0006.tmp"
+   ],
+   "read_bytes": 96837632,
+   "pages": 11821,
+   "writes_since_read": 7167,
+   "s5_bad_files": [],
+   "mem_peak_bytes": 26343187,
+   "s": 0.5400024999980815,
+   "after_op": 500000,
+   "witness_errors": 0,
+   "witnesses": 150
+  },
+  {
+   "kind": "round_step",
+   "part": 7,
+   "section": 7,
+   "rows": 143748,
+   "adr_bytes": 459424,
+   "pair_bytes": 2874960,
+   "max_live_page": 11804,
+   "s_read": 0.47904840001137927,
+   "s_build": 0.05433410000114236,
+   "last": true,
+   "files_written": [
+    "c:\\gams\\test\\rcm_address_engine\\data\\a6_n1\\a6.manifest.json",
+    "c:\\gams\\test\\rcm_address_engine\\data\\a6_n1\\a6.manifest.tmp",
+    "c:\\gams\\test\\rcm_address_engine\\data\\a6_n1\\b0007_g0006.adr",
+    "c:\\gams\\test\\rcm_address_engine\\data\\a6_n1\\b0007_g0006.tmp"
+   ],
+   "files_removed": [
+    "c:\\gams\\test\\rcm_address_engine\\data\\a6_n1\\a6.manifest.tmp",
+    "c:\\gams\\test\\rcm_address_engine\\data\\a6_n1\\b0007_g0005.adr",
+    "c:\\gams\\test\\rcm_address_engine\\data\\a6_n1\\b0007_g0006.tmp"
+   ],
+   "read_bytes": 96706560,
+   "pages": 11805,
+   "writes_since_read": 7234,
+   "s5_bad_files": [],
+   "mem_peak_bytes": 26293671,
+   "round_end": {
+    "W": 500000,
+    "rows": 1150000,
+    "max_rows": 144141,
+    "steps": 8,
+    "n0": 1150000,
+    "base_keys_sum": 1150000,
+    "window_ops": 0,
+    "s": 0.0022873999987496063,
+    "s5_bad_files": [],
+    "live_rows": 1150000
+   },
+   "s": 0.5376046000019414,
+   "after_op": 500000,
+   "witness_errors": 0,
+   "witnesses": 150
+  }
+ ],
+ "step_memory": {
+  "max_peak_bytes": 26377878,
+  "peak_by_step": [
+   26377878,
+   26246543,
+   26259199,
+   26229126,
+   26303021,
+   26276508,
+   26343187,
+   26293671
+  ],
+  "max_pair_bytes": 2882820,
+  "median_peak_bytes": 26285089.5
+ },
+ "partitions_end": {
+  "a6": [
+   [
+    0,
+    11833,
+    144141
+   ],
+   [
+    1,
+    11779,
+    143535
+   ],
+   [
+    2,
+    11801,
+    143589
+   ],
+   [
+    3,
+    11783,
+    143449
+   ],
+   [
+    4,
+    11804,
+    143783
+   ],
+   [
+    5,
+    11790,
+    143733
+   ],
+   [
+    6,
+    11821,
+    144022
+   ],
+   [
+    7,
+    11805,
+    143748
+   ]
+  ],
+  "c6": [
+   [
+    0,
+    11852,
+    144141
+   ],
+   [
+    1,
+    11795,
+    143535
+   ],
+   [
+    2,
+    11817,
+    143589
+   ],
+   [
+    3,
+    11801,
+    143449
+   ],
+   [
+    4,
+    11826,
+    143783
+   ],
+   [
+    5,
+    11809,
+    143733
+   ],
+   [
+    6,
+    11841,
+    144022
+   ],
+   [
+    7,
+    11824,
+    143748
+   ]
+  ]
+ },
+ "table_bytes": {
+  "a6": {
+   "main_bytes": 773455872,
+   "table_bytes": 773914624
+  },
+  "c6": {
+   "main_bytes": 774676480,
+   "table_bytes": 775135232
+  }
+ },
+ "ops_time_s": {
+  "a6_n1": 149.68837999986135,
+  "c6_n1": 142.74601419983082
+ },
+ "maintenance_s": 12.99628040016978,
+ "vacuum_s": {
+  "a6_n1": 9.72867120000592,
+  "c6_n1": 14.971403900010046
+ },
+ "errors": {
+  "a6_n1": 0,
+  "c6_n1": 0
+ },
+ "full_cost_us_per_op": {
+  "a6_n1": 344.8266632000741,
+  "c6_n1": 315.43483619968174
+ },
+ "boundary_pause_s": {
+  "max": 0.6226749000052223,
+  "p99": 0.4846395620060501,
+  "p95": 0.2616033600046648,
+  "sum": 12.99628040016978,
+  "nonzero": 50,
+  "max_at_op": 424000
+ },
+ "step_s_by_kind": {
+  "seal": {
+   "n": 14,
+   "max": 0.04334849999577273,
+   "p99": 0.04295393699547276,
+   "sum": 0.5282822999579366
+  },
+  "round_start": {
+   "n": 4,
+   "max": 0.05582209999556653,
+   "p99": 0.055133569995814466,
+   "sum": 0.13973959999566432
+  },
+  "round_step": {
+   "n": 32,
+   "max": 0.6226477000018349,
+   "p99": 0.6208658199985803,
+   "sum": 12.289498300015111
+  }
+ },
+ "round_step_work": {
+  "max_rows": 141339,
+  "max_pair_bytes": 2826780,
+  "max_read_s": 0.567786999992677,
+  "max_build_s": 0.05446509999455884,
+  "p50_read_s": 0.338126149996242
+ },
+ "s5": {
+  "steps_checked": 40,
+  "step_file_violations": [],
+  "stray_file_boundaries": 0
+ },
+ "batch_time_s": {
+  "p50": 0.2964059500009171,
+  "p95": 0.6002334549906656,
+  "p99": 0.9360465339964139,
+  "max": 1.0368442999897525
+ },
+ "max_client_stop_s": {
+  "address_pause": 0.6226749000052223,
+  "vacuum_max_single": 8.62544699999853,
+  "pg_restart": 1.4776636000024155,
+  "restart_total": 2.5683061000017915,
+  "client_restart_mid_round": 0.41441879999183584
+ },
+ "rounds": [
+  {
+   "start_op": 100000,
+   "start_s": 0.02286630000162404,
+   "read_s": 1.552543699988746,
+   "build_s": 0.3132369999802904,
+   "read_bytes": 676200448,
+   "steps": 8,
+   "max_step_s": 0.29077289999986533,
+   "max_read_s": 0.24522399999841582,
+   "max_build_s": 0.044904999987920746,
+   "max_rows": 129305,
+   "forced": false,
+   "final": false,
+   "delta_bytes_at_start": 5146815,
+   "steps_s": 1.8713563000055728,
+   "W": 100000,
+   "rows": 1031107,
+   "n0": 1032119,
+   "base_keys_sum": 1031107,
+   "window_ops": 8000,
+   "s5_bad_files": [],
+   "live_rows": 1032119,
+   "end_s": 0.0019504999945638701,
+   "end_op": 108000,
+   "B_s": 1.8713563000055728,
+   "vacuum_in_window": []
+  },
+  {
+   "start_op": 204000,
+   "start_s": 0.02818009999464266,
+   "read_s": 1.9965469999733614,
+   "build_s": 0.40710269995906856,
+   "read_bytes": 717479936,
+   "steps": 8,
+   "max_step_s": 0.35223769998992793,
+   "max_read_s": 0.29866729999776,
+   "max_build_s": 0.052963699999963865,
+   "max_rows": 133191,
+   "forced": false,
+   "final": false,
+   "delta_bytes_at_start": 5362840,
+   "steps_s": 2.4087885999906575,
+   "W": 204000,
+   "rows": 1062448,
+   "n0": 1063473,
+   "base_keys_sum": 1062448,
+   "window_ops": 8000,
+   "s5_bad_files": [],
+   "live_rows": 1063473,
+   "end_s": 0.002057500008959323,
+   "end_op": 212000,
+   "B_s": 2.4087885999906575,
+   "vacuum_in_window": []
+  },
+  {
+   "start_op": 311000,
+   "start_s": 0.03287110000383109,
+   "read_s": 3.374404400019557,
+   "build_s": 0.41564250001101755,
+   "read_bytes": 729145344,
+   "steps": 8,
+   "max_step_s": 0.5702785000030417,
+   "max_read_s": 0.5158722000051057,
+   "max_build_s": 0.05433420000190381,
+   "max_rows": 137149,
+   "forced": false,
+   "final": false,
+   "delta_bytes_at_start": 5552350,
+   "steps_s": 3.795384200027911,
+   "W": 311000,
+   "rows": 1094682,
+   "n0": 1095722,
+   "base_keys_sum": 1094682,
+   "window_ops": 8000,
+   "s5_bad_files": [],
+   "live_rows": 1095722,
+   "end_s": 0.002023900000494905,
+   "end_op": 319000,
+   "B_s": 3.795384200027911,
+   "vacuum_in_window": []
+  },
+  {
+   "start_op": 421000,
+   "start_s": 0.05582209999556653,
+   "read_s": 3.7768264999613166,
+   "build_s": 0.42357099999208003,
+   "read_bytes": 752558080,
+   "steps": 8,
+   "max_step_s": 0.6226477000018349,
+   "max_read_s": 0.567786999992677,
+   "max_build_s": 0.05446509999455884,
+   "max_rows": 141339,
+   "forced": false,
+   "final": false,
+   "delta_bytes_at_start": 5740779,
+   "steps_s": 4.2059286999865435,
+   "W": 421000,
+   "rows": 1127730,
+   "n0": 1128831,
+   "base_keys_sum": 1127730,
+   "window_ops": 8000,
+   "s5_bad_files": [],
+   "live_rows": 1128831,
+   "end_s": 0.002008600000408478,
+   "end_op": 429000,
+   "B_s": 4.2059286999865435,
+   "vacuum_in_window": []
+  }
+ ],
+ "final_round": {
+  "start_op": 500000,
+  "start_s": 0.039474500008509494,
+  "read_s": 3.8524204000277678,
+  "build_s": 0.4537321000243537,
+  "read_bytes": 773455872,
+  "steps": 8,
+  "max_step_s": 0.5504466999991564,
+  "max_read_s": 0.48776860001089517,
+  "max_build_s": 0.061407500004861504,
+  "max_rows": 144141,
+  "forced": false,
+  "final": true,
+  "delta_bytes_at_start": 5261975,
+  "steps_s": 4.317785500010359,
+  "W": 500000,
+  "rows": 1150000,
+  "n0": 1150000,
+  "base_keys_sum": 1150000,
+  "window_ops": 0,
+  "s5_bad_files": [],
+  "live_rows": 1150000,
+  "end_s": 0.0022873999987496063,
+  "end_op": 500000,
+  "B_s": 4.317785500010359,
+  "vacuum_in_window": []
+ },
+ "merge_work": {
+  "steps": 0,
+  "max_keys_in": 0,
+  "max_keys_out": 0,
+  "finished": 0
+ },
+ "peaks": {
+  "published_bytes": 5133052
+ },
+ "rss": {
+  "peak_mb": 1166.79296875,
+  "current_mb": 1065.828125
+ }
+}

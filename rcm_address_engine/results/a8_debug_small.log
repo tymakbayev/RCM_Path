@@ -1,0 +1,28 @@
+a2_gen: 100000 records, copies 0..0, span 12797350389000 us
+01:04:54 small load {'copy_s': 12.19733009999618, 'post_s7_s': 0.28032259999599773, 'post_p7_s': 0.6539759000006597, 'post_a7_s': 0.6010747000109404, 'layout_p7_a7': {'same': 100000, 'total': 100000, 'share': 1.0}, 'rows': {'s7_s8': 100000, 'p7_s8': 100000, 'a7_s8': 100000}} {'s7': 7688, 'p7_sum': 7904, 'a7_sum': 7904}
+01:05:16 C7 0 0 {'s': 0, 'par': 0, 'dir': 0, 'a7': 0} {'s': 92.0, 'par': 128.4, 'dir': 95.9, 'a7': 137.6} prep violations 0
+01:05:22 small round start at op 10000
+01:05:44 C7 1 10000 {'s': 0, 'par': 0, 'dir': 0, 'a7': 0} {'s': 85.8, 'par': 127.7, 'dir': 98.8, 'a7': 215.2} prep violations 0
+01:06:14 C7 2 20000 {'s': 0, 'par': 0, 'dir': 0, 'a7': 0} {'s': 87.8, 'par': 131.9, 'dir': 96.3, 'a7': 200.7} prep violations 0
+01:06:14 small D1 {'defined': True, 'lookup_ud_us': {'s': 102.40960531614981, 'dir': 95.88423153692615}, 'a_ratio': 1.0680547121735096, 'a_cond': False, 'b_ratios': [0.6718872357086922, 0.66565579984837], 'b_cond': False, 'repeated': False, 'ops_between': [10000, 20000]}
+01:06:14 stage B block 1
+01:06:22 stage B block 2a
+01:06:26 stage B block 2b
+01:06:30 stage B block 3
+01:07:00 stage B block 4
+01:07:00 stage B block 1
+01:07:08 stage B block 2a
+01:07:12 stage B block 2b
+01:07:16 stage B block 3
+01:07:46 stage B block 4
+01:07:47 stage B block 1
+01:07:54 stage B block 2a
+01:07:58 stage B block 2b
+01:08:02 stage B block 3
+01:08:32 stage B block 4
+01:08:32 stage B block 1
+01:08:40 stage B block 2a
+01:08:44 stage B block 2b
+01:08:48 stage B block 3
+01:09:18 stage B block 4
+{"stage_a_ok": true, "p7": {"ok": true, "bad": [], "last_equals_final": true}, "attr": "поддержана", "checks": {"p1_correct": true, "p1_track_io_timing": true, "p1_prepared_rule": true, "p1_activity": true, "p1_quotas": true, "p2_zero_read_valid": true, "p2_evicted_reads": true, "p3b_journal": true, "p3b_publication": true, "p4_abba": true, "p6_memory": true, "p6_evict": true}, "block_status": {"1": {"n": 12, "incorrect": 0, "procedure_violations": 0, "io_contaminated": 0, "rel_not_ok": 0, "established": true, "io_usable": true}, "2a": {"n": 8, "incorrect": 0, "procedure_violations": 0, "io_contaminated": 0, "rel_not_ok": 0, "established": true, "io_usable": true}, "2b": {"n": 8, "incorrect": 0, "procedure_violations": 0, "io_contaminated": 0, "rel_not_ok": 0, "established": true, "io_usable": true}, "3": {"n": 24, "incorrect": 0, "procedure_violations": 0, "io_contaminated": 0, "rel_not_ok": 0, "established": true, "io_usable": true}, "4": {"n": 10, "incorrect": 0, "procedure_violations": 0, "io_contaminated": 0, "rel_not_ok": 0, "established": true, "io_usable": true}}, "prep_head": [{"ok": true, "statements": 1, "min_exec": 48}, {"ok": true, "statements": 8, "leaves": 8, "parent": [], "min_exec": 6}], "prewarm": [{"what": "2a s7", "blocks": 9233, "accounted_share": 0.0, "accounting": "недоступно или неполно"}, {"what": "2a p7", "blocks": 9311, "accounted_share": 0.0, "accounting": "недоступно или неполно"}, {"what": "2b p7", "blocks": 9311, "accounted_share": 0.0, "accounting": "недоступно или неполно"}, {"what": "2b s7", "blocks": 9233, "accounted_share": 0.0, "accounting": "недоступно или неполно"}, {"what": "interference pair 0", "blocks": 8733, "accounted_share": 0.0004580327493415779, "accounting": "недоступно или неполно"}, {"what": "interference pair 1", "blocks": 8733, "accounted_share": 0.0, "accounting": "недоступно или неполно"}], "mutant_N1": {"designated": "p1_prepared_rule", "value": false}, "mutant_N3": {"designated": "p1_track_io_timing", "value": false}, "mutant_N11": {"designated": "p6_evict", "value": false}, "cleanup": [], "seconds": 278.7272901535034}

@@ -1,0 +1,31 @@
+{
+ "size": "N1",
+ "cycle_ops": 100000,
+ "seals": 3,
+ "merges": 0,
+ "maint_s": 0.12723460000415798,
+ "log_s": 0.46064940003998345,
+ "maint_us_per_op": 1.2723460000415798,
+ "log_us_per_op": 4.6064940003998345,
+ "maint_bytes_per_op": 16.94104,
+ "read_bytes": 0,
+ "written_bytes": 1694104,
+ "levels_end": 5,
+ "tiers_end": [
+  0,
+  0,
+  0
+ ],
+ "address_bytes_end": 5549922,
+ "live_end": 1030000,
+ "r9": {
+  "keys": 23781,
+  "mphf_bytes_per_key": 3.725999747697742,
+  "sorted_bytes_per_key": 20.0,
+  "mphf_build_s": 0.0064681000003474765,
+  "sorted_build_s": 0.0,
+  "mphf_lookup_us": 12.725346791000113,
+  "sorted_lookup_us": 0.8269861314978925,
+  "note": "the sorted segment is the run log itself; A4 keeps both (log for merges, address for lookups)"
+ }
+}

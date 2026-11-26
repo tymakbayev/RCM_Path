@@ -1,0 +1,13 @@
+a2_gen: 100000 records, copies 0..0, span 12797350389000 us
+A: {'bytes': 307296, 'sha256': '5c10bba387a8542e5f58db4f50209a50b4625d4711400a75c8a42d67d8a07d74', 'levels': 12, 'exceptions': 0, 'blocks': 693, 'd_bytes': 262512, 'read_s': 0.12758970000140835, 'build_s': 0.031560600000375416, 'r_bits': 13, 'rows': 100000, 'pages': 7688, 'bytes_per_row': 3.07296, 'keys_match_ref': True, 'c1_errors': 0}
+static_A 1 [(0, 'Tid Range Scan', 1, 1.0)]
+update_by_ctid 26 [(0, 'ModifyTable', 1, 0.0), (1, 'Tid Scan', 1, 1.0)]
+lookup_updated 3 [(0, 'Limit', 1, 1.0), (1, 'Append', 1, 1.0), (2, 'Index Scan', 1, 1.0), (2, 'Tid Range Scan', 0, 0)]
+lookup_unchanged 3 [(0, 'Limit', 1, 1.0), (1, 'Append', 1, 1.0), (2, 'Index Scan', 1, 0.0), (2, 'Tid Range Scan', 1, 1.0)]
+lookup_absent_fp_miss 2 [(0, 'Index Scan', 1, 0.0)]
+delete_by_ctid 3 [(0, 'ModifyTable', 1, 0.0), (1, 'Tid Scan', 1, 1.0)]
+answers {'updated_v': 2, 'deleted_found': False}
+statio A {'queries': 2000, 'heap_per_q': 1.0, 'index_per_q': 0.0, 'toast_per_q': 0.0} btree {'queries': 2000, 'heap_per_q': 1.0, 'index_per_q': 3.0005, 'toast_per_q': 0.0}
+explain mean buffers A 1.0 btree 4.0
+B: {'b': 13, 'invariant_violations': 391, 'bytes_per_row': 0.32868328683286835, 'pages_per_bucket': {'mean': 1.937744140625, 'p99': 3.0, 'max': 12}}
+N10 estimate: {'load_s': 1105.7070200000453, 'vacuum_s': 13.268750000133878, 'read_build_s': 15.915030000178376, 'load_b_s': 165.4645900001924, 'btree_s': 15.18419999993057, 'lookups_s_per_100k_per_method': 26.419999999999998}

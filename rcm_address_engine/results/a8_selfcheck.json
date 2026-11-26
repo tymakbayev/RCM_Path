@@ -1,0 +1,1901 @@
+{
+ "impl_sha256": {
+  "a6_lsm.py": "22cac7f0f9df13087b586edf0ef891a91f6c91bdbd9d04ddc4affa97d0cc2b3c",
+  "a6_run.py": "6effa8acef758757e6c0525f6046a0fea182a06e40565a685a360b93381c2188",
+  "a6_pghash.py": "fb56864bcd49fc136dbbd980933b980b4936cde40655e56310ffbf4915dedc0b",
+  "a6_selftest_lsm.py": "bebfa88eefdcd21fb3ba731eca22c72ec56f2c7afc320e0fd345f7c27e42832a",
+  "a5_lsm.py": "114238664ef2837d538ba46f2587b7c77bcca741241c913cbecda55fde62a7eb",
+  "a5_run.py": "950b623148bd6d0f1764f7b79f048bc444779008723bcee114c117f5d7d305d9",
+  "a4_lsm.py": "322da95ceb0403ce82cd14880d2d41722e74a09854530e6a04c8a51d42f8c870",
+  "a4_run.py": "b638699acf91f4ece87525869fb23e9614f60849cf2ce5c9704e35656b5276c2",
+  "a2_core.py": "2bb07e0a4fb9ed478f68a4e4ffabf9decea7cb15bd7f5c3587941d1e5151e3cd",
+  "a2_pg.py": "f992dda35ff0a13eb8822882de5db6ec7addfa68ba026ec2eb02cd73a8845c7c",
+  "a2_dyn.py": "b27fd166cdf6639c2f7a15fe7bece551d5cc1ea0a0e2128b385d3566408160f7",
+  "a2_runs.py": "274a9483701b394618de182038a5a102b5a4dad249c08a3c8dced28df69af658",
+  "a2_gen.py": "ec252c44752f9776eac3058aebc54398dd19a4f27718e0e6e4d27975512e6381",
+  "a2_selftest_core.py": "32761bf3a86a9dea494af752e83cb2ecb589702ca25611e959f2759122141c88",
+  "a2.py": "3992d0e242c50d649904c84bce6775fb53ca4265c8a62e112b2e18ae23a1abf5",
+  "a7_run.py": "32ab74ffb53627a1361e99ec611b4c87fcf650be92ad4b3fbe46b5955b2ae0f2",
+  "a8_run.py": "761a2e0d8a97394e8d529dd104ed32452642db85b6ddf861891404ac29fef578"
+ },
+ "calc_selftest": {
+  "ok": true,
+  "checks": {
+   "rho": true,
+   "rho_parts": true,
+   "tau_per_block": true,
+   "I": true,
+   "op_bytes": true,
+   "G": true,
+   "coverage": true,
+   "coverage_sign": true,
+   "zero_reads": true,
+   "dirty_io": true,
+   "negative_foreign": true,
+   "active_rel": true,
+   "unsupported": true,
+   "E_pairs": true,
+   "incorrect_block": true,
+   "d1": true,
+   "describe": true,
+   "ratio_none": true
+  }
+ },
+ "all_ok": true,
+ "calc_selftest_N6": {
+  "ok": false,
+  "checks": {
+   "rho": true,
+   "rho_parts": true,
+   "tau_per_block": false,
+   "I": true,
+   "op_bytes": true,
+   "G": true,
+   "coverage": true,
+   "coverage_sign": true,
+   "zero_reads": true,
+   "dirty_io": true,
+   "negative_foreign": true,
+   "active_rel": true,
+   "unsupported": true,
+   "E_pairs": true,
+   "incorrect_block": true,
+   "d1": true,
+   "describe": true,
+   "ratio_none": true
+  }
+ },
+ "preconditions": {
+  "block_size": 8192,
+  "block_size_ok": true,
+  "track_io_timing_default": "off",
+  "track_io_timing_default_off": true
+ },
+ "extensions": {
+  "created": [
+   "pg_buffercache",
+   "pg_prewarm"
+  ],
+  "pg_buffercache_version": "1.6"
+ },
+ "stage_a_ok": true,
+ "p5_schedule_prefix": true,
+ "p7_wrapper": {
+  "ok": true,
+  "bad": [],
+  "last_equals_final": true
+ },
+ "p6_c7_observations": {
+  "ok": true,
+  "checkpoints": 3,
+  "bad": []
+ },
+ "d1_small": {
+  "defined": true,
+  "lookup_ud_us": {
+   "s": 107.84820781312928,
+   "dir": 102.37381902860945
+  },
+  "a_ratio": 1.0534744999890056,
+  "a_cond": false,
+  "b_ratios": [
+   0.6761512542119056,
+   0.6488983653162758
+  ],
+  "b_cond": false,
+  "repeated": false,
+  "ops_between": [
+   10000,
+   20000
+  ]
+ },
+ "p3a_attribution": {
+  "mode": "поддержана",
+  "evicted_series": 20,
+  "ok_share": 1.0,
+  "rows": [
+   {
+    "rel_blocks": 800,
+    "be_blocks": 800.0,
+    "be_read_time_ms": 11.384,
+    "ok": true
+   },
+   {
+    "rel_blocks": 803,
+    "be_blocks": 803.0,
+    "be_read_time_ms": 9.372,
+    "ok": true
+   },
+   {
+    "rel_blocks": 820,
+    "be_blocks": 820.0,
+    "be_read_time_ms": 10.03,
+    "ok": true
+   },
+   {
+    "rel_blocks": 819,
+    "be_blocks": 819.0,
+    "be_read_time_ms": 10.998000000000001,
+    "ok": true
+   },
+   {
+    "rel_blocks": 803,
+    "be_blocks": 803.0,
+    "be_read_time_ms": 11.156,
+    "ok": true
+   },
+   {
+    "rel_blocks": 822,
+    "be_blocks": 822.0,
+    "be_read_time_ms": 9.612,
+    "ok": true
+   },
+   {
+    "rel_blocks": 803,
+    "be_blocks": 803.0,
+    "be_read_time_ms": 10.736,
+    "ok": true
+   },
+   {
+    "rel_blocks": 822,
+    "be_blocks": 822.0,
+    "be_read_time_ms": 10.274,
+    "ok": true
+   },
+   {
+    "rel_blocks": 803,
+    "be_blocks": 803.0,
+    "be_read_time_ms": 11.031,
+    "ok": true
+   },
+   {
+    "rel_blocks": 811,
+    "be_blocks": 811.0,
+    "be_read_time_ms": 9.91,
+    "ok": true
+   },
+   {
+    "rel_blocks": 803,
+    "be_blocks": 803.0,
+    "be_read_time_ms": 10.346,
+    "ok": true
+   },
+   {
+    "rel_blocks": 811,
+    "be_blocks": 811.0,
+    "be_read_time_ms": 9.690999999999999,
+    "ok": true
+   }
+  ]
+ },
+ "checks": {
+  "p1_correct": true,
+  "p1_track_io_timing": true,
+  "p1_prepared_rule": true,
+  "p1_activity": true,
+  "p1_quotas": true,
+  "p2_zero_read_valid": true,
+  "p2_evicted_reads": true,
+  "p3b_journal": true,
+  "p3b_publication": true,
+  "p4_abba": true,
+  "p6_memory": true,
+  "p6_evict": true
+ },
+ "analysis_small": {
+  "mode": "поддержана",
+  "block_status": {
+   "1": {
+    "n": 12,
+    "incorrect": 0,
+    "procedure_violations": 0,
+    "io_contaminated": 0,
+    "rel_not_ok": 0,
+    "established": true,
+    "io_usable": true
+   },
+   "2a": {
+    "n": 8,
+    "incorrect": 0,
+    "procedure_violations": 0,
+    "io_contaminated": 0,
+    "rel_not_ok": 0,
+    "established": true,
+    "io_usable": true
+   },
+   "2b": {
+    "n": 8,
+    "incorrect": 0,
+    "procedure_violations": 0,
+    "io_contaminated": 0,
+    "rel_not_ok": 0,
+    "established": true,
+    "io_usable": true
+   },
+   "3": {
+    "n": 24,
+    "incorrect": 0,
+    "procedure_violations": 0,
+    "io_contaminated": 0,
+    "rel_not_ok": 0,
+    "established": true,
+    "io_usable": true
+   },
+   "4": {
+    "n": 10,
+    "incorrect": 0,
+    "procedure_violations": 0,
+    "io_contaminated": 0,
+    "rel_not_ok": 0,
+    "established": true,
+    "io_usable": true
+   }
+  },
+  "b1_first": {
+   "pairs": [
+    {
+     "G": 1.032407375435931,
+     "G_p50": 1.1960257787325457,
+     "rho_ratio": 4.613333333333333,
+     "tau_ratio": 0.9146158049621746,
+     "rho_heap": [
+      0.94,
+      0.3
+     ],
+     "rho_idx": [
+      0.444,
+      0.0
+     ],
+     "L": [
+      119.59819999999999,
+      115.844
+     ],
+     "tau": [
+      14.060693641618498,
+      15.373333333333333
+     ],
+     "delta_L": 3.7541999999999973,
+     "delta_I": 14.848,
+     "coverage": 3.9550370251984472
+    },
+    {
+     "G": 0.9400838412067748,
+     "G_p50": 0.9760147601476014,
+     "rho_ratio": 0.9772727272727273,
+     "tau_ratio": 1.0286658717427422,
+     "rho_heap": [
+      0.95,
+      0.966
+     ],
+     "rho_idx": [
+      0.254,
+      0.266
+     ],
+     "L": [
+      111.67820000000002,
+      118.796
+     ],
+     "tau": [
+      13.581395348837209,
+      13.202922077922077
+     ],
+     "delta_L": -7.117799999999988,
+     "delta_I": 0.08600000000000207,
+     "coverage": null
+    }
+   ],
+   "summary": {
+    "G": {
+     "values": [
+      1.032407375435931,
+      0.9400838412067748
+     ],
+     "min": 0.9400838412067748,
+     "max": 1.032407375435931,
+     "describe": "примерно равно во всех"
+    },
+    "G_p50": {
+     "values": [
+      1.1960257787325457,
+      0.9760147601476014
+     ],
+     "min": 0.9760147601476014,
+     "max": 1.1960257787325457,
+     "describe": "примерно равно во всех"
+    },
+    "rho_ratio": {
+     "values": [
+      4.613333333333333,
+      0.9772727272727273
+     ],
+     "min": 0.9772727272727273,
+     "max": 4.613333333333333,
+     "describe": "смешано"
+    },
+    "tau_ratio": {
+     "values": [
+      0.9146158049621746,
+      1.0286658717427422
+     ],
+     "min": 0.9146158049621746,
+     "max": 1.0286658717427422,
+     "describe": "примерно равно во всех"
+    },
+    "coverage": {
+     "values": [
+      3.9550370251984472,
+      null
+     ],
+     "n_defined": 1,
+     "ge_half": 1
+    }
+   }
+  },
+  "b1_repeat": {
+   "pairs": [
+    {
+     "G": 1.0655655058640303,
+     "G_p50": 1.080335731414868,
+     "rho_ratio": null,
+     "tau_ratio": null,
+     "rho_heap": [
+      0.0,
+      0.0
+     ],
+     "rho_idx": [
+      0.0,
+      0.0
+     ],
+     "L": [
+      94.69019999999999,
+      88.86379999999998
+     ],
+     "tau": [
+      null,
+      null
+     ],
+     "delta_L": 5.826400000000007,
+     "delta_I": 0.0,
+     "coverage": null
+    },
+    {
+     "G": 0.9235124215520222,
+     "G_p50": 0.9276500280426248,
+     "rho_ratio": null,
+     "tau_ratio": null,
+     "rho_heap": [
+      0.0,
+      0.0
+     ],
+     "rho_idx": [
+      0.0,
+      0.0
+     ],
+     "L": [
+      86.58520000000001,
+      93.7564
+     ],
+     "tau": [
+      null,
+      null
+     ],
+     "delta_L": -7.171199999999985,
+     "delta_I": 0.0,
+     "coverage": null
+    }
+   ],
+   "summary": {
+    "G": {
+     "values": [
+      1.0655655058640303,
+      0.9235124215520222
+     ],
+     "min": 0.9235124215520222,
+     "max": 1.0655655058640303,
+     "describe": "примерно равно во всех"
+    },
+    "G_p50": {
+     "values": [
+      1.080335731414868,
+      0.9276500280426248
+     ],
+     "min": 0.9276500280426248,
+     "max": 1.080335731414868,
+     "describe": "примерно равно во всех"
+    },
+    "rho_ratio": {
+     "values": [
+      null,
+      null
+     ],
+     "min": null,
+     "max": null,
+     "describe": "не определено"
+    },
+    "tau_ratio": {
+     "values": [
+      null,
+      null
+     ],
+     "min": null,
+     "max": null,
+     "describe": "не определено"
+    },
+    "coverage": {
+     "values": [
+      null,
+      null
+     ],
+     "n_defined": 0,
+     "ge_half": 0
+    }
+   }
+  },
+  "b1_evicted": {
+   "pairs": [
+    {
+     "G": 1.4876769164324302,
+     "G_p50": 1.1349952963311383,
+     "rho_ratio": 0.9962640099626401,
+     "tau_ratio": 1.219237089201878,
+     "rho_heap": [
+      0.976,
+      0.984
+     ],
+     "rho_idx": [
+      0.624,
+      0.622
+     ],
+     "L": [
+      168.0944,
+      112.9912
+     ],
+     "tau": [
+      14.23,
+      11.67123287671233
+     ],
+     "delta_L": 55.1032,
+     "delta_I": 4.024000000000001,
+     "coverage": 0.07302661188460925
+    },
+    {
+     "G": 1.0261046603050592,
+     "G_p50": 0.9960560911481158,
+     "rho_ratio": 0.998780487804878,
+     "tau_ratio": 1.0978493092152115,
+     "rho_heap": [
+      0.986,
+      0.984
+     ],
+     "rho_idx": [
+      0.652,
+      0.656
+     ],
+     "L": [
+      123.9832,
+      120.829
+     ],
+     "tau": [
+      13.42857142857143,
+      12.231707317073171
+     ],
+     "delta_L": 3.154200000000003,
+     "delta_I": 1.9360000000000035,
+     "coverage": 0.6137847948766729
+    }
+   ],
+   "summary": {
+    "G": {
+     "values": [
+      1.4876769164324302,
+      1.0261046603050592
+     ],
+     "min": 1.0261046603050592,
+     "max": 1.4876769164324302,
+     "describe": "смешано"
+    },
+    "G_p50": {
+     "values": [
+      1.1349952963311383,
+      0.9960560911481158
+     ],
+     "min": 0.9960560911481158,
+     "max": 1.1349952963311383,
+     "describe": "примерно равно во всех"
+    },
+    "rho_ratio": {
+     "values": [
+      0.9962640099626401,
+      0.998780487804878
+     ],
+     "min": 0.9962640099626401,
+     "max": 0.998780487804878,
+     "describe": "примерно равно во всех"
+    },
+    "tau_ratio": {
+     "values": [
+      1.219237089201878,
+      1.0978493092152115
+     ],
+     "min": 1.0978493092152115,
+     "max": 1.219237089201878,
+     "describe": "примерно равно во всех"
+    },
+    "coverage": {
+     "values": [
+      0.07302661188460925,
+      0.6137847948766729
+     ],
+     "n_defined": 2,
+     "ge_half": 1
+    }
+   }
+  },
+  "b2a_first": {
+   "pairs": [
+    {
+     "G": 1.020241470540077,
+     "G_p50": 1.0138760407030527,
+     "rho_ratio": 1.0237691001697793,
+     "tau_ratio": 1.1181444027463452,
+     "rho_heap": [
+      0.966,
+      0.936
+     ],
+     "rho_idx": [
+      0.24,
+      0.242
+     ],
+     "L": [
+      118.3878,
+      116.039
+     ],
+     "tau": [
+      14.83582089552239,
+      13.268251273344651
+     ],
+     "delta_L": 2.348799999999997,
+     "delta_I": 2.2620000000000022,
+     "coverage": 0.9630449591280675
+    },
+    {
+     "G": 0.9186729193787022,
+     "G_p50": 0.9417206290471786,
+     "rho_ratio": 0.986328125,
+     "tau_ratio": 0.9583413919651058,
+     "rho_heap": [
+      0.914,
+      0.914
+     ],
+     "rho_idx": [
+      0.096,
+      0.11
+     ],
+     "L": [
+      105.43260000000001,
+      114.7662
+     ],
+     "tau": [
+      13.740594059405941,
+      14.337890625
+     ],
+     "delta_L": -9.33359999999999,
+     "delta_I": -0.8040000000000003,
+     "coverage": null
+    }
+   ],
+   "summary": {
+    "G": {
+     "values": [
+      1.020241470540077,
+      0.9186729193787022
+     ],
+     "min": 0.9186729193787022,
+     "max": 1.020241470540077,
+     "describe": "примерно равно во всех"
+    },
+    "G_p50": {
+     "values": [
+      1.0138760407030527,
+      0.9417206290471786
+     ],
+     "min": 0.9417206290471786,
+     "max": 1.0138760407030527,
+     "describe": "примерно равно во всех"
+    },
+    "rho_ratio": {
+     "values": [
+      1.0237691001697793,
+      0.986328125
+     ],
+     "min": 0.986328125,
+     "max": 1.0237691001697793,
+     "describe": "примерно равно во всех"
+    },
+    "tau_ratio": {
+     "values": [
+      1.1181444027463452,
+      0.9583413919651058
+     ],
+     "min": 0.9583413919651058,
+     "max": 1.1181444027463452,
+     "describe": "примерно равно во всех"
+    },
+    "coverage": {
+     "values": [
+      0.9630449591280675,
+      null
+     ],
+     "n_defined": 1,
+     "ge_half": 1
+    }
+   }
+  },
+  "b2a_repeat": {
+   "pairs": [
+    {
+     "G": 1.0324152927038035,
+     "G_p50": 1.0444829578278452,
+     "rho_ratio": null,
+     "tau_ratio": null,
+     "rho_heap": [
+      0.0,
+      0.0
+     ],
+     "rho_idx": [
+      0.0,
+      0.0
+     ],
+     "L": [
+      95.52980000000002,
+      92.5304
+     ],
+     "tau": [
+      null,
+      null
+     ],
+     "delta_L": 2.9994000000000227,
+     "delta_I": 0.0,
+     "coverage": null
+    },
+    {
+     "G": 0.9022536703968081,
+     "G_p50": 0.9069767441860466,
+     "rho_ratio": null,
+     "tau_ratio": null,
+     "rho_heap": [
+      0.0,
+      0.0
+     ],
+     "rho_idx": [
+      0.0,
+      0.0
+     ],
+     "L": [
+      86.8356,
+      96.243
+     ],
+     "tau": [
+      null,
+      null
+     ],
+     "delta_L": -9.407399999999996,
+     "delta_I": 0.0,
+     "coverage": null
+    }
+   ],
+   "summary": {
+    "G": {
+     "values": [
+      1.0324152927038035,
+      0.9022536703968081
+     ],
+     "min": 0.9022536703968081,
+     "max": 1.0324152927038035,
+     "describe": "примерно равно во всех"
+    },
+    "G_p50": {
+     "values": [
+      1.0444829578278452,
+      0.9069767441860466
+     ],
+     "min": 0.9069767441860466,
+     "max": 1.0444829578278452,
+     "describe": "примерно равно во всех"
+    },
+    "rho_ratio": {
+     "values": [
+      null,
+      null
+     ],
+     "min": null,
+     "max": null,
+     "describe": "не определено"
+    },
+    "tau_ratio": {
+     "values": [
+      null,
+      null
+     ],
+     "min": null,
+     "max": null,
+     "describe": "не определено"
+    },
+    "coverage": {
+     "values": [
+      null,
+      null
+     ],
+     "n_defined": 0,
+     "ge_half": 0
+    }
+   }
+  },
+  "b2b_first": {
+   "pairs": [
+    {
+     "G": 1.0211224418600382,
+     "G_p50": 1.0173410404624277,
+     "rho_ratio": 0.9534368070953436,
+     "tau_ratio": 1.0637830574148393,
+     "rho_heap": [
+      0.824,
+      0.852
+     ],
+     "rho_idx": [
+      0.036,
+      0.05
+     ],
+     "L": [
+      111.22760000000001,
+      108.9268
+     ],
+     "tau": [
+      15.06279069767442,
+      14.159645232815965
+     ],
+     "delta_L": 2.3008000000000095,
+     "delta_I": 0.18200000000000038,
+     "coverage": 0.07910292072322654
+    },
+    {
+     "G": 0.9842048999716385,
+     "G_p50": 0.9783427495291902,
+     "rho_ratio": 0.9727722772277227,
+     "tau_ratio": 0.993508339093421,
+     "rho_heap": [
+      0.762,
+      0.784
+     ],
+     "rho_idx": [
+      0.024,
+      0.024
+     ],
+     "L": [
+      108.2712,
+      110.00880000000001
+     ],
+     "tau": [
+      14.882951653944021,
+      14.980198019801982
+     ],
+     "delta_L": -1.7376000000000147,
+     "delta_I": -0.4060000000000006,
+     "coverage": null
+    }
+   ],
+   "summary": {
+    "G": {
+     "values": [
+      1.0211224418600382,
+      0.9842048999716385
+     ],
+     "min": 0.9842048999716385,
+     "max": 1.0211224418600382,
+     "describe": "примерно равно во всех"
+    },
+    "G_p50": {
+     "values": [
+      1.0173410404624277,
+      0.9783427495291902
+     ],
+     "min": 0.9783427495291902,
+     "max": 1.0173410404624277,
+     "describe": "примерно равно во всех"
+    },
+    "rho_ratio": {
+     "values": [
+      0.9534368070953436,
+      0.9727722772277227
+     ],
+     "min": 0.9534368070953436,
+     "max": 0.9727722772277227,
+     "describe": "примерно равно во всех"
+    },
+    "tau_ratio": {
+     "values": [
+      1.0637830574148393,
+      0.993508339093421
+     ],
+     "min": 0.993508339093421,
+     "max": 1.0637830574148393,
+     "describe": "примерно равно во всех"
+    },
+    "coverage": {
+     "values": [
+      0.07910292072322654,
+      null
+     ],
+     "n_defined": 1,
+     "ge_half": 0
+    }
+   }
+  },
+  "b2b_repeat": {
+   "pairs": [
+    {
+     "G": 0.9807487163735529,
+     "G_p50": 0.9955654101995565,
+     "rho_ratio": null,
+     "tau_ratio": null,
+     "rho_heap": [
+      0.0,
+      0.0
+     ],
+     "rho_idx": [
+      0.0,
+      0.0
+     ],
+     "L": [
+      94.5124,
+      96.36760000000001
+     ],
+     "tau": [
+      null,
+      null
+     ],
+     "delta_L": -1.8552000000000106,
+     "delta_I": 0.0,
+     "coverage": null
+    },
+    {
+     "G": 0.9827461130525477,
+     "G_p50": 0.984118291347207,
+     "rho_ratio": null,
+     "tau_ratio": null,
+     "rho_heap": [
+      0.0,
+      0.0
+     ],
+     "rho_idx": [
+      0.0,
+      0.0
+     ],
+     "L": [
+      97.80820000000001,
+      99.52539999999999
+     ],
+     "tau": [
+      null,
+      null
+     ],
+     "delta_L": -1.717199999999977,
+     "delta_I": 0.0,
+     "coverage": null
+    }
+   ],
+   "summary": {
+    "G": {
+     "values": [
+      0.9807487163735529,
+      0.9827461130525477
+     ],
+     "min": 0.9807487163735529,
+     "max": 0.9827461130525477,
+     "describe": "примерно равно во всех"
+    },
+    "G_p50": {
+     "values": [
+      0.9955654101995565,
+      0.984118291347207
+     ],
+     "min": 0.984118291347207,
+     "max": 0.9955654101995565,
+     "describe": "примерно равно во всех"
+    },
+    "rho_ratio": {
+     "values": [
+      null,
+      null
+     ],
+     "min": null,
+     "max": null,
+     "describe": "не определено"
+    },
+    "tau_ratio": {
+     "values": [
+      null,
+      null
+     ],
+     "min": null,
+     "max": null,
+     "describe": "не определено"
+    },
+    "coverage": {
+     "values": [
+      null,
+      null
+     ],
+     "n_defined": 0,
+     "ge_half": 0
+    }
+   }
+  },
+  "b3": {
+   "sets": {
+    "0": {
+     "pair": 0,
+     "branch": "P",
+     "R_s": 0.9302925934167288,
+     "Rtau_s": 0.9623520975259949,
+     "dL_s": -8.646199999999993,
+     "drho_s": 0.0,
+     "R_d": 1.062454336072589,
+     "Rtau_d": 1.0688722430295463,
+     "dL_d": 7.180400000000006,
+     "drho_d": 0.0
+    },
+    "1": {
+     "pair": 0,
+     "branch": "K",
+     "R_s": 0.9446856567166606,
+     "Rtau_s": 0.9379022754056751,
+     "dL_s": -6.808199999999985,
+     "drho_s": 0.0,
+     "R_d": 0.9721066687846867,
+     "Rtau_d": 0.9779011099899091,
+     "dL_d": -3.3714000000000084,
+     "drho_d": 0.0
+    },
+    "2": {
+     "pair": 1,
+     "branch": "K",
+     "R_s": 1.0553426464619131,
+     "Rtau_s": 1.0225501113585747,
+     "dL_s": 6.544600000000003,
+     "drho_s": 0.0,
+     "R_d": 0.9933640712615688,
+     "Rtau_d": 0.9942808726964626,
+     "dL_d": -0.7509999999999906,
+     "drho_d": 0.0
+    },
+    "3": {
+     "pair": 1,
+     "branch": "P",
+     "R_s": 1.0055392641622292,
+     "Rtau_s": 1.0038932674959642,
+     "dL_s": 0.6463999999999999,
+     "drho_s": 0.0,
+     "R_d": 1.017190011676432,
+     "Rtau_d": 1.0249072602013778,
+     "dL_d": 1.9698000000000064,
+     "drho_d": 0.0
+    }
+   },
+   "pairs": [
+    {
+     "pair": 0,
+     "E_s": 0.9847641771656022,
+     "E_d": 1.0929400755997836,
+     "Etau_s": 1.0260686243774646,
+     "Etau_d": 1.0930269248191935,
+     "E_s_over_E_d": 0.9010230287558844
+    },
+    {
+     "pair": 1,
+     "E_s": 0.9528083296295737,
+     "E_d": 1.0239851038548278,
+     "Etau_s": 0.9817545921169353,
+     "Etau_d": 1.0308025512165966,
+     "E_s_over_E_d": 0.9304904202636283
+    }
+   ],
+   "summary": {
+    "E_s": {
+     "values": [
+      0.9847641771656022,
+      0.9528083296295737
+     ],
+     "describe": "примерно равно во всех"
+    },
+    "E_d": {
+     "values": [
+      1.0929400755997836,
+      1.0239851038548278
+     ],
+     "describe": "примерно равно во всех"
+    },
+    "E_s_over_E_d": {
+     "values": [
+      0.9010230287558844,
+      0.9304904202636283
+     ],
+     "describe": "примерно равно во всех"
+    },
+    "Etau_s": {
+     "values": [
+      1.0260686243774646,
+      0.9817545921169353
+     ],
+     "describe": "примерно равно во всех"
+    },
+    "Etau_d": {
+     "values": [
+      1.0930269248191935,
+      1.0308025512165966
+     ],
+     "describe": "примерно равно во всех"
+    }
+   }
+  },
+  "b4": {
+   "passes": [
+    {
+     "pass": 0,
+     "G": 0.9828204309090264,
+     "G_p50": 1.0761718749999998,
+     "rho_ratio": 1.032258064516129,
+     "tau_ratio": 1.066883116883117,
+     "rho_heap": [
+      0.9583333333333334,
+      0.9166666666666666
+     ],
+     "rho_idx": [
+      0.375,
+      0.375
+     ],
+     "L": [
+      115.37083333333334,
+      117.3875
+     ],
+     "tau": [
+      13.250000000000002,
+      12.419354838709678
+     ],
+     "delta_L": -2.0166666666666657,
+     "delta_I": 1.625,
+     "coverage": null,
+     "rho_s": 1.3333333333333333,
+     "rho_d": 1.2916666666666667
+    },
+    {
+     "pass": 1,
+     "G": 0.9779933589426391,
+     "G_p50": 0.9475392103839912,
+     "rho_ratio": null,
+     "tau_ratio": null,
+     "rho_heap": [
+      0.0,
+      0.0
+     ],
+     "rho_idx": [
+      0.0,
+      0.0
+     ],
+     "L": [
+      93.88124999999998,
+      95.99375000000002
+     ],
+     "tau": [
+      null,
+      null
+     ],
+     "delta_L": -2.11250000000004,
+     "delta_I": 0.0,
+     "coverage": null,
+     "rho_s": 0.0,
+     "rho_d": 0.0
+    },
+    {
+     "pass": 2,
+     "G": 0.904746257008482,
+     "G_p50": 0.9669603524229075,
+     "rho_ratio": null,
+     "tau_ratio": null,
+     "rho_heap": [
+      0.0,
+      0.0
+     ],
+     "rho_idx": [
+      0.0,
+      0.0
+     ],
+     "L": [
+      91.77708333333334,
+      101.43958333333335
+     ],
+     "tau": [
+      null,
+      null
+     ],
+     "delta_L": -9.662500000000009,
+     "delta_I": 0.0,
+     "coverage": null,
+     "rho_s": 0.0,
+     "rho_d": 0.0
+    },
+    {
+     "pass": 3,
+     "G": 1.078488770982939,
+     "G_p50": 1.0719298245614035,
+     "rho_ratio": null,
+     "tau_ratio": null,
+     "rho_heap": [
+      0.0,
+      0.0
+     ],
+     "rho_idx": [
+      0.0,
+      0.0
+     ],
+     "L": [
+      98.24583333333332,
+      91.09583333333335
+     ],
+     "tau": [
+      null,
+      null
+     ],
+     "delta_L": 7.149999999999977,
+     "delta_I": 0.0,
+     "coverage": null,
+     "rho_s": 0.0,
+     "rho_d": 0.0
+    },
+    {
+     "pass": 4,
+     "G": 1.0612137319071364,
+     "G_p50": 1.072829131652661,
+     "rho_ratio": null,
+     "tau_ratio": null,
+     "rho_heap": [
+      0.0,
+      0.0
+     ],
+     "rho_idx": [
+      0.0,
+      0.0
+     ],
+     "L": [
+      100.65833333333335,
+      94.85208333333333
+     ],
+     "tau": [
+      null,
+      null
+     ],
+     "delta_L": 5.80625000000002,
+     "delta_I": 0.0,
+     "coverage": null,
+     "rho_s": 0.0,
+     "rho_d": 0.0
+    }
+   ],
+   "last_rho_zero": true,
+   "last_G": 1.0612137319071364,
+   "describe_G": "примерно равно во всех"
+  }
+ },
+ "interventions_small": [
+  {
+   "what": "2a s7",
+   "kind": "read",
+   "s": 0.0291544000065187,
+   "pause_s": null,
+   "total_s": 1.5840214999916498,
+   "blocks": 9233,
+   "server_read_bytes": 0.0,
+   "server_read_bytes_late": 90112.0,
+   "accounted_share": 0.0,
+   "accounting": "недоступно или неполно",
+   "mem_before": {
+    "where": "before 2a s7",
+    "t": 1794860872.3868456,
+    "avail_phys_gb": 21.737735748291016,
+    "total_phys_gb": 31.952014923095703,
+    "system_cache_gb": 7.3800201416015625,
+    "rss": {
+     "peak_mb": 526.9296875,
+     "current_mb": 140.78515625
+    },
+    "disk": {
+     "read_count": 5523756,
+     "bytes_read": 92198031872,
+     "read_time_100ns": 65773915049
+    },
+    "pg_buffers": {
+     "s7_heap": 493,
+     "s7_idx": 326,
+     "p7_heap": 492,
+     "p7_idx": 328,
+     "a7_heap": 7201,
+     "a7_idx": 0
+    }
+   },
+   "mem_after": {
+    "where": "after 2a s7",
+    "t": 1794860873.945146,
+    "avail_phys_gb": 21.742347717285156,
+    "total_phys_gb": 31.952014923095703,
+    "system_cache_gb": 7.3800506591796875,
+    "rss": {
+     "peak_mb": 526.9296875,
+     "current_mb": 140.78515625
+    },
+    "disk": {
+     "read_count": 5523756,
+     "bytes_read": 92198031872,
+     "read_time_100ns": 65773915049
+    },
+    "pg_buffers": {
+     "s7_heap": 493,
+     "s7_idx": 326,
+     "p7_heap": 492,
+     "p7_idx": 328,
+     "a7_heap": 7201,
+     "a7_idx": 0
+    }
+   }
+  },
+  {
+   "what": "2a p7",
+   "kind": "read",
+   "s": 0.03522779999184422,
+   "pause_s": null,
+   "total_s": 1.6008191000000807,
+   "blocks": 9311,
+   "server_read_bytes": 0.0,
+   "server_read_bytes_late": 0.0,
+   "accounted_share": 0.0,
+   "accounting": "недоступно или неполно",
+   "mem_before": {
+    "where": "before 2a p7",
+    "t": 1794860873.9701457,
+    "avail_phys_gb": 21.74817657470703,
+    "total_phys_gb": 31.952014923095703,
+    "system_cache_gb": 7.3800506591796875,
+    "rss": {
+     "peak_mb": 526.9296875,
+     "current_mb": 140.78515625
+    },
+    "disk": {
+     "read_count": 5523756,
+     "bytes_read": 92198031872,
+     "read_time_100ns": 65773915049
+    },
+    "pg_buffers": {
+     "s7_heap": 493,
+     "s7_idx": 326,
+     "p7_heap": 492,
+     "p7_idx": 328,
+     "a7_heap": 7201,
+     "a7_idx": 0
+    }
+   },
+   "mem_after": {
+    "where": "after 2a p7",
+    "t": 1794860875.5459526,
+    "avail_phys_gb": 21.74026107788086,
+    "total_phys_gb": 31.952014923095703,
+    "system_cache_gb": 7.3801116943359375,
+    "rss": {
+     "peak_mb": 526.9296875,
+     "current_mb": 140.78515625
+    },
+    "disk": {
+     "read_count": 5523756,
+     "bytes_read": 92198031872,
+     "read_time_100ns": 65773915049
+    },
+    "pg_buffers": {
+     "s7_heap": 493,
+     "s7_idx": 326,
+     "p7_heap": 492,
+     "p7_idx": 328,
+     "a7_heap": 7201,
+     "a7_idx": 0
+    }
+   }
+  },
+  {
+   "what": "2b p7",
+   "kind": "read",
+   "s": 0.03429169999435544,
+   "pause_s": null,
+   "total_s": 1.587925300002098,
+   "blocks": 9311,
+   "server_read_bytes": 0.0,
+   "server_read_bytes_late": 0.0,
+   "accounted_share": 0.0,
+   "accounting": "недоступно или неполно",
+   "mem_before": {
+    "where": "before 2b p7",
+    "t": 1794860876.518338,
+    "avail_phys_gb": 21.740386962890625,
+    "total_phys_gb": 31.952014923095703,
+    "system_cache_gb": 7.3801116943359375,
+    "rss": {
+     "peak_mb": 526.9296875,
+     "current_mb": 140.78515625
+    },
+    "disk": {
+     "read_count": 5523756,
+     "bytes_read": 92198031872,
+     "read_time_100ns": 65773915049
+    },
+    "pg_buffers": {
+     "s7_heap": 1480,
+     "s7_idx": 510,
+     "p7_heap": 1462,
+     "p7_idx": 530,
+     "a7_heap": 6856,
+     "a7_idx": 0
+    }
+   },
+   "mem_after": {
+    "where": "after 2b p7",
+    "t": 1794860878.080144,
+    "avail_phys_gb": 21.74276351928711,
+    "total_phys_gb": 31.952014923095703,
+    "system_cache_gb": 7.3801727294921875,
+    "rss": {
+     "peak_mb": 526.9296875,
+     "current_mb": 140.78515625
+    },
+    "disk": {
+     "read_count": 5523756,
+     "bytes_read": 92198031872,
+     "read_time_100ns": 65773915049
+    },
+    "pg_buffers": {
+     "s7_heap": 1480,
+     "s7_idx": 510,
+     "p7_heap": 1462,
+     "p7_idx": 530,
+     "a7_heap": 6856,
+     "a7_idx": 0
+    }
+   }
+  },
+  {
+   "what": "2b s7",
+   "kind": "read",
+   "s": 0.028550899995025247,
+   "pause_s": null,
+   "total_s": 1.5836850999912713,
+   "blocks": 9233,
+   "server_read_bytes": 0.0,
+   "server_read_bytes_late": 0.0,
+   "accounted_share": 0.0,
+   "accounting": "недоступно или неполно",
+   "mem_before": {
+    "where": "before 2b s7",
+    "t": 1794860878.1061437,
+    "avail_phys_gb": 21.734588623046875,
+    "total_phys_gb": 31.952014923095703,
+    "system_cache_gb": 7.3801727294921875,
+    "rss": {
+     "peak_mb": 526.9296875,
+     "current_mb": 140.78515625
+    },
+    "disk": {
+     "read_count": 5523756,
+     "bytes_read": 92198031872,
+     "read_time_100ns": 65773915049
+    },
+    "pg_buffers": {
+     "s7_heap": 1480,
+     "s7_idx": 510,
+     "p7_heap": 1462,
+     "p7_idx": 530,
+     "a7_heap": 6856,
+     "a7_idx": 0
+    }
+   },
+   "mem_after": {
+    "where": "after 2b s7",
+    "t": 1794860879.663804,
+    "avail_phys_gb": 21.736495971679688,
+    "total_phys_gb": 31.952014923095703,
+    "system_cache_gb": 7.3802032470703125,
+    "rss": {
+     "peak_mb": 526.9296875,
+     "current_mb": 140.78515625
+    },
+    "disk": {
+     "read_count": 5523756,
+     "bytes_read": 92198031872,
+     "read_time_100ns": 65773915049
+    },
+    "pg_buffers": {
+     "s7_heap": 1480,
+     "s7_idx": 510,
+     "p7_heap": 1462,
+     "p7_idx": 530,
+     "a7_heap": 6856,
+     "a7_idx": 0
+    }
+   }
+  },
+  {
+   "what": "interference pair 0",
+   "kind": "read",
+   "s": 0.03004930001043249,
+   "pause_s": null,
+   "total_s": 1.5907575000019278,
+   "blocks": 8733,
+   "server_read_bytes": 32768.0,
+   "server_read_bytes_late": 909312.0,
+   "accounted_share": 0.0004580327493415779,
+   "accounting": "недоступно или неполно",
+   "mem_before": {
+    "where": "before interference pair 0",
+    "t": 1794860883.9413352,
+    "avail_phys_gb": 21.743389129638672,
+    "total_phys_gb": 31.952014923095703,
+    "system_cache_gb": 7.380313873291016,
+    "rss": {
+     "peak_mb": 526.9296875,
+     "current_mb": 140.78515625
+    },
+    "disk": {
+     "read_count": 5523756,
+     "bytes_read": 92198031872,
+     "read_time_100ns": 65773915049
+    },
+    "pg_buffers": {
+     "s7_heap": 479,
+     "s7_idx": 324,
+     "p7_heap": 486,
+     "p7_idx": 336,
+     "a7_heap": 6098,
+     "a7_idx": 0
+    }
+   },
+   "mem_after": {
+    "where": "after interference pair 0",
+    "t": 1794860885.5075078,
+    "avail_phys_gb": 21.746437072753906,
+    "total_phys_gb": 31.952014923095703,
+    "system_cache_gb": 7.380165100097656,
+    "rss": {
+     "peak_mb": 526.9296875,
+     "current_mb": 140.78515625
+    },
+    "disk": {
+     "read_count": 5523756,
+     "bytes_read": 92198031872,
+     "read_time_100ns": 65773915049
+    },
+    "pg_buffers": {
+     "s7_heap": 479,
+     "s7_idx": 324,
+     "p7_heap": 486,
+     "p7_idx": 336,
+     "a7_heap": 6076,
+     "a7_idx": 0
+    }
+   }
+  },
+  {
+   "what": "control pair 0",
+   "kind": "pause",
+   "s": 0.037529799999902025,
+   "pause_s": 0.03004930001043249,
+   "total_s": 1.588665100003709,
+   "blocks": 0,
+   "server_read_bytes": 0.0,
+   "server_read_bytes_late": 0.0,
+   "accounted_share": null,
+   "accounting": "не применимо",
+   "mem_before": {
+    "where": "before control pair 0",
+    "t": 1794860892.2418213,
+    "avail_phys_gb": 21.70539093017578,
+    "total_phys_gb": 31.952014923095703,
+    "system_cache_gb": 7.3854522705078125,
+    "rss": {
+     "peak_mb": 526.9296875,
+     "current_mb": 140.78515625
+    },
+    "disk": {
+     "read_count": 5523756,
+     "bytes_read": 92198031872,
+     "read_time_100ns": 65773915049
+    },
+    "pg_buffers": {
+     "s7_heap": 476,
+     "s7_idx": 327,
+     "p7_heap": 481,
+     "p7_idx": 330,
+     "a7_heap": 4492,
+     "a7_idx": 0
+    }
+   },
+   "mem_after": {
+    "where": "after control pair 0",
+    "t": 1794860893.8062577,
+    "avail_phys_gb": 21.667591094970703,
+    "total_phys_gb": 31.952014923095703,
+    "system_cache_gb": 7.385478973388672,
+    "rss": {
+     "peak_mb": 526.9296875,
+     "current_mb": 140.78515625
+    },
+    "disk": {
+     "read_count": 5523756,
+     "bytes_read": 92198031872,
+     "read_time_100ns": 65773915049
+    },
+    "pg_buffers": {
+     "s7_heap": 476,
+     "s7_idx": 327,
+     "p7_heap": 481,
+     "p7_idx": 330,
+     "a7_heap": 4492,
+     "a7_idx": 0
+    }
+   }
+  },
+  {
+   "what": "control pair 1",
+   "kind": "pause",
+   "s": 0.03650119999656454,
+   "pause_s": 0.03004930001043249,
+   "total_s": 1.5964586999907624,
+   "blocks": 0,
+   "server_read_bytes": 0.0,
+   "server_read_bytes_late": 0.0,
+   "accounted_share": null,
+   "accounting": "не применимо",
+   "mem_before": {
+    "where": "before control pair 1",
+    "t": 1794860900.5054586,
+    "avail_phys_gb": 21.674598693847656,
+    "total_phys_gb": 31.952014923095703,
+    "system_cache_gb": 7.385612487792969,
+    "rss": {
+     "peak_mb": 526.9296875,
+     "current_mb": 140.78515625
+    },
+    "disk": {
+     "read_count": 5523756,
+     "bytes_read": 92198031872,
+     "read_time_100ns": 65773915049
+    },
+    "pg_buffers": {
+     "s7_heap": 483,
+     "s7_idx": 310,
+     "p7_heap": 493,
+     "p7_idx": 325,
+     "a7_heap": 3793,
+     "a7_idx": 0
+    }
+   },
+   "mem_after": {
+    "where": "after control pair 1",
+    "t": 1794860902.078207,
+    "avail_phys_gb": 21.664318084716797,
+    "total_phys_gb": 31.952014923095703,
+    "system_cache_gb": 7.385639190673828,
+    "rss": {
+     "peak_mb": 526.9296875,
+     "current_mb": 140.7578125
+    },
+    "disk": {
+     "read_count": 5523756,
+     "bytes_read": 92198031872,
+     "read_time_100ns": 65773915049
+    },
+    "pg_buffers": {
+     "s7_heap": 483,
+     "s7_idx": 310,
+     "p7_heap": 493,
+     "p7_idx": 325,
+     "a7_heap": 3793,
+     "a7_idx": 0
+    }
+   }
+  },
+  {
+   "what": "interference pair 1",
+   "kind": "read",
+   "s": 0.032499900000402704,
+   "pause_s": null,
+   "total_s": 1.583247600006871,
+   "blocks": 8733,
+   "server_read_bytes": 0.0,
+   "server_read_bytes_late": 0.0,
+   "accounted_share": 0.0,
+   "accounting": "недоступно или неполно",
+   "mem_before": {
+    "where": "before interference pair 1",
+    "t": 1794860908.7791822,
+    "avail_phys_gb": 21.66653823852539,
+    "total_phys_gb": 31.952014923095703,
+    "system_cache_gb": 7.385814666748047,
+    "rss": {
+     "peak_mb": 526.9296875,
+     "current_mb": 140.7578125
+    },
+    "disk": {
+     "read_count": 5523756,
+     "bytes_read": 92198031872,
+     "read_time_100ns": 65773915049
+    },
+    "pg_buffers": {
+     "s7_heap": 489,
+     "s7_idx": 326,
+     "p7_heap": 482,
+     "p7_idx": 316,
+     "a7_heap": 2879,
+     "a7_idx": 0
+    }
+   },
+   "mem_after": {
+    "where": "after interference pair 1",
+    "t": 1794860910.3399775,
+    "avail_phys_gb": 21.66775131225586,
+    "total_phys_gb": 31.952014923095703,
+    "system_cache_gb": 7.385826110839844,
+    "rss": {
+     "peak_mb": 526.9296875,
+     "current_mb": 140.7578125
+    },
+    "disk": {
+     "read_count": 5523756,
+     "bytes_read": 92198031872,
+     "read_time_100ns": 65773915049
+    },
+    "pg_buffers": {
+     "s7_heap": 489,
+     "s7_idx": 326,
+     "p7_heap": 482,
+     "p7_idx": 316,
+     "a7_heap": 2879,
+     "a7_idx": 0
+    }
+   }
+  }
+ ],
+ "mutants": {
+  "N1": {
+   "caught": true,
+   "check": "p1_prepared_rule",
+   "checks": {
+    "p1_correct": true,
+    "p1_track_io_timing": true,
+    "p1_prepared_rule": false,
+    "p1_activity": true,
+    "p1_quotas": true,
+    "p2_zero_read_valid": true,
+    "p2_evicted_reads": true,
+    "p3b_journal": true,
+    "p3b_publication": true,
+    "p4_abba": true,
+    "p6_memory": true,
+    "p6_evict": true
+   }
+  },
+  "N2": {
+   "caught": true,
+   "check": "p1_activity",
+   "checks": {
+    "p1_correct": true,
+    "p1_track_io_timing": true,
+    "p1_prepared_rule": false,
+    "p1_activity": false,
+    "p1_quotas": true,
+    "p2_zero_read_valid": true,
+    "p2_evicted_reads": false,
+    "p3b_journal": true,
+    "p3b_publication": false,
+    "p4_abba": true,
+    "p6_memory": true,
+    "p6_evict": true
+   }
+  },
+  "N3": {
+   "caught": true,
+   "check": "p1_track_io_timing",
+   "checks": {
+    "p1_correct": true,
+    "p1_track_io_timing": false,
+    "p1_prepared_rule": true,
+    "p1_activity": true,
+    "p1_quotas": true,
+    "p2_zero_read_valid": true,
+    "p2_evicted_reads": true,
+    "p3b_journal": true,
+    "p3b_publication": true,
+    "p4_abba": true,
+    "p6_memory": true,
+    "p6_evict": true
+   }
+  },
+  "N4": {
+   "caught": true,
+   "check": "p1_correct",
+   "checks": {
+    "p1_correct": false,
+    "p1_track_io_timing": true,
+    "p1_prepared_rule": true,
+    "p1_activity": true,
+    "p1_quotas": true,
+    "p2_zero_read_valid": false,
+    "p2_evicted_reads": true,
+    "p3b_journal": true,
+    "p3b_publication": true,
+    "p4_abba": true,
+    "p6_memory": true,
+    "p6_evict": true
+   }
+  },
+  "N5": {
+   "caught": true,
+   "check": "p4_abba",
+   "checks": {
+    "p1_correct": true,
+    "p1_track_io_timing": true,
+    "p1_prepared_rule": true,
+    "p1_activity": true,
+    "p1_quotas": true,
+    "p2_zero_read_valid": true,
+    "p2_evicted_reads": true,
+    "p3b_journal": true,
+    "p3b_publication": true,
+    "p4_abba": false,
+    "p6_memory": true,
+    "p6_evict": true
+   }
+  },
+  "N6": {
+   "caught": true,
+   "check": "calc_selftest"
+  },
+  "N7": {
+   "caught": true,
+   "check": "p3b_journal",
+   "checks": {
+    "p1_correct": true,
+    "p1_track_io_timing": true,
+    "p1_prepared_rule": true,
+    "p1_activity": false,
+    "p1_quotas": true,
+    "p2_zero_read_valid": true,
+    "p2_evicted_reads": false,
+    "p3b_journal": false,
+    "p3b_publication": false,
+    "p4_abba": true,
+    "p6_memory": true,
+    "p6_evict": true
+   }
+  },
+  "N8": {
+   "caught": true,
+   "check": "p2_zero_read_valid"
+  },
+  "N9": {
+   "caught": true,
+   "check": "p1_quotas",
+   "checks": {
+    "p1_correct": true,
+    "p1_track_io_timing": true,
+    "p1_prepared_rule": false,
+    "p1_activity": true,
+    "p1_quotas": false,
+    "p2_zero_read_valid": true,
+    "p2_evicted_reads": true,
+    "p3b_journal": true,
+    "p3b_publication": true,
+    "p4_abba": true,
+    "p6_memory": true,
+    "p6_evict": true
+   }
+  },
+  "N10": {
+   "caught": true,
+   "check": "p4_abba",
+   "checks": {
+    "p1_correct": true,
+    "p1_track_io_timing": true,
+    "p1_prepared_rule": true,
+    "p1_activity": true,
+    "p1_quotas": true,
+    "p2_zero_read_valid": true,
+    "p2_evicted_reads": true,
+    "p3b_journal": true,
+    "p3b_publication": true,
+    "p4_abba": false,
+    "p6_memory": true,
+    "p6_evict": true
+   }
+  },
+  "N11": {
+   "caught": true,
+   "check": "p6_evict",
+   "checks": {
+    "p1_correct": true,
+    "p1_track_io_timing": true,
+    "p1_prepared_rule": true,
+    "p1_activity": true,
+    "p1_quotas": true,
+    "p2_zero_read_valid": true,
+    "p2_evicted_reads": false,
+    "p3b_journal": true,
+    "p3b_publication": false,
+    "p4_abba": true,
+    "p6_memory": true,
+    "p6_evict": false
+   }
+  }
+ },
+ "setup": {
+  "tables_absent_before": true,
+  "load": {
+   "copy_s": 13.962280899999314,
+   "post_s7_s": 0.2769996999995783,
+   "post_p7_s": 0.5990948999969987,
+   "post_a7_s": 0.6653111000050558,
+   "layout_p7_a7": {
+    "same": 100000,
+    "total": 100000,
+    "share": 1.0
+   },
+   "rows": {
+    "s7_s8": 100000,
+    "p7_s8": 100000,
+    "a7_s8": 100000
+   },
+   "pages": {
+    "s7": 7688,
+    "p7_sum": 7904,
+    "a7_sum": 7904
+   }
+  },
+  "function_check": {
+   "rows": 100000,
+   "bad_numpy": 0,
+   "scalar_checked": 100000,
+   "bad_scalar": 0,
+   "insert_keys": 10000,
+   "bad_insert_keys": 0,
+   "scalar_us_per_key": 8.448479999788105,
+   "insert_scalar_checked": 10000,
+   "bad_insert_scalar_vs_numpy": 0,
+   "s": 1.152361699991161,
+   "ok": true
+  }
+ },
+ "cleanup_errors": []
+}

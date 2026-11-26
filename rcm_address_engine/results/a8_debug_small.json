@@ -1,0 +1,136 @@
+{
+ "stage_a_ok": true,
+ "p7": {
+  "ok": true,
+  "bad": [],
+  "last_equals_final": true
+ },
+ "attr": "поддержана",
+ "checks": {
+  "p1_correct": true,
+  "p1_track_io_timing": true,
+  "p1_prepared_rule": true,
+  "p1_activity": true,
+  "p1_quotas": true,
+  "p2_zero_read_valid": true,
+  "p2_evicted_reads": true,
+  "p3b_journal": true,
+  "p3b_publication": true,
+  "p4_abba": true,
+  "p6_memory": true,
+  "p6_evict": true
+ },
+ "block_status": {
+  "1": {
+   "n": 12,
+   "incorrect": 0,
+   "procedure_violations": 0,
+   "io_contaminated": 0,
+   "rel_not_ok": 0,
+   "established": true,
+   "io_usable": true
+  },
+  "2a": {
+   "n": 8,
+   "incorrect": 0,
+   "procedure_violations": 0,
+   "io_contaminated": 0,
+   "rel_not_ok": 0,
+   "established": true,
+   "io_usable": true
+  },
+  "2b": {
+   "n": 8,
+   "incorrect": 0,
+   "procedure_violations": 0,
+   "io_contaminated": 0,
+   "rel_not_ok": 0,
+   "established": true,
+   "io_usable": true
+  },
+  "3": {
+   "n": 24,
+   "incorrect": 0,
+   "procedure_violations": 0,
+   "io_contaminated": 0,
+   "rel_not_ok": 0,
+   "established": true,
+   "io_usable": true
+  },
+  "4": {
+   "n": 10,
+   "incorrect": 0,
+   "procedure_violations": 0,
+   "io_contaminated": 0,
+   "rel_not_ok": 0,
+   "established": true,
+   "io_usable": true
+  }
+ },
+ "prep_head": [
+  {
+   "ok": true,
+   "statements": 1,
+   "min_exec": 48
+  },
+  {
+   "ok": true,
+   "statements": 8,
+   "leaves": 8,
+   "parent": [],
+   "min_exec": 6
+  }
+ ],
+ "prewarm": [
+  {
+   "what": "2a s7",
+   "blocks": 9233,
+   "accounted_share": 0.0,
+   "accounting": "недоступно или неполно"
+  },
+  {
+   "what": "2a p7",
+   "blocks": 9311,
+   "accounted_share": 0.0,
+   "accounting": "недоступно или неполно"
+  },
+  {
+   "what": "2b p7",
+   "blocks": 9311,
+   "accounted_share": 0.0,
+   "accounting": "недоступно или неполно"
+  },
+  {
+   "what": "2b s7",
+   "blocks": 9233,
+   "accounted_share": 0.0,
+   "accounting": "недоступно или неполно"
+  },
+  {
+   "what": "interference pair 0",
+   "blocks": 8733,
+   "accounted_share": 0.0004580327493415779,
+   "accounting": "недоступно или неполно"
+  },
+  {
+   "what": "interference pair 1",
+   "blocks": 8733,
+   "accounted_share": 0.0,
+   "accounting": "недоступно или неполно"
+  }
+ ],
+ "mutant_N1": {
+  "designated": "p1_prepared_rule",
+  "value": false
+ },
+ "mutant_N3": {
+  "designated": "p1_track_io_timing",
+  "value": false
+ },
+ "mutant_N11": {
+  "designated": "p6_evict",
+  "value": false
+ },
+ "cleanup": [],
+ "seconds": 278.7272901535034
+}

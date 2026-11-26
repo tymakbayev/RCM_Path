@@ -1,0 +1,20 @@
+21:44:44 N1 r1 load three tables, partitions 8
+a2_gen: 1000000 records, copies 0..7, span 12797350389000 us
+21:46:46 N1 load {'copy_s': 92.22701990000496, 'post_s7_s': 6.835089000000153, 'post_p7_s': 10.305840999993961, 'post_a7_s': 9.622728799993638, 'layout_p7_a7': {'same': 1000000, 'total': 1000000, 'share': 1.0}, 'rows': {'s7_n1': 1000000, 'p7_n1': 1000000, 'a7_n1': 1000000}} {'s7': 76232, 'p7_sum': 76832, 'a7_sum': 76832}
+21:47:04 N1 function check {'rows': 1000000, 'bad_numpy': 0, 'bad_scalar': 0, 'bad_insert_keys': 0, 'ok': True}
+21:47:28 C7 0 0 {'s': 0, 'par': 0, 'dir': 0, 'a7': 0} {'s': 104.7, 'par': 150.6, 'dir': 117.0, 'a7': 195.9} prep violations 0
+21:48:52 N1 round start at op 100000
+21:49:43 C7 1 100000 {'s': 0, 'par': 0, 'dir': 0, 'a7': 0} {'s': 148.4, 'par': 172.2, 'dir': 128.9, 'a7': 289.3} prep violations 0
+21:49:43 N1 ops 100000 {'t_s': 23.7, 't_p': 27.4, 't_a7': 31.9} maint 0.1
+21:51:56 C7 2 200000 {'s': 0, 'par': 0, 'dir': 0, 'a7': 0} {'s': 139.4, 'par': 181.1, 'dir': 128.1, 'a7': 264.1} prep violations 0
+21:51:56 N1 ops 200000 {'t_s': 48.6, 't_p': 56.5, 't_a7': 62.4} maint 3.2
+21:51:59 N1 round start at op 204000
+21:54:30 C7 3 300000 {'s': 0, 'par': 0, 'dir': 0, 'a7': 0} {'s': 138.7, 'par': 164.8, 'dir': 121.9, 'a7': 262.3} prep violations 0
+21:54:30 N1 ops 300000 {'t_s': 75.7, 't_p': 87.6, 't_a7': 94.7} maint 6.8
+21:54:41 N1 round start at op 311000
+21:56:49 C7 4 400000 {'s': 0, 'par': 0, 'dir': 0, 'a7': 0} {'s': 144.6, 'par': 183.4, 'dir': 123.8, 'a7': 250.2} prep violations 0
+21:56:49 N1 ops 400000 {'t_s': 103.1, 't_p': 118.7, 't_a7': 127.7} maint 11.6
+21:57:06 N1 round start at op 421000
+21:59:19 C7 5 500000 {'s': 0, 'par': 0, 'dir': 0, 'a7': 0} {'s': 134.9, 'par': 158.2, 'dir': 121.1, 'a7': 241.7} prep violations 0
+21:59:19 N1 ops 500000 {'t_s': 128.0, 't_p': 147.4, 't_a7': 158.4} maint 16.8
+21:59:21 N1 r1 done {'K_par': 1.251, 'K_dir': 1.052, 'K_route': 1.189, 'K_par_m': 1.255, 'K_dir_m': 1.049, 'a7_s': 1.237} {'F_a7/F_s': 1.36, 'F_p_mix/F_s': 1.14, 'F_a7/F_par_hat': 1.105}

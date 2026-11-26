@@ -1,0 +1,55 @@
+{
+ "size": "N10",
+ "partitions": 128,
+ "cycle_ops_K": 1000000,
+ "ops_done": 2034000,
+ "W1": 1000000,
+ "W2": 2034000,
+ "M": 1034000,
+ "round_start_ops": [
+  1000000,
+  2034000
+ ],
+ "first_term_us_per_op": 2.9225589942125825,
+ "first_term_bytes_per_op": 82.4928085106383,
+ "seals_in_cycle": 35,
+ "merge_steps_in_cycle": 16,
+ "log_us_per_op": 10.134067600754086,
+ "max_boundary_work_s": 0.17872279998846352,
+ "max_boundary_work_at": 1120000,
+ "warmup_max_boundary_work_s": 0.13968839999870397,
+ "w2_boundary_work_s": 0.036238000000594184,
+ "max_multi_kind_work_s": 0.17872279998846352,
+ "multi_kind_boundaries": 11,
+ "max_other_work_at_step_boundaries_s": 0.14038529999379534,
+ "max_by_kind": {
+  "seal_s": 0.061516200003097765,
+  "merge_s": 0.14148629999544937,
+  "round_start_s": 0.03134799998952076,
+  "step_s": 0.07803710000007413,
+  "round_end_s": 0.007651299994904548
+ },
+ "levels_end": 7,
+ "tiers_end": [
+  0,
+  0,
+  0,
+  2,
+  2
+ ],
+ "peak_published_bytes": 57493259,
+ "rss": {
+  "peak_mb": 893.265625,
+  "current_mb": 460.51171875
+ },
+ "due_ops": [
+  1000000,
+  2034000
+ ],
+ "start_delay_ops": [
+  0,
+  0
+ ],
+ "n_live_end": 10609537,
+ "n0_end": 10338463
+}

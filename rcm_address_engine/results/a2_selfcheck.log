@@ -1,0 +1,2 @@
+a2_gen: 100000 records, copies 0..0, span 12797350389000 us
+02:01:58 selfcheck {"core_selftest": {"exit": 0, "tail": "ALL OK"}, "mutants": {"a_D_wrong_page": true, "b_rank_minus_one": true, "c_no_key_check": true, "c_no_key_check_errors_on_2000": 1847, "d_exceptions_used_when_present": true, "d_exceptions_skipped": true, "g_bucket_start_shift": true, "e_B_exceptions_used": true, "e_B_exceptions_skipped": true, "edge_no_bit_absent": true, "edge_no_bit_absent_count": 488, "unmutated_A_errors_on_2000": 0}, "c1_errors_A": 0, "c1_violations_B": 0, "all_ok": true}

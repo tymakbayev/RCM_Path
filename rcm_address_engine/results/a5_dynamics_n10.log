@@ -1,0 +1,35 @@
+13:49:53 N10 load A5 table
+a2_gen: 10000000 records, copies 0..72, span 12797350389000 us
+14:09:48 N10 load control table
+a2_gen: 10000000 records, copies 0..72, span 12797350389000 us
+15:29:29 N10 stream sha256 1bdeb7fbbffdc4111ec5a4903a7d664071a1921760d3c12824ed8b25bd2a313a matches A4: True S_base 128
+15:29:55 checkpoint 0 base 0 {'a5_n10': ({'live': 0, 'deleted': 0, 'absent': 0}, 1.0, 3.952), 'c5_n10': ({'live': 0, 'deleted': 0, 'absent': 0}, 4.0, 31.544)}
+15:30:57 checkpoint 1 every_50k 50000 {'a5_n10': ({'live': 0, 'deleted': 0, 'absent': 0}, 1.002, 4.061), 'c5_n10': ({'live': 0, 'deleted': 0, 'absent': 0}, 4.0, 31.497)}
+15:30:57 N10 ops 50000 {'a5_n10': 13.0, 'c5_n10': 15.8} maint 0.0 levels 3 max pause 0.048
+15:32:05 checkpoint 2 every_50k 100000 {'a5_n10': ({'live': 0, 'deleted': 0, 'absent': 0}, 1.003, 4.141), 'c5_n10': ({'live': 0, 'deleted': 0, 'absent': 0}, 4.0, 31.45)}
+15:32:05 N10 ops 100000 {'a5_n10': 28.5, 'c5_n10': 30.6} maint 0.1 levels 5 max pause 0.049
+15:32:35 N10 forced round requested at op 150000
+15:32:35 N10 round start at op 150000 P0 771838
+15:33:08 checkpoint 3 every_50k 150000 {'a5_n10': ({'live': 0, 'deleted': 0, 'absent': 0}, 1.003, 4.219), 'c5_n10': ({'live': 0, 'deleted': 0, 'absent': 0}, 4.0, 31.404)}
+15:33:08 N10 ops 150000 {'a5_n10': 43.6, 'c5_n10': 44.4} maint 0.4 levels 5 max pause 0.144
+15:34:12 checkpoint 4 every_50k 200000 {'a5_n10': ({'live': 0, 'deleted': 0, 'absent': 0}, 1.004, 4.328), 'c5_n10': ({'live': 0, 'deleted': 0, 'absent': 0}, 4.0, 31.357)}
+15:34:12 N10 ops 200000 {'a5_n10': 58.5, 'c5_n10': 57.1} maint 9.2 levels 6 max pause 0.281
+15:35:51 checkpoint 5 every_50k 250000 {'a5_n10': ({'live': 0, 'deleted': 0, 'absent': 0}, 1.006, 4.407), 'c5_n10': ({'live': 0, 'deleted': 0, 'absent': 0}, 4.0, 31.31)}
+15:35:51 N10 ops 250000 {'a5_n10': 75.4, 'c5_n10': 72.9} maint 18.4 levels 8 max pause 0.4
+15:37:17 checkpoint 6 every_50k 300000 {'a5_n10': ({'live': 0, 'deleted': 0, 'absent': 0}, 1.004, 4.486), 'c5_n10': ({'live': 0, 'deleted': 0, 'absent': 0}, 4.0, 31.263)}
+15:37:17 N10 ops 300000 {'a5_n10': 94.9, 'c5_n10': 91.1} maint 24.9 levels 7 max pause 0.4
+15:38:37 checkpoint 7 mid_round 342000 {'a5_n10': ({'live': 0, 'deleted': 0, 'absent': 0}, 1.009, 4.574), 'c5_n10': ({'live': 0, 'deleted': 0, 'absent': 0}, 4.0, 31.224)}
+15:39:20 checkpoint 8 every_50k 350000 {'a5_n10': ({'live': 0, 'deleted': 0, 'absent': 0}, 1.008, 4.596), 'c5_n10': ({'live': 0, 'deleted': 0, 'absent': 0}, 4.0, 31.216)}
+15:39:20 N10 ops 350000 {'a5_n10': 114.8, 'c5_n10': 108.6} maint 27.9 levels 8 max pause 0.4
+15:40:42 checkpoint 9 every_50k 400000 {'a5_n10': ({'live': 0, 'deleted': 0, 'absent': 0}, 1.007, 4.676), 'c5_n10': ({'live': 0, 'deleted': 0, 'absent': 0}, 4.0, 31.17)}
+15:40:42 N10 ops 400000 {'a5_n10': 134.4, 'c5_n10': 125.0} maint 31.0 levels 7 max pause 0.4
+15:40:46 N10 round end at op 406000 {'rows': 10014713, 'dups': 0, 'steps': 256, 'window_ops': 256000}
+15:41:48 checkpoint 10 every_50k 450000 {'a5_n10': ({'live': 0, 'deleted': 0, 'absent': 0}, 1.005, 4.471), 'c5_n10': ({'live': 0, 'deleted': 0, 'absent': 0}, 4.0, 31.124)}
+15:41:48 N10 ops 450000 {'a5_n10': 150.1, 'c5_n10': 139.1} maint 31.4 levels 6 max pause 0.4
+15:43:45 checkpoint 11 every_50k 500000 {'a5_n10': ({'live': 0, 'deleted': 0, 'absent': 0}, 1.014, 4.578), 'c5_n10': ({'live': 0, 'deleted': 0, 'absent': 0}, 4.0, 31.078)}
+15:43:45 N10 ops 500000 {'a5_n10': 170.7, 'c5_n10': 155.4} maint 31.4 levels 7 max pause 0.4
+15:43:45 N10 restart
+15:44:10 checkpoint 12 after_restart 500000 {'a5_n10': ({'live': 0, 'deleted': 0, 'absent': 0}, 1.015, 4.578), 'c5_n10': ({'live': 0, 'deleted': 0, 'absent': 0}, 4.0, 31.078)}
+15:44:20 N10 open probe {'p50': 47.633599999244325, 'p95': 48.436800003401004, 'p99': 49.47839999513235, 'mean': 47.81975237988046, 'n': 21}
+15:45:03 checkpoint 13 after_final_round 500000 {'a5_n10': ({'live': 0, 'deleted': 0, 'absent': 0}, 1.0, 3.951), 'c5_n10': ({'live': 0, 'deleted': 0, 'absent': 0}, 4.0, 31.078)}
+15:45:04 N10 done errors {'a5_n10': 0, 'c5_n10': 0} witness 0 S3 batch violations 0 max pause 0.4

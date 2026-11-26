@@ -1,0 +1,27 @@
+a2_gen: 10000 records, copies 0..0, span 12797350389000 us
+13:33:53 scenarios ok-run: True []
+a2_gen: 10000 records, copies 0..0, span 12797350389000 us
+13:34:08 mutant a {'caught': True, 'failed': ['R1: UPDATE moved to another page, then ROLLBACK', 'R1: DELETE, then ROLLBACK', 'tail: R1 keys', 'after_seal: R1 keys', 'after_merge: R1 keys']}
+a2_gen: 10000 records, copies 0..0, span 12797350389000 us
+13:34:24 mutant b {'caught': True, 'failed': ['witness after a tier merge (3 versions on different pages)', 'R2: after the tier-2 merge', 'R4: collisions of h (6-bit h), merge by full key']}
+a2_gen: 10000 records, copies 0..0, span 12797350389000 us
+13:34:40 mutant c {'caught': True, 'failed': ['reader sees a key committed after it opened']}
+a2_gen: 10000 records, copies 0..0, span 12797350389000 us
+13:34:55 mutant d {'caught': True, 'failed': ['refuse to open with a batch without outcome']}
+a2_gen: 10000 records, copies 0..0, span 12797350389000 us
+13:35:10 mutant e {'caught': True, 'failed': ['mid-round: pre-W changes (sections partly rebuilt)', 'R3: after restart mid-round + mid-merge']}
+a2_gen: 10000 records, copies 0..0, span 12797350389000 us
+13:35:26 mutant f {'caught': True, 'failed': ['after the round: pre-W changes', 'R3: after restart mid-round + mid-merge', 'R3: after the next full round']}
+a2_gen: 10000 records, copies 0..0, span 12797350389000 us
+13:35:41 mutant g {'caught': True, 'failed': ['after the round: moved during the scan', 'after the round: inserted during the round', 'after the round: post-W sealed', 'R3: after restart mid-round + mid-merge']}
+a2_gen: 10000 records, copies 0..0, span 12797350389000 us
+13:35:57 mutant i {'caught': True, 'failed': ['after the round: post-W in the tail', 'R3: after restart mid-round + mid-merge']}
+a2_gen: 10000 records, copies 0..0, span 12797350389000 us
+13:36:12 mutant k {'caught': False, 'failed': []}
+a2_gen: 10000 records, copies 0..0, span 12797350389000 us
+13:36:28 mutant k2 {'caught': True, 'failed': ['R2: after the tier-2 merge']}
+a2_gen: 10000 records, copies 0..0, span 12797350389000 us
+13:36:43 mutant l {'caught': True, 'failed': ['R4: collisions of h (6-bit h), merge by full key']}
+a2_gen: 10000 records, copies 0..0, span 12797350389000 us
+13:36:59 mutant z {'caught': True, 'failed': ['lookup during a tier merge (ready + not-ready sections)']}
+13:36:59 selfcheck all_ok True

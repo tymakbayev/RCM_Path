@@ -1,0 +1,8661 @@
+{
+ "checkpoints": [
+  {
+   "cp": 0,
+   "name": "base",
+   "after_op": 0,
+   "live_keys": 1000000,
+   "deleted_keys": 0,
+   "delta_live_rows": 0,
+   "systems": {
+    "dyn_a": {
+     "errors": {
+      "live": 0,
+      "deleted": 0,
+      "absent": 0
+     },
+     "client_us": {
+      "p50": 279.4,
+      "p95": 776.8,
+      "p99": 982.0059999999991,
+      "mean": 409.528045,
+      "n": 20000
+     },
+     "buffers_by_category": {
+      "base": 3.0
+     },
+     "buffers_equal_mix": 3.0,
+     "buffers_raw_mix": 3.0,
+     "category_counts": {
+      "base": 2000
+     },
+     "buffers_deleted": 0.0,
+     "buffers_absent": 2.002,
+     "statio_live": {
+      "queries": 2000,
+      "heap_per_q": 1.0,
+      "index_per_q": 4.0,
+      "toast_per_q": 0.0
+     },
+     "sizes": {
+      "sidecar_bytes": 3565920,
+      "manifest_bytes": 262,
+      "delta_main": 8192,
+      "delta_total": 8192,
+      "address_main": 3574374,
+      "address_total": 3574374,
+      "table_bytes": 624697344
+     },
+     "address_main_per_live_key": 3.574374,
+     "address_total_per_live_key": 3.574374
+    },
+    "dyn_b": {
+     "errors": {
+      "live": 0,
+      "deleted": 0,
+      "absent": 0
+     },
+     "client_us": {
+      "p50": 226.7,
+      "p95": 341.9049999999999,
+      "p99": 430.50699999999887,
+      "mean": 243.99863,
+      "n": 20000
+     },
+     "buffers_by_category": {
+      "base": 4.2455
+     },
+     "buffers_equal_mix": 4.2455,
+     "buffers_raw_mix": 4.2455,
+     "category_counts": {
+      "base": 2000
+     },
+     "buffers_deleted": 0.0,
+     "buffers_absent": 4.14,
+     "statio_live": {
+      "queries": 2000,
+      "heap_per_q": 2.2025,
+      "index_per_q": 4.0,
+      "toast_per_q": 0.0
+     },
+     "sizes": {
+      "sidecar_bytes": 274848,
+      "manifest_bytes": 265,
+      "delta_main": 8192,
+      "delta_total": 8192,
+      "address_main": 283305,
+      "address_total": 283305,
+      "table_bytes": 629399552
+     },
+     "address_main_per_live_key": 0.283305,
+     "address_total_per_live_key": 0.283305
+    },
+    "dyn_c": {
+     "errors": {
+      "live": 0,
+      "deleted": 0,
+      "absent": 0
+     },
+     "client_us": {
+      "p50": 111.0,
+      "p95": 178.1,
+      "p99": 225.0,
+      "mean": 121.07690500000001,
+      "n": 20000
+     },
+     "buffers_by_category": {
+      "base": 4.0
+     },
+     "buffers_equal_mix": 4.0,
+     "buffers_raw_mix": 4.0,
+     "category_counts": {
+      "base": 2000
+     },
+     "buffers_deleted": 0.0,
+     "buffers_absent": 3.0,
+     "statio_live": {
+      "queries": 2000,
+      "heap_per_q": 1.0,
+      "index_per_q": 3.0,
+      "toast_per_q": 0.0
+     },
+     "sizes": {
+      "address_main": 31563776,
+      "address_total": 31563776,
+      "table_bytes": 624697344
+     },
+     "address_main_per_live_key": 31.563776,
+     "address_total_per_live_key": 31.563776
+    }
+   },
+   "pg_stat_tuples": {
+    "dyn_a": {
+     "live": 999996,
+     "dead": 0
+    },
+    "dyn_c": {
+     "live": 999920,
+     "dead": 0
+    },
+    "dyn_b_g1": {
+     "live": 999960,
+     "dead": 0
+    }
+   }
+  },
+  {
+   "cp": 1,
+   "name": "before_reseal",
+   "after_op": 120000,
+   "live_keys": 1035805,
+   "deleted_keys": 24116,
+   "delta_live_rows": 93078,
+   "systems": {
+    "dyn_a": {
+     "errors": {
+      "live": 0,
+      "deleted": 0,
+      "absent": 0
+     },
+     "client_us": {
+      "p50": 287.35,
+      "p95": 731.1149999999998,
+      "p99": 955.2119999999982,
+      "mean": 404.29307500000004,
+      "n": 20000
+     },
+     "buffers_by_category": {
+      "ins": 4.0,
+      "base": 4.0,
+      "upd": 4.056603773584905
+     },
+     "buffers_equal_mix": 4.018867924528302,
+     "buffers_raw_mix": 4.0015,
+     "category_counts": {
+      "ins": 119,
+      "base": 1828,
+      "upd": 53
+     },
+     "buffers_deleted": 3.96,
+     "buffers_absent": 3.002,
+     "statio_live": {
+      "queries": 2000,
+      "heap_per_q": 1.001,
+      "index_per_q": 3.001,
+      "toast_per_q": 0.0
+     },
+     "sizes": {
+      "sidecar_bytes": 3565920,
+      "manifest_bytes": 262,
+      "delta_main": 4292608,
+      "delta_total": 4292608,
+      "address_main": 7858790,
+      "address_total": 7858790,
+      "table_bytes": 678322176
+     },
+     "address_main_per_live_key": 7.58713271320374,
+     "address_total_per_live_key": 7.58713271320374
+    },
+    "dyn_b": {
+     "errors": {
+      "live": 0,
+      "deleted": 0,
+      "absent": 0
+     },
+     "client_us": {
+      "p50": 272.3,
+      "p95": 780.7049999999999,
+      "p99": 1005.7119999999982,
+      "mean": 385.64357,
+      "n": 20000
+     },
+     "buffers_by_category": {
+      "ins": 4.0,
+      "base": 5.241794310722101,
+      "upd": 4.037735849056604
+     },
+     "buffers_equal_mix": 4.426510053259569,
+     "buffers_raw_mix": 5.136,
+     "category_counts": {
+      "ins": 119,
+      "base": 1828,
+      "upd": 53
+     },
+     "buffers_deleted": 5.228,
+     "buffers_absent": 5.136,
+     "statio_live": {
+      "queries": 2000,
+      "heap_per_q": 2.091,
+      "index_per_q": 3.001,
+      "toast_per_q": 0.0
+     },
+     "sizes": {
+      "sidecar_bytes": 274848,
+      "manifest_bytes": 265,
+      "delta_main": 4300800,
+      "delta_total": 4300800,
+      "address_main": 4575913,
+      "address_total": 4575913,
+      "table_bytes": 683114496
+     },
+     "address_main_per_live_key": 4.417735963815583,
+     "address_total_per_live_key": 4.417735963815583
+    },
+    "dyn_c": {
+     "errors": {
+      "live": 0,
+      "deleted": 0,
+      "absent": 0
+     },
+     "client_us": {
+      "p50": 116.0,
+      "p95": 188.4,
+      "p99": 259.3009999999999,
+      "mean": 127.73332999999998,
+      "n": 20000
+     },
+     "buffers_by_category": {
+      "ins": 4.0,
+      "base": 4.0,
+      "upd": 4.037735849056604
+     },
+     "buffers_equal_mix": 4.012578616352202,
+     "buffers_raw_mix": 4.001,
+     "category_counts": {
+      "ins": 119,
+      "base": 1828,
+      "upd": 53
+     },
+     "buffers_deleted": 3.0,
+     "buffers_absent": 3.0,
+     "statio_live": {
+      "queries": 2000,
+      "heap_per_q": 1.0005,
+      "index_per_q": 3.0005,
+      "toast_per_q": 0.0
+     },
+     "sizes": {
+      "address_main": 33529856,
+      "address_total": 33529856,
+      "table_bytes": 678322176
+     },
+     "address_main_per_live_key": 32.37081883172991,
+     "address_total_per_live_key": 32.37081883172991
+    }
+   },
+   "pg_stat_tuples": {
+    "dyn_a": {
+     "live": 1035801,
+     "dead": 60079
+    },
+    "dyn_c": {
+     "live": 1035725,
+     "dead": 54126
+    },
+    "dyn_b_g1": {
+     "live": 1035765,
+     "dead": 60079
+    }
+   }
+  },
+  {
+   "cp": 2,
+   "name": "after_reseal",
+   "after_op": 120000,
+   "live_keys": 1035805,
+   "deleted_keys": 24116,
+   "delta_live_rows": 0,
+   "systems": {
+    "dyn_a": {
+     "errors": {
+      "live": 0,
+      "deleted": 0,
+      "absent": 0
+     },
+     "client_us": {
+      "p50": 560.75,
+      "p95": 839.7199999999998,
+      "p99": 1072.2019999999998,
+      "mean": 488.40877,
+      "n": 20000
+     },
+     "buffers_by_category": {
+      "base": 3.0,
+      "ins": 3.0,
+      "upd": 3.0
+     },
+     "buffers_equal_mix": 3.0,
+     "buffers_raw_mix": 3.0,
+     "category_counts": {
+      "base": 1791,
+      "ins": 135,
+      "upd": 74
+     },
+     "buffers_deleted": 2.002,
+     "buffers_absent": 2.01,
+     "statio_live": {
+      "queries": 2000,
+      "heap_per_q": 1.0,
+      "index_per_q": 4.0,
+      "toast_per_q": 0.0
+     },
+     "sizes": {
+      "sidecar_bytes": 3693472,
+      "manifest_bytes": 262,
+      "delta_main": 8192,
+      "delta_total": 8192,
+      "address_main": 3701926,
+      "address_total": 3701926,
+      "table_bytes": 678322176
+     },
+     "address_main_per_live_key": 3.5739603496797177,
+     "address_total_per_live_key": 3.5739603496797177
+    },
+    "dyn_b": {
+     "errors": {
+      "live": 0,
+      "deleted": 0,
+      "absent": 0
+     },
+     "client_us": {
+      "p50": 244.75,
+      "p95": 350.80499999999995,
+      "p99": 449.00199999999967,
+      "mean": 259.691125,
+      "n": 20000
+     },
+     "buffers_by_category": {
+      "base": 4.269123394751535,
+      "ins": 4.281481481481482,
+      "upd": 4.351351351351352
+     },
+     "buffers_equal_mix": 4.300652075861456,
+     "buffers_raw_mix": 4.273,
+     "category_counts": {
+      "base": 1791,
+      "ins": 135,
+      "upd": 74
+     },
+     "buffers_deleted": 4.184,
+     "buffers_absent": 4.196,
+     "statio_live": {
+      "queries": 2000,
+      "heap_per_q": 2.227,
+      "index_per_q": 4.0,
+      "toast_per_q": 0.0
+     },
+     "sizes": {
+      "sidecar_bytes": 275308,
+      "manifest_bytes": 265,
+      "delta_main": 8192,
+      "delta_total": 8192,
+      "address_main": 283765,
+      "address_total": 283765,
+      "table_bytes": 651976704
+     },
+     "address_main_per_live_key": 0.27395600523264513,
+     "address_total_per_live_key": 0.27395600523264513
+    },
+    "dyn_c": {
+     "errors": {
+      "live": 0,
+      "deleted": 0,
+      "absent": 0
+     },
+     "client_us": {
+      "p50": 109.8,
+      "p95": 183.5,
+      "p99": 241.30299999999954,
+      "mean": 121.21946499999999,
+      "n": 20000
+     },
+     "buffers_by_category": {
+      "base": 4.0,
+      "ins": 4.0,
+      "upd": 4.0
+     },
+     "buffers_equal_mix": 4.0,
+     "buffers_raw_mix": 4.0,
+     "category_counts": {
+      "base": 1791,
+      "ins": 135,
+      "upd": 74
+     },
+     "buffers_deleted": 3.0,
+     "buffers_absent": 3.0,
+     "statio_live": {
+      "queries": 2000,
+      "heap_per_q": 1.0,
+      "index_per_q": 3.0,
+      "toast_per_q": 0.0
+     },
+     "sizes": {
+      "address_main": 33529856,
+      "address_total": 33529856,
+      "table_bytes": 678322176
+     },
+     "address_main_per_live_key": 32.37081883172991,
+     "address_total_per_live_key": 32.37081883172991
+    }
+   },
+   "pg_stat_tuples": {
+    "dyn_a": {
+     "live": 1036209,
+     "dead": 59557
+    },
+    "dyn_c": {
+     "live": 1035725,
+     "dead": 53109
+    },
+    "dyn_b_g2": {
+     "live": 1035815,
+     "dead": 0
+    }
+   }
+  },
+  {
+   "cp": 3,
+   "name": "before_reseal",
+   "after_op": 240000,
+   "live_keys": 1071709,
+   "deleted_keys": 48202,
+   "delta_live_rows": 93304,
+   "systems": {
+    "dyn_a": {
+     "errors": {
+      "live": 0,
+      "deleted": 0,
+      "absent": 0
+     },
+     "client_us": {
+      "p50": 272.0,
+      "p95": 744.5,
+      "p99": 944.0,
+      "mean": 392.21079,
+      "n": 20000
+     },
+     "buffers_by_category": {
+      "base": 4.0,
+      "upd": 4.0,
+      "ins": 4.0
+     },
+     "buffers_equal_mix": 4.0,
+     "buffers_raw_mix": 4.0,
+     "category_counts": {
+      "base": 1633,
+      "upd": 143,
+      "ins": 224
+     },
+     "buffers_deleted": 3.474,
+     "buffers_absent": 3.004,
+     "statio_live": {
+      "queries": 2000,
+      "heap_per_q": 1.0,
+      "index_per_q": 3.0,
+      "toast_per_q": 0.0
+     },
+     "sizes": {
+      "sidecar_bytes": 3693472,
+      "manifest_bytes": 262,
+      "delta_main": 4128768,
+      "delta_total": 4128768,
+      "address_main": 7822502,
+      "address_total": 7822502,
+      "table_bytes": 724770816
+     },
+     "address_main_per_live_key": 7.299091451130858,
+     "address_total_per_live_key": 7.299091451130858
+    },
+    "dyn_b": {
+     "errors": {
+      "live": 0,
+      "deleted": 0,
+      "absent": 0
+     },
+     "client_us": {
+      "p50": 241.8,
+      "p95": 352.0099999999999,
+      "p99": 462.00099999999986,
+      "mean": 255.373995,
+      "n": 20000
+     },
+     "buffers_by_category": {
+      "base": 5.251071647274954,
+      "upd": 4.65034965034965,
+      "ins": 4.625
+     },
+     "buffers_equal_mix": 4.842140432541535,
+     "buffers_raw_mix": 5.138,
+     "category_counts": {
+      "base": 1633,
+      "upd": 143,
+      "ins": 224
+     },
+     "buffers_deleted": 5.24,
+     "buffers_absent": 5.214,
+     "statio_live": {
+      "queries": 2000,
+      "heap_per_q": 2.1015,
+      "index_per_q": 3.0,
+      "toast_per_q": 0.0
+     },
+     "sizes": {
+      "sidecar_bytes": 275308,
+      "manifest_bytes": 265,
+      "delta_main": 4128768,
+      "delta_total": 4128768,
+      "address_main": 4404341,
+      "address_total": 4404341,
+      "table_bytes": 705994752
+     },
+     "address_main_per_live_key": 4.109642636200685,
+     "address_total_per_live_key": 4.109642636200685
+    },
+    "dyn_c": {
+     "errors": {
+      "live": 0,
+      "deleted": 0,
+      "absent": 0
+     },
+     "client_us": {
+      "p50": 107.9,
+      "p95": 176.8,
+      "p99": 222.4,
+      "mean": 117.55990999999999,
+      "n": 20000
+     },
+     "buffers_by_category": {
+      "base": 4.0,
+      "upd": 4.0,
+      "ins": 4.0
+     },
+     "buffers_equal_mix": 4.0,
+     "buffers_raw_mix": 4.0,
+     "category_counts": {
+      "base": 1633,
+      "upd": 143,
+      "ins": 224
+     },
+     "buffers_deleted": 3.0,
+     "buffers_absent": 3.0,
+     "statio_live": {
+      "queries": 2000,
+      "heap_per_q": 1.0,
+      "index_per_q": 3.0,
+      "toast_per_q": 0.0
+     },
+     "sizes": {
+      "address_main": 55009280,
+      "address_total": 55009280,
+      "table_bytes": 724770816
+     },
+     "address_main_per_live_key": 51.32856027149161,
+     "address_total_per_live_key": 51.32856027149161
+    }
+   },
+   "pg_stat_tuples": {
+    "dyn_a": {
+     "live": 1071709,
+     "dead": 0
+    },
+    "dyn_c": {
+     "live": 1071709,
+     "dead": 0
+    },
+    "dyn_b_g2": {
+     "live": 1071709,
+     "dead": 0
+    }
+   }
+  },
+  {
+   "cp": 4,
+   "name": "after_reseal",
+   "after_op": 240000,
+   "live_keys": 1071709,
+   "deleted_keys": 48202,
+   "delta_live_rows": 0,
+   "systems": {
+    "dyn_a": {
+     "errors": {
+      "live": 0,
+      "deleted": 0,
+      "absent": 0
+     },
+     "client_us": {
+      "p50": 306.7,
+      "p95": 839.1099999999999,
+      "p99": 1119.7119999999982,
+      "mean": 440.11585,
+      "n": 20000
+     },
+     "buffers_by_category": {
+      "ins": 3.0,
+      "base": 3.0,
+      "upd": 3.0
+     },
+     "buffers_equal_mix": 3.0,
+     "buffers_raw_mix": 3.0,
+     "category_counts": {
+      "ins": 208,
+      "base": 1653,
+      "upd": 139
+     },
+     "buffers_deleted": 2.0,
+     "buffers_absent": 2.002,
+     "statio_live": {
+      "queries": 2000,
+      "heap_per_q": 1.0,
+      "index_per_q": 4.0,
+      "toast_per_q": 0.0
+     },
+     "sizes": {
+      "sidecar_bytes": 3821472,
+      "manifest_bytes": 262,
+      "delta_main": 8192,
+      "delta_total": 8192,
+      "address_main": 3829926,
+      "address_total": 3829926,
+      "table_bytes": 724770816
+     },
+     "address_main_per_live_key": 3.5736622534661926,
+     "address_total_per_live_key": 3.5736622534661926
+    },
+    "dyn_b": {
+     "errors": {
+      "live": 0,
+      "deleted": 0,
+      "absent": 0
+     },
+     "client_us": {
+      "p50": 238.0,
+      "p95": 365.2,
+      "p99": 464.7039999999993,
+      "mean": 255.998985,
+      "n": 20000
+     },
+     "buffers_by_category": {
+      "ins": 4.326923076923077,
+      "base": 4.313974591651543,
+      "upd": 4.345323741007194
+     },
+     "buffers_equal_mix": 4.3287404698606045,
+     "buffers_raw_mix": 4.3175,
+     "category_counts": {
+      "ins": 208,
+      "base": 1653,
+      "upd": 139
+     },
+     "buffers_deleted": 4.252,
+     "buffers_absent": 4.226,
+     "statio_live": {
+      "queries": 2000,
+      "heap_per_q": 2.262,
+      "index_per_q": 4.0,
+      "toast_per_q": 0.0
+     },
+     "sizes": {
+      "sidecar_bytes": 275088,
+      "manifest_bytes": 265,
+      "delta_main": 8192,
+      "delta_total": 8192,
+      "address_main": 283545,
+      "address_total": 283545,
+      "table_bytes": 674562048
+     },
+     "address_main_per_live_key": 0.2645727524915812,
+     "address_total_per_live_key": 0.2645727524915812
+    },
+    "dyn_c": {
+     "errors": {
+      "live": 0,
+      "deleted": 0,
+      "absent": 0
+     },
+     "client_us": {
+      "p50": 111.7,
+      "p95": 175.6,
+      "p99": 212.10299999999953,
+      "mean": 121.33406000000001,
+      "n": 20000
+     },
+     "buffers_by_category": {
+      "ins": 4.0,
+      "base": 4.0,
+      "upd": 4.0
+     },
+     "buffers_equal_mix": 4.0,
+     "buffers_raw_mix": 4.0,
+     "category_counts": {
+      "ins": 208,
+      "base": 1653,
+      "upd": 139
+     },
+     "buffers_deleted": 3.0,
+     "buffers_absent": 3.0,
+     "statio_live": {
+      "queries": 2000,
+      "heap_per_q": 1.0,
+      "index_per_q": 3.0,
+      "toast_per_q": 0.0
+     },
+     "sizes": {
+      "address_main": 55009280,
+      "address_total": 55009280,
+      "table_bytes": 724770816
+     },
+     "address_main_per_live_key": 51.32856027149161,
+     "address_total_per_live_key": 51.32856027149161
+    }
+   },
+   "pg_stat_tuples": {
+    "dyn_a": {
+     "live": 1071414,
+     "dead": 0
+    },
+    "dyn_c": {
+     "live": 1071709,
+     "dead": 0
+    },
+    "dyn_b_g3": {
+     "live": 1071756,
+     "dead": 0
+    }
+   }
+  },
+  {
+   "cp": 5,
+   "name": "before_reseal",
+   "after_op": 360000,
+   "live_keys": 1107949,
+   "deleted_keys": 72012,
+   "delta_live_rows": 93625,
+   "systems": {
+    "dyn_a": {
+     "errors": {
+      "live": 0,
+      "deleted": 0,
+      "absent": 0
+     },
+     "client_us": {
+      "p50": 289.65,
+      "p95": 757.5,
+      "p99": 1038.0109999999981,
+      "mean": 420.89111499999996,
+      "n": 20000
+     },
+     "buffers_by_category": {
+      "base": 4.0,
+      "ins": 4.0,
+      "upd": 4.011560693641618
+     },
+     "buffers_equal_mix": 4.003853564547206,
+     "buffers_raw_mix": 4.001,
+     "category_counts": {
+      "base": 1517,
+      "ins": 310,
+      "upd": 173
+     },
+     "buffers_deleted": 3.348,
+     "buffers_absent": 3.002,
+     "statio_live": {
+      "queries": 2000,
+      "heap_per_q": 1.0005,
+      "index_per_q": 3.0005,
+      "toast_per_q": 0.0
+     },
+     "sizes": {
+      "sidecar_bytes": 3821472,
+      "manifest_bytes": 262,
+      "delta_main": 4161536,
+      "delta_total": 4161536,
+      "address_main": 7983270,
+      "address_total": 7983270,
+      "table_bytes": 726097920
+     },
+     "address_main_per_live_key": 7.20544898727288,
+     "address_total_per_live_key": 7.20544898727288
+    },
+    "dyn_b": {
+     "errors": {
+      "live": 0,
+      "deleted": 0,
+      "absent": 0
+     },
+     "client_us": {
+      "p50": 265.9,
+      "p95": 833.4149999999997,
+      "p99": 1106.2,
+      "mean": 416.35454500000003,
+      "n": 20000
+     },
+     "buffers_by_category": {
+      "base": 5.319709953856296,
+      "ins": 4.916129032258064,
+      "upd": 4.826589595375722
+     },
+     "buffers_equal_mix": 5.020809527163361,
+     "buffers_raw_mix": 5.2145,
+     "category_counts": {
+      "base": 1517,
+      "ins": 310,
+      "upd": 173
+     },
+     "buffers_deleted": 5.294,
+     "buffers_absent": 5.256,
+     "statio_live": {
+      "queries": 2000,
+      "heap_per_q": 2.1615,
+      "index_per_q": 3.0005,
+      "toast_per_q": 0.0
+     },
+     "sizes": {
+      "sidecar_bytes": 275088,
+      "manifest_bytes": 265,
+      "delta_main": 4186112,
+      "delta_total": 4186112,
+      "address_main": 4461465,
+      "address_total": 4461465,
+      "table_bytes": 728801280
+     },
+     "address_main_per_live_key": 4.026778308387841,
+     "address_total_per_live_key": 4.026778308387841
+    },
+    "dyn_c": {
+     "errors": {
+      "live": 0,
+      "deleted": 0,
+      "absent": 0
+     },
+     "client_us": {
+      "p50": 118.6,
+      "p95": 196.0,
+      "p99": 307.6109999999983,
+      "mean": 133.005925,
+      "n": 20000
+     },
+     "buffers_by_category": {
+      "base": 4.0,
+      "ins": 4.0,
+      "upd": 4.0
+     },
+     "buffers_equal_mix": 4.0,
+     "buffers_raw_mix": 4.0,
+     "category_counts": {
+      "base": 1517,
+      "ins": 310,
+      "upd": 173
+     },
+     "buffers_deleted": 3.0,
+     "buffers_absent": 3.0,
+     "statio_live": {
+      "queries": 2000,
+      "heap_per_q": 1.0,
+      "index_per_q": 3.0,
+      "toast_per_q": 0.0
+     },
+     "sizes": {
+      "address_main": 59719680,
+      "address_total": 59719680,
+      "table_bytes": 726065152
+     },
+     "address_main_per_live_key": 53.901109166577164,
+     "address_total_per_live_key": 53.901109166577164
+    }
+   },
+   "pg_stat_tuples": {
+    "dyn_a": {
+     "live": 1107654,
+     "dead": 59950
+    },
+    "dyn_c": {
+     "live": 1107949,
+     "dead": 51090
+    },
+    "dyn_b_g3": {
+     "live": 1107996,
+     "dead": 59950
+    }
+   }
+  },
+  {
+   "cp": 6,
+   "name": "after_reseal",
+   "after_op": 360000,
+   "live_keys": 1107949,
+   "deleted_keys": 72012,
+   "delta_live_rows": 0,
+   "systems": {
+    "dyn_a": {
+     "errors": {
+      "live": 0,
+      "deleted": 0,
+      "absent": 0
+     },
+     "client_us": {
+      "p50": 299.4,
+      "p95": 774.5049999999999,
+      "p99": 977.6049999999992,
+      "mean": 430.3634,
+      "n": 20000
+     },
+     "buffers_by_category": {
+      "ins": 3.0,
+      "base": 3.0,
+      "upd": 3.0
+     },
+     "buffers_equal_mix": 3.0,
+     "buffers_raw_mix": 3.0,
+     "category_counts": {
+      "ins": 291,
+      "base": 1511,
+      "upd": 198
+     },
+     "buffers_deleted": 2.01,
+     "buffers_absent": 2.004,
+     "statio_live": {
+      "queries": 2000,
+      "heap_per_q": 1.0,
+      "index_per_q": 4.0,
+      "toast_per_q": 0.0
+     },
+     "sizes": {
+      "sidecar_bytes": 3951008,
+      "manifest_bytes": 262,
+      "delta_main": 8192,
+      "delta_total": 8192,
+      "address_main": 3959462,
+      "address_total": 3959462,
+      "table_bytes": 726097920
+     },
+     "address_main_per_live_key": 3.5736861534240294,
+     "address_total_per_live_key": 3.5736861534240294
+    },
+    "dyn_b": {
+     "errors": {
+      "live": 0,
+      "deleted": 0,
+      "absent": 0
+     },
+     "client_us": {
+      "p50": 258.6,
+      "p95": 366.2,
+      "p99": 461.4,
+      "mean": 271.62331500000005,
+      "n": 20000
+     },
+     "buffers_by_category": {
+      "ins": 4.381443298969073,
+      "base": 4.353408338848444,
+      "upd": 4.4393939393939394
+     },
+     "buffers_equal_mix": 4.3914151924038185,
+     "buffers_raw_mix": 4.366,
+     "category_counts": {
+      "ins": 291,
+      "base": 1511,
+      "upd": 198
+     },
+     "buffers_deleted": 4.296,
+     "buffers_absent": 4.31,
+     "statio_live": {
+      "queries": 2000,
+      "heap_per_q": 2.306,
+      "index_per_q": 4.0,
+      "toast_per_q": 0.0
+     },
+     "sizes": {
+      "sidecar_bytes": 275188,
+      "manifest_bytes": 265,
+      "delta_main": 8192,
+      "delta_total": 8192,
+      "address_main": 283645,
+      "address_total": 283645,
+      "table_bytes": 697401344
+     },
+     "address_main_per_live_key": 0.2560090762300431,
+     "address_total_per_live_key": 0.2560090762300431
+    },
+    "dyn_c": {
+     "errors": {
+      "live": 0,
+      "deleted": 0,
+      "absent": 0
+     },
+     "client_us": {
+      "p50": 117.3,
+      "p95": 188.9,
+      "p99": 245.20199999999966,
+      "mean": 127.97586499999998,
+      "n": 20000
+     },
+     "buffers_by_category": {
+      "ins": 4.0,
+      "base": 4.0,
+      "upd": 4.01010101010101
+     },
+     "buffers_equal_mix": 4.0033670033670035,
+     "buffers_raw_mix": 4.001,
+     "category_counts": {
+      "ins": 291,
+      "base": 1511,
+      "upd": 198
+     },
+     "buffers_deleted": 3.0,
+     "buffers_absent": 3.0,
+     "statio_live": {
+      "queries": 2000,
+      "heap_per_q": 1.0005,
+      "index_per_q": 3.0005,
+      "toast_per_q": 0.0
+     },
+     "sizes": {
+      "address_main": 59719680,
+      "address_total": 59719680,
+      "table_bytes": 726065152
+     },
+     "address_main_per_live_key": 53.901109166577164,
+     "address_total_per_live_key": 53.901109166577164
+    }
+   },
+   "pg_stat_tuples": {
+    "dyn_a": {
+     "live": 1107546,
+     "dead": 60474
+    },
+    "dyn_c": {
+     "live": 1107949,
+     "dead": 48521
+    },
+    "dyn_b_g4": {
+     "live": 1107962,
+     "dead": 0
+    }
+   }
+  },
+  {
+   "cp": 7,
+   "name": "before_reseal",
+   "after_op": 480000,
+   "live_keys": 1143923,
+   "deleted_keys": 96001,
+   "delta_live_rows": 93490,
+   "systems": {
+    "dyn_a": {
+     "errors": {
+      "live": 0,
+      "deleted": 0,
+      "absent": 0
+     },
+     "client_us": {
+      "p50": 260.6,
+      "p95": 730.9,
+      "p99": 895.7119999999982,
+      "mean": 348.30655,
+      "n": 20000
+     },
+     "buffers_by_category": {
+      "base": 4.0,
+      "ins": 4.0,
+      "upd": 4.0
+     },
+     "buffers_equal_mix": 4.0,
+     "buffers_raw_mix": 4.0,
+     "category_counts": {
+      "base": 1390,
+      "ins": 385,
+      "upd": 225
+     },
+     "buffers_deleted": 3.214,
+     "buffers_absent": 3.002,
+     "statio_live": {
+      "queries": 2000,
+      "heap_per_q": 1.0,
+      "index_per_q": 3.0,
+      "toast_per_q": 0.0
+     },
+     "sizes": {
+      "sidecar_bytes": 3951008,
+      "manifest_bytes": 262,
+      "delta_main": 4317184,
+      "delta_total": 4317184,
+      "address_main": 8268454,
+      "address_total": 8268454,
+      "table_bytes": 771219456
+     },
+     "address_main_per_live_key": 7.2281560909257,
+     "address_total_per_live_key": 7.2281560909257
+    },
+    "dyn_b": {
+     "errors": {
+      "live": 0,
+      "deleted": 0,
+      "absent": 0
+     },
+     "client_us": {
+      "p50": 240.5,
+      "p95": 358.9,
+      "p99": 480.1009999999999,
+      "mean": 258.011095,
+      "n": 20000
+     },
+     "buffers_by_category": {
+      "base": 5.379136690647482,
+      "ins": 5.005194805194805,
+      "upd": 4.982222222222222
+     },
+     "buffers_equal_mix": 5.12218457268817,
+     "buffers_raw_mix": 5.2625,
+     "category_counts": {
+      "base": 1390,
+      "ins": 385,
+      "upd": 225
+     },
+     "buffers_deleted": 5.26,
+     "buffers_absent": 5.302,
+     "statio_live": {
+      "queries": 2000,
+      "heap_per_q": 2.206,
+      "index_per_q": 3.0,
+      "toast_per_q": 0.0
+     },
+     "sizes": {
+      "sidecar_bytes": 275188,
+      "manifest_bytes": 265,
+      "delta_main": 4325376,
+      "delta_total": 4325376,
+      "address_main": 4600829,
+      "address_total": 4600829,
+      "table_bytes": 751747072
+     },
+     "address_main_per_live_key": 4.021974381142787,
+     "address_total_per_live_key": 4.021974381142787
+    },
+    "dyn_c": {
+     "errors": {
+      "live": 0,
+      "deleted": 0,
+      "absent": 0
+     },
+     "client_us": {
+      "p50": 109.5,
+      "p95": 175.0,
+      "p99": 212.9,
+      "mean": 118.87813499999999,
+      "n": 20000
+     },
+     "buffers_by_category": {
+      "base": 4.0,
+      "ins": 4.0,
+      "upd": 4.0
+     },
+     "buffers_equal_mix": 4.0,
+     "buffers_raw_mix": 4.0,
+     "category_counts": {
+      "base": 1390,
+      "ins": 385,
+      "upd": 225
+     },
+     "buffers_deleted": 3.0,
+     "buffers_absent": 3.0,
+     "statio_live": {
+      "queries": 2000,
+      "heap_per_q": 1.0,
+      "index_per_q": 3.0,
+      "toast_per_q": 0.0
+     },
+     "sizes": {
+      "address_main": 63004672,
+      "address_total": 63004672,
+      "table_bytes": 771465216
+     },
+     "address_main_per_live_key": 55.07772114032151,
+     "address_total_per_live_key": 55.07772114032151
+    }
+   },
+   "pg_stat_tuples": {
+    "dyn_a": {
+     "live": 1143923,
+     "dead": 0
+    },
+    "dyn_c": {
+     "live": 1143923,
+     "dead": 0
+    },
+    "dyn_b_g4": {
+     "live": 1143923,
+     "dead": 0
+    }
+   }
+  },
+  {
+   "cp": 8,
+   "name": "after_reseal",
+   "after_op": 480000,
+   "live_keys": 1143923,
+   "deleted_keys": 96001,
+   "delta_live_rows": 0,
+   "systems": {
+    "dyn_a": {
+     "errors": {
+      "live": 0,
+      "deleted": 0,
+      "absent": 0
+     },
+     "client_us": {
+      "p50": 300.2,
+      "p95": 804.0049999999999,
+      "p99": 1021.0179999999971,
+      "mean": 434.12958999999995,
+      "n": 20000
+     },
+     "buffers_by_category": {
+      "base": 3.0,
+      "ins": 3.0,
+      "upd": 3.0
+     },
+     "buffers_equal_mix": 3.0,
+     "buffers_raw_mix": 3.0,
+     "category_counts": {
+      "base": 1407,
+      "ins": 366,
+      "upd": 227
+     },
+     "buffers_deleted": 2.008,
+     "buffers_absent": 2.004,
+     "statio_live": {
+      "queries": 2000,
+      "heap_per_q": 1.0,
+      "index_per_q": 4.0,
+      "toast_per_q": 0.0
+     },
+     "sizes": {
+      "sidecar_bytes": 4078816,
+      "manifest_bytes": 262,
+      "delta_main": 8192,
+      "delta_total": 8192,
+      "address_main": 4087270,
+      "address_total": 4087270,
+      "table_bytes": 771219456
+     },
+     "address_main_per_live_key": 3.573028953871895,
+     "address_total_per_live_key": 3.573028953871895
+    },
+    "dyn_b": {
+     "errors": {
+      "live": 0,
+      "deleted": 0,
+      "absent": 0
+     },
+     "client_us": {
+      "p50": 247.7,
+      "p95": 358.10499999999996,
+      "p99": 465.20699999999886,
+      "mean": 263.05219000000005,
+      "n": 20000
+     },
+     "buffers_by_category": {
+      "base": 4.398009950248756,
+      "ins": 4.4289617486338795,
+      "upd": 4.436123348017621
+     },
+     "buffers_equal_mix": 4.421031682300086,
+     "buffers_raw_mix": 4.408,
+     "category_counts": {
+      "base": 1407,
+      "ins": 366,
+      "upd": 227
+     },
+     "buffers_deleted": 4.382,
+     "buffers_absent": 4.328,
+     "statio_live": {
+      "queries": 2000,
+      "heap_per_q": 2.3385,
+      "index_per_q": 4.0,
+      "toast_per_q": 0.0
+     },
+     "sizes": {
+      "sidecar_bytes": 276208,
+      "manifest_bytes": 265,
+      "delta_main": 8192,
+      "delta_total": 8192,
+      "address_main": 284665,
+      "address_total": 284665,
+      "table_bytes": 720068608
+     },
+     "address_main_per_live_key": 0.2488497914632366,
+     "address_total_per_live_key": 0.2488497914632366
+    },
+    "dyn_c": {
+     "errors": {
+      "live": 0,
+      "deleted": 0,
+      "absent": 0
+     },
+     "client_us": {
+      "p50": 106.4,
+      "p95": 156.6,
+      "p99": 186.40099999999984,
+      "mean": 111.980135,
+      "n": 20000
+     },
+     "buffers_by_category": {
+      "base": 4.0,
+      "ins": 4.0,
+      "upd": 4.0
+     },
+     "buffers_equal_mix": 4.0,
+     "buffers_raw_mix": 4.0,
+     "category_counts": {
+      "base": 1407,
+      "ins": 366,
+      "upd": 227
+     },
+     "buffers_deleted": 3.0,
+     "buffers_absent": 3.0,
+     "statio_live": {
+      "queries": 2000,
+      "heap_per_q": 1.0,
+      "index_per_q": 3.0,
+      "toast_per_q": 0.0
+     },
+     "sizes": {
+      "address_main": 63004672,
+      "address_total": 63004672,
+      "table_bytes": 771465216
+     },
+     "address_main_per_live_key": 55.07772114032151,
+     "address_total_per_live_key": 55.07772114032151
+    }
+   },
+   "pg_stat_tuples": {
+    "dyn_a": {
+     "live": 1143928,
+     "dead": 0
+    },
+    "dyn_c": {
+     "live": 1143923,
+     "dead": 0
+    },
+    "dyn_b_g5": {
+     "live": 1143899,
+     "dead": 0
+    }
+   }
+  },
+  {
+   "cp": 9,
+   "name": "before_reseal",
+   "after_op": 500000,
+   "live_keys": 1150000,
+   "deleted_keys": 100000,
+   "delta_live_rows": 15937,
+   "systems": {
+    "dyn_a": {
+     "errors": {
+      "live": 0,
+      "deleted": 0,
+      "absent": 0
+     },
+     "client_us": {
+      "p50": 254.0,
+      "p95": 657.2,
+      "p99": 732.5029999999995,
+      "mean": 347.907275,
+      "n": 20000
+     },
+     "buffers_by_category": {
+      "ins": 3.0,
+      "base": 3.0,
+      "upd": 3.0
+     },
+     "buffers_equal_mix": 3.0,
+     "buffers_raw_mix": 3.0,
+     "category_counts": {
+      "ins": 402,
+      "base": 1360,
+      "upd": 238
+     },
+     "buffers_deleted": 2.066,
+     "buffers_absent": 2.004,
+     "statio_live": {
+      "queries": 2000,
+      "heap_per_q": 1.0,
+      "index_per_q": 2.0,
+      "toast_per_q": 0.0
+     },
+     "sizes": {
+      "sidecar_bytes": 4078816,
+      "manifest_bytes": 262,
+      "delta_main": 622592,
+      "delta_total": 622592,
+      "address_main": 4701670,
+      "address_total": 4701670,
+      "table_bytes": 771219456
+     },
+     "address_main_per_live_key": 4.088408695652174,
+     "address_total_per_live_key": 4.088408695652174
+    },
+    "dyn_b": {
+     "errors": {
+      "live": 0,
+      "deleted": 0,
+      "absent": 0
+     },
+     "client_us": {
+      "p50": 247.9,
+      "p95": 641.0,
+      "p99": 745.1039999999994,
+      "mean": 293.36967,
+      "n": 20000
+     },
+     "buffers_by_category": {
+      "ins": 4.395522388059701,
+      "base": 4.397058823529412,
+      "upd": 4.357142857142857
+     },
+     "buffers_equal_mix": 4.38324135624399,
+     "buffers_raw_mix": 4.392,
+     "category_counts": {
+      "ins": 402,
+      "base": 1360,
+      "upd": 238
+     },
+     "buffers_deleted": 4.326,
+     "buffers_absent": 4.328,
+     "statio_live": {
+      "queries": 2000,
+      "heap_per_q": 2.3085,
+      "index_per_q": 2.0,
+      "toast_per_q": 0.0
+     },
+     "sizes": {
+      "sidecar_bytes": 276208,
+      "manifest_bytes": 265,
+      "delta_main": 622592,
+      "delta_total": 622592,
+      "address_main": 899065,
+      "address_total": 899065,
+      "table_bytes": 729915392
+     },
+     "address_main_per_live_key": 0.781795652173913,
+     "address_total_per_live_key": 0.781795652173913
+    },
+    "dyn_c": {
+     "errors": {
+      "live": 0,
+      "deleted": 0,
+      "absent": 0
+     },
+     "client_us": {
+      "p50": 105.6,
+      "p95": 145.4,
+      "p99": 176.7,
+      "mean": 109.89573999999999,
+      "n": 20000
+     },
+     "buffers_by_category": {
+      "ins": 4.0,
+      "base": 4.0,
+      "upd": 4.0
+     },
+     "buffers_equal_mix": 4.0,
+     "buffers_raw_mix": 4.0,
+     "category_counts": {
+      "ins": 402,
+      "base": 1360,
+      "upd": 238
+     },
+     "buffers_deleted": 3.0,
+     "buffers_absent": 3.0,
+     "statio_live": {
+      "queries": 2000,
+      "heap_per_q": 1.0,
+      "index_per_q": 3.0,
+      "toast_per_q": 0.0
+     },
+     "sizes": {
+      "address_main": 63004672,
+      "address_total": 63004672,
+      "table_bytes": 771465216
+     },
+     "address_main_per_live_key": 54.78667130434783,
+     "address_total_per_live_key": 54.78667130434783
+    }
+   },
+   "pg_stat_tuples": {
+    "dyn_a": {
+     "live": 1150005,
+     "dead": 9924
+    },
+    "dyn_c": {
+     "live": 1150000,
+     "dead": 9222
+    },
+    "dyn_b_g5": {
+     "live": 1149976,
+     "dead": 9924
+    }
+   }
+  },
+  {
+   "cp": 10,
+   "name": "after_reseal",
+   "after_op": 500000,
+   "live_keys": 1150000,
+   "deleted_keys": 100000,
+   "delta_live_rows": 0,
+   "systems": {
+    "dyn_a": {
+     "errors": {
+      "live": 0,
+      "deleted": 0,
+      "absent": 0
+     },
+     "client_us": {
+      "p50": 260.7,
+      "p95": 737.7049999999999,
+      "p99": 953.8019999999997,
+      "mean": 408.48666999999995,
+      "n": 20000
+     },
+     "buffers_by_category": {
+      "ins": 3.0,
+      "base": 3.0,
+      "upd": 3.0
+     },
+     "buffers_equal_mix": 3.0,
+     "buffers_raw_mix": 3.0,
+     "category_counts": {
+      "ins": 369,
+      "base": 1401,
+      "upd": 230
+     },
+     "buffers_deleted": 2.002,
+     "buffers_absent": 2.004,
+     "statio_live": {
+      "queries": 2000,
+      "heap_per_q": 1.0,
+      "index_per_q": 4.0,
+      "toast_per_q": 0.0
+     },
+     "sizes": {
+      "sidecar_bytes": 4100704,
+      "manifest_bytes": 262,
+      "delta_main": 8192,
+      "delta_total": 8192,
+      "address_main": 4109158,
+      "address_total": 4109158,
+      "table_bytes": 771219456
+     },
+     "address_main_per_live_key": 3.5731808695652174,
+     "address_total_per_live_key": 3.5731808695652174
+    },
+    "dyn_b": {
+     "errors": {
+      "live": 0,
+      "deleted": 0,
+      "absent": 0
+     },
+     "client_us": {
+      "p50": 242.9,
+      "p95": 342.10499999999996,
+      "p99": 456.2029999999995,
+      "mean": 254.00583000000003,
+      "n": 20000
+     },
+     "buffers_by_category": {
+      "ins": 4.441734417344174,
+      "base": 4.382583868665239,
+      "upd": 4.417391304347826
+     },
+     "buffers_equal_mix": 4.413903196785746,
+     "buffers_raw_mix": 4.3975,
+     "category_counts": {
+      "ins": 369,
+      "base": 1401,
+      "upd": 230
+     },
+     "buffers_deleted": 4.35,
+     "buffers_absent": 4.374,
+     "statio_live": {
+      "queries": 2000,
+      "heap_per_q": 2.316,
+      "index_per_q": 4.0,
+      "toast_per_q": 0.0
+     },
+     "sizes": {
+      "sidecar_bytes": 275468,
+      "manifest_bytes": 265,
+      "delta_main": 8192,
+      "delta_total": 8192,
+      "address_main": 283925,
+      "address_total": 283925,
+      "table_bytes": 723943424
+     },
+     "address_main_per_live_key": 0.24689130434782608,
+     "address_total_per_live_key": 0.24689130434782608
+    },
+    "dyn_c": {
+     "errors": {
+      "live": 0,
+      "deleted": 0,
+      "absent": 0
+     },
+     "client_us": {
+      "p50": 107.1,
+      "p95": 155.30499999999995,
+      "p99": 193.2049999999992,
+      "mean": 112.87418000000001,
+      "n": 20000
+     },
+     "buffers_by_category": {
+      "ins": 4.0,
+      "base": 4.0,
+      "upd": 4.0
+     },
+     "buffers_equal_mix": 4.0,
+     "buffers_raw_mix": 4.0,
+     "category_counts": {
+      "ins": 369,
+      "base": 1401,
+      "upd": 230
+     },
+     "buffers_deleted": 3.0,
+     "buffers_absent": 3.0,
+     "statio_live": {
+      "queries": 2000,
+      "heap_per_q": 1.0,
+      "index_per_q": 3.0,
+      "toast_per_q": 0.0
+     },
+     "sizes": {
+      "address_main": 63004672,
+      "address_total": 63004672,
+      "table_bytes": 771465216
+     },
+     "address_main_per_live_key": 54.78667130434783,
+     "address_total_per_live_key": 54.78667130434783
+    }
+   },
+   "pg_stat_tuples": {
+    "dyn_a": {
+     "live": 1150280,
+     "dead": 9766
+    },
+    "dyn_c": {
+     "live": 1150000,
+     "dead": 8771
+    },
+    "dyn_b_g6": {
+     "live": 1149977,
+     "dead": 0
+    }
+   }
+  },
+  {
+   "cp": 11,
+   "name": "after_restart",
+   "after_op": 500000,
+   "live_keys": 1150000,
+   "deleted_keys": 100000,
+   "delta_live_rows": 0,
+   "systems": {
+    "dyn_a": {
+     "errors": {
+      "live": 0,
+      "deleted": 0,
+      "absent": 0
+     },
+     "client_us": {
+      "p50": 267.6,
+      "p95": 347.0,
+      "p99": 405.2029999999995,
+      "mean": 277.54053500000003,
+      "n": 20000
+     },
+     "buffers_by_category": {
+      "upd": 3.0,
+      "ins": 3.0,
+      "base": 3.0
+     },
+     "buffers_equal_mix": 3.0,
+     "buffers_raw_mix": 3.0,
+     "category_counts": {
+      "upd": 246,
+      "ins": 370,
+      "base": 1384
+     },
+     "buffers_deleted": 2.002,
+     "buffers_absent": 2.004,
+     "statio_live": {
+      "queries": 2000,
+      "heap_per_q": 1.0,
+      "index_per_q": 4.0,
+      "toast_per_q": 0.0
+     },
+     "sizes": {
+      "sidecar_bytes": 4100704,
+      "manifest_bytes": 262,
+      "delta_main": 8192,
+      "delta_total": 8192,
+      "address_main": 4109158,
+      "address_total": 4109158,
+      "table_bytes": 771219456
+     },
+     "address_main_per_live_key": 3.5731808695652174,
+     "address_total_per_live_key": 3.5731808695652174
+    },
+    "dyn_b": {
+     "errors": {
+      "live": 0,
+      "deleted": 0,
+      "absent": 0
+     },
+     "client_us": {
+      "p50": 252.9,
+      "p95": 333.5,
+      "p99": 458.80399999999935,
+      "mean": 260.36244000000005,
+      "n": 20000
+     },
+     "buffers_by_category": {
+      "upd": 4.467479674796748,
+      "ins": 4.440540540540541,
+      "base": 4.406791907514451
+     },
+     "buffers_equal_mix": 4.438270707617247,
+     "buffers_raw_mix": 4.4205,
+     "category_counts": {
+      "upd": 246,
+      "ins": 370,
+      "base": 1384
+     },
+     "buffers_deleted": 4.33,
+     "buffers_absent": 4.336,
+     "statio_live": {
+      "queries": 2000,
+      "heap_per_q": 2.337,
+      "index_per_q": 4.0,
+      "toast_per_q": 0.0
+     },
+     "sizes": {
+      "sidecar_bytes": 275468,
+      "manifest_bytes": 265,
+      "delta_main": 8192,
+      "delta_total": 8192,
+      "address_main": 283925,
+      "address_total": 283925,
+      "table_bytes": 723943424
+     },
+     "address_main_per_live_key": 0.24689130434782608,
+     "address_total_per_live_key": 0.24689130434782608
+    },
+    "dyn_c": {
+     "errors": {
+      "live": 0,
+      "deleted": 0,
+      "absent": 0
+     },
+     "client_us": {
+      "p50": 109.2,
+      "p95": 159.4,
+      "p99": 202.50299999999953,
+      "mean": 114.9609,
+      "n": 20000
+     },
+     "buffers_by_category": {
+      "upd": 4.0,
+      "ins": 4.0,
+      "base": 4.0
+     },
+     "buffers_equal_mix": 4.0,
+     "buffers_raw_mix": 4.0,
+     "category_counts": {
+      "upd": 246,
+      "ins": 370,
+      "base": 1384
+     },
+     "buffers_deleted": 3.0,
+     "buffers_absent": 3.0,
+     "statio_live": {
+      "queries": 2000,
+      "heap_per_q": 1.0,
+      "index_per_q": 3.0,
+      "toast_per_q": 0.0
+     },
+     "sizes": {
+      "address_main": 63004672,
+      "address_total": 63004672,
+      "table_bytes": 771465216
+     },
+     "address_main_per_live_key": 54.78667130434783,
+     "address_total_per_live_key": 54.78667130434783
+    }
+   },
+   "pg_stat_tuples": {
+    "dyn_a": {
+     "live": 1150280,
+     "dead": 9766
+    },
+    "dyn_c": {
+     "live": 1150000,
+     "dead": 8427
+    },
+    "dyn_b_g6": {
+     "live": 1149977,
+     "dead": 0
+    }
+   }
+  }
+ ],
+ "delta_trace": [
+  {
+   "after_op": 1000,
+   "delta_live_rows": 771,
+   "dyn_a": 57344,
+   "dyn_b": 57344
+  },
+  {
+   "after_op": 2000,
+   "delta_live_rows": 1565,
+   "dyn_a": 90112,
+   "dyn_b": 90112
+  },
+  {
+   "after_op": 3000,
+   "delta_live_rows": 2352,
+   "dyn_a": 98304,
+   "dyn_b": 98304
+  },
+  {
+   "after_op": 4000,
+   "delta_live_rows": 3149,
+   "dyn_a": 172032,
+   "dyn_b": 172032
+  },
+  {
+   "after_op": 5000,
+   "delta_live_rows": 3941,
+   "dyn_a": 172032,
+   "dyn_b": 172032
+  },
+  {
+   "after_op": 6000,
+   "delta_live_rows": 4739,
+   "dyn_a": 196608,
+   "dyn_b": 196608
+  },
+  {
+   "after_op": 7000,
+   "delta_live_rows": 5549,
+   "dyn_a": 262144,
+   "dyn_b": 262144
+  },
+  {
+   "after_op": 8000,
+   "delta_live_rows": 6343,
+   "dyn_a": 319488,
+   "dyn_b": 319488
+  },
+  {
+   "after_op": 9000,
+   "delta_live_rows": 7118,
+   "dyn_a": 319488,
+   "dyn_b": 319488
+  },
+  {
+   "after_op": 10000,
+   "delta_live_rows": 7928,
+   "dyn_a": 319488,
+   "dyn_b": 319488
+  },
+  {
+   "after_op": 11000,
+   "delta_live_rows": 8725,
+   "dyn_a": 335872,
+   "dyn_b": 335872
+  },
+  {
+   "after_op": 12000,
+   "delta_live_rows": 9524,
+   "dyn_a": 368640,
+   "dyn_b": 368640
+  },
+  {
+   "after_op": 13000,
+   "delta_live_rows": 10331,
+   "dyn_a": 458752,
+   "dyn_b": 458752
+  },
+  {
+   "after_op": 14000,
+   "delta_live_rows": 11113,
+   "dyn_a": 524288,
+   "dyn_b": 524288
+  },
+  {
+   "after_op": 15000,
+   "delta_live_rows": 11938,
+   "dyn_a": 565248,
+   "dyn_b": 565248
+  },
+  {
+   "after_op": 16000,
+   "delta_live_rows": 12747,
+   "dyn_a": 565248,
+   "dyn_b": 565248
+  },
+  {
+   "after_op": 17000,
+   "delta_live_rows": 13533,
+   "dyn_a": 614400,
+   "dyn_b": 614400
+  },
+  {
+   "after_op": 18000,
+   "delta_live_rows": 14316,
+   "dyn_a": 614400,
+   "dyn_b": 614400
+  },
+  {
+   "after_op": 19000,
+   "delta_live_rows": 15083,
+   "dyn_a": 614400,
+   "dyn_b": 614400
+  },
+  {
+   "after_op": 20000,
+   "delta_live_rows": 15872,
+   "dyn_a": 614400,
+   "dyn_b": 614400
+  },
+  {
+   "after_op": 21000,
+   "delta_live_rows": 16664,
+   "dyn_a": 614400,
+   "dyn_b": 614400
+  },
+  {
+   "after_op": 22000,
+   "delta_live_rows": 17466,
+   "dyn_a": 647168,
+   "dyn_b": 647168
+  },
+  {
+   "after_op": 23000,
+   "delta_live_rows": 18264,
+   "dyn_a": 704512,
+   "dyn_b": 704512
+  },
+  {
+   "after_op": 24000,
+   "delta_live_rows": 19066,
+   "dyn_a": 745472,
+   "dyn_b": 745472
+  },
+  {
+   "after_op": 25000,
+   "delta_live_rows": 19866,
+   "dyn_a": 835584,
+   "dyn_b": 835584
+  },
+  {
+   "after_op": 26000,
+   "delta_live_rows": 20676,
+   "dyn_a": 892928,
+   "dyn_b": 892928
+  },
+  {
+   "after_op": 27000,
+   "delta_live_rows": 21451,
+   "dyn_a": 933888,
+   "dyn_b": 933888
+  },
+  {
+   "after_op": 28000,
+   "delta_live_rows": 22225,
+   "dyn_a": 1007616,
+   "dyn_b": 1007616
+  },
+  {
+   "after_op": 29000,
+   "delta_live_rows": 23043,
+   "dyn_a": 1081344,
+   "dyn_b": 1081344
+  },
+  {
+   "after_op": 30000,
+   "delta_live_rows": 23830,
+   "dyn_a": 1097728,
+   "dyn_b": 1097728
+  },
+  {
+   "after_op": 31000,
+   "delta_live_rows": 24623,
+   "dyn_a": 1105920,
+   "dyn_b": 1105920
+  },
+  {
+   "after_op": 32000,
+   "delta_live_rows": 25433,
+   "dyn_a": 1122304,
+   "dyn_b": 1122304
+  },
+  {
+   "after_op": 33000,
+   "delta_live_rows": 26221,
+   "dyn_a": 1163264,
+   "dyn_b": 1163264
+  },
+  {
+   "after_op": 34000,
+   "delta_live_rows": 26986,
+   "dyn_a": 1187840,
+   "dyn_b": 1187840
+  },
+  {
+   "after_op": 35000,
+   "delta_live_rows": 27791,
+   "dyn_a": 1212416,
+   "dyn_b": 1212416
+  },
+  {
+   "after_op": 36000,
+   "delta_live_rows": 28595,
+   "dyn_a": 1212416,
+   "dyn_b": 1212416
+  },
+  {
+   "after_op": 37000,
+   "delta_live_rows": 29401,
+   "dyn_a": 1220608,
+   "dyn_b": 1220608
+  },
+  {
+   "after_op": 38000,
+   "delta_live_rows": 30170,
+   "dyn_a": 1220608,
+   "dyn_b": 1220608
+  },
+  {
+   "after_op": 39000,
+   "delta_live_rows": 30961,
+   "dyn_a": 1220608,
+   "dyn_b": 1220608
+  },
+  {
+   "after_op": 40000,
+   "delta_live_rows": 31725,
+   "dyn_a": 1228800,
+   "dyn_b": 1228800
+  },
+  {
+   "after_op": 41000,
+   "delta_live_rows": 32517,
+   "dyn_a": 1253376,
+   "dyn_b": 1253376
+  },
+  {
+   "after_op": 42000,
+   "delta_live_rows": 33314,
+   "dyn_a": 1277952,
+   "dyn_b": 1277952
+  },
+  {
+   "after_op": 43000,
+   "delta_live_rows": 34114,
+   "dyn_a": 1294336,
+   "dyn_b": 1294336
+  },
+  {
+   "after_op": 44000,
+   "delta_live_rows": 34879,
+   "dyn_a": 1335296,
+   "dyn_b": 1335296
+  },
+  {
+   "after_op": 45000,
+   "delta_live_rows": 35656,
+   "dyn_a": 1351680,
+   "dyn_b": 1351680
+  },
+  {
+   "after_op": 46000,
+   "delta_live_rows": 36432,
+   "dyn_a": 1368064,
+   "dyn_b": 1368064
+  },
+  {
+   "after_op": 47000,
+   "delta_live_rows": 37204,
+   "dyn_a": 1449984,
+   "dyn_b": 1449984
+  },
+  {
+   "after_op": 48000,
+   "delta_live_rows": 37996,
+   "dyn_a": 1474560,
+   "dyn_b": 1474560
+  },
+  {
+   "after_op": 49000,
+   "delta_live_rows": 38767,
+   "dyn_a": 1531904,
+   "dyn_b": 1531904
+  },
+  {
+   "after_op": 50000,
+   "delta_live_rows": 39536,
+   "dyn_a": 1581056,
+   "dyn_b": 1581056
+  },
+  {
+   "after_op": 51000,
+   "delta_live_rows": 40321,
+   "dyn_a": 1654784,
+   "dyn_b": 1654784
+  },
+  {
+   "after_op": 52000,
+   "delta_live_rows": 41101,
+   "dyn_a": 1703936,
+   "dyn_b": 1703936
+  },
+  {
+   "after_op": 53000,
+   "delta_live_rows": 41865,
+   "dyn_a": 1777664,
+   "dyn_b": 1777664
+  },
+  {
+   "after_op": 54000,
+   "delta_live_rows": 42622,
+   "dyn_a": 1851392,
+   "dyn_b": 1851392
+  },
+  {
+   "after_op": 55000,
+   "delta_live_rows": 43414,
+   "dyn_a": 1900544,
+   "dyn_b": 1900544
+  },
+  {
+   "after_op": 56000,
+   "delta_live_rows": 44205,
+   "dyn_a": 1982464,
+   "dyn_b": 1982464
+  },
+  {
+   "after_op": 57000,
+   "delta_live_rows": 45001,
+   "dyn_a": 1998848,
+   "dyn_b": 1998848
+  },
+  {
+   "after_op": 58000,
+   "delta_live_rows": 45755,
+   "dyn_a": 2056192,
+   "dyn_b": 2056192
+  },
+  {
+   "after_op": 59000,
+   "delta_live_rows": 46519,
+   "dyn_a": 2121728,
+   "dyn_b": 2121728
+  },
+  {
+   "after_op": 60000,
+   "delta_live_rows": 47308,
+   "dyn_a": 2179072,
+   "dyn_b": 2179072
+  },
+  {
+   "after_op": 61000,
+   "delta_live_rows": 48067,
+   "dyn_a": 2220032,
+   "dyn_b": 2220032
+  },
+  {
+   "after_op": 62000,
+   "delta_live_rows": 48813,
+   "dyn_a": 2228224,
+   "dyn_b": 2228224
+  },
+  {
+   "after_op": 63000,
+   "delta_live_rows": 49578,
+   "dyn_a": 2244608,
+   "dyn_b": 2244608
+  },
+  {
+   "after_op": 64000,
+   "delta_live_rows": 50332,
+   "dyn_a": 2269184,
+   "dyn_b": 2269184
+  },
+  {
+   "after_op": 65000,
+   "delta_live_rows": 51088,
+   "dyn_a": 2277376,
+   "dyn_b": 2277376
+  },
+  {
+   "after_op": 66000,
+   "delta_live_rows": 51857,
+   "dyn_a": 2285568,
+   "dyn_b": 2285568
+  },
+  {
+   "after_op": 67000,
+   "delta_live_rows": 52630,
+   "dyn_a": 2301952,
+   "dyn_b": 2310144
+  },
+  {
+   "after_op": 68000,
+   "delta_live_rows": 53396,
+   "dyn_a": 2318336,
+   "dyn_b": 2318336
+  },
+  {
+   "after_op": 69000,
+   "delta_live_rows": 54166,
+   "dyn_a": 2342912,
+   "dyn_b": 2342912
+  },
+  {
+   "after_op": 70000,
+   "delta_live_rows": 54927,
+   "dyn_a": 2367488,
+   "dyn_b": 2367488
+  },
+  {
+   "after_op": 71000,
+   "delta_live_rows": 55695,
+   "dyn_a": 2383872,
+   "dyn_b": 2383872
+  },
+  {
+   "after_op": 72000,
+   "delta_live_rows": 56477,
+   "dyn_a": 2392064,
+   "dyn_b": 2392064
+  },
+  {
+   "after_op": 73000,
+   "delta_live_rows": 57238,
+   "dyn_a": 2392064,
+   "dyn_b": 2392064
+  },
+  {
+   "after_op": 74000,
+   "delta_live_rows": 58008,
+   "dyn_a": 2392064,
+   "dyn_b": 2400256
+  },
+  {
+   "after_op": 75000,
+   "delta_live_rows": 58801,
+   "dyn_a": 2433024,
+   "dyn_b": 2433024
+  },
+  {
+   "after_op": 76000,
+   "delta_live_rows": 59572,
+   "dyn_a": 2433024,
+   "dyn_b": 2433024
+  },
+  {
+   "after_op": 77000,
+   "delta_live_rows": 60326,
+   "dyn_a": 2441216,
+   "dyn_b": 2441216
+  },
+  {
+   "after_op": 78000,
+   "delta_live_rows": 61104,
+   "dyn_a": 2441216,
+   "dyn_b": 2441216
+  },
+  {
+   "after_op": 79000,
+   "delta_live_rows": 61874,
+   "dyn_a": 2449408,
+   "dyn_b": 2449408
+  },
+  {
+   "after_op": 80000,
+   "delta_live_rows": 62659,
+   "dyn_a": 2465792,
+   "dyn_b": 2473984
+  },
+  {
+   "after_op": 81000,
+   "delta_live_rows": 63428,
+   "dyn_a": 2473984,
+   "dyn_b": 2473984
+  },
+  {
+   "after_op": 82000,
+   "delta_live_rows": 64221,
+   "dyn_a": 2490368,
+   "dyn_b": 2490368
+  },
+  {
+   "after_op": 83000,
+   "delta_live_rows": 64981,
+   "dyn_a": 2539520,
+   "dyn_b": 2539520
+  },
+  {
+   "after_op": 84000,
+   "delta_live_rows": 65759,
+   "dyn_a": 2555904,
+   "dyn_b": 2555904
+  },
+  {
+   "after_op": 85000,
+   "delta_live_rows": 66529,
+   "dyn_a": 2596864,
+   "dyn_b": 2588672
+  },
+  {
+   "after_op": 86000,
+   "delta_live_rows": 67282,
+   "dyn_a": 2629632,
+   "dyn_b": 2629632
+  },
+  {
+   "after_op": 87000,
+   "delta_live_rows": 68042,
+   "dyn_a": 2629632,
+   "dyn_b": 2629632
+  },
+  {
+   "after_op": 88000,
+   "delta_live_rows": 68818,
+   "dyn_a": 2670592,
+   "dyn_b": 2678784
+  },
+  {
+   "after_op": 89000,
+   "delta_live_rows": 69574,
+   "dyn_a": 2695168,
+   "dyn_b": 2695168
+  },
+  {
+   "after_op": 90000,
+   "delta_live_rows": 70335,
+   "dyn_a": 2727936,
+   "dyn_b": 2727936
+  },
+  {
+   "after_op": 91000,
+   "delta_live_rows": 71110,
+   "dyn_a": 2760704,
+   "dyn_b": 2760704
+  },
+  {
+   "after_op": 92000,
+   "delta_live_rows": 71858,
+   "dyn_a": 2785280,
+   "dyn_b": 2785280
+  },
+  {
+   "after_op": 93000,
+   "delta_live_rows": 72617,
+   "dyn_a": 2818048,
+   "dyn_b": 2818048
+  },
+  {
+   "after_op": 94000,
+   "delta_live_rows": 73361,
+   "dyn_a": 2826240,
+   "dyn_b": 2826240
+  },
+  {
+   "after_op": 95000,
+   "delta_live_rows": 74121,
+   "dyn_a": 2867200,
+   "dyn_b": 2867200
+  },
+  {
+   "after_op": 96000,
+   "delta_live_rows": 74892,
+   "dyn_a": 2899968,
+   "dyn_b": 2899968
+  },
+  {
+   "after_op": 97000,
+   "delta_live_rows": 75659,
+   "dyn_a": 2957312,
+   "dyn_b": 2957312
+  },
+  {
+   "after_op": 98000,
+   "delta_live_rows": 76422,
+   "dyn_a": 3055616,
+   "dyn_b": 3055616
+  },
+  {
+   "after_op": 99000,
+   "delta_live_rows": 77198,
+   "dyn_a": 3112960,
+   "dyn_b": 3112960
+  },
+  {
+   "after_op": 100000,
+   "delta_live_rows": 77952,
+   "dyn_a": 3121152,
+   "dyn_b": 3121152
+  },
+  {
+   "after_op": 101000,
+   "delta_live_rows": 78698,
+   "dyn_a": 3162112,
+   "dyn_b": 3170304
+  },
+  {
+   "after_op": 102000,
+   "delta_live_rows": 79453,
+   "dyn_a": 3203072,
+   "dyn_b": 3203072
+  },
+  {
+   "after_op": 103000,
+   "delta_live_rows": 80191,
+   "dyn_a": 3268608,
+   "dyn_b": 3268608
+  },
+  {
+   "after_op": 104000,
+   "delta_live_rows": 80944,
+   "dyn_a": 3342336,
+   "dyn_b": 3342336
+  },
+  {
+   "after_op": 105000,
+   "delta_live_rows": 81718,
+   "dyn_a": 3391488,
+   "dyn_b": 3399680
+  },
+  {
+   "after_op": 106000,
+   "delta_live_rows": 82481,
+   "dyn_a": 3457024,
+   "dyn_b": 3457024
+  },
+  {
+   "after_op": 107000,
+   "delta_live_rows": 83235,
+   "dyn_a": 3547136,
+   "dyn_b": 3547136
+  },
+  {
+   "after_op": 108000,
+   "delta_live_rows": 83995,
+   "dyn_a": 3596288,
+   "dyn_b": 3596288
+  },
+  {
+   "after_op": 109000,
+   "delta_live_rows": 84764,
+   "dyn_a": 3661824,
+   "dyn_b": 3661824
+  },
+  {
+   "after_op": 110000,
+   "delta_live_rows": 85513,
+   "dyn_a": 3760128,
+   "dyn_b": 3743744
+  },
+  {
+   "after_op": 111000,
+   "delta_live_rows": 86266,
+   "dyn_a": 3801088,
+   "dyn_b": 3801088
+  },
+  {
+   "after_op": 112000,
+   "delta_live_rows": 87024,
+   "dyn_a": 3842048,
+   "dyn_b": 3833856
+  },
+  {
+   "after_op": 113000,
+   "delta_live_rows": 87777,
+   "dyn_a": 3956736,
+   "dyn_b": 3948544
+  },
+  {
+   "after_op": 114000,
+   "delta_live_rows": 88539,
+   "dyn_a": 4022272,
+   "dyn_b": 4022272
+  },
+  {
+   "after_op": 115000,
+   "delta_live_rows": 89294,
+   "dyn_a": 4087808,
+   "dyn_b": 4087808
+  },
+  {
+   "after_op": 116000,
+   "delta_live_rows": 90049,
+   "dyn_a": 4136960,
+   "dyn_b": 4136960
+  },
+  {
+   "after_op": 117000,
+   "delta_live_rows": 90818,
+   "dyn_a": 4194304,
+   "dyn_b": 4194304
+  },
+  {
+   "after_op": 118000,
+   "delta_live_rows": 91557,
+   "dyn_a": 4227072,
+   "dyn_b": 4227072
+  },
+  {
+   "after_op": 119000,
+   "delta_live_rows": 92319,
+   "dyn_a": 4259840,
+   "dyn_b": 4259840
+  },
+  {
+   "after_op": 120000,
+   "delta_live_rows": 93078,
+   "dyn_a": 4292608,
+   "dyn_b": 4300800
+  },
+  {
+   "after_op": 121000,
+   "delta_live_rows": 801,
+   "dyn_a": 57344,
+   "dyn_b": 57344
+  },
+  {
+   "after_op": 122000,
+   "delta_live_rows": 1615,
+   "dyn_a": 90112,
+   "dyn_b": 90112
+  },
+  {
+   "after_op": 123000,
+   "delta_live_rows": 2409,
+   "dyn_a": 106496,
+   "dyn_b": 106496
+  },
+  {
+   "after_op": 124000,
+   "delta_live_rows": 3213,
+   "dyn_a": 172032,
+   "dyn_b": 172032
+  },
+  {
+   "after_op": 125000,
+   "delta_live_rows": 3997,
+   "dyn_a": 172032,
+   "dyn_b": 172032
+  },
+  {
+   "after_op": 126000,
+   "delta_live_rows": 4785,
+   "dyn_a": 212992,
+   "dyn_b": 212992
+  },
+  {
+   "after_op": 127000,
+   "delta_live_rows": 5567,
+   "dyn_a": 262144,
+   "dyn_b": 262144
+  },
+  {
+   "after_op": 128000,
+   "delta_live_rows": 6342,
+   "dyn_a": 303104,
+   "dyn_b": 303104
+  },
+  {
+   "after_op": 129000,
+   "delta_live_rows": 7145,
+   "dyn_a": 319488,
+   "dyn_b": 319488
+  },
+  {
+   "after_op": 130000,
+   "delta_live_rows": 7949,
+   "dyn_a": 319488,
+   "dyn_b": 319488
+  },
+  {
+   "after_op": 131000,
+   "delta_live_rows": 8727,
+   "dyn_a": 352256,
+   "dyn_b": 352256
+  },
+  {
+   "after_op": 132000,
+   "delta_live_rows": 9520,
+   "dyn_a": 393216,
+   "dyn_b": 393216
+  },
+  {
+   "after_op": 133000,
+   "delta_live_rows": 10320,
+   "dyn_a": 425984,
+   "dyn_b": 425984
+  },
+  {
+   "after_op": 134000,
+   "delta_live_rows": 11121,
+   "dyn_a": 499712,
+   "dyn_b": 499712
+  },
+  {
+   "after_op": 135000,
+   "delta_live_rows": 11902,
+   "dyn_a": 532480,
+   "dyn_b": 532480
+  },
+  {
+   "after_op": 136000,
+   "delta_live_rows": 12705,
+   "dyn_a": 573440,
+   "dyn_b": 573440
+  },
+  {
+   "after_op": 137000,
+   "delta_live_rows": 13483,
+   "dyn_a": 589824,
+   "dyn_b": 589824
+  },
+  {
+   "after_op": 138000,
+   "delta_live_rows": 14286,
+   "dyn_a": 614400,
+   "dyn_b": 614400
+  },
+  {
+   "after_op": 139000,
+   "delta_live_rows": 15087,
+   "dyn_a": 622592,
+   "dyn_b": 622592
+  },
+  {
+   "after_op": 140000,
+   "delta_live_rows": 15884,
+   "dyn_a": 630784,
+   "dyn_b": 630784
+  },
+  {
+   "after_op": 141000,
+   "delta_live_rows": 16685,
+   "dyn_a": 638976,
+   "dyn_b": 638976
+  },
+  {
+   "after_op": 142000,
+   "delta_live_rows": 17470,
+   "dyn_a": 647168,
+   "dyn_b": 647168
+  },
+  {
+   "after_op": 143000,
+   "delta_live_rows": 18267,
+   "dyn_a": 696320,
+   "dyn_b": 696320
+  },
+  {
+   "after_op": 144000,
+   "delta_live_rows": 19054,
+   "dyn_a": 778240,
+   "dyn_b": 778240
+  },
+  {
+   "after_op": 145000,
+   "delta_live_rows": 19850,
+   "dyn_a": 819200,
+   "dyn_b": 819200
+  },
+  {
+   "after_op": 146000,
+   "delta_live_rows": 20651,
+   "dyn_a": 868352,
+   "dyn_b": 868352
+  },
+  {
+   "after_op": 147000,
+   "delta_live_rows": 21441,
+   "dyn_a": 925696,
+   "dyn_b": 925696
+  },
+  {
+   "after_op": 148000,
+   "delta_live_rows": 22238,
+   "dyn_a": 966656,
+   "dyn_b": 966656
+  },
+  {
+   "after_op": 149000,
+   "delta_live_rows": 23006,
+   "dyn_a": 1015808,
+   "dyn_b": 1015808
+  },
+  {
+   "after_op": 150000,
+   "delta_live_rows": 23787,
+   "dyn_a": 1073152,
+   "dyn_b": 1073152
+  },
+  {
+   "after_op": 151000,
+   "delta_live_rows": 24578,
+   "dyn_a": 1097728,
+   "dyn_b": 1097728
+  },
+  {
+   "after_op": 152000,
+   "delta_live_rows": 25354,
+   "dyn_a": 1138688,
+   "dyn_b": 1138688
+  },
+  {
+   "after_op": 153000,
+   "delta_live_rows": 26134,
+   "dyn_a": 1163264,
+   "dyn_b": 1163264
+  },
+  {
+   "after_op": 154000,
+   "delta_live_rows": 26905,
+   "dyn_a": 1171456,
+   "dyn_b": 1171456
+  },
+  {
+   "after_op": 155000,
+   "delta_live_rows": 27653,
+   "dyn_a": 1187840,
+   "dyn_b": 1187840
+  },
+  {
+   "after_op": 156000,
+   "delta_live_rows": 28465,
+   "dyn_a": 1220608,
+   "dyn_b": 1220608
+  },
+  {
+   "after_op": 157000,
+   "delta_live_rows": 29251,
+   "dyn_a": 1228800,
+   "dyn_b": 1228800
+  },
+  {
+   "after_op": 158000,
+   "delta_live_rows": 30030,
+   "dyn_a": 1236992,
+   "dyn_b": 1236992
+  },
+  {
+   "after_op": 159000,
+   "delta_live_rows": 30826,
+   "dyn_a": 1236992,
+   "dyn_b": 1236992
+  },
+  {
+   "after_op": 160000,
+   "delta_live_rows": 31605,
+   "dyn_a": 1245184,
+   "dyn_b": 1245184
+  },
+  {
+   "after_op": 161000,
+   "delta_live_rows": 32388,
+   "dyn_a": 1261568,
+   "dyn_b": 1261568
+  },
+  {
+   "after_op": 162000,
+   "delta_live_rows": 33190,
+   "dyn_a": 1286144,
+   "dyn_b": 1286144
+  },
+  {
+   "after_op": 163000,
+   "delta_live_rows": 33949,
+   "dyn_a": 1286144,
+   "dyn_b": 1286144
+  },
+  {
+   "after_op": 164000,
+   "delta_live_rows": 34730,
+   "dyn_a": 1327104,
+   "dyn_b": 1327104
+  },
+  {
+   "after_op": 165000,
+   "delta_live_rows": 35514,
+   "dyn_a": 1335296,
+   "dyn_b": 1335296
+  },
+  {
+   "after_op": 166000,
+   "delta_live_rows": 36278,
+   "dyn_a": 1392640,
+   "dyn_b": 1400832
+  },
+  {
+   "after_op": 167000,
+   "delta_live_rows": 37060,
+   "dyn_a": 1433600,
+   "dyn_b": 1433600
+  },
+  {
+   "after_op": 168000,
+   "delta_live_rows": 37850,
+   "dyn_a": 1482752,
+   "dyn_b": 1482752
+  },
+  {
+   "after_op": 169000,
+   "delta_live_rows": 38628,
+   "dyn_a": 1540096,
+   "dyn_b": 1540096
+  },
+  {
+   "after_op": 170000,
+   "delta_live_rows": 39419,
+   "dyn_a": 1630208,
+   "dyn_b": 1630208
+  },
+  {
+   "after_op": 171000,
+   "delta_live_rows": 40196,
+   "dyn_a": 1662976,
+   "dyn_b": 1662976
+  },
+  {
+   "after_op": 172000,
+   "delta_live_rows": 40969,
+   "dyn_a": 1728512,
+   "dyn_b": 1728512
+  },
+  {
+   "after_op": 173000,
+   "delta_live_rows": 41759,
+   "dyn_a": 1785856,
+   "dyn_b": 1785856
+  },
+  {
+   "after_op": 174000,
+   "delta_live_rows": 42560,
+   "dyn_a": 1843200,
+   "dyn_b": 1843200
+  },
+  {
+   "after_op": 175000,
+   "delta_live_rows": 43351,
+   "dyn_a": 1900544,
+   "dyn_b": 1900544
+  },
+  {
+   "after_op": 176000,
+   "delta_live_rows": 44152,
+   "dyn_a": 1925120,
+   "dyn_b": 1925120
+  },
+  {
+   "after_op": 177000,
+   "delta_live_rows": 44938,
+   "dyn_a": 1966080,
+   "dyn_b": 1966080
+  },
+  {
+   "after_op": 178000,
+   "delta_live_rows": 45738,
+   "dyn_a": 2007040,
+   "dyn_b": 2007040
+  },
+  {
+   "after_op": 179000,
+   "delta_live_rows": 46524,
+   "dyn_a": 2023424,
+   "dyn_b": 2023424
+  },
+  {
+   "after_op": 180000,
+   "delta_live_rows": 47287,
+   "dyn_a": 2048000,
+   "dyn_b": 2056192
+  },
+  {
+   "after_op": 181000,
+   "delta_live_rows": 48044,
+   "dyn_a": 2129920,
+   "dyn_b": 2129920
+  },
+  {
+   "after_op": 182000,
+   "delta_live_rows": 48823,
+   "dyn_a": 2162688,
+   "dyn_b": 2162688
+  },
+  {
+   "after_op": 183000,
+   "delta_live_rows": 49604,
+   "dyn_a": 2170880,
+   "dyn_b": 2170880
+  },
+  {
+   "after_op": 184000,
+   "delta_live_rows": 50369,
+   "dyn_a": 2211840,
+   "dyn_b": 2211840
+  },
+  {
+   "after_op": 185000,
+   "delta_live_rows": 51153,
+   "dyn_a": 2244608,
+   "dyn_b": 2244608
+  },
+  {
+   "after_op": 186000,
+   "delta_live_rows": 51939,
+   "dyn_a": 2260992,
+   "dyn_b": 2260992
+  },
+  {
+   "after_op": 187000,
+   "delta_live_rows": 52720,
+   "dyn_a": 2310144,
+   "dyn_b": 2310144
+  },
+  {
+   "after_op": 188000,
+   "delta_live_rows": 53512,
+   "dyn_a": 2334720,
+   "dyn_b": 2334720
+  },
+  {
+   "after_op": 189000,
+   "delta_live_rows": 54269,
+   "dyn_a": 2351104,
+   "dyn_b": 2351104
+  },
+  {
+   "after_op": 190000,
+   "delta_live_rows": 55036,
+   "dyn_a": 2359296,
+   "dyn_b": 2359296
+  },
+  {
+   "after_op": 191000,
+   "delta_live_rows": 55790,
+   "dyn_a": 2383872,
+   "dyn_b": 2392064
+  },
+  {
+   "after_op": 192000,
+   "delta_live_rows": 56575,
+   "dyn_a": 2392064,
+   "dyn_b": 2392064
+  },
+  {
+   "after_op": 193000,
+   "delta_live_rows": 57350,
+   "dyn_a": 2400256,
+   "dyn_b": 2400256
+  },
+  {
+   "after_op": 194000,
+   "delta_live_rows": 58137,
+   "dyn_a": 2433024,
+   "dyn_b": 2433024
+  },
+  {
+   "after_op": 195000,
+   "delta_live_rows": 58903,
+   "dyn_a": 2441216,
+   "dyn_b": 2441216
+  },
+  {
+   "after_op": 196000,
+   "delta_live_rows": 59687,
+   "dyn_a": 2441216,
+   "dyn_b": 2441216
+  },
+  {
+   "after_op": 197000,
+   "delta_live_rows": 60457,
+   "dyn_a": 2449408,
+   "dyn_b": 2449408
+  },
+  {
+   "after_op": 198000,
+   "delta_live_rows": 61246,
+   "dyn_a": 2465792,
+   "dyn_b": 2465792
+  },
+  {
+   "after_op": 199000,
+   "delta_live_rows": 62024,
+   "dyn_a": 2473984,
+   "dyn_b": 2482176
+  },
+  {
+   "after_op": 200000,
+   "delta_live_rows": 62807,
+   "dyn_a": 2506752,
+   "dyn_b": 2506752
+  },
+  {
+   "after_op": 201000,
+   "delta_live_rows": 63583,
+   "dyn_a": 2514944,
+   "dyn_b": 2514944
+  },
+  {
+   "after_op": 202000,
+   "delta_live_rows": 64341,
+   "dyn_a": 2531328,
+   "dyn_b": 2523136
+  },
+  {
+   "after_op": 203000,
+   "delta_live_rows": 65111,
+   "dyn_a": 2531328,
+   "dyn_b": 2539520
+  },
+  {
+   "after_op": 204000,
+   "delta_live_rows": 65875,
+   "dyn_a": 2555904,
+   "dyn_b": 2555904
+  },
+  {
+   "after_op": 205000,
+   "delta_live_rows": 66632,
+   "dyn_a": 2580480,
+   "dyn_b": 2588672
+  },
+  {
+   "after_op": 206000,
+   "delta_live_rows": 67409,
+   "dyn_a": 2629632,
+   "dyn_b": 2629632
+  },
+  {
+   "after_op": 207000,
+   "delta_live_rows": 68179,
+   "dyn_a": 2646016,
+   "dyn_b": 2646016
+  },
+  {
+   "after_op": 208000,
+   "delta_live_rows": 68962,
+   "dyn_a": 2662400,
+   "dyn_b": 2662400
+  },
+  {
+   "after_op": 209000,
+   "delta_live_rows": 69754,
+   "dyn_a": 2695168,
+   "dyn_b": 2695168
+  },
+  {
+   "after_op": 210000,
+   "delta_live_rows": 70510,
+   "dyn_a": 2744320,
+   "dyn_b": 2736128
+  },
+  {
+   "after_op": 211000,
+   "delta_live_rows": 71267,
+   "dyn_a": 2777088,
+   "dyn_b": 2777088
+  },
+  {
+   "after_op": 212000,
+   "delta_live_rows": 72017,
+   "dyn_a": 2818048,
+   "dyn_b": 2826240
+  },
+  {
+   "after_op": 213000,
+   "delta_live_rows": 72765,
+   "dyn_a": 2867200,
+   "dyn_b": 2875392
+  },
+  {
+   "after_op": 214000,
+   "delta_live_rows": 73537,
+   "dyn_a": 2924544,
+   "dyn_b": 2924544
+  },
+  {
+   "after_op": 215000,
+   "delta_live_rows": 74321,
+   "dyn_a": 2973696,
+   "dyn_b": 2973696
+  },
+  {
+   "after_op": 216000,
+   "delta_live_rows": 75082,
+   "dyn_a": 3055616,
+   "dyn_b": 3055616
+  },
+  {
+   "after_op": 217000,
+   "delta_live_rows": 75873,
+   "dyn_a": 3104768,
+   "dyn_b": 3104768
+  },
+  {
+   "after_op": 218000,
+   "delta_live_rows": 76654,
+   "dyn_a": 3137536,
+   "dyn_b": 3137536
+  },
+  {
+   "after_op": 219000,
+   "delta_live_rows": 77424,
+   "dyn_a": 3211264,
+   "dyn_b": 3219456
+  },
+  {
+   "after_op": 220000,
+   "delta_live_rows": 78188,
+   "dyn_a": 3252224,
+   "dyn_b": 3260416
+  },
+  {
+   "after_op": 221000,
+   "delta_live_rows": 78949,
+   "dyn_a": 3284992,
+   "dyn_b": 3284992
+  },
+  {
+   "after_op": 222000,
+   "delta_live_rows": 79719,
+   "dyn_a": 3317760,
+   "dyn_b": 3317760
+  },
+  {
+   "after_op": 223000,
+   "delta_live_rows": 80470,
+   "dyn_a": 3375104,
+   "dyn_b": 3366912
+  },
+  {
+   "after_op": 224000,
+   "delta_live_rows": 81227,
+   "dyn_a": 3457024,
+   "dyn_b": 3465216
+  },
+  {
+   "after_op": 225000,
+   "delta_live_rows": 81967,
+   "dyn_a": 3506176,
+   "dyn_b": 3506176
+  },
+  {
+   "after_op": 226000,
+   "delta_live_rows": 82728,
+   "dyn_a": 3555328,
+   "dyn_b": 3571712
+  },
+  {
+   "after_op": 227000,
+   "delta_live_rows": 83454,
+   "dyn_a": 3612672,
+   "dyn_b": 3612672
+  },
+  {
+   "after_op": 228000,
+   "delta_live_rows": 84228,
+   "dyn_a": 3661824,
+   "dyn_b": 3670016
+  },
+  {
+   "after_op": 229000,
+   "delta_live_rows": 84985,
+   "dyn_a": 3702784,
+   "dyn_b": 3710976
+  },
+  {
+   "after_op": 230000,
+   "delta_live_rows": 85742,
+   "dyn_a": 3768320,
+   "dyn_b": 3784704
+  },
+  {
+   "after_op": 231000,
+   "delta_live_rows": 86525,
+   "dyn_a": 3809280,
+   "dyn_b": 3817472
+  },
+  {
+   "after_op": 232000,
+   "delta_live_rows": 87290,
+   "dyn_a": 3866624,
+   "dyn_b": 3866624
+  },
+  {
+   "after_op": 233000,
+   "delta_live_rows": 88039,
+   "dyn_a": 3923968,
+   "dyn_b": 3932160
+  },
+  {
+   "after_op": 234000,
+   "delta_live_rows": 88785,
+   "dyn_a": 3956736,
+   "dyn_b": 3964928
+  },
+  {
+   "after_op": 235000,
+   "delta_live_rows": 89554,
+   "dyn_a": 3981312,
+   "dyn_b": 3989504
+  },
+  {
+   "after_op": 236000,
+   "delta_live_rows": 90308,
+   "dyn_a": 4022272,
+   "dyn_b": 4030464
+  },
+  {
+   "after_op": 237000,
+   "delta_live_rows": 91035,
+   "dyn_a": 4038656,
+   "dyn_b": 4038656
+  },
+  {
+   "after_op": 238000,
+   "delta_live_rows": 91802,
+   "dyn_a": 4063232,
+   "dyn_b": 4063232
+  },
+  {
+   "after_op": 239000,
+   "delta_live_rows": 92551,
+   "dyn_a": 4079616,
+   "dyn_b": 4079616
+  },
+  {
+   "after_op": 240000,
+   "delta_live_rows": 93304,
+   "dyn_a": 4128768,
+   "dyn_b": 4128768
+  },
+  {
+   "after_op": 241000,
+   "delta_live_rows": 796,
+   "dyn_a": 57344,
+   "dyn_b": 57344
+  },
+  {
+   "after_op": 242000,
+   "delta_live_rows": 1605,
+   "dyn_a": 90112,
+   "dyn_b": 90112
+  },
+  {
+   "after_op": 243000,
+   "delta_live_rows": 2401,
+   "dyn_a": 106496,
+   "dyn_b": 106496
+  },
+  {
+   "after_op": 244000,
+   "delta_live_rows": 3202,
+   "dyn_a": 155648,
+   "dyn_b": 155648
+  },
+  {
+   "after_op": 245000,
+   "delta_live_rows": 3995,
+   "dyn_a": 172032,
+   "dyn_b": 172032
+  },
+  {
+   "after_op": 246000,
+   "delta_live_rows": 4814,
+   "dyn_a": 204800,
+   "dyn_b": 204800
+  },
+  {
+   "after_op": 247000,
+   "delta_live_rows": 5609,
+   "dyn_a": 278528,
+   "dyn_b": 278528
+  },
+  {
+   "after_op": 248000,
+   "delta_live_rows": 6391,
+   "dyn_a": 303104,
+   "dyn_b": 303104
+  },
+  {
+   "after_op": 249000,
+   "delta_live_rows": 7183,
+   "dyn_a": 311296,
+   "dyn_b": 311296
+  },
+  {
+   "after_op": 250000,
+   "delta_live_rows": 7986,
+   "dyn_a": 319488,
+   "dyn_b": 319488
+  },
+  {
+   "after_op": 251000,
+   "delta_live_rows": 8792,
+   "dyn_a": 335872,
+   "dyn_b": 335872
+  },
+  {
+   "after_op": 252000,
+   "delta_live_rows": 9587,
+   "dyn_a": 393216,
+   "dyn_b": 393216
+  },
+  {
+   "after_op": 253000,
+   "delta_live_rows": 10408,
+   "dyn_a": 442368,
+   "dyn_b": 442368
+  },
+  {
+   "after_op": 254000,
+   "delta_live_rows": 11220,
+   "dyn_a": 532480,
+   "dyn_b": 532480
+  },
+  {
+   "after_op": 255000,
+   "delta_live_rows": 12017,
+   "dyn_a": 581632,
+   "dyn_b": 581632
+  },
+  {
+   "after_op": 256000,
+   "delta_live_rows": 12830,
+   "dyn_a": 581632,
+   "dyn_b": 581632
+  },
+  {
+   "after_op": 257000,
+   "delta_live_rows": 13627,
+   "dyn_a": 581632,
+   "dyn_b": 581632
+  },
+  {
+   "after_op": 258000,
+   "delta_live_rows": 14416,
+   "dyn_a": 589824,
+   "dyn_b": 589824
+  },
+  {
+   "after_op": 259000,
+   "delta_live_rows": 15184,
+   "dyn_a": 606208,
+   "dyn_b": 606208
+  },
+  {
+   "after_op": 260000,
+   "delta_live_rows": 15991,
+   "dyn_a": 614400,
+   "dyn_b": 614400
+  },
+  {
+   "after_op": 261000,
+   "delta_live_rows": 16781,
+   "dyn_a": 630784,
+   "dyn_b": 630784
+  },
+  {
+   "after_op": 262000,
+   "delta_live_rows": 17572,
+   "dyn_a": 663552,
+   "dyn_b": 663552
+  },
+  {
+   "after_op": 263000,
+   "delta_live_rows": 18368,
+   "dyn_a": 729088,
+   "dyn_b": 729088
+  },
+  {
+   "after_op": 264000,
+   "delta_live_rows": 19142,
+   "dyn_a": 770048,
+   "dyn_b": 770048
+  },
+  {
+   "after_op": 265000,
+   "delta_live_rows": 19937,
+   "dyn_a": 794624,
+   "dyn_b": 794624
+  },
+  {
+   "after_op": 266000,
+   "delta_live_rows": 20704,
+   "dyn_a": 909312,
+   "dyn_b": 909312
+  },
+  {
+   "after_op": 267000,
+   "delta_live_rows": 21482,
+   "dyn_a": 966656,
+   "dyn_b": 966656
+  },
+  {
+   "after_op": 268000,
+   "delta_live_rows": 22266,
+   "dyn_a": 1015808,
+   "dyn_b": 1015808
+  },
+  {
+   "after_op": 269000,
+   "delta_live_rows": 23074,
+   "dyn_a": 1048576,
+   "dyn_b": 1048576
+  },
+  {
+   "after_op": 270000,
+   "delta_live_rows": 23878,
+   "dyn_a": 1081344,
+   "dyn_b": 1081344
+  },
+  {
+   "after_op": 271000,
+   "delta_live_rows": 24680,
+   "dyn_a": 1122304,
+   "dyn_b": 1122304
+  },
+  {
+   "after_op": 272000,
+   "delta_live_rows": 25486,
+   "dyn_a": 1130496,
+   "dyn_b": 1130496
+  },
+  {
+   "after_op": 273000,
+   "delta_live_rows": 26282,
+   "dyn_a": 1130496,
+   "dyn_b": 1130496
+  },
+  {
+   "after_op": 274000,
+   "delta_live_rows": 27070,
+   "dyn_a": 1138688,
+   "dyn_b": 1138688
+  },
+  {
+   "after_op": 275000,
+   "delta_live_rows": 27870,
+   "dyn_a": 1146880,
+   "dyn_b": 1146880
+  },
+  {
+   "after_op": 276000,
+   "delta_live_rows": 28658,
+   "dyn_a": 1155072,
+   "dyn_b": 1155072
+  },
+  {
+   "after_op": 277000,
+   "delta_live_rows": 29445,
+   "dyn_a": 1163264,
+   "dyn_b": 1163264
+  },
+  {
+   "after_op": 278000,
+   "delta_live_rows": 30244,
+   "dyn_a": 1187840,
+   "dyn_b": 1187840
+  },
+  {
+   "after_op": 279000,
+   "delta_live_rows": 31017,
+   "dyn_a": 1187840,
+   "dyn_b": 1187840
+  },
+  {
+   "after_op": 280000,
+   "delta_live_rows": 31802,
+   "dyn_a": 1196032,
+   "dyn_b": 1196032
+  },
+  {
+   "after_op": 281000,
+   "delta_live_rows": 32565,
+   "dyn_a": 1228800,
+   "dyn_b": 1228800
+  },
+  {
+   "after_op": 282000,
+   "delta_live_rows": 33366,
+   "dyn_a": 1269760,
+   "dyn_b": 1269760
+  },
+  {
+   "after_op": 283000,
+   "delta_live_rows": 34168,
+   "dyn_a": 1286144,
+   "dyn_b": 1286144
+  },
+  {
+   "after_op": 284000,
+   "delta_live_rows": 34934,
+   "dyn_a": 1343488,
+   "dyn_b": 1343488
+  },
+  {
+   "after_op": 285000,
+   "delta_live_rows": 35711,
+   "dyn_a": 1392640,
+   "dyn_b": 1392640
+  },
+  {
+   "after_op": 286000,
+   "delta_live_rows": 36510,
+   "dyn_a": 1474560,
+   "dyn_b": 1474560
+  },
+  {
+   "after_op": 287000,
+   "delta_live_rows": 37282,
+   "dyn_a": 1499136,
+   "dyn_b": 1499136
+  },
+  {
+   "after_op": 288000,
+   "delta_live_rows": 38065,
+   "dyn_a": 1556480,
+   "dyn_b": 1556480
+  },
+  {
+   "after_op": 289000,
+   "delta_live_rows": 38871,
+   "dyn_a": 1613824,
+   "dyn_b": 1613824
+  },
+  {
+   "after_op": 290000,
+   "delta_live_rows": 39647,
+   "dyn_a": 1654784,
+   "dyn_b": 1654784
+  },
+  {
+   "after_op": 291000,
+   "delta_live_rows": 40443,
+   "dyn_a": 1769472,
+   "dyn_b": 1769472
+  },
+  {
+   "after_op": 292000,
+   "delta_live_rows": 41222,
+   "dyn_a": 1818624,
+   "dyn_b": 1818624
+  },
+  {
+   "after_op": 293000,
+   "delta_live_rows": 42010,
+   "dyn_a": 1867776,
+   "dyn_b": 1867776
+  },
+  {
+   "after_op": 294000,
+   "delta_live_rows": 42791,
+   "dyn_a": 1908736,
+   "dyn_b": 1908736
+  },
+  {
+   "after_op": 295000,
+   "delta_live_rows": 43554,
+   "dyn_a": 1949696,
+   "dyn_b": 1949696
+  },
+  {
+   "after_op": 296000,
+   "delta_live_rows": 44346,
+   "dyn_a": 1982464,
+   "dyn_b": 1982464
+  },
+  {
+   "after_op": 297000,
+   "delta_live_rows": 45132,
+   "dyn_a": 2007040,
+   "dyn_b": 2007040
+  },
+  {
+   "after_op": 298000,
+   "delta_live_rows": 45896,
+   "dyn_a": 2039808,
+   "dyn_b": 2039808
+  },
+  {
+   "after_op": 299000,
+   "delta_live_rows": 46696,
+   "dyn_a": 2064384,
+   "dyn_b": 2064384
+  },
+  {
+   "after_op": 300000,
+   "delta_live_rows": 47466,
+   "dyn_a": 2113536,
+   "dyn_b": 2113536
+  },
+  {
+   "after_op": 301000,
+   "delta_live_rows": 48257,
+   "dyn_a": 2146304,
+   "dyn_b": 2146304
+  },
+  {
+   "after_op": 302000,
+   "delta_live_rows": 49029,
+   "dyn_a": 2195456,
+   "dyn_b": 2195456
+  },
+  {
+   "after_op": 303000,
+   "delta_live_rows": 49789,
+   "dyn_a": 2203648,
+   "dyn_b": 2203648
+  },
+  {
+   "after_op": 304000,
+   "delta_live_rows": 50585,
+   "dyn_a": 2220032,
+   "dyn_b": 2220032
+  },
+  {
+   "after_op": 305000,
+   "delta_live_rows": 51393,
+   "dyn_a": 2228224,
+   "dyn_b": 2228224
+  },
+  {
+   "after_op": 306000,
+   "delta_live_rows": 52173,
+   "dyn_a": 2244608,
+   "dyn_b": 2244608
+  },
+  {
+   "after_op": 307000,
+   "delta_live_rows": 52953,
+   "dyn_a": 2244608,
+   "dyn_b": 2244608
+  },
+  {
+   "after_op": 308000,
+   "delta_live_rows": 53716,
+   "dyn_a": 2269184,
+   "dyn_b": 2269184
+  },
+  {
+   "after_op": 309000,
+   "delta_live_rows": 54518,
+   "dyn_a": 2285568,
+   "dyn_b": 2285568
+  },
+  {
+   "after_op": 310000,
+   "delta_live_rows": 55286,
+   "dyn_a": 2293760,
+   "dyn_b": 2285568
+  },
+  {
+   "after_op": 311000,
+   "delta_live_rows": 56037,
+   "dyn_a": 2293760,
+   "dyn_b": 2293760
+  },
+  {
+   "after_op": 312000,
+   "delta_live_rows": 56781,
+   "dyn_a": 2310144,
+   "dyn_b": 2310144
+  },
+  {
+   "after_op": 313000,
+   "delta_live_rows": 57556,
+   "dyn_a": 2310144,
+   "dyn_b": 2310144
+  },
+  {
+   "after_op": 314000,
+   "delta_live_rows": 58339,
+   "dyn_a": 2310144,
+   "dyn_b": 2318336
+  },
+  {
+   "after_op": 315000,
+   "delta_live_rows": 59117,
+   "dyn_a": 2326528,
+   "dyn_b": 2326528
+  },
+  {
+   "after_op": 316000,
+   "delta_live_rows": 59887,
+   "dyn_a": 2342912,
+   "dyn_b": 2351104
+  },
+  {
+   "after_op": 317000,
+   "delta_live_rows": 60652,
+   "dyn_a": 2375680,
+   "dyn_b": 2375680
+  },
+  {
+   "after_op": 318000,
+   "delta_live_rows": 61441,
+   "dyn_a": 2392064,
+   "dyn_b": 2392064
+  },
+  {
+   "after_op": 319000,
+   "delta_live_rows": 62221,
+   "dyn_a": 2400256,
+   "dyn_b": 2400256
+  },
+  {
+   "after_op": 320000,
+   "delta_live_rows": 62995,
+   "dyn_a": 2424832,
+   "dyn_b": 2424832
+  },
+  {
+   "after_op": 321000,
+   "delta_live_rows": 63773,
+   "dyn_a": 2433024,
+   "dyn_b": 2433024
+  },
+  {
+   "after_op": 322000,
+   "delta_live_rows": 64545,
+   "dyn_a": 2465792,
+   "dyn_b": 2473984
+  },
+  {
+   "after_op": 323000,
+   "delta_live_rows": 65323,
+   "dyn_a": 2498560,
+   "dyn_b": 2498560
+  },
+  {
+   "after_op": 324000,
+   "delta_live_rows": 66109,
+   "dyn_a": 2531328,
+   "dyn_b": 2547712
+  },
+  {
+   "after_op": 325000,
+   "delta_live_rows": 66889,
+   "dyn_a": 2613248,
+   "dyn_b": 2613248
+  },
+  {
+   "after_op": 326000,
+   "delta_live_rows": 67674,
+   "dyn_a": 2613248,
+   "dyn_b": 2621440
+  },
+  {
+   "after_op": 327000,
+   "delta_live_rows": 68454,
+   "dyn_a": 2670592,
+   "dyn_b": 2678784
+  },
+  {
+   "after_op": 328000,
+   "delta_live_rows": 69205,
+   "dyn_a": 2727936,
+   "dyn_b": 2719744
+  },
+  {
+   "after_op": 329000,
+   "delta_live_rows": 69942,
+   "dyn_a": 2744320,
+   "dyn_b": 2744320
+  },
+  {
+   "after_op": 330000,
+   "delta_live_rows": 70699,
+   "dyn_a": 2793472,
+   "dyn_b": 2793472
+  },
+  {
+   "after_op": 331000,
+   "delta_live_rows": 71450,
+   "dyn_a": 2818048,
+   "dyn_b": 2850816
+  },
+  {
+   "after_op": 332000,
+   "delta_live_rows": 72198,
+   "dyn_a": 2891776,
+   "dyn_b": 2891776
+  },
+  {
+   "after_op": 333000,
+   "delta_live_rows": 72959,
+   "dyn_a": 2949120,
+   "dyn_b": 2957312
+  },
+  {
+   "after_op": 334000,
+   "delta_live_rows": 73722,
+   "dyn_a": 2998272,
+   "dyn_b": 3006464
+  },
+  {
+   "after_op": 335000,
+   "delta_live_rows": 74508,
+   "dyn_a": 3047424,
+   "dyn_b": 3055616
+  },
+  {
+   "after_op": 336000,
+   "delta_live_rows": 75300,
+   "dyn_a": 3104768,
+   "dyn_b": 3112960
+  },
+  {
+   "after_op": 337000,
+   "delta_live_rows": 76077,
+   "dyn_a": 3194880,
+   "dyn_b": 3194880
+  },
+  {
+   "after_op": 338000,
+   "delta_live_rows": 76833,
+   "dyn_a": 3227648,
+   "dyn_b": 3219456
+  },
+  {
+   "after_op": 339000,
+   "delta_live_rows": 77569,
+   "dyn_a": 3276800,
+   "dyn_b": 3284992
+  },
+  {
+   "after_op": 340000,
+   "delta_live_rows": 78322,
+   "dyn_a": 3317760,
+   "dyn_b": 3342336
+  },
+  {
+   "after_op": 341000,
+   "delta_live_rows": 79094,
+   "dyn_a": 3383296,
+   "dyn_b": 3399680
+  },
+  {
+   "after_op": 342000,
+   "delta_live_rows": 79872,
+   "dyn_a": 3448832,
+   "dyn_b": 3473408
+  },
+  {
+   "after_op": 343000,
+   "delta_live_rows": 80607,
+   "dyn_a": 3489792,
+   "dyn_b": 3522560
+  },
+  {
+   "after_op": 344000,
+   "delta_live_rows": 81397,
+   "dyn_a": 3538944,
+   "dyn_b": 3555328
+  },
+  {
+   "after_op": 345000,
+   "delta_live_rows": 82157,
+   "dyn_a": 3604480,
+   "dyn_b": 3604480
+  },
+  {
+   "after_op": 346000,
+   "delta_live_rows": 82946,
+   "dyn_a": 3637248,
+   "dyn_b": 3637248
+  },
+  {
+   "after_op": 347000,
+   "delta_live_rows": 83726,
+   "dyn_a": 3719168,
+   "dyn_b": 3719168
+  },
+  {
+   "after_op": 348000,
+   "delta_live_rows": 84512,
+   "dyn_a": 3735552,
+   "dyn_b": 3735552
+  },
+  {
+   "after_op": 349000,
+   "delta_live_rows": 85263,
+   "dyn_a": 3768320,
+   "dyn_b": 3776512
+  },
+  {
+   "after_op": 350000,
+   "delta_live_rows": 86042,
+   "dyn_a": 3850240,
+   "dyn_b": 3858432
+  },
+  {
+   "after_op": 351000,
+   "delta_live_rows": 86772,
+   "dyn_a": 3899392,
+   "dyn_b": 3907584
+  },
+  {
+   "after_op": 352000,
+   "delta_live_rows": 87516,
+   "dyn_a": 3932160,
+   "dyn_b": 3940352
+  },
+  {
+   "after_op": 353000,
+   "delta_live_rows": 88259,
+   "dyn_a": 3964928,
+   "dyn_b": 3989504
+  },
+  {
+   "after_op": 354000,
+   "delta_live_rows": 89016,
+   "dyn_a": 4014080,
+   "dyn_b": 4030464
+  },
+  {
+   "after_op": 355000,
+   "delta_live_rows": 89798,
+   "dyn_a": 4063232,
+   "dyn_b": 4079616
+  },
+  {
+   "after_op": 356000,
+   "delta_live_rows": 90566,
+   "dyn_a": 4096000,
+   "dyn_b": 4104192
+  },
+  {
+   "after_op": 357000,
+   "delta_live_rows": 91292,
+   "dyn_a": 4128768,
+   "dyn_b": 4128768
+  },
+  {
+   "after_op": 358000,
+   "delta_live_rows": 92044,
+   "dyn_a": 4153344,
+   "dyn_b": 4161536
+  },
+  {
+   "after_op": 359000,
+   "delta_live_rows": 92832,
+   "dyn_a": 4161536,
+   "dyn_b": 4169728
+  },
+  {
+   "after_op": 360000,
+   "delta_live_rows": 93625,
+   "dyn_a": 4161536,
+   "dyn_b": 4186112
+  },
+  {
+   "after_op": 361000,
+   "delta_live_rows": 793,
+   "dyn_a": 57344,
+   "dyn_b": 57344
+  },
+  {
+   "after_op": 362000,
+   "delta_live_rows": 1592,
+   "dyn_a": 90112,
+   "dyn_b": 90112
+  },
+  {
+   "after_op": 363000,
+   "delta_live_rows": 2401,
+   "dyn_a": 90112,
+   "dyn_b": 90112
+  },
+  {
+   "after_op": 364000,
+   "delta_live_rows": 3218,
+   "dyn_a": 172032,
+   "dyn_b": 172032
+  },
+  {
+   "after_op": 365000,
+   "delta_live_rows": 3997,
+   "dyn_a": 172032,
+   "dyn_b": 172032
+  },
+  {
+   "after_op": 366000,
+   "delta_live_rows": 4813,
+   "dyn_a": 188416,
+   "dyn_b": 188416
+  },
+  {
+   "after_op": 367000,
+   "delta_live_rows": 5602,
+   "dyn_a": 286720,
+   "dyn_b": 286720
+  },
+  {
+   "after_op": 368000,
+   "delta_live_rows": 6403,
+   "dyn_a": 311296,
+   "dyn_b": 311296
+  },
+  {
+   "after_op": 369000,
+   "delta_live_rows": 7184,
+   "dyn_a": 319488,
+   "dyn_b": 319488
+  },
+  {
+   "after_op": 370000,
+   "delta_live_rows": 7981,
+   "dyn_a": 319488,
+   "dyn_b": 319488
+  },
+  {
+   "after_op": 371000,
+   "delta_live_rows": 8798,
+   "dyn_a": 327680,
+   "dyn_b": 327680
+  },
+  {
+   "after_op": 372000,
+   "delta_live_rows": 9604,
+   "dyn_a": 335872,
+   "dyn_b": 335872
+  },
+  {
+   "after_op": 373000,
+   "delta_live_rows": 10416,
+   "dyn_a": 442368,
+   "dyn_b": 442368
+  },
+  {
+   "after_op": 374000,
+   "delta_live_rows": 11193,
+   "dyn_a": 557056,
+   "dyn_b": 557056
+  },
+  {
+   "after_op": 375000,
+   "delta_live_rows": 12005,
+   "dyn_a": 581632,
+   "dyn_b": 581632
+  },
+  {
+   "after_op": 376000,
+   "delta_live_rows": 12802,
+   "dyn_a": 606208,
+   "dyn_b": 606208
+  },
+  {
+   "after_op": 377000,
+   "delta_live_rows": 13601,
+   "dyn_a": 614400,
+   "dyn_b": 614400
+  },
+  {
+   "after_op": 378000,
+   "delta_live_rows": 14361,
+   "dyn_a": 614400,
+   "dyn_b": 614400
+  },
+  {
+   "after_op": 379000,
+   "delta_live_rows": 15155,
+   "dyn_a": 614400,
+   "dyn_b": 614400
+  },
+  {
+   "after_op": 380000,
+   "delta_live_rows": 15965,
+   "dyn_a": 614400,
+   "dyn_b": 614400
+  },
+  {
+   "after_op": 381000,
+   "delta_live_rows": 16755,
+   "dyn_a": 622592,
+   "dyn_b": 622592
+  },
+  {
+   "after_op": 382000,
+   "delta_live_rows": 17556,
+   "dyn_a": 622592,
+   "dyn_b": 622592
+  },
+  {
+   "after_op": 383000,
+   "delta_live_rows": 18353,
+   "dyn_a": 647168,
+   "dyn_b": 647168
+  },
+  {
+   "after_op": 384000,
+   "delta_live_rows": 19133,
+   "dyn_a": 688128,
+   "dyn_b": 688128
+  },
+  {
+   "after_op": 385000,
+   "delta_live_rows": 19928,
+   "dyn_a": 778240,
+   "dyn_b": 778240
+  },
+  {
+   "after_op": 386000,
+   "delta_live_rows": 20710,
+   "dyn_a": 860160,
+   "dyn_b": 860160
+  },
+  {
+   "after_op": 387000,
+   "delta_live_rows": 21507,
+   "dyn_a": 983040,
+   "dyn_b": 983040
+  },
+  {
+   "after_op": 388000,
+   "delta_live_rows": 22281,
+   "dyn_a": 1048576,
+   "dyn_b": 1040384
+  },
+  {
+   "after_op": 389000,
+   "delta_live_rows": 23066,
+   "dyn_a": 1122304,
+   "dyn_b": 1122304
+  },
+  {
+   "after_op": 390000,
+   "delta_live_rows": 23866,
+   "dyn_a": 1130496,
+   "dyn_b": 1130496
+  },
+  {
+   "after_op": 391000,
+   "delta_live_rows": 24659,
+   "dyn_a": 1163264,
+   "dyn_b": 1163264
+  },
+  {
+   "after_op": 392000,
+   "delta_live_rows": 25428,
+   "dyn_a": 1171456,
+   "dyn_b": 1171456
+  },
+  {
+   "after_op": 393000,
+   "delta_live_rows": 26219,
+   "dyn_a": 1187840,
+   "dyn_b": 1187840
+  },
+  {
+   "after_op": 394000,
+   "delta_live_rows": 27004,
+   "dyn_a": 1196032,
+   "dyn_b": 1196032
+  },
+  {
+   "after_op": 395000,
+   "delta_live_rows": 27783,
+   "dyn_a": 1204224,
+   "dyn_b": 1204224
+  },
+  {
+   "after_op": 396000,
+   "delta_live_rows": 28565,
+   "dyn_a": 1204224,
+   "dyn_b": 1204224
+  },
+  {
+   "after_op": 397000,
+   "delta_live_rows": 29351,
+   "dyn_a": 1204224,
+   "dyn_b": 1204224
+  },
+  {
+   "after_op": 398000,
+   "delta_live_rows": 30151,
+   "dyn_a": 1212416,
+   "dyn_b": 1212416
+  },
+  {
+   "after_op": 399000,
+   "delta_live_rows": 30937,
+   "dyn_a": 1212416,
+   "dyn_b": 1212416
+  },
+  {
+   "after_op": 400000,
+   "delta_live_rows": 31722,
+   "dyn_a": 1220608,
+   "dyn_b": 1220608
+  },
+  {
+   "after_op": 401000,
+   "delta_live_rows": 32498,
+   "dyn_a": 1220608,
+   "dyn_b": 1220608
+  },
+  {
+   "after_op": 402000,
+   "delta_live_rows": 33294,
+   "dyn_a": 1245184,
+   "dyn_b": 1245184
+  },
+  {
+   "after_op": 403000,
+   "delta_live_rows": 34065,
+   "dyn_a": 1253376,
+   "dyn_b": 1261568
+  },
+  {
+   "after_op": 404000,
+   "delta_live_rows": 34865,
+   "dyn_a": 1286144,
+   "dyn_b": 1286144
+  },
+  {
+   "after_op": 405000,
+   "delta_live_rows": 35671,
+   "dyn_a": 1294336,
+   "dyn_b": 1294336
+  },
+  {
+   "after_op": 406000,
+   "delta_live_rows": 36453,
+   "dyn_a": 1310720,
+   "dyn_b": 1310720
+  },
+  {
+   "after_op": 407000,
+   "delta_live_rows": 37252,
+   "dyn_a": 1359872,
+   "dyn_b": 1368064
+  },
+  {
+   "after_op": 408000,
+   "delta_live_rows": 38033,
+   "dyn_a": 1425408,
+   "dyn_b": 1425408
+  },
+  {
+   "after_op": 409000,
+   "delta_live_rows": 38818,
+   "dyn_a": 1499136,
+   "dyn_b": 1507328
+  },
+  {
+   "after_op": 410000,
+   "delta_live_rows": 39609,
+   "dyn_a": 1572864,
+   "dyn_b": 1572864
+  },
+  {
+   "after_op": 411000,
+   "delta_live_rows": 40381,
+   "dyn_a": 1613824,
+   "dyn_b": 1613824
+  },
+  {
+   "after_op": 412000,
+   "delta_live_rows": 41157,
+   "dyn_a": 1712128,
+   "dyn_b": 1720320
+  },
+  {
+   "after_op": 413000,
+   "delta_live_rows": 41925,
+   "dyn_a": 1769472,
+   "dyn_b": 1769472
+  },
+  {
+   "after_op": 414000,
+   "delta_live_rows": 42713,
+   "dyn_a": 1843200,
+   "dyn_b": 1843200
+  },
+  {
+   "after_op": 415000,
+   "delta_live_rows": 43495,
+   "dyn_a": 1941504,
+   "dyn_b": 1941504
+  },
+  {
+   "after_op": 416000,
+   "delta_live_rows": 44286,
+   "dyn_a": 2015232,
+   "dyn_b": 2031616
+  },
+  {
+   "after_op": 417000,
+   "delta_live_rows": 45065,
+   "dyn_a": 2113536,
+   "dyn_b": 2121728
+  },
+  {
+   "after_op": 418000,
+   "delta_live_rows": 45844,
+   "dyn_a": 2146304,
+   "dyn_b": 2146304
+  },
+  {
+   "after_op": 419000,
+   "delta_live_rows": 46644,
+   "dyn_a": 2187264,
+   "dyn_b": 2187264
+  },
+  {
+   "after_op": 420000,
+   "delta_live_rows": 47448,
+   "dyn_a": 2220032,
+   "dyn_b": 2220032
+  },
+  {
+   "after_op": 421000,
+   "delta_live_rows": 48243,
+   "dyn_a": 2269184,
+   "dyn_b": 2269184
+  },
+  {
+   "after_op": 422000,
+   "delta_live_rows": 49041,
+   "dyn_a": 2277376,
+   "dyn_b": 2277376
+  },
+  {
+   "after_op": 423000,
+   "delta_live_rows": 49806,
+   "dyn_a": 2285568,
+   "dyn_b": 2285568
+  },
+  {
+   "after_op": 424000,
+   "delta_live_rows": 50574,
+   "dyn_a": 2318336,
+   "dyn_b": 2318336
+  },
+  {
+   "after_op": 425000,
+   "delta_live_rows": 51351,
+   "dyn_a": 2342912,
+   "dyn_b": 2342912
+  },
+  {
+   "after_op": 426000,
+   "delta_live_rows": 52123,
+   "dyn_a": 2351104,
+   "dyn_b": 2359296
+  },
+  {
+   "after_op": 427000,
+   "delta_live_rows": 52885,
+   "dyn_a": 2367488,
+   "dyn_b": 2367488
+  },
+  {
+   "after_op": 428000,
+   "delta_live_rows": 53673,
+   "dyn_a": 2383872,
+   "dyn_b": 2383872
+  },
+  {
+   "after_op": 429000,
+   "delta_live_rows": 54447,
+   "dyn_a": 2383872,
+   "dyn_b": 2383872
+  },
+  {
+   "after_op": 430000,
+   "delta_live_rows": 55225,
+   "dyn_a": 2383872,
+   "dyn_b": 2383872
+  },
+  {
+   "after_op": 431000,
+   "delta_live_rows": 56003,
+   "dyn_a": 2392064,
+   "dyn_b": 2392064
+  },
+  {
+   "after_op": 432000,
+   "delta_live_rows": 56749,
+   "dyn_a": 2392064,
+   "dyn_b": 2392064
+  },
+  {
+   "after_op": 433000,
+   "delta_live_rows": 57524,
+   "dyn_a": 2392064,
+   "dyn_b": 2392064
+  },
+  {
+   "after_op": 434000,
+   "delta_live_rows": 58311,
+   "dyn_a": 2400256,
+   "dyn_b": 2400256
+  },
+  {
+   "after_op": 435000,
+   "delta_live_rows": 59115,
+   "dyn_a": 2424832,
+   "dyn_b": 2424832
+  },
+  {
+   "after_op": 436000,
+   "delta_live_rows": 59890,
+   "dyn_a": 2424832,
+   "dyn_b": 2424832
+  },
+  {
+   "after_op": 437000,
+   "delta_live_rows": 60669,
+   "dyn_a": 2424832,
+   "dyn_b": 2424832
+  },
+  {
+   "after_op": 438000,
+   "delta_live_rows": 61436,
+   "dyn_a": 2424832,
+   "dyn_b": 2424832
+  },
+  {
+   "after_op": 439000,
+   "delta_live_rows": 62216,
+   "dyn_a": 2424832,
+   "dyn_b": 2424832
+  },
+  {
+   "after_op": 440000,
+   "delta_live_rows": 62979,
+   "dyn_a": 2433024,
+   "dyn_b": 2433024
+  },
+  {
+   "after_op": 441000,
+   "delta_live_rows": 63751,
+   "dyn_a": 2433024,
+   "dyn_b": 2433024
+  },
+  {
+   "after_op": 442000,
+   "delta_live_rows": 64532,
+   "dyn_a": 2441216,
+   "dyn_b": 2449408
+  },
+  {
+   "after_op": 443000,
+   "delta_live_rows": 65287,
+   "dyn_a": 2465792,
+   "dyn_b": 2473984
+  },
+  {
+   "after_op": 444000,
+   "delta_live_rows": 66055,
+   "dyn_a": 2498560,
+   "dyn_b": 2498560
+  },
+  {
+   "after_op": 445000,
+   "delta_live_rows": 66816,
+   "dyn_a": 2506752,
+   "dyn_b": 2506752
+  },
+  {
+   "after_op": 446000,
+   "delta_live_rows": 67565,
+   "dyn_a": 2514944,
+   "dyn_b": 2506752
+  },
+  {
+   "after_op": 447000,
+   "delta_live_rows": 68326,
+   "dyn_a": 2514944,
+   "dyn_b": 2531328
+  },
+  {
+   "after_op": 448000,
+   "delta_live_rows": 69088,
+   "dyn_a": 2547712,
+   "dyn_b": 2547712
+  },
+  {
+   "after_op": 449000,
+   "delta_live_rows": 69851,
+   "dyn_a": 2588672,
+   "dyn_b": 2596864
+  },
+  {
+   "after_op": 450000,
+   "delta_live_rows": 70624,
+   "dyn_a": 2637824,
+   "dyn_b": 2637824
+  },
+  {
+   "after_op": 451000,
+   "delta_live_rows": 71393,
+   "dyn_a": 2678784,
+   "dyn_b": 2686976
+  },
+  {
+   "after_op": 452000,
+   "delta_live_rows": 72167,
+   "dyn_a": 2695168,
+   "dyn_b": 2703360
+  },
+  {
+   "after_op": 453000,
+   "delta_live_rows": 72920,
+   "dyn_a": 2744320,
+   "dyn_b": 2760704
+  },
+  {
+   "after_op": 454000,
+   "delta_live_rows": 73671,
+   "dyn_a": 2785280,
+   "dyn_b": 2801664
+  },
+  {
+   "after_op": 455000,
+   "delta_live_rows": 74444,
+   "dyn_a": 2826240,
+   "dyn_b": 2826240
+  },
+  {
+   "after_op": 456000,
+   "delta_live_rows": 75188,
+   "dyn_a": 2891776,
+   "dyn_b": 2883584
+  },
+  {
+   "after_op": 457000,
+   "delta_live_rows": 75954,
+   "dyn_a": 2924544,
+   "dyn_b": 2932736
+  },
+  {
+   "after_op": 458000,
+   "delta_live_rows": 76695,
+   "dyn_a": 2990080,
+   "dyn_b": 2998272
+  },
+  {
+   "after_op": 459000,
+   "delta_live_rows": 77472,
+   "dyn_a": 3088384,
+   "dyn_b": 3088384
+  },
+  {
+   "after_op": 460000,
+   "delta_live_rows": 78237,
+   "dyn_a": 3137536,
+   "dyn_b": 3145728
+  },
+  {
+   "after_op": 461000,
+   "delta_live_rows": 79003,
+   "dyn_a": 3219456,
+   "dyn_b": 3227648
+  },
+  {
+   "after_op": 462000,
+   "delta_live_rows": 79777,
+   "dyn_a": 3309568,
+   "dyn_b": 3301376
+  },
+  {
+   "after_op": 463000,
+   "delta_live_rows": 80538,
+   "dyn_a": 3334144,
+   "dyn_b": 3342336
+  },
+  {
+   "after_op": 464000,
+   "delta_live_rows": 81277,
+   "dyn_a": 3424256,
+   "dyn_b": 3391488
+  },
+  {
+   "after_op": 465000,
+   "delta_live_rows": 82046,
+   "dyn_a": 3481600,
+   "dyn_b": 3497984
+  },
+  {
+   "after_op": 466000,
+   "delta_live_rows": 82789,
+   "dyn_a": 3563520,
+   "dyn_b": 3555328
+  },
+  {
+   "after_op": 467000,
+   "delta_live_rows": 83525,
+   "dyn_a": 3612672,
+   "dyn_b": 3612672
+  },
+  {
+   "after_op": 468000,
+   "delta_live_rows": 84313,
+   "dyn_a": 3670016,
+   "dyn_b": 3670016
+  },
+  {
+   "after_op": 469000,
+   "delta_live_rows": 85068,
+   "dyn_a": 3776512,
+   "dyn_b": 3776512
+  },
+  {
+   "after_op": 470000,
+   "delta_live_rows": 85843,
+   "dyn_a": 3842048,
+   "dyn_b": 3842048
+  },
+  {
+   "after_op": 471000,
+   "delta_live_rows": 86613,
+   "dyn_a": 3932160,
+   "dyn_b": 3923968
+  },
+  {
+   "after_op": 472000,
+   "delta_live_rows": 87370,
+   "dyn_a": 4014080,
+   "dyn_b": 4014080
+  },
+  {
+   "after_op": 473000,
+   "delta_live_rows": 88138,
+   "dyn_a": 4079616,
+   "dyn_b": 4071424
+  },
+  {
+   "after_op": 474000,
+   "delta_live_rows": 88929,
+   "dyn_a": 4104192,
+   "dyn_b": 4104192
+  },
+  {
+   "after_op": 475000,
+   "delta_live_rows": 89694,
+   "dyn_a": 4145152,
+   "dyn_b": 4145152
+  },
+  {
+   "after_op": 476000,
+   "delta_live_rows": 90457,
+   "dyn_a": 4186112,
+   "dyn_b": 4194304
+  },
+  {
+   "after_op": 477000,
+   "delta_live_rows": 91223,
+   "dyn_a": 4210688,
+   "dyn_b": 4218880
+  },
+  {
+   "after_op": 478000,
+   "delta_live_rows": 91976,
+   "dyn_a": 4268032,
+   "dyn_b": 4284416
+  },
+  {
+   "after_op": 479000,
+   "delta_live_rows": 92722,
+   "dyn_a": 4300800,
+   "dyn_b": 4300800
+  },
+  {
+   "after_op": 480000,
+   "delta_live_rows": 93490,
+   "dyn_a": 4317184,
+   "dyn_b": 4325376
+  },
+  {
+   "after_op": 481000,
+   "delta_live_rows": 797,
+   "dyn_a": 57344,
+   "dyn_b": 57344
+  },
+  {
+   "after_op": 482000,
+   "delta_live_rows": 1582,
+   "dyn_a": 90112,
+   "dyn_b": 90112
+  },
+  {
+   "after_op": 483000,
+   "delta_live_rows": 2366,
+   "dyn_a": 98304,
+   "dyn_b": 98304
+  },
+  {
+   "after_op": 484000,
+   "delta_live_rows": 3155,
+   "dyn_a": 172032,
+   "dyn_b": 172032
+  },
+  {
+   "after_op": 485000,
+   "delta_live_rows": 3962,
+   "dyn_a": 172032,
+   "dyn_b": 172032
+  },
+  {
+   "after_op": 486000,
+   "delta_live_rows": 4765,
+   "dyn_a": 188416,
+   "dyn_b": 188416
+  },
+  {
+   "after_op": 487000,
+   "delta_live_rows": 5581,
+   "dyn_a": 278528,
+   "dyn_b": 278528
+  },
+  {
+   "after_op": 488000,
+   "delta_live_rows": 6364,
+   "dyn_a": 319488,
+   "dyn_b": 319488
+  },
+  {
+   "after_op": 489000,
+   "delta_live_rows": 7174,
+   "dyn_a": 319488,
+   "dyn_b": 319488
+  },
+  {
+   "after_op": 490000,
+   "delta_live_rows": 7980,
+   "dyn_a": 319488,
+   "dyn_b": 319488
+  },
+  {
+   "after_op": 491000,
+   "delta_live_rows": 8783,
+   "dyn_a": 327680,
+   "dyn_b": 327680
+  },
+  {
+   "after_op": 492000,
+   "delta_live_rows": 9564,
+   "dyn_a": 352256,
+   "dyn_b": 352256
+  },
+  {
+   "after_op": 493000,
+   "delta_live_rows": 10351,
+   "dyn_a": 450560,
+   "dyn_b": 450560
+  },
+  {
+   "after_op": 494000,
+   "delta_live_rows": 11147,
+   "dyn_a": 524288,
+   "dyn_b": 524288
+  },
+  {
+   "after_op": 495000,
+   "delta_live_rows": 11937,
+   "dyn_a": 557056,
+   "dyn_b": 557056
+  },
+  {
+   "after_op": 496000,
+   "delta_live_rows": 12748,
+   "dyn_a": 606208,
+   "dyn_b": 606208
+  },
+  {
+   "after_op": 497000,
+   "delta_live_rows": 13536,
+   "dyn_a": 614400,
+   "dyn_b": 614400
+  },
+  {
+   "after_op": 498000,
+   "delta_live_rows": 14326,
+   "dyn_a": 614400,
+   "dyn_b": 614400
+  },
+  {
+   "after_op": 499000,
+   "delta_live_rows": 15129,
+   "dyn_a": 614400,
+   "dyn_b": 614400
+  },
+  {
+   "after_op": 500000,
+   "delta_live_rows": 15937,
+   "dyn_a": 622592,
+   "dyn_b": 622592
+  }
+ ],
+ "vacuum": [
+  240000,
+  480000
+ ],
+ "restart_to_first_answer_s": 1.0419129000001703,
+ "restart_first_ok": true,
+ "ops_time_s": {
+  "dyn_a": 169.70839400005207,
+  "dyn_b": 211.03340200000093,
+  "dyn_c": 128.5609280000026
+ },
+ "maintenance_s_per_op": {
+  "dyn_a": 0.00038020004800010793,
+  "dyn_b": 0.000741358530199992,
+  "dyn_c": 0.0002571218560000052
+ },
+ "reseals": {
+  "dyn_a": [
+   {
+    "gen": 1,
+    "build": {
+     "bytes": 3565920,
+     "sha256": "4ed18f138f38ca8f1844d3c6b29ca7ad9ccfb313f6a1563ee49ec9e42b480b5d",
+     "levels": 13,
+     "exceptions": 0,
+     "blocks": 6881,
+     "d_bytes": 3125008,
+     "read_s": 1.4107598000009602,
+     "build_s": 0.33646549999684794,
+     "r_bits": 17,
+     "rows": 1000000,
+     "pages": 76232,
+     "watermark": 1000000
+    }
+   },
+   {
+    "gen": 2,
+    "after_op": 120000,
+    "busy_backends": 0,
+    "build_s": 3.957305899999483,
+    "delta_index_s": 0.2992689999991853,
+    "total_s": 4.299348399999872,
+    "read_bytes": 678100992,
+    "written_bytes": 3701664,
+    "build": {
+     "bytes": 3693472,
+     "sha256": "14187a3897e26bf5aae1ab1181d6fe69ef850ddb03a8ea4f15204c85b8fc9d89",
+     "levels": 14,
+     "exceptions": 0,
+     "blocks": 7126,
+     "d_bytes": 3236904,
+     "read_s": 3.5526606000021275,
+     "build_s": 0.3512246000027517,
+     "r_bits": 17,
+     "rows": 1035805,
+     "pages": 82776,
+     "watermark": 1095884
+    }
+   },
+   {
+    "gen": 3,
+    "after_op": 240000,
+    "busy_backends": 0,
+    "build_s": 2.1528534999997646,
+    "delta_index_s": 0.38254419999793754,
+    "total_s": 2.57902280000053,
+    "read_bytes": 724541440,
+    "written_bytes": 3829664,
+    "build": {
+     "bytes": 3821472,
+     "sha256": "77843ba1305976dcc813384c0c4979ed1192988a64f3fa5eda08d8150f40a3bb",
+     "levels": 13,
+     "exceptions": 0,
+     "blocks": 7373,
+     "d_bytes": 3349104,
+     "read_s": 1.7186682999999903,
+     "build_s": 0.3803189999998722,
+     "r_bits": 17,
+     "rows": 1071709,
+     "pages": 88445,
+     "watermark": 1191798
+    }
+   },
+   {
+    "gen": 4,
+    "after_op": 360000,
+    "busy_backends": 0,
+    "build_s": 7.730488599998353,
+    "delta_index_s": 0.3142119999974966,
+    "total_s": 8.077476899998146,
+    "read_bytes": 725868544,
+    "written_bytes": 3959200,
+    "build": {
+     "bytes": 3951008,
+     "sha256": "2047788ed25eb2de6eb57186cfd914bd17f255bda1bede15b49ec5407b08089a",
+     "levels": 14,
+     "exceptions": 0,
+     "blocks": 7627,
+     "d_bytes": 3462352,
+     "read_s": 7.2958322999984375,
+     "build_s": 0.37950160000036703,
+     "r_bits": 17,
+     "rows": 1107949,
+     "pages": 88607,
+     "watermark": 1287988
+    }
+   },
+   {
+    "gen": 5,
+    "after_op": 480000,
+    "busy_backends": 0,
+    "build_s": 2.307051499999943,
+    "delta_index_s": 0.41541289999804576,
+    "total_s": 2.754002900001069,
+    "read_bytes": 770973696,
+    "written_bytes": 4087008,
+    "build": {
+     "bytes": 4078816,
+     "sha256": "43f1a0e7b1a4996dfcccb24ba880a23321138e1f15b1d007aefede0b38cd6647",
+     "levels": 15,
+     "exceptions": 0,
+     "blocks": 7868,
+     "d_bytes": 3574768,
+     "read_s": 1.8554261999997834,
+     "build_s": 0.394365199997992,
+     "r_bits": 17,
+     "rows": 1143923,
+     "pages": 94113,
+     "watermark": 1383999
+    }
+   },
+   {
+    "gen": 6,
+    "after_op": 500000,
+    "busy_backends": 0,
+    "build_s": 2.280646800001705,
+    "delta_index_s": 0.35953220000010333,
+    "total_s": 2.6817790000022796,
+    "read_bytes": 770973696,
+    "written_bytes": 4108896,
+    "build": {
+     "bytes": 4100704,
+     "sha256": "0cd31aefd215d3b56bad816fafe00c2bf120635c1fdf4d566243b9d7d56df50b",
+     "levels": 14,
+     "exceptions": 0,
+     "blocks": 7913,
+     "d_bytes": 3593760,
+     "read_s": 1.831329900000128,
+     "build_s": 0.388189199999033,
+     "r_bits": 17,
+     "rows": 1150000,
+     "pages": 94113,
+     "watermark": 1400000
+    }
+   }
+  ],
+  "dyn_b": [
+   {
+    "gen": 1,
+    "build": {
+     "bytes": 274848,
+     "sha256": "00fc17aa9c3d82d5b3ee1b804753a303842765834002ee1ce35370938d3f195c",
+     "exceptions": 627,
+     "rows_per_page_rule": 13.117850771329625,
+     "b": 16,
+     "load_s": 26.674455299998954,
+     "layout_s": 1.6651735000014014,
+     "rows": 1000000,
+     "pages": 76806,
+     "misplaced_rows": 627,
+     "c1_violations": 0,
+     "pages_per_bucket": {
+      "mean": 2.1719512939453125,
+      "p50": 2.0,
+      "p99": 3.0,
+      "max": 4
+     },
+     "watermark": 1000000,
+     "table": "dyn_b_g1"
+    }
+   },
+   {
+    "gen": 2,
+    "after_op": 120000,
+    "busy_backends": 0,
+    "build_s": 26.020241700000042,
+    "delta_index_s": 0.2928543999987596,
+    "total_s": 26.506852799997432,
+    "read_bytes": 682893312,
+    "written_bytes": 652260204,
+    "build": {
+     "bytes": 275308,
+     "sha256": "e6b5c8a1f004ba782c6e3bb3c999c9921616aeac3a6011e2ff97818dd9b32c32",
+     "exceptions": 650,
+     "rows_per_page_rule": 13.117850771329625,
+     "b": 16,
+     "load_s": 23.381147599997348,
+     "layout_s": 1.804301599997416,
+     "rows": 1035805,
+     "pages": 79561,
+     "misplaced_rows": 650,
+     "c1_violations": 0,
+     "pages_per_bucket": {
+      "mean": 2.2139892578125,
+      "p50": 2.0,
+      "p99": 3.0,
+      "max": 4
+     },
+     "watermark": 1095884,
+     "table": "dyn_b_g2"
+    }
+   },
+   {
+    "gen": 3,
+    "after_op": 240000,
+    "busy_backends": 0,
+    "build_s": 33.59870629999932,
+    "delta_index_s": 0.3276235000012093,
+    "total_s": 34.0102724999997,
+    "read_bytes": 705765376,
+    "written_bytes": 674845328,
+    "build": {
+     "bytes": 275088,
+     "sha256": "b5037bbe44b464e34bb34c4c10d50fa99a52b1e1deab5a311c4c7c779bd80593",
+     "exceptions": 639,
+     "rows_per_page_rule": 13.117850771329625,
+     "b": 16,
+     "load_s": 31.469558900000266,
+     "layout_s": 1.8793048999978055,
+     "rows": 1071709,
+     "pages": 82317,
+     "misplaced_rows": 639,
+     "c1_violations": 0,
+     "pages_per_bucket": {
+      "mean": 2.25604248046875,
+      "p50": 2.0,
+      "p99": 3.0,
+      "max": 4
+     },
+     "watermark": 1191798,
+     "table": "dyn_b_g3"
+    }
+   },
+   {
+    "gen": 4,
+    "after_op": 360000,
+    "busy_backends": 0,
+    "build_s": 29.359687199998007,
+    "delta_index_s": 0.3229280000014114,
+    "total_s": 29.773760199997923,
+    "read_bytes": 728571904,
+    "written_bytes": 697684724,
+    "build": {
+     "bytes": 275188,
+     "sha256": "bcda5a7f5c7fd439c3808f49ebf322233796d6e8356bc4c6d41cc461df3e44eb",
+     "exceptions": 644,
+     "rows_per_page_rule": 13.117850771329625,
+     "b": 16,
+     "load_s": 26.455097499998374,
+     "layout_s": 1.9391987999988487,
+     "rows": 1107949,
+     "pages": 85105,
+     "misplaced_rows": 644,
+     "c1_violations": 0,
+     "pages_per_bucket": {
+      "mean": 2.298583984375,
+      "p50": 2.0,
+      "p99": 3.0,
+      "max": 4
+     },
+     "watermark": 1287988,
+     "table": "dyn_b_g4"
+    }
+   },
+   {
+    "gen": 5,
+    "after_op": 480000,
+    "busy_backends": 0,
+    "build_s": 34.80609280000135,
+    "delta_index_s": 0.31606030000330065,
+    "total_s": 35.204572099999496,
+    "read_bytes": 751509504,
+    "written_bytes": 720353008,
+    "build": {
+     "bytes": 276208,
+     "sha256": "f7bc35b0cbea61a8df2ddddab7ec6ccc110813499307754d86106a905a266b76",
+     "exceptions": 695,
+     "rows_per_page_rule": 13.117850771329625,
+     "b": 16,
+     "load_s": 32.609997999999905,
+     "layout_s": 1.935012400001142,
+     "rows": 1143923,
+     "pages": 87871,
+     "misplaced_rows": 695,
+     "c1_violations": 0,
+     "pages_per_bucket": {
+      "mean": 2.340789794921875,
+      "p50": 2.0,
+      "p99": 3.0,
+      "max": 4
+     },
+     "watermark": 1383999,
+     "table": "dyn_b_g5"
+    }
+   },
+   {
+    "gen": 6,
+    "after_op": 500000,
+    "busy_backends": 0,
+    "build_s": 33.7629694999996,
+    "delta_index_s": 0.29558620000170777,
+    "total_s": 34.15040550000049,
+    "read_bytes": 729686016,
+    "written_bytes": 724227084,
+    "build": {
+     "bytes": 275468,
+     "sha256": "025ff92acd1ae3f1b109b339a6e057ab65801dbd7641c8e4e441bf87e7b88aa4",
+     "exceptions": 658,
+     "rows_per_page_rule": 13.117850771329625,
+     "b": 16,
+     "load_s": 31.6496702000004,
+     "layout_s": 1.8479580999992322,
+     "rows": 1150000,
+     "pages": 88344,
+     "misplaced_rows": 658,
+     "c1_violations": 0,
+     "pages_per_bucket": {
+      "mean": 2.3480072021484375,
+      "p50": 2.0,
+      "p99": 3.0,
+      "max": 4
+     },
+     "watermark": 1400000,
+     "table": "dyn_b_g6"
+    }
+   }
+  ]
+ },
+ "errors": {
+  "dyn_a": 0,
+  "dyn_b": 0,
+  "dyn_c": 0
+ },
+ "scenarios": {
+  "A": [
+   {
+    "scenario": "before_reseal: UPDATE a key already in the delta",
+    "ok": true,
+    "outcomes": [
+     "upd",
+     "upd"
+    ]
+   },
+   {
+    "scenario": "before_reseal: three UPDATEs -> v = 4",
+    "ok": true,
+    "outcomes": [
+     "upd",
+     "upd",
+     "upd"
+    ]
+   },
+   {
+    "scenario": "before_reseal: UPDATE -> DELETE",
+    "ok": true,
+    "outcomes": [
+     "upd",
+     "del"
+    ]
+   },
+   {
+    "scenario": "before_reseal: DELETE -> INSERT same key",
+    "ok": true,
+    "outcomes": [
+     "del",
+     "ins"
+    ]
+   },
+   {
+    "scenario": "before_reseal: repeated DELETE",
+    "ok": true,
+    "outcomes": [
+     "del",
+     "none"
+    ]
+   },
+   {
+    "scenario": "before_reseal: UPDATE of an absent key",
+    "ok": true,
+    "outcomes": [
+     "none"
+    ]
+   },
+   {
+    "scenario": "before_reseal: DELETE 200 + UPDATE 200",
+    "ok": true,
+    "outcomes": [
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd"
+    ]
+   },
+   {
+    "scenario": "before_reseal: after VACUUM: INSERT 300 + UPDATE 100",
+    "ok": true,
+    "outcomes": [
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd"
+    ],
+    "inserted_rows_on_reused_pages": 300
+   },
+   {
+    "scenario": "reseal between phases",
+    "ok": true,
+    "gen": 2,
+    "busy_backends": 0,
+    "total_s": 0.08675589999984368
+   },
+   {
+    "scenario": "after_reseal: UPDATE a key already in the delta",
+    "ok": true,
+    "outcomes": [
+     "upd",
+     "upd"
+    ]
+   },
+   {
+    "scenario": "after_reseal: three UPDATEs -> v = 4",
+    "ok": true,
+    "outcomes": [
+     "upd",
+     "upd",
+     "upd"
+    ]
+   },
+   {
+    "scenario": "after_reseal: UPDATE -> DELETE",
+    "ok": true,
+    "outcomes": [
+     "upd",
+     "del"
+    ]
+   },
+   {
+    "scenario": "after_reseal: DELETE -> INSERT same key",
+    "ok": true,
+    "outcomes": [
+     "del",
+     "ins"
+    ]
+   },
+   {
+    "scenario": "after_reseal: repeated DELETE",
+    "ok": true,
+    "outcomes": [
+     "del",
+     "none"
+    ]
+   },
+   {
+    "scenario": "after_reseal: UPDATE of an absent key",
+    "ok": true,
+    "outcomes": [
+     "none"
+    ]
+   },
+   {
+    "scenario": "after_reseal: DELETE 200 + UPDATE 200",
+    "ok": true,
+    "outcomes": [
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd"
+    ]
+   },
+   {
+    "scenario": "after_reseal: after VACUUM: INSERT 300 + UPDATE 100",
+    "ok": true,
+    "outcomes": [
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd"
+    ],
+    "inserted_rows_on_reused_pages": 300
+   }
+  ],
+  "B": [
+   {
+    "scenario": "before_reseal: UPDATE a key already in the delta",
+    "ok": true,
+    "outcomes": [
+     "upd",
+     "upd"
+    ]
+   },
+   {
+    "scenario": "before_reseal: three UPDATEs -> v = 4",
+    "ok": true,
+    "outcomes": [
+     "upd",
+     "upd",
+     "upd"
+    ]
+   },
+   {
+    "scenario": "before_reseal: UPDATE -> DELETE",
+    "ok": true,
+    "outcomes": [
+     "upd",
+     "del"
+    ]
+   },
+   {
+    "scenario": "before_reseal: DELETE -> INSERT same key",
+    "ok": true,
+    "outcomes": [
+     "del",
+     "ins"
+    ]
+   },
+   {
+    "scenario": "before_reseal: repeated DELETE",
+    "ok": true,
+    "outcomes": [
+     "del",
+     "none"
+    ]
+   },
+   {
+    "scenario": "before_reseal: UPDATE of an absent key",
+    "ok": true,
+    "outcomes": [
+     "none"
+    ]
+   },
+   {
+    "scenario": "before_reseal: DELETE 200 + UPDATE 200",
+    "ok": true,
+    "outcomes": [
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd"
+    ]
+   },
+   {
+    "scenario": "before_reseal: after VACUUM: INSERT 300 + UPDATE 100",
+    "ok": true,
+    "outcomes": [
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd"
+    ],
+    "inserted_rows_on_reused_pages": 300
+   },
+   {
+    "scenario": "reseal between phases",
+    "ok": true,
+    "gen": 2,
+    "busy_backends": 0,
+    "total_s": 0.211476100001164
+   },
+   {
+    "scenario": "after_reseal: UPDATE a key already in the delta",
+    "ok": true,
+    "outcomes": [
+     "upd",
+     "upd"
+    ]
+   },
+   {
+    "scenario": "after_reseal: three UPDATEs -> v = 4",
+    "ok": true,
+    "outcomes": [
+     "upd",
+     "upd",
+     "upd"
+    ]
+   },
+   {
+    "scenario": "after_reseal: UPDATE -> DELETE",
+    "ok": true,
+    "outcomes": [
+     "upd",
+     "del"
+    ]
+   },
+   {
+    "scenario": "after_reseal: DELETE -> INSERT same key",
+    "ok": true,
+    "outcomes": [
+     "del",
+     "ins"
+    ]
+   },
+   {
+    "scenario": "after_reseal: repeated DELETE",
+    "ok": true,
+    "outcomes": [
+     "del",
+     "none"
+    ]
+   },
+   {
+    "scenario": "after_reseal: UPDATE of an absent key",
+    "ok": true,
+    "outcomes": [
+     "none"
+    ]
+   },
+   {
+    "scenario": "after_reseal: DELETE 200 + UPDATE 200",
+    "ok": true,
+    "outcomes": [
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "del",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd"
+    ]
+   },
+   {
+    "scenario": "after_reseal: after VACUUM: INSERT 300 + UPDATE 100",
+    "ok": true,
+    "outcomes": [
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "ins",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd",
+     "upd"
+    ],
+    "inserted_rows_on_reused_pages": 300
+   }
+  ]
+ }
+}

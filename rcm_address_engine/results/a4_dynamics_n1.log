@@ -1,0 +1,35 @@
+03:59:46 N1 load A4 table
+a2_gen: 1000000 records, copies 0..7, span 12797350389000 us
+04:00:23 N1 load control table
+a2_gen: 1000000 records, copies 0..7, span 12797350389000 us
+04:01:06 N1 stream sha256 1f685ebefc15933071387ce022540a44d73507dbec55a3740f20db3d9ce247d5
+04:01:18 checkpoint 0 base 0 {'a4_n1': ({'live': 0, 'deleted': 0, 'absent': 0}, 1.0, 3.565), 'c4_n1': ({'live': 0, 'deleted': 0, 'absent': 0}, 4.0, 31.564)}
+04:02:04 checkpoint 1 every_50k 50000 {'a4_n1': ({'live': 0, 'deleted': 0, 'absent': 0}, 1.002, 4.639), 'c4_n1': ({'live': 0, 'deleted': 0, 'absent': 0}, 4.0, 31.096)}
+04:02:04 N1 ops 50000 {'a4_n1': 13.0, 'c4_n1': 10.1} maint 0.0 levels 3
+04:02:34 N1 major compaction 3.41 s at op 100000
+04:02:50 checkpoint 2 every_50k 100000 {'a4_n1': ({'live': 0, 'deleted': 0, 'absent': 0}, 1.0, 3.566), 'c4_n1': ({'live': 0, 'deleted': 0, 'absent': 0}, 4.0, 30.697)}
+04:02:50 N1 ops 100000 {'a4_n1': 27.4, 'c4_n1': 21.7} maint 3.6 levels 2
+04:03:41 checkpoint 3 every_50k 150000 {'a4_n1': ({'live': 0, 'deleted': 0, 'absent': 0}, 1.001, 4.609), 'c4_n1': ({'live': 0, 'deleted': 0, 'absent': 0}, 4.0, 32.726)}
+04:03:41 N1 ops 150000 {'a4_n1': 42.3, 'c4_n1': 34.0} maint 3.6 levels 3
+04:04:37 checkpoint 4 every_50k 200000 {'a4_n1': ({'live': 0, 'deleted': 0, 'absent': 0}, 1.009, 5.33), 'c4_n1': ({'live': 0, 'deleted': 0, 'absent': 0}, 4.022, 40.634)}
+04:04:37 N1 ops 200000 {'a4_n1': 58.7, 'c4_n1': 47.5} maint 3.7 levels 5
+04:04:41 N1 major compaction 3.03 s at op 203000
+04:05:35 checkpoint 5 every_50k 250000 {'a4_n1': ({'live': 0, 'deleted': 0, 'absent': 0}, 1.002, 4.502), 'c4_n1': ({'live': 0, 'deleted': 0, 'absent': 0}, 4.0, 47.358)}
+04:05:35 N1 ops 250000 {'a4_n1': 71.6, 'c4_n1': 61.1} maint 6.8 levels 3
+04:06:30 checkpoint 6 every_50k 300000 {'a4_n1': ({'live': 0, 'deleted': 0, 'absent': 0}, 1.009, 5.207), 'c4_n1': ({'live': 0, 'deleted': 0, 'absent': 0}, 4.0, 47.668)}
+04:06:30 N1 ops 300000 {'a4_n1': 87.8, 'c4_n1': 74.8} maint 6.9 levels 5
+04:06:42 N1 major compaction 4.82 s at op 310000
+04:07:26 checkpoint 7 every_50k 350000 {'a4_n1': ({'live': 0, 'deleted': 0, 'absent': 0}, 1.003, 4.297), 'c4_n1': ({'live': 0, 'deleted': 0, 'absent': 0}, 4.004, 51.546)}
+04:07:26 N1 ops 350000 {'a4_n1': 102.6, 'c4_n1': 89.3} maint 11.8 levels 3
+04:08:18 checkpoint 8 every_50k 400000 {'a4_n1': ({'live': 0, 'deleted': 0, 'absent': 0}, 1.018, 4.987), 'c4_n1': ({'live': 0, 'deleted': 0, 'absent': 0}, 4.003, 54.509)}
+04:08:18 N1 ops 400000 {'a4_n1': 117.5, 'c4_n1': 100.7} maint 11.8 levels 5
+04:08:34 N1 major compaction 4.99 s at op 420000
+04:09:08 checkpoint 9 every_50k 450000 {'a4_n1': ({'live': 0, 'deleted': 0, 'absent': 0}, 1.004, 4.033), 'c4_n1': ({'live': 0, 'deleted': 0, 'absent': 0}, 4.009, 55.038)}
+04:09:08 N1 ops 450000 {'a4_n1': 130.9, 'c4_n1': 112.1} maint 16.9 levels 3
+04:10:07 checkpoint 10 every_50k 500000 {'a4_n1': ({'live': 0, 'deleted': 0, 'absent': 0}, 1.006, 4.973), 'c4_n1': ({'live': 0, 'deleted': 0, 'absent': 0}, 4.0, 54.637)}
+04:10:07 N1 ops 500000 {'a4_n1': 145.4, 'c4_n1': 123.0} maint 16.9 levels 4
+04:10:07 N1 restart
+04:10:27 checkpoint 11 after_restart 500000 {'a4_n1': ({'live': 0, 'deleted': 0, 'absent': 0}, 1.006, 4.973), 'c4_n1': ({'live': 0, 'deleted': 0, 'absent': 0}, 4.0, 54.637)}
+04:10:36 N1 open probe {'p50': 11.461699999927077, 'p95': 11.902199999894947, 'p99': 12.070280002080835, 'mean': 11.523447618812844, 'n': 21}
+04:10:52 checkpoint 12 after_final_major 500000 {'a4_n1': ({'live': 0, 'deleted': 0, 'absent': 0}, 1.0, 3.566), 'c4_n1': ({'live': 0, 'deleted': 0, 'absent': 0}, 4.0, 54.637)}
+04:10:52 N1 done errors {'a4_n1': 0, 'c4_n1': 0} witness 0 S3 batch violations 0

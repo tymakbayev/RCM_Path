@@ -1,0 +1,12 @@
+# generated data: reference arrays, address files, COPY streams (regenerate with a2_gen.py; hashes in
+# rcm_address_engine/results/data_manifest.sha256)
+rcm_address_engine/data/
+# local environments and caches
+.venv*/
+rcm_address_engine/.venv*/
+__pycache__/
+*.pyc
+# secrets: never commit a token or a password file
+*token*.txt
+pwfile.txt
+.env

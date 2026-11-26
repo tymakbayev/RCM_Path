@@ -1,0 +1,12 @@
+02:04:51 N1 load
+a2_gen: 1000000 records, copies 0..7, span 12797350389000 us
+02:05:41 N1 table {'oid': 24641, 'relfilenode': 24641, 'pages': 76232, 'main_bytes': 624492544, 'table_bytes': 624697344, 'toast_bytes': 0, 'toast_rows': 0, 'payload_len': {'min': 513, 'p50': 522.0, 'p99': 581.0, 'max': 596}, 'rows_per_page': 13.117850771329625}
+02:05:41 N1 sidecar A
+02:05:44 N1 A build {'bytes_per_row': 3.56592, 'levels': 13, 'exceptions': 0, 'c1_errors': 0, 'r_bits': 17}
+02:05:44 N1 A measure
+02:06:37 N1 btree
+02:07:14 N1 hash
+02:07:51 N1 sidecar B
+02:08:17 N1 B build {'bytes_per_row': 0.274848, 'b': 16, 'misplaced_rows': 627, 'c1_violations': 0}
+02:09:28 N1 BRIN control
+02:13:16 N1 done

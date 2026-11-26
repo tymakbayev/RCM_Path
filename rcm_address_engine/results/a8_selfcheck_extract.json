@@ -1,0 +1,598 @@
+{
+ "impl_sha256": {
+  "a6_lsm.py": "22cac7f0f9df13087b586edf0ef891a91f6c91bdbd9d04ddc4affa97d0cc2b3c",
+  "a6_run.py": "6effa8acef758757e6c0525f6046a0fea182a06e40565a685a360b93381c2188",
+  "a6_pghash.py": "fb56864bcd49fc136dbbd980933b980b4936cde40655e56310ffbf4915dedc0b",
+  "a6_selftest_lsm.py": "bebfa88eefdcd21fb3ba731eca22c72ec56f2c7afc320e0fd345f7c27e42832a",
+  "a5_lsm.py": "114238664ef2837d538ba46f2587b7c77bcca741241c913cbecda55fde62a7eb",
+  "a5_run.py": "950b623148bd6d0f1764f7b79f048bc444779008723bcee114c117f5d7d305d9",
+  "a4_lsm.py": "322da95ceb0403ce82cd14880d2d41722e74a09854530e6a04c8a51d42f8c870",
+  "a4_run.py": "b638699acf91f4ece87525869fb23e9614f60849cf2ce5c9704e35656b5276c2",
+  "a2_core.py": "2bb07e0a4fb9ed478f68a4e4ffabf9decea7cb15bd7f5c3587941d1e5151e3cd",
+  "a2_pg.py": "f992dda35ff0a13eb8822882de5db6ec7addfa68ba026ec2eb02cd73a8845c7c",
+  "a2_dyn.py": "b27fd166cdf6639c2f7a15fe7bece551d5cc1ea0a0e2128b385d3566408160f7",
+  "a2_runs.py": "274a9483701b394618de182038a5a102b5a4dad249c08a3c8dced28df69af658",
+  "a2_gen.py": "ec252c44752f9776eac3058aebc54398dd19a4f27718e0e6e4d27975512e6381",
+  "a2_selftest_core.py": "32761bf3a86a9dea494af752e83cb2ecb589702ca25611e959f2759122141c88",
+  "a2.py": "3992d0e242c50d649904c84bce6775fb53ca4265c8a62e112b2e18ae23a1abf5",
+  "a7_run.py": "32ab74ffb53627a1361e99ec611b4c87fcf650be92ad4b3fbe46b5955b2ae0f2",
+  "a8_run.py": "e3ea0ba3c7da90e5f25899784e00acef2823eb283249bf26c49a8c0f898a6956"
+ },
+ "calc_selftest": {
+  "ok": true,
+  "checks": {
+   "rho": true,
+   "rho_parts": true,
+   "tau_per_block": true,
+   "I": true,
+   "op_bytes": true,
+   "G": true,
+   "coverage": true,
+   "coverage_sign": true,
+   "zero_reads": true,
+   "dirty_io": true,
+   "negative_foreign": true,
+   "active_rel": true,
+   "unsupported": true,
+   "E_pairs": true,
+   "incorrect_block": true,
+   "d1": true,
+   "describe": true,
+   "ratio_none": true
+  }
+ },
+ "all_ok": true,
+ "calc_selftest_N6": {
+  "ok": false,
+  "checks": {
+   "rho": true,
+   "rho_parts": true,
+   "tau_per_block": false,
+   "I": true,
+   "op_bytes": true,
+   "G": true,
+   "coverage": true,
+   "coverage_sign": true,
+   "zero_reads": true,
+   "dirty_io": true,
+   "negative_foreign": true,
+   "active_rel": true,
+   "unsupported": true,
+   "E_pairs": true,
+   "incorrect_block": true,
+   "d1": true,
+   "describe": true,
+   "ratio_none": true
+  }
+ },
+ "preconditions": {
+  "block_size": 8192,
+  "block_size_ok": true,
+  "track_io_timing_default": "off",
+  "track_io_timing_default_off": true
+ },
+ "extensions": {
+  "created": [
+   "pg_buffercache",
+   "pg_prewarm"
+  ],
+  "pg_buffercache_version": "1.6"
+ },
+ "stage_a_ok": true,
+ "p5_schedule_prefix": true,
+ "p7_wrapper": {
+  "ok": true,
+  "bad": [],
+  "last_equals_final": true
+ },
+ "p6_c7_observations": {
+  "ok": true,
+  "checkpoints": 3,
+  "bad": []
+ },
+ "d1_small": {
+  "defined": true,
+  "lookup_ud_us": {
+   "s": 96.36772049939589,
+   "dir": 90.79487691284099
+  },
+  "a_ratio": 1.0613783924384255,
+  "a_cond": false,
+  "b_ratios": [
+   0.6700547302580141,
+   0.6752136752136754
+  ],
+  "b_cond": false,
+  "repeated": false,
+  "ops_between": [
+   10000,
+   20000
+  ]
+ },
+ "p3a_attribution": {
+  "mode": "поддержана",
+  "evicted_series": 20,
+  "ok_share": 1.0,
+  "rows": [
+   {
+    "rel_blocks": 800,
+    "be_blocks": 800.0,
+    "be_read_time_ms": 10.988,
+    "ok": true
+   },
+   {
+    "rel_blocks": 803,
+    "be_blocks": 803.0,
+    "be_read_time_ms": 9.359,
+    "ok": true
+   },
+   {
+    "rel_blocks": 820,
+    "be_blocks": 820.0,
+    "be_read_time_ms": 9.07,
+    "ok": true
+   },
+   {
+    "rel_blocks": 819,
+    "be_blocks": 819.0,
+    "be_read_time_ms": 10.289,
+    "ok": true
+   },
+   {
+    "rel_blocks": 803,
+    "be_blocks": 803.0,
+    "be_read_time_ms": 10.191,
+    "ok": true
+   },
+   {
+    "rel_blocks": 822,
+    "be_blocks": 822.0,
+    "be_read_time_ms": 9.023,
+    "ok": true
+   },
+   {
+    "rel_blocks": 803,
+    "be_blocks": 803.0,
+    "be_read_time_ms": 10.077000000000002,
+    "ok": true
+   },
+   {
+    "rel_blocks": 822,
+    "be_blocks": 822.0,
+    "be_read_time_ms": 9.028,
+    "ok": true
+   },
+   {
+    "rel_blocks": 803,
+    "be_blocks": 803.0,
+    "be_read_time_ms": 10.142,
+    "ok": true
+   },
+   {
+    "rel_blocks": 811,
+    "be_blocks": 811.0,
+    "be_read_time_ms": 9.103,
+    "ok": true
+   },
+   {
+    "rel_blocks": 803,
+    "be_blocks": 803.0,
+    "be_read_time_ms": 10.018,
+    "ok": true
+   },
+   {
+    "rel_blocks": 811,
+    "be_blocks": 811.0,
+    "be_read_time_ms": 9.280000000000001,
+    "ok": true
+   }
+  ]
+ },
+ "checks": {
+  "p1_correct": true,
+  "p1_track_io_timing": true,
+  "p1_prepared_rule": true,
+  "p1_activity": true,
+  "p1_quotas": true,
+  "p2_zero_read_valid": true,
+  "p2_evicted_reads": true,
+  "p3b_journal": true,
+  "p3b_publication": true,
+  "p4_abba": true,
+  "p6_memory": true,
+  "p6_evict": true
+ },
+ "analysis_small": {
+  "block_status": {
+   "1": {
+    "n": 12,
+    "incorrect": 0,
+    "procedure_violations": 0,
+    "io_contaminated": 0,
+    "rel_not_ok": 0,
+    "established": true,
+    "io_usable": true
+   },
+   "2a": {
+    "n": 8,
+    "incorrect": 0,
+    "procedure_violations": 0,
+    "io_contaminated": 0,
+    "rel_not_ok": 0,
+    "established": true,
+    "io_usable": true
+   },
+   "2b": {
+    "n": 8,
+    "incorrect": 0,
+    "procedure_violations": 0,
+    "io_contaminated": 0,
+    "rel_not_ok": 0,
+    "established": true,
+    "io_usable": true
+   },
+   "3": {
+    "n": 24,
+    "incorrect": 0,
+    "procedure_violations": 0,
+    "io_contaminated": 0,
+    "rel_not_ok": 0,
+    "established": true,
+    "io_usable": true
+   },
+   "4": {
+    "n": 10,
+    "incorrect": 0,
+    "procedure_violations": 0,
+    "io_contaminated": 0,
+    "rel_not_ok": 0,
+    "established": true,
+    "io_usable": true
+   }
+  },
+  "summaries": {
+   "b1_first": {
+    "G": "смешано",
+    "G_p50": "примерно равно во всех",
+    "rho_ratio": "смешано",
+    "tau_ratio": "примерно равно во всех"
+   },
+   "b1_repeat": {
+    "G": "примерно равно во всех",
+    "G_p50": "примерно равно во всех",
+    "rho_ratio": "не определено",
+    "tau_ratio": "не определено"
+   },
+   "b1_evicted": {
+    "G": "смешано",
+    "G_p50": "примерно равно во всех",
+    "rho_ratio": "примерно равно во всех",
+    "tau_ratio": "примерно равно во всех"
+   },
+   "b2a_first": {
+    "G": "примерно равно во всех",
+    "G_p50": "примерно равно во всех",
+    "rho_ratio": "примерно равно во всех",
+    "tau_ratio": "примерно равно во всех"
+   },
+   "b2a_repeat": {
+    "G": "примерно равно во всех",
+    "G_p50": "примерно равно во всех",
+    "rho_ratio": "не определено",
+    "tau_ratio": "не определено"
+   },
+   "b2b_first": {
+    "G": "примерно равно во всех",
+    "G_p50": "примерно равно во всех",
+    "rho_ratio": "примерно равно во всех",
+    "tau_ratio": "примерно равно во всех"
+   },
+   "b2b_repeat": {
+    "G": "примерно равно во всех",
+    "G_p50": "примерно равно во всех",
+    "rho_ratio": "не определено",
+    "tau_ratio": "не определено"
+   },
+   "b3": {
+    "E_s": "примерно равно во всех",
+    "E_d": "примерно равно во всех",
+    "E_s_over_E_d": "примерно равно во всех",
+    "Etau_s": "примерно равно во всех",
+    "Etau_d": "примерно равно во всех"
+   }
+  },
+  "note": "выжимка: пары и значения по наборам опущены"
+ },
+ "interventions_small": [
+  {
+   "what": "2a s7",
+   "kind": "read",
+   "s": 0.028780599997844547,
+   "pause_s": null,
+   "total_s": 1.5842285999970045,
+   "blocks": 9233,
+   "accounted_share": 0.0,
+   "accounting": "недоступно или неполно"
+  },
+  {
+   "what": "2a p7",
+   "kind": "read",
+   "s": 0.03600999999616761,
+   "pause_s": null,
+   "total_s": 1.5962263999972492,
+   "blocks": 9311,
+   "accounted_share": 0.0007517989474814735,
+   "accounting": "недоступно или неполно"
+  },
+  {
+   "what": "2b p7",
+   "kind": "read",
+   "s": 0.03328160000091884,
+   "pause_s": null,
+   "total_s": 1.5917378000012832,
+   "blocks": 9311,
+   "accounted_share": 0.0,
+   "accounting": "недоступно или неполно"
+  },
+  {
+   "what": "2b s7",
+   "kind": "read",
+   "s": 0.028353199988487177,
+   "pause_s": null,
+   "total_s": 1.5864017999992939,
+   "blocks": 9233,
+   "accounted_share": 0.0,
+   "accounting": "недоступно или неполно"
+  },
+  {
+   "what": "interference pair 0",
+   "kind": "read",
+   "s": 0.029571599996415898,
+   "pause_s": null,
+   "total_s": 1.5978934000013396,
+   "blocks": 8733,
+   "accounted_share": 0.0004580327493415779,
+   "accounting": "недоступно или неполно"
+  },
+  {
+   "what": "control pair 0",
+   "kind": "pause",
+   "s": 0.02652539999689907,
+   "pause_s": 0.029571599996415898,
+   "total_s": 1.581781000000774,
+   "blocks": 0,
+   "accounted_share": null,
+   "accounting": "не применимо"
+  },
+  {
+   "what": "control pair 1",
+   "kind": "pause",
+   "s": 0.02998170000500977,
+   "pause_s": 0.029571599996415898,
+   "total_s": 1.5907308000023477,
+   "blocks": 0,
+   "accounted_share": null,
+   "accounting": "не применимо"
+  },
+  {
+   "what": "interference pair 1",
+   "kind": "read",
+   "s": 0.0329764000052819,
+   "pause_s": null,
+   "total_s": 1.5865504999965196,
+   "blocks": 8733,
+   "accounted_share": 0.0,
+   "accounting": "недоступно или неполно"
+  }
+ ],
+ "mutants": {
+  "N1": {
+   "caught": true,
+   "check": "p1_prepared_rule",
+   "checks": {
+    "p1_correct": true,
+    "p1_track_io_timing": true,
+    "p1_prepared_rule": false,
+    "p1_activity": true,
+    "p1_quotas": true,
+    "p2_zero_read_valid": true,
+    "p2_evicted_reads": true,
+    "p3b_journal": true,
+    "p3b_publication": true,
+    "p4_abba": true,
+    "p6_memory": true,
+    "p6_evict": true
+   }
+  },
+  "N2": {
+   "caught": true,
+   "check": "p1_activity",
+   "checks": {
+    "p1_correct": true,
+    "p1_track_io_timing": true,
+    "p1_prepared_rule": false,
+    "p1_activity": false,
+    "p1_quotas": true,
+    "p2_zero_read_valid": true,
+    "p2_evicted_reads": false,
+    "p3b_journal": true,
+    "p3b_publication": false,
+    "p4_abba": true,
+    "p6_memory": true,
+    "p6_evict": true
+   }
+  },
+  "N3": {
+   "caught": true,
+   "check": "p1_track_io_timing",
+   "checks": {
+    "p1_correct": true,
+    "p1_track_io_timing": false,
+    "p1_prepared_rule": true,
+    "p1_activity": true,
+    "p1_quotas": true,
+    "p2_zero_read_valid": true,
+    "p2_evicted_reads": true,
+    "p3b_journal": true,
+    "p3b_publication": true,
+    "p4_abba": true,
+    "p6_memory": true,
+    "p6_evict": true
+   }
+  },
+  "N4": {
+   "caught": true,
+   "check": "p1_correct",
+   "checks": {
+    "p1_correct": false,
+    "p1_track_io_timing": true,
+    "p1_prepared_rule": true,
+    "p1_activity": true,
+    "p1_quotas": true,
+    "p2_zero_read_valid": false,
+    "p2_evicted_reads": true,
+    "p3b_journal": true,
+    "p3b_publication": true,
+    "p4_abba": true,
+    "p6_memory": true,
+    "p6_evict": true
+   }
+  },
+  "N5": {
+   "caught": true,
+   "check": "p4_abba",
+   "checks": {
+    "p1_correct": true,
+    "p1_track_io_timing": true,
+    "p1_prepared_rule": true,
+    "p1_activity": true,
+    "p1_quotas": true,
+    "p2_zero_read_valid": true,
+    "p2_evicted_reads": true,
+    "p3b_journal": true,
+    "p3b_publication": true,
+    "p4_abba": false,
+    "p6_memory": true,
+    "p6_evict": true
+   }
+  },
+  "N6": {
+   "caught": true,
+   "check": "calc_selftest"
+  },
+  "N7": {
+   "caught": true,
+   "check": "p3b_journal",
+   "checks": {
+    "p1_correct": true,
+    "p1_track_io_timing": true,
+    "p1_prepared_rule": true,
+    "p1_activity": false,
+    "p1_quotas": true,
+    "p2_zero_read_valid": true,
+    "p2_evicted_reads": false,
+    "p3b_journal": false,
+    "p3b_publication": false,
+    "p4_abba": true,
+    "p6_memory": true,
+    "p6_evict": true
+   }
+  },
+  "N8": {
+   "caught": true,
+   "check": "p2_zero_read_valid"
+  },
+  "N9": {
+   "caught": true,
+   "check": "p1_quotas",
+   "checks": {
+    "p1_correct": true,
+    "p1_track_io_timing": true,
+    "p1_prepared_rule": false,
+    "p1_activity": true,
+    "p1_quotas": false,
+    "p2_zero_read_valid": true,
+    "p2_evicted_reads": true,
+    "p3b_journal": true,
+    "p3b_publication": true,
+    "p4_abba": true,
+    "p6_memory": true,
+    "p6_evict": true
+   }
+  },
+  "N10": {
+   "caught": true,
+   "check": "p4_abba",
+   "checks": {
+    "p1_correct": true,
+    "p1_track_io_timing": true,
+    "p1_prepared_rule": true,
+    "p1_activity": true,
+    "p1_quotas": true,
+    "p2_zero_read_valid": true,
+    "p2_evicted_reads": true,
+    "p3b_journal": true,
+    "p3b_publication": true,
+    "p4_abba": false,
+    "p6_memory": true,
+    "p6_evict": true
+   }
+  },
+  "N11": {
+   "caught": true,
+   "check": "p6_evict",
+   "checks": {
+    "p1_correct": true,
+    "p1_track_io_timing": true,
+    "p1_prepared_rule": true,
+    "p1_activity": true,
+    "p1_quotas": true,
+    "p2_zero_read_valid": true,
+    "p2_evicted_reads": false,
+    "p3b_journal": true,
+    "p3b_publication": false,
+    "p4_abba": true,
+    "p6_memory": true,
+    "p6_evict": false
+   }
+  }
+ },
+ "setup": {
+  "tables_absent_before": true,
+  "load": {
+   "copy_s": 12.330291999998735,
+   "post_s7_s": 0.27594750000571366,
+   "post_p7_s": 0.6578236999921501,
+   "post_a7_s": 0.7018131000077119,
+   "layout_p7_a7": {
+    "same": 100000,
+    "total": 100000,
+    "share": 1.0
+   },
+   "rows": {
+    "s7_s8": 100000,
+    "p7_s8": 100000,
+    "a7_s8": 100000
+   },
+   "pages": {
+    "s7": 7688,
+    "p7_sum": 7904,
+    "a7_sum": 7904
+   }
+  },
+  "function_check": {
+   "rows": 100000,
+   "bad_numpy": 0,
+   "scalar_checked": 100000,
+   "bad_scalar": 0,
+   "insert_keys": 10000,
+   "bad_insert_keys": 0,
+   "scalar_us_per_key": 8.362979999219533,
+   "insert_scalar_checked": 10000,
+   "bad_insert_scalar_vs_numpy": 0,
+   "s": 1.1411438000068301,
+   "ok": true
+  }
+ },
+ "cleanup_errors": []
+}

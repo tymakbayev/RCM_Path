@@ -1,0 +1,37 @@
+18:32:59 N10 load A6 table
+a2_gen: 10000000 records, copies 0..72, span 12797350389000 us
+19:08:20 N10 partition function check
+19:10:02 N10 function check {'rows': 10000000, 'bad_numpy': 0, 'bad_scalar': 0, 'bad_insert_keys': 0, 'ok': True}
+19:10:02 N10 fill control table on the server
+19:14:47 N10 control layout share 1.0
+19:14:48 N10 stream sha256 1bdeb7fbbffdc4111ec5a4903a7d664071a1921760d3c12824ed8b25bd2a313a matches A4: True partitions 128 btree heights [3]
+19:15:16 checkpoint 0 base 0 {'a6_n10': ({'live': 0, 'deleted': 0, 'absent': 0}, 1.0, 3.076), 'c6_n10': ({'live': 0, 'deleted': 0, 'absent': 0}, 4.0, 31.86)}
+19:16:24 checkpoint 1 every_50k 50000 {'a6_n10': ({'live': 0, 'deleted': 0, 'absent': 0}, 1.001, 3.185), 'c6_n10': ({'live': 0, 'deleted': 0, 'absent': 0}, 4.0, 31.812)}
+19:16:24 N10 ops 50000 {'a6_n10': 17.1, 'c6_n10': 20.6} maint 0.0 levels 3 max pause 0.045
+19:17:37 checkpoint 2 every_50k 100000 {'a6_n10': ({'live': 0, 'deleted': 0, 'absent': 0}, 1.002, 3.262), 'c6_n10': ({'live': 0, 'deleted': 0, 'absent': 0}, 4.0, 31.765)}
+19:17:37 N10 ops 100000 {'a6_n10': 36.5, 'c6_n10': 40.2} maint 0.1 levels 5 max pause 0.045
+19:18:15 N10 forced round requested at op 150000
+19:18:15 N10 round start at op 150000
+19:18:47 checkpoint 3 every_50k 150000 {'a6_n10': ({'live': 0, 'deleted': 0, 'absent': 0}, 1.003, 3.338), 'c6_n10': ({'live': 0, 'deleted': 0, 'absent': 0}, 4.0, 31.718)}
+19:18:47 N10 ops 150000 {'a6_n10': 54.9, 'c6_n10': 58.8} maint 0.3 levels 5 max pause 0.148
+19:20:09 checkpoint 4 every_50k 200000 {'a6_n10': ({'live': 0, 'deleted': 0, 'absent': 0}, 1.004, 3.452), 'c6_n10': ({'live': 0, 'deleted': 0, 'absent': 0}, 4.0, 31.67)}
+19:20:09 N10 ops 200000 {'a6_n10': 72.1, 'c6_n10': 78.1} maint 11.9 levels 6 max pause 0.289
+19:20:53 checkpoint 5 mid_round 214000 {'a6_n10': ({'live': 0, 'deleted': 0, 'absent': 0}, 1.004, 3.461), 'c6_n10': ({'live': 0, 'deleted': 0, 'absent': 0}, 4.0, 31.657)}
+19:22:43 checkpoint 6 every_50k 250000 {'a6_n10': ({'live': 0, 'deleted': 0, 'absent': 0}, 1.004, 3.536), 'c6_n10': ({'live': 0, 'deleted': 0, 'absent': 0}, 4.0, 31.623)}
+19:22:43 N10 ops 250000 {'a6_n10': 92.2, 'c6_n10': 98.5} maint 22.4 levels 8 max pause 0.356
+19:23:16 N10 round end at op 278000 {'rows': 10064142, 'max_rows': 79280, 'steps': 128, 'window_ops': 128000}
+19:24:05 checkpoint 7 every_50k 300000 {'a6_n10': ({'live': 0, 'deleted': 0, 'absent': 0}, 1.003, 3.343), 'c6_n10': ({'live': 0, 'deleted': 0, 'absent': 0}, 4.0, 31.576)}
+19:24:05 N10 ops 300000 {'a6_n10': 115.2, 'c6_n10': 121.5} maint 27.4 levels 4 max pause 0.356
+19:25:27 checkpoint 8 every_50k 350000 {'a6_n10': ({'live': 0, 'deleted': 0, 'absent': 0}, 1.005, 3.45), 'c6_n10': ({'live': 0, 'deleted': 0, 'absent': 0}, 4.0, 31.528)}
+19:25:27 N10 ops 350000 {'a6_n10': 139.9, 'c6_n10': 145.2} maint 27.4 levels 5 max pause 0.356
+19:26:43 checkpoint 9 every_50k 400000 {'a6_n10': ({'live': 0, 'deleted': 0, 'absent': 0}, 1.003, 3.525), 'c6_n10': ({'live': 0, 'deleted': 0, 'absent': 0}, 4.0, 31.482)}
+19:26:43 N10 ops 400000 {'a6_n10': 162.1, 'c6_n10': 167.4} maint 27.6 levels 4 max pause 0.356
+19:27:57 checkpoint 10 every_50k 450000 {'a6_n10': ({'live': 0, 'deleted': 0, 'absent': 0}, 1.004, 3.601), 'c6_n10': ({'live': 0, 'deleted': 0, 'absent': 0}, 4.0, 31.435)}
+19:27:57 N10 ops 450000 {'a6_n10': 181.5, 'c6_n10': 187.4} maint 27.8 levels 6 max pause 0.356
+19:30:10 checkpoint 11 every_50k 500000 {'a6_n10': ({'live': 0, 'deleted': 0, 'absent': 0}, 1.013, 3.707), 'c6_n10': ({'live': 0, 'deleted': 0, 'absent': 0}, 4.0, 31.389)}
+19:30:10 N10 ops 500000 {'a6_n10': 205.9, 'c6_n10': 208.3} maint 27.8 levels 7 max pause 0.356
+19:30:10 N10 restart
+19:30:46 checkpoint 12 after_restart 500000 {'a6_n10': ({'live': 0, 'deleted': 0, 'absent': 0}, 1.013, 3.707), 'c6_n10': ({'live': 0, 'deleted': 0, 'absent': 0}, 4.0, 31.389)}
+19:30:56 N10 open probe {'p50': 47.32000001240522, 'p95': 48.03160000301432, 'p99': 48.663759996998124, 'mean': 47.37543333266374, 'n': 21}
+19:32:01 checkpoint 13 after_final_round 500000 {'a6_n10': ({'live': 0, 'deleted': 0, 'absent': 0}, 1.0, 3.076), 'c6_n10': ({'live': 0, 'deleted': 0, 'absent': 0}, 4.0, 31.389)}
+19:32:08 N10 done errors {'a6_n10': 0, 'c6_n10': 0} witness 0 S3 batch violations 0 max pause 0.356 stray 0

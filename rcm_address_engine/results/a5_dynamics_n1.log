@@ -1,0 +1,43 @@
+13:37:32 N1 load A5 table
+a2_gen: 1000000 records, copies 0..7, span 12797350389000 us
+13:38:11 N1 load control table
+a2_gen: 1000000 records, copies 0..7, span 12797350389000 us
+13:38:55 N1 stream sha256 1f685ebefc15933071387ce022540a44d73507dbec55a3740f20db3d9ce247d5 matches A4: True S_base 8
+13:39:07 checkpoint 0 base 0 {'a5_n1': ({'live': 0, 'deleted': 0, 'absent': 0}, 1.0, 3.571), 'c5_n1': ({'live': 0, 'deleted': 0, 'absent': 0}, 4.0, 31.564)}
+13:39:50 checkpoint 1 every_50k 50000 {'a5_n1': ({'live': 0, 'deleted': 0, 'absent': 0}, 1.002, 4.644), 'c5_n1': ({'live': 0, 'deleted': 0, 'absent': 0}, 4.0, 31.096)}
+13:39:50 N1 ops 50000 {'a5_n1': 11.7, 'c5_n1': 9.7} maint 0.0 levels 3 max pause 0.04
+13:40:16 N1 round start at op 100000 P0 81756
+13:40:43 checkpoint 2 every_50k 100000 {'a5_n1': ({'live': 0, 'deleted': 0, 'absent': 0}, 1.011, 5.287), 'c5_n1': ({'live': 0, 'deleted': 0, 'absent': 0}, 4.0, 30.697)}
+13:40:43 N1 ops 100000 {'a5_n1': 26.5, 'c5_n1': 20.3} maint 0.1 levels 6 max pause 0.04
+13:41:13 checkpoint 3 mid_round 112000 {'a5_n1': ({'live': 0, 'deleted': 0, 'absent': 0}, 1.008, 5.656), 'c5_n1': ({'live': 0, 'deleted': 0, 'absent': 0}, 4.0, 30.679)}
+13:41:16 N1 round end at op 116000 {'rows': 1028109, 'dups': 0, 'steps': 16, 'window_ops': 16000}
+13:41:53 checkpoint 4 every_50k 150000 {'a5_n1': ({'live': 0, 'deleted': 0, 'absent': 0}, 1.006, 4.61), 'c5_n1': ({'live': 0, 'deleted': 0, 'absent': 0}, 4.0, 32.349)}
+13:41:53 N1 ops 150000 {'a5_n1': 39.6, 'c5_n1': 31.2} maint 4.0 levels 3 max pause 0.899
+13:42:41 checkpoint 5 every_50k 200000 {'a5_n1': ({'live': 0, 'deleted': 0, 'absent': 0}, 1.006, 5.331), 'c5_n1': ({'live': 0, 'deleted': 0, 'absent': 0}, 4.058, 40.062)}
+13:42:41 N1 ops 200000 {'a5_n1': 53.7, 'c5_n1': 41.7} maint 4.1 levels 5 max pause 0.899
+13:42:43 N1 round start at op 203000 P0 86769
+13:43:13 checkpoint 6 mid_round 215000 {'a5_n1': ({'live': 0, 'deleted': 0, 'absent': 0}, 1.008, 5.644), 'c5_n1': ({'live': 0, 'deleted': 0, 'absent': 0}, 4.036, 41.606)}
+13:43:16 N1 round end at op 219000 {'rows': 1059361, 'dups': 0, 'steps': 16, 'window_ops': 16000}
+13:44:01 checkpoint 7 every_50k 250000 {'a5_n1': ({'live': 0, 'deleted': 0, 'absent': 0}, 1.005, 4.503), 'c5_n1': ({'live': 0, 'deleted': 0, 'absent': 0}, 4.0, 45.011)}
+13:44:01 N1 ops 250000 {'a5_n1': 67.4, 'c5_n1': 52.2} maint 8.0 levels 3 max pause 1.129
+13:44:52 checkpoint 8 every_50k 300000 {'a5_n1': ({'live': 0, 'deleted': 0, 'absent': 0}, 1.009, 5.209), 'c5_n1': ({'live': 0, 'deleted': 0, 'absent': 0}, 4.0, 45.895)}
+13:44:52 N1 ops 300000 {'a5_n1': 83.3, 'c5_n1': 64.1} maint 8.1 levels 5 max pause 1.129
+13:44:58 N1 round start at op 309000 P0 88445
+13:45:30 checkpoint 9 mid_round 321000 {'a5_n1': ({'live': 0, 'deleted': 0, 'absent': 0}, 1.005, 5.644), 'c5_n1': ({'live': 0, 'deleted': 0, 'absent': 0}, 4.0, 47.515)}
+13:45:33 N1 round end at op 325000 {'rows': 1094492, 'dups': 236, 'steps': 16, 'window_ops': 16000}
+13:46:07 checkpoint 10 every_50k 350000 {'a5_n1': ({'live': 0, 'deleted': 0, 'absent': 0}, 1.001, 4.334), 'c5_n1': ({'live': 0, 'deleted': 0, 'absent': 0}, 4.0, 50.286)}
+13:46:07 N1 ops 350000 {'a5_n1': 98.4, 'c5_n1': 76.6} maint 12.9 levels 3 max pause 1.129
+13:46:56 checkpoint 11 every_50k 400000 {'a5_n1': ({'live': 0, 'deleted': 0, 'absent': 0}, 1.01, 5.023), 'c5_n1': ({'live': 0, 'deleted': 0, 'absent': 0}, 4.014, 54.187)}
+13:46:56 N1 ops 400000 {'a5_n1': 113.4, 'c5_n1': 87.5} maint 13.0 levels 5 max pause 1.129
+13:47:07 N1 round start at op 419000 P0 91011
+13:47:38 checkpoint 12 mid_round 431000 {'a5_n1': ({'live': 0, 'deleted': 0, 'absent': 0}, 1.012, 5.645), 'c5_n1': ({'live': 0, 'deleted': 0, 'absent': 0}, 4.01, 54.761)}
+13:47:40 N1 round end at op 435000 {'rows': 1124380, 'dups': 0, 'steps': 16, 'window_ops': 16000}
+13:48:06 checkpoint 13 every_50k 450000 {'a5_n1': ({'live': 0, 'deleted': 0, 'absent': 0}, 1.007, 4.06), 'c5_n1': ({'live': 0, 'deleted': 0, 'absent': 0}, 4.003, 54.728)}
+13:48:06 N1 ops 450000 {'a5_n1': 127.8, 'c5_n1': 98.0} maint 17.9 levels 3 max pause 1.129
+13:49:07 checkpoint 14 every_50k 500000 {'a5_n1': ({'live': 0, 'deleted': 0, 'absent': 0}, 1.003, 5.0), 'c5_n1': ({'live': 0, 'deleted': 0, 'absent': 0}, 4.0, 54.423)}
+13:49:07 N1 ops 500000 {'a5_n1': 141.4, 'c5_n1': 109.3} maint 17.9 levels 4 max pause 1.129
+13:49:07 N1 restart
+13:49:25 checkpoint 15 after_restart 500000 {'a5_n1': ({'live': 0, 'deleted': 0, 'absent': 0}, 1.007, 5.0), 'c5_n1': ({'live': 0, 'deleted': 0, 'absent': 0}, 4.0, 54.423)}
+13:49:35 N1 open probe {'p50': 13.890999995055608, 'p95': 14.416100006201304, 'p99': 14.563780001481064, 'mean': 13.944523809533123, 'n': 21}
+13:49:51 checkpoint 16 after_final_round 500000 {'a5_n1': ({'live': 0, 'deleted': 0, 'absent': 0}, 1.0, 3.571), 'c5_n1': ({'live': 0, 'deleted': 0, 'absent': 0}, 4.0, 54.423)}
+13:49:51 N1 done errors {'a5_n1': 0, 'c5_n1': 0} witness 0 S3 batch violations 0 max pause 1.129

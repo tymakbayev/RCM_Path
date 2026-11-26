@@ -1,0 +1,781 @@
+{
+ "size": "N1",
+ "rows": 1000000,
+ "settings": {
+  "effective_cache_size": "524288",
+  "jit": "on",
+  "max_wal_size": "1024",
+  "random_page_cost": "4",
+  "server_version": "18.7",
+  "shared_buffers": "16384",
+  "wal_level": "replica",
+  "work_mem": "4096"
+ },
+ "load": {
+  "copy_s": 41.473942999997234,
+  "vacuum_s": 8.053271000000677
+ },
+ "table": {
+  "oid": 24641,
+  "relfilenode": 24641,
+  "pages": 76232,
+  "main_bytes": 624492544,
+  "table_bytes": 624697344,
+  "toast_bytes": 0,
+  "toast_rows": 0,
+  "payload_len": {
+   "min": 513,
+   "p50": 522.0,
+   "p99": 581.0,
+   "max": 596
+  },
+  "rows_per_page": 13.117850771329625
+ },
+ "A": {
+  "build": {
+   "bytes": 3565920,
+   "sha256": "5e7d435d73bcf54219eb121e221ef6f3fded9d76cba46acfb7cfdb0a65405945",
+   "levels": 13,
+   "exceptions": 0,
+   "blocks": 6881,
+   "d_bytes": 3125008,
+   "read_s": 1.3645141999986663,
+   "build_s": 0.3440179999997781,
+   "r_bits": 17,
+   "rows": 1000000,
+   "pages": 76232,
+   "watermark": 0,
+   "path": "C:\\gams\\test\\rcm_address_engine\\data\\st_n1.g1.adr",
+   "keys_match_ref": true,
+   "c1_errors": 0,
+   "bytes_per_row": 3.56592,
+   "manifest_bytes": 255
+  },
+  "measure": {
+   "kind": "A",
+   "c2_errors": 0,
+   "c3_errors": 0,
+   "present": 100000,
+   "absent": 100000,
+   "client_us": {
+    "p50": 177.0,
+    "p95": 287.8,
+    "p99": 398.7,
+    "mean": 191.30252199999995,
+    "n": 100000
+   },
+   "client_absent_us": {
+    "p50": 18.3,
+    "p95": 39.6,
+    "p99": 50.10099999999948,
+    "mean": 21.734234,
+    "n": 100000
+   },
+   "address_us": {
+    "p50": 21.6,
+    "p95": 36.7,
+    "p99": 51.1,
+    "mean": 23.533407,
+    "n": 100000
+   },
+   "explain_present": {
+    "buffers_mean": 1.0,
+    "buffers_max": 1,
+    "read_mean": 0.7965,
+    "exec_us": {
+     "p50": 47.0,
+     "p95": 69.04999999999995,
+     "p99": 110.01999999999998,
+     "mean": 43.409,
+     "n": 2000
+    },
+    "planning_buffers_mean": 0.0,
+    "serialize_buffers_mean": 0.0,
+    "plan": [
+     [
+      0,
+      "Tid Range Scan",
+      1,
+      1.0
+     ]
+    ]
+   },
+   "explain_absent": {
+    "buffers_mean_over_all": 0.0055,
+    "no_sql_fraction": 0.9945,
+    "plan": [
+     [
+      0,
+      "Tid Range Scan",
+      1,
+      0.0
+     ]
+    ]
+   },
+   "statio_present": {
+    "queries": 2000,
+    "heap_per_q": 1.0,
+    "index_per_q": 0.0,
+    "toast_per_q": 0.0
+   },
+   "statio_absent": {
+    "queries": 2000,
+    "heap_per_q": 0.0055,
+    "index_per_q": 0.0,
+    "toast_per_q": 0.0
+   }
+  },
+  "open_probe": {
+   "connect_ms": {
+    "p50": 30.421800001931842,
+    "p95": 34.88160000051721,
+    "p99": 121.48224000047784,
+    "mean": 35.63795238144286,
+    "n": 21,
+    "max": 143.1324000004679
+   },
+   "open_ms": {
+    "p50": 2.97839999984717,
+    "p95": 4.062199997861171,
+    "p99": 6.707239998650041,
+    "mean": 3.2789428568364762,
+    "n": 21,
+    "max": 7.3684999988472555
+   },
+   "first_answer_ms": {
+    "p50": 1.2466000007407274,
+    "p95": 2.053399999567773,
+    "p99": 5.360600001586138,
+    "mean": 1.6075333332992159,
+    "n": 21,
+    "max": 6.187400002090726
+   },
+   "found": {
+    "p50": 1.0,
+    "p95": 1.0,
+    "p99": 1.0,
+    "mean": 1.0,
+    "n": 21,
+    "max": true
+   },
+   "sidecar_pages_touched": {
+    "p50": 3.0,
+    "p95": 7.0,
+    "p99": 7.800000000000001,
+    "mean": 4.142857142857143,
+    "n": 21,
+    "max": 8
+   }
+  },
+  "restart": [
+   {
+    "first_buffers": 1,
+    "first_read": 1,
+    "first_exec_us": 527.0,
+    "next200_buffers_mean": 1.0,
+    "next200_read_mean": 1.0,
+    "next200_exec_us_mean": 58.825
+   },
+   {
+    "first_buffers": 1,
+    "first_read": 1,
+    "first_exec_us": 610.0,
+    "next200_buffers_mean": 1.0,
+    "next200_read_mean": 1.0,
+    "next200_exec_us_mean": 61.12
+   },
+   {
+    "first_buffers": 1,
+    "first_read": 1,
+    "first_exec_us": 565.0,
+    "next200_buffers_mean": 1.0,
+    "next200_read_mean": 0.995,
+    "next200_exec_us_mean": 61.425
+   }
+  ]
+ },
+ "SORT": {
+  "bytes_per_row": 8.000064,
+  "c1_errors": 0
+ },
+ "EF": {
+  "bytes_per_row": 3.881072
+ },
+ "btree": {
+  "create_s": 0.6530940000011469,
+  "size": {
+   "main_bytes": 31563776,
+   "total_bytes": 31563776,
+   "reloptions": null
+  },
+  "bytes_per_row": 31.563776,
+  "total_bytes_per_row": 31.563776,
+  "measure": {
+   "kind": "btree",
+   "c2_errors": 0,
+   "c3_errors": 0,
+   "present": 100000,
+   "absent": 100000,
+   "client_us": {
+    "p50": 100.6,
+    "p95": 166.0,
+    "p99": 214.60099999999946,
+    "mean": 110.662881,
+    "n": 100000
+   },
+   "client_absent_us": {
+    "p50": 79.2,
+    "p95": 133.5,
+    "p99": 168.7,
+    "mean": 88.42183399999999,
+    "n": 100000
+   },
+   "address_us": null,
+   "explain_present": {
+    "buffers_mean": 4.0,
+    "buffers_max": 4,
+    "read_mean": 0.8415,
+    "exec_us": {
+     "p50": 28.0,
+     "p95": 48.0,
+     "p99": 62.0,
+     "mean": 30.18,
+     "n": 2000
+    },
+    "planning_buffers_mean": 0.0,
+    "serialize_buffers_mean": 0.0,
+    "plan": [
+     [
+      0,
+      "Index Scan",
+      1,
+      1.0
+     ]
+    ]
+   },
+   "explain_absent": {
+    "buffers_mean_over_all": 3.0,
+    "no_sql_fraction": 0.0,
+    "plan": [
+     [
+      0,
+      "Index Scan",
+      1,
+      0.0
+     ]
+    ]
+   },
+   "statio_present": {
+    "queries": 2000,
+    "heap_per_q": 1.0,
+    "index_per_q": 3.0,
+    "toast_per_q": 0.0
+   },
+   "statio_absent": {
+    "queries": 2000,
+    "heap_per_q": 0.0,
+    "index_per_q": 3.0,
+    "toast_per_q": 0.0
+   }
+  },
+  "restart": [
+   {
+    "first_buffers": 4,
+    "first_read": 4,
+    "first_exec_us": 209.0,
+    "next200_buffers_mean": 4.0,
+    "next200_read_mean": 2.045,
+    "next200_exec_us_mean": 46.16
+   },
+   {
+    "first_buffers": 4,
+    "first_read": 4,
+    "first_exec_us": 138.0,
+    "next200_buffers_mean": 4.0,
+    "next200_read_mean": 2.06,
+    "next200_exec_us_mean": 47.655
+   },
+   {
+    "first_buffers": 4,
+    "first_read": 4,
+    "first_exec_us": 165.0,
+    "next200_buffers_mean": 4.0,
+    "next200_read_mean": 2.065,
+    "next200_exec_us_mean": 47.7
+   }
+  ]
+ },
+ "hash": {
+  "create_s": 1.967275900002278,
+  "size": {
+   "main_bytes": 33570816,
+   "total_bytes": 33570816,
+   "reloptions": null
+  },
+  "bytes_per_row": 33.570816,
+  "total_bytes_per_row": 33.570816,
+  "measure": {
+   "kind": "hash",
+   "c2_errors": 0,
+   "c3_errors": 0,
+   "present": 100000,
+   "absent": 100000,
+   "client_us": {
+    "p50": 99.5,
+    "p95": 164.6,
+    "p99": 206.90099999999947,
+    "mean": 109.65685599999999,
+    "n": 100000
+   },
+   "client_absent_us": {
+    "p50": 77.3,
+    "p95": 129.2,
+    "p99": 157.5,
+    "mean": 84.89109399999998,
+    "n": 100000
+   },
+   "address_us": null,
+   "explain_present": {
+    "buffers_mean": 2.238,
+    "buffers_max": 3,
+    "read_mean": 0.8435,
+    "exec_us": {
+     "p50": 26.0,
+     "p95": 44.0,
+     "p99": 57.00999999999999,
+     "mean": 27.572,
+     "n": 2000
+    },
+    "planning_buffers_mean": 0.0,
+    "serialize_buffers_mean": 0.0,
+    "plan": [
+     [
+      0,
+      "Index Scan",
+      1,
+      1.0
+     ]
+    ]
+   },
+   "explain_absent": {
+    "buffers_mean_over_all": 1.2525,
+    "no_sql_fraction": 0.0,
+    "plan": [
+     [
+      0,
+      "Index Scan",
+      1,
+      0.0
+     ]
+    ]
+   },
+   "statio_present": {
+    "queries": 2000,
+    "heap_per_q": 1.0005,
+    "index_per_q": 1.2375,
+    "toast_per_q": 0.0
+   },
+   "statio_absent": {
+    "queries": 2000,
+    "heap_per_q": 0.0,
+    "index_per_q": 1.2525,
+    "toast_per_q": 0.0
+   }
+  },
+  "restart": [
+   {
+    "first_buffers": 3,
+    "first_read": 3,
+    "first_exec_us": 164.0,
+    "next200_buffers_mean": 2.24,
+    "next200_read_mean": 2.21,
+    "next200_exec_us_mean": 47.23
+   },
+   {
+    "first_buffers": 3,
+    "first_read": 3,
+    "first_exec_us": 157.0,
+    "next200_buffers_mean": 2.26,
+    "next200_read_mean": 2.215,
+    "next200_exec_us_mean": 45.34
+   },
+   {
+    "first_buffers": 3,
+    "first_read": 3,
+    "first_exec_us": 159.0,
+    "next200_buffers_mean": 2.19,
+    "next200_read_mean": 2.16,
+    "next200_exec_us_mean": 45.545
+   }
+  ]
+ },
+ "B": {
+  "build": {
+   "bytes": 274848,
+   "sha256": "65904044bea4a14e5df773f9aada633536122559df3de6d42791f9ab5e0a18a4",
+   "exceptions": 627,
+   "rows_per_page_rule": 13.117850771329625,
+   "b": 16,
+   "load_s": 24.31957120000152,
+   "layout_s": 1.8008307000018249,
+   "rows": 1000000,
+   "pages": 76806,
+   "misplaced_rows": 627,
+   "c1_violations": 0,
+   "pages_per_bucket": {
+    "mean": 2.1719512939453125,
+    "p50": 2.0,
+    "p99": 3.0,
+    "max": 4
+   },
+   "watermark": 1000000,
+   "path": "C:\\gams\\test\\rcm_address_engine\\data\\stb_n1.g1.hpl",
+   "table": "b_n1",
+   "bytes_per_row": 0.274848
+  },
+  "table": {
+   "oid": 24660,
+   "relfilenode": 24660,
+   "pages": 76806,
+   "main_bytes": 629194752,
+   "table_bytes": 629399552,
+   "toast_bytes": 0,
+   "toast_rows": 0
+  },
+  "measure": {
+   "kind": "B",
+   "c2_errors": 0,
+   "c3_errors": 0,
+   "present": 100000,
+   "absent": 100000,
+   "client_us": {
+    "p50": 181.8,
+    "p95": 271.7,
+    "p99": 352.40099999999944,
+    "mean": 191.05180399999998,
+    "n": 100000
+   },
+   "client_absent_us": {
+    "p50": 177.9,
+    "p95": 264.4,
+    "p99": 330.8,
+    "mean": 185.736656,
+    "n": 100000
+   },
+   "address_us": {
+    "p50": 6.7,
+    "p95": 10.9,
+    "p99": 15.5,
+    "mean": 7.433163,
+    "n": 100000
+   },
+   "explain_present": {
+    "buffers_mean": 2.2645,
+    "buffers_max": 4,
+    "read_mean": 1.764,
+    "exec_us": {
+     "p50": 66.0,
+     "p95": 95.0,
+     "p99": 132.01,
+     "mean": 64.0565,
+     "n": 2000
+    },
+    "planning_buffers_mean": 0.0,
+    "serialize_buffers_mean": 0.0,
+    "plan": [
+     [
+      0,
+      "Tid Range Scan",
+      1,
+      1.0
+     ]
+    ]
+   },
+   "explain_absent": {
+    "buffers_mean_over_all": 2.1725,
+    "no_sql_fraction": 0.0,
+    "plan": [
+     [
+      0,
+      "Tid Range Scan",
+      1,
+      0.0
+     ]
+    ]
+   },
+   "statio_present": {
+    "queries": 2000,
+    "heap_per_q": 2.2645,
+    "index_per_q": 0.0,
+    "toast_per_q": 0.0
+   },
+   "statio_absent": {
+    "queries": 2000,
+    "heap_per_q": 2.1725,
+    "index_per_q": 0.0,
+    "toast_per_q": 0.0
+   }
+  },
+  "open_probe": {
+   "connect_ms": {
+    "p50": 28.82559999852674,
+    "p95": 35.546099999919534,
+    "p99": 113.36386000039063,
+    "mean": 34.55120952362666,
+    "n": 21,
+    "max": 132.81830000050832
+   },
+   "open_ms": {
+    "p50": 2.995599999849219,
+    "p95": 3.8309999981720466,
+    "p99": 6.300520001241241,
+    "mean": 3.2791714287928437,
+    "n": 21,
+    "max": 6.917900002008537
+   },
+   "first_answer_ms": {
+    "p50": 1.0731999973359052,
+    "p95": 1.5541000029770657,
+    "p99": 4.75826000038069,
+    "mean": 1.3053428575360504,
+    "n": 21,
+    "max": 5.559299999731593
+   },
+   "found": {
+    "p50": 1.0,
+    "p95": 1.0,
+    "p99": 1.0,
+    "mean": 1.0,
+    "n": 21,
+    "max": true
+   },
+   "sidecar_pages_touched": {
+    "p50": 6.0,
+    "p95": 6.0,
+    "p99": 6.0,
+    "mean": 6.0,
+    "n": 21,
+    "max": 6
+   }
+  },
+  "restart": [
+   {
+    "first_buffers": 2,
+    "first_read": 2,
+    "first_exec_us": 568.0,
+    "next200_buffers_mean": 2.23,
+    "next200_read_mean": 2.23,
+    "next200_exec_us_mean": 81.36
+   },
+   {
+    "first_buffers": 2,
+    "first_read": 2,
+    "first_exec_us": 552.0,
+    "next200_buffers_mean": 2.27,
+    "next200_read_mean": 2.265,
+    "next200_exec_us_mean": 81.375
+   },
+   {
+    "first_buffers": 3,
+    "first_read": 3,
+    "first_exec_us": 560.0,
+    "next200_buffers_mean": 2.255,
+    "next200_read_mean": 2.25,
+    "next200_exec_us_mean": 76.79
+   }
+  ]
+ },
+ "BRIN": {
+  "table": {
+   "oid": 24670,
+   "relfilenode": 24670,
+   "pages": 76815,
+   "main_bytes": 629268480,
+   "table_bytes": 629473280,
+   "toast_bytes": 0,
+   "toast_rows": 0
+  },
+  "ppr1": {
+   "create_s": 0.29564120000213734,
+   "size": {
+    "main_bytes": 3883008,
+    "total_bytes": 3907584,
+    "reloptions": [
+     "pages_per_range=1"
+    ]
+   },
+   "bytes_per_row": 3.883008,
+   "measure": {
+    "kind": "brin",
+    "c2_errors": 0,
+    "c3_errors": 0,
+    "present": 2000,
+    "absent": 2000,
+    "client_us": {
+     "p50": 11570.2,
+     "p95": 12171.175,
+     "p99": 12714.904999999997,
+     "mean": 11606.040050000001,
+     "n": 2000
+    },
+    "client_absent_us": {
+     "p50": 11689.3,
+     "p95": 12285.52,
+     "p99": 13062.752999999999,
+     "mean": 11723.14725,
+     "n": 2000
+    },
+    "address_us": null,
+    "explain_present": {
+     "buffers_mean": 583.0155,
+     "buffers_max": 584,
+     "read_mean": 0.0,
+     "exec_us": {
+      "p50": 11439.0,
+      "p95": 11999.25,
+      "p99": 12469.35,
+      "mean": 11466.0625,
+      "n": 2000
+     },
+     "planning_buffers_mean": 1.0,
+     "serialize_buffers_mean": 0.0,
+     "plan": [
+      [
+       0,
+       "Bitmap Heap Scan",
+       1,
+       1.0
+      ],
+      [
+       1,
+       "Bitmap Index Scan",
+       1,
+       10.0
+      ]
+     ]
+    },
+    "explain_absent": {
+     "buffers_mean_over_all": 582.9385,
+     "no_sql_fraction": 0.0,
+     "plan": [
+      [
+       0,
+       "Bitmap Heap Scan",
+       1,
+       0.0
+      ],
+      [
+       1,
+       "Bitmap Index Scan",
+       1,
+       10.0
+      ]
+     ]
+    },
+    "statio_present": {
+     "queries": 2000,
+     "heap_per_q": 1.0155,
+     "index_per_q": 583.0,
+     "toast_per_q": 0.0
+    },
+    "statio_absent": {
+     "queries": 2000,
+     "heap_per_q": 0.9385,
+     "index_per_q": 583.0,
+     "toast_per_q": 0.0
+    }
+   }
+  },
+  "ppr4": {
+   "create_s": 0.2336059999979625,
+   "size": {
+    "main_bytes": 983040,
+    "total_bytes": 1007616,
+    "reloptions": [
+     "pages_per_range=4"
+    ]
+   },
+   "bytes_per_row": 0.98304,
+   "measure": {
+    "kind": "brin",
+    "c2_errors": 0,
+    "c3_errors": 0,
+    "present": 2000,
+    "absent": 2000,
+    "client_us": {
+     "p50": 3021.45,
+     "p95": 3272.545,
+     "p99": 3522.8320000000003,
+     "mean": 3046.5464500000003,
+     "n": 2000
+    },
+    "client_absent_us": {
+     "p50": 3114.2,
+     "p95": 3380.405,
+     "p99": 3632.319,
+     "mean": 3142.60735,
+     "n": 2000
+    },
+    "address_us": null,
+    "explain_present": {
+     "buffers_mean": 151.038,
+     "buffers_max": 155,
+     "read_mean": 0.0,
+     "exec_us": {
+      "p50": 2930.0,
+      "p95": 3110.0,
+      "p99": 3662.14,
+      "mean": 2948.9315,
+      "n": 2000
+     },
+     "planning_buffers_mean": 1.0,
+     "serialize_buffers_mean": 0.0,
+     "plan": [
+      [
+       0,
+       "Bitmap Heap Scan",
+       1,
+       1.0
+      ],
+      [
+       1,
+       "Bitmap Index Scan",
+       1,
+       40.0
+      ]
+     ]
+    },
+    "explain_absent": {
+     "buffers_mean_over_all": 150.952,
+     "no_sql_fraction": 0.0,
+     "plan": [
+      [
+       0,
+       "Bitmap Heap Scan",
+       1,
+       0.0
+      ],
+      [
+       1,
+       "Bitmap Index Scan",
+       1,
+       40.0
+      ]
+     ]
+    },
+    "statio_present": {
+     "queries": 2000,
+     "heap_per_q": 4.038,
+     "index_per_q": 148.0,
+     "toast_per_q": 0.0
+    },
+    "statio_absent": {
+     "queries": 2000,
+     "heap_per_q": 3.952,
+     "index_per_q": 148.0,
+     "toast_per_q": 0.0
+    }
+   }
+  }
+ }
+}

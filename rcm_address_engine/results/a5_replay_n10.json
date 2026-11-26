@@ -1,0 +1,38 @@
+{
+ "size": "N10",
+ "cycle_ops": 1000000,
+ "ops_done": 1256000,
+ "bits_base": 7,
+ "first_term_us_per_op": 2.912554496887383,
+ "seal_merge_us_per_op": 2.8429964968845116,
+ "round_start_end_us_per_op": 0.06955800000287127,
+ "first_term_bytes_per_op": 79.04739808917198,
+ "log_us_per_op": 5.764747133592435,
+ "replay_build_s": 8.56547419988783,
+ "replay_scan_add_s": 7.083135100037907,
+ "max_boundary_work_s": 0.2838848999963375,
+ "max_boundary_work_at": 1224000,
+ "max_multi_kind_work_s": 0.2837117000017315,
+ "multi_kind_boundaries": 16,
+ "max_by_kind": {
+  "seal_s": 0.09783439998864196,
+  "merge_s": 0.12539630000537727,
+  "round_start_s": 0.06132429999706801,
+  "scan_add_s": 0.154618999993545,
+  "build_s": 0.283662000001641,
+  "round_end_s": 0.008233700005803257
+ },
+ "seals": 41,
+ "merge_steps": 18,
+ "levels_end": 4,
+ "tiers_end": [
+  1,
+  1
+ ],
+ "peak_published_bytes": 64834734,
+ "peak_layer_bytes": 267541789,
+ "rss": {
+  "peak_mb": 779.26171875,
+  "current_mb": 758.28125
+ }
+}

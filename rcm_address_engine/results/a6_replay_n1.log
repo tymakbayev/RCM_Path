@@ -1,0 +1,1 @@
+18:32:14 replay N1 {'M': 104000, 'first_term_us_per_op': 3.486379807397428, 'first_term_bytes_per_op': 17.875115384615384, 'max_boundary_work_s': 0.2502985000028275, 'max_multi_kind_work_s': 0.0, 'seals_in_cycle': 4, 'merge_steps_in_cycle': 0}

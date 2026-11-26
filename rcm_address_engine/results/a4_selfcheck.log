@@ -1,0 +1,11 @@
+a2_gen: 10000 records, copies 0..0, span 12797350389000 us
+03:58:40 scenarios ok-run: True []
+a2_gen: 10000 records, copies 0..0, span 12797350389000 us
+03:58:54 mutant a {'caught': True, 'failed': ['R1: UPDATE moved to another page, then ROLLBACK', 'R1: DELETE, then ROLLBACK', 'tail: R1 keys', 'after_seal: R1 keys', 'after_merge: R1 keys']}
+a2_gen: 10000 records, copies 0..0, span 12797350389000 us
+03:59:08 mutant b {'caught': True, 'failed': ['witness after tier merges (3 versions on different pages)']}
+a2_gen: 10000 records, copies 0..0, span 12797350389000 us
+03:59:22 mutant c {'caught': True, 'failed': ['reader sees a key committed after it opened']}
+a2_gen: 10000 records, copies 0..0, span 12797350389000 us
+03:59:36 mutant d {'caught': True, 'failed': ['refuse to open with a batch without outcome']}
+03:59:36 selfcheck all_ok True
