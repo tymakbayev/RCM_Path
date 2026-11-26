@@ -138,7 +138,8 @@ How the work was done:
 
 The author directed the work and made every decision. Code, protocols and reports were written with AI assistance
 (Claude Code). Before the runs, a second AI model (Codex) reviewed every protocol, and from A6 on also the code. The
-review rounds are recorded in the protocols and addenda.
+review rounds are recorded in the protocols and addenda. The method itself (Assume → Build → Break; models propose,
+the human routes, experiments decide) is described in the author's essay [`docs/`](docs/README.md).
 
 The reports and protocols are in Russian.
 
@@ -147,6 +148,7 @@ The reports and protocols are in Russian.
 ```
 README.md, README.ru.md, LICENSE, CITATION.cff, requirements.txt
 theory/                        RCM Path model (memory_math.md) and results of the project it came from
+docs/                          the author's essay on the research method (several LLMs, experiments as arbiter)
 rcm_address_engine/
   STAGE1*.md                   audit and design of the address scheme (stage 1)
   A*_protocol.md, A*_addendum  frozen protocols and dated addenda
