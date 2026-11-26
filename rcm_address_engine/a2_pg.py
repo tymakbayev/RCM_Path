@@ -7,7 +7,10 @@ from __future__ import annotations
 
 import json
 import math
+import os
+import shutil
 import subprocess
+import sys
 import time
 import uuid
 from pathlib import Path
@@ -18,20 +21,37 @@ import psycopg
 import a2_core as C
 
 ROOT = Path(__file__).resolve().parent
-PG = Path(r"C:\gams\pg18")
-PG_BIN = PG / "pgsql" / "bin"
-PG_DATA = "C:/gams/pg18/data"
-PG_LOG = "C:/gams/pg18/server.log"
-DB = "a2"
-GEN_PY = ROOT.parent / ".venv" / "Scripts" / "python.exe"
+# Stand configuration from the environment (README, "Configure the stand"). The reference stand of the published
+# runs: PostgreSQL 18.7 zip in C:\gams\pg18 (pg_ctl in pgsql\bin, cluster in data, log server.log), port 5433,
+# superuser role "bench" with a password file; the record generator ran in a second venv (JARVIS project).
+_PG_CTL_ON_PATH = shutil.which("pg_ctl")
+PG_BIN = Path(os.environ.get("RCM_PG_BIN") or (Path(_PG_CTL_ON_PATH).parent if _PG_CTL_ON_PATH else "."))
+PG_DATA = os.environ.get("RCM_PG_DATA") or os.environ.get("PGDATA") or ""
+PG_LOG = os.environ.get("RCM_PG_LOG") or (str(Path(PG_DATA) / "rcm_server.log") if PG_DATA else "rcm_server.log")
+PG_HOST = os.environ.get("PGHOST", "localhost")
+PG_PORT = int(os.environ.get("PGPORT", "5432"))
+PG_USER = os.environ.get("PGUSER", "postgres")
+PG_PWFILE = os.environ.get("RCM_PG_PWFILE", "")  # optional; otherwise libpq uses PGPASSWORD or ~/.pgpass
+DB = os.environ.get("RCM_DB", "a2")
+GEN_PY = Path(sys.executable)
 GEN = ROOT / "a2_gen.py"
 DATA = ROOT / "data"
 COLS = "ctid, v, seq, payload"
 
 
 # ------------------------------------------------------------------ server
+PG_CTL = PG_BIN / ("pg_ctl.exe" if os.name == "nt" else "pg_ctl")
+
+
+def require_data_dir() -> str:
+    """The cluster directory: the runs restart the server (cold cache) and measure the free space of its volume."""
+    if not PG_DATA:
+        raise RuntimeError("set RCM_PG_DATA (or PGDATA) to the data directory of a dedicated test cluster")
+    return PG_DATA
+
+
 def pg_ctl(action: str) -> None:
-    cmd = [str(PG_BIN / "pg_ctl.exe"), "-D", PG_DATA, "-l", PG_LOG, "-w"]
+    cmd = [str(PG_CTL), "-D", require_data_dir(), "-l", PG_LOG, "-w"]
     cmd += [action] + (["-m", "fast"] if action in ("stop", "restart") else [])
     # no pipes: the server inherits pg_ctl's handles, and a captured pipe would never close (hang seen in P0)
     r = subprocess.run(cmd, stdin=subprocess.DEVNULL, stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
@@ -40,12 +60,14 @@ def pg_ctl(action: str) -> None:
 
 
 def pg_running() -> bool:
-    return subprocess.run([str(PG_BIN / "pg_ctl.exe"), "-D", PG_DATA, "status"], capture_output=True).returncode == 0
+    return subprocess.run([str(PG_CTL), "-D", require_data_dir(), "status"], capture_output=True).returncode == 0
 
 
 def connect(db: str = DB, autocommit: bool = True) -> psycopg.Connection:
-    return psycopg.connect(host="localhost", port=5433, user="bench", dbname=db, autocommit=autocommit,
-                           password=(PG / "pwfile.txt").read_text().strip())
+    kw = {"host": PG_HOST, "port": PG_PORT, "user": PG_USER, "dbname": db, "autocommit": autocommit}
+    if PG_PWFILE:
+        kw["password"] = Path(PG_PWFILE).read_text().strip()
+    return psycopg.connect(**kw)
 
 
 def ensure_db() -> None:

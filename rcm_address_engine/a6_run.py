@@ -29,7 +29,7 @@ from a5_run import clean, rss_mb
 
 ROOT = Path(__file__).resolve().parent
 PROTOCOL = ROOT / "A6_protocol.md"
-PY = ROOT / ".venv-pg" / "Scripts" / "python.exe"
+PY = Path(sys.executable)
 VACUUMS = (240_000, 480_000)
 CP_EVERY = 50_000
 F_MAJOR = 0.1

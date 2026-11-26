@@ -1024,7 +1024,7 @@ def cmd_dynamics(size: str, rep: str) -> None:
     conn = G.connect()
     out: dict = {"size": size, "rep": rep, "rows": n, "impl_sha256": impl_hashes(),
                  "settings": {k: conn.execute(f"SHOW {k}").fetchone()[0] for k in SETTINGS}, "stage": "start"}
-    free = shutil.disk_usage("C:\\").free
+    free = shutil.disk_usage(G.require_data_dir()).free
     out["free_bytes_before"] = free
     if size == "N10" and free < MIN_FREE_N10:
         out["status"] = "НЕ ВЫПОЛНЕНО: мало места на C:"

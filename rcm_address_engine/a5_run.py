@@ -4,8 +4,6 @@ dynamics N1|N10, replay N1|N10, open-probe. Run with .venv-pg:
 
 from __future__ import annotations
 
-import ctypes
-import ctypes.wintypes as wt
 import hashlib
 import json
 import random
@@ -26,7 +24,7 @@ from a4_run import A4System, Control, moving_update, wide_payload
 
 ROOT = Path(__file__).resolve().parent
 PROTOCOL = ROOT / "A5_protocol.md"
-PY = ROOT / ".venv-pg" / "Scripts" / "python.exe"
+PY = Path(sys.executable)
 VACUUMS = (240_000, 480_000)
 CP_EVERY = 50_000
 F_MAJOR = 0.1
@@ -43,26 +41,8 @@ def check_protocol() -> None:
         raise SystemExit(f"A5 protocol changed: {sha}")
 
 
-class PMC(ctypes.Structure):
-    _fields_ = [("cb", wt.DWORD), ("PageFaultCount", wt.DWORD), ("PeakWorkingSetSize", ctypes.c_size_t),
-                ("WorkingSetSize", ctypes.c_size_t), ("QuotaPeakPagedPoolUsage", ctypes.c_size_t),
-                ("QuotaPagedPoolUsage", ctypes.c_size_t), ("QuotaPeakNonPagedPoolUsage", ctypes.c_size_t),
-                ("QuotaNonPagedPoolUsage", ctypes.c_size_t), ("PagefileUsage", ctypes.c_size_t),
-                ("PeakPagefileUsage", ctypes.c_size_t)]
-
-
-def rss_mb() -> dict | None:
-    """Peak / current working set of this process (fixed: explicit HANDLE types, K32GetProcessMemoryInfo)."""
-    k32 = ctypes.WinDLL("kernel32", use_last_error=True)
-    k32.GetCurrentProcess.restype = wt.HANDLE
-    f = k32.K32GetProcessMemoryInfo
-    f.argtypes = [wt.HANDLE, ctypes.POINTER(PMC), wt.DWORD]
-    f.restype = wt.BOOL
-    c = PMC()
-    c.cb = ctypes.sizeof(PMC)
-    if not f(k32.GetCurrentProcess(), ctypes.byref(c), c.cb):
-        return None
-    return {"peak_mb": c.PeakWorkingSetSize / 2**20, "current_mb": c.WorkingSetSize / 2**20}
+# rss_mb moved to hoststats.py (Win32 code unchanged, /proc on Linux); re-exported for a6_run, a7_run, a8_run
+from hoststats import rss_mb  # noqa: E402,F401
 
 
 def clean(x):

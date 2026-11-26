@@ -1,11 +1,12 @@
 """A2 record stream (protocol A2_protocol.md §2): E19/E20 corpus copies -> COPY text rows on stdout + reference arrays.
 
-Usage (run with .venv): a2_gen.py START COUNT --ref PREFIX [--workers 6]
+Usage: a2_gen.py START COUNT --ref PREFIX [--workers 6] [--no-stdout]
   stdout       COPY text rows "seq<TAB>k<TAB>v<TAB>payload" for stream positions [START, START+COUNT); seq = position + 1
   PREFIX.keys  uint8 [COUNT, 16]  uuid bytes of k
   PREFIX.dig   uint8 [COUNT, 16]  sha256(payload utf-8)[:16]
   PREFIX.len   uint32 [COUNT]     payload length in bytes
-Copy c of the corpus: e19.build_corpus(2026 + c, 0.0), epoch "e{c+1}", event ids re-derived, time shifted by c * span.
+Copy c of the corpus: corpus.build_corpus(2026 + c, 0.0), epoch "e{c+1}", event ids re-derived, time shifted by c * span.
+The corpus code lives in corpus.py (stand-alone copy of the JARVIS E19/E20 generator used by the reference runs).
 """
 
 from __future__ import annotations
@@ -20,20 +21,16 @@ from pathlib import Path
 
 import numpy as np
 
-ROOT = Path(__file__).resolve().parent.parent
-sys.path.insert(0, str(ROOT / "experiments"))
-sys.path.insert(0, str(ROOT / "src"))
+import corpus
 
 DAY_US = 86_400_000_000
 SEED0 = 2026
 
 
 def _corpus(copy: int):
-    import e19_cascade as e19
-    import e20_engine_cascade as e20
-    e19.TIME_UNIT_MS = 1
-    atoms, dicts, _ = e19.build_corpus(SEED0 + copy, 0.0)
-    return e20.to_observations(atoms, dicts["entities"])
+    assert corpus.TIME_UNIT_MS == 1  # the reference runs set e19.TIME_UNIT_MS = 1
+    atoms, dicts, _ = corpus.build_corpus(SEED0 + copy, 0.0)
+    return corpus.to_observations(atoms, dicts["entities"])
 
 
 _SPAN: int | None = None
@@ -53,8 +50,7 @@ def _shift(t: int | None, d: int) -> int | None:
 
 def copy_records(copy: int, span_us: int) -> list[tuple[bytes, bytes]]:
     """All records of one corpus copy in arrival order: (uuid bytes of k, canonical JSON payload utf-8)."""
-    from jarvis_mem.engine.deletion import memory_id
-    from jarvis_mem.engine.model import derived_event_uuid
+    from corpus import derived_event_uuid, memory_id
     epoch, d = f"e{copy + 1}", copy * span_us
     out = []
     for o in _corpus(copy):

@@ -21,7 +21,7 @@ ROOT = Path(__file__).resolve().parent
 RES = ROOT / "results"
 DATA = ROOT / "data"
 SEED_A, SEED_B = 0xA2A2_0001, 0xA2B2_0001
-PY = ROOT / ".venv-pg" / "Scripts" / "python.exe"
+PY = Path(sys.executable)
 
 
 def log(*a) -> None:

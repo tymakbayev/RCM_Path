@@ -3,8 +3,6 @@ open-probe. Run with .venv-pg:  a4_run.py selfcheck | dynamics N1 | dynamics N10
 
 from __future__ import annotations
 
-import ctypes
-import ctypes.wintypes as wt
 import hashlib
 import json
 import random
@@ -20,12 +18,13 @@ import psycopg
 import a2_core as C
 import a2_pg as G
 import a4_lsm as L
+import hoststats as H
 from a2_dyn import BATCH, OPS, Model, checkpoint, load_extra, make_ops, ops_sha256
 from a2_runs import DATA, RES, absent_keys, log, sha16
 
 ROOT = Path(__file__).resolve().parent
 PROTOCOL = ROOT / "A4_protocol.md"
-PY = ROOT / ".venv-pg" / "Scripts" / "python.exe"
+PY = Path(sys.executable)
 VACUUMS = (240_000, 480_000)
 CP_EVERY = 50_000
 F_MAJOR = 0.1
@@ -39,17 +38,11 @@ def check_protocol() -> None:
         raise SystemExit(f"A4 protocol changed: {sha}")
 
 
-def peak_rss_mb() -> float:
-    class PMC(ctypes.Structure):
-        _fields_ = [("cb", wt.DWORD), ("PageFaultCount", wt.DWORD), ("PeakWorkingSetSize", ctypes.c_size_t),
-                    ("WorkingSetSize", ctypes.c_size_t), ("QuotaPeakPagedPoolUsage", ctypes.c_size_t),
-                    ("QuotaPagedPoolUsage", ctypes.c_size_t), ("QuotaPeakNonPagedPoolUsage", ctypes.c_size_t),
-                    ("QuotaNonPagedPoolUsage", ctypes.c_size_t), ("PagefileUsage", ctypes.c_size_t),
-                    ("PeakPagefileUsage", ctypes.c_size_t)]
-    c = PMC()
-    c.cb = ctypes.sizeof(PMC)
-    ctypes.windll.psapi.GetProcessMemoryInfo(ctypes.windll.kernel32.GetCurrentProcess(), ctypes.byref(c), c.cb)
-    return c.PeakWorkingSetSize / 2**20
+def peak_rss_mb() -> float | None:
+    """Peak resident set, MiB. The reference A4 runs recorded 0 here: the old Win32 call had no argtypes (a known
+    defect, fixed in A5); this field is reported only and no A4 criterion uses it."""
+    r = H.rss_mb()
+    return None if r is None else r["peak_mb"]
 
 
 def page_of_ctid(ctid: str) -> int:

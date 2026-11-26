@@ -1,0 +1,15 @@
+# sha256 of the reference record streams: numpy .npy files written by `a2_gen.py START COUNT --ref PREFIX`
+#   PREFIX.keys uint8[COUNT,16] uuid bytes of k | PREFIX.dig uint8[COUNT,16] sha256(payload)[:16] | PREFIX.len uint32[COUNT]
+# small = stream positions [0, 100000)    = data/ref_a7_small.*, data/ref_a8_small.* of the reference runs
+# n1    = stream positions [0, 1000000)   = data/ref_n1.*, ref_dyn_base.*, ref_a4_n1.* .. ref_a7_n1.* (all identical)
+# n10   = stream positions [0, 10000000)  = data/ref_n10.*, ref_a4_n10.* .. ref_a7_n10.* (all identical)
+# Check: python verify_corpus.py small|n1|n10
+c56b4d68f5a725e474dacf57b0c5734f4833ebab06602f1f936806ea7699139f  small.keys
+5d6b818511be2be1305f3831148830168fb9be941f7f1bbaa82e2dae70c3da5b  small.dig
+eb3a682bce1f9b5758eb509fff99db0144efd61d8cbad5831a2e166cd2f6c320  small.len
+9e5ee8b7cf566b7792c858182cbb353a5624a5ec30f78ec84f654e4121b925b2  n1.keys
+a0f04f59b91ccf25c27ea841e679a6529d1a4632cabcffe8e20e748e1bd7cfe1  n1.dig
+b94ac2ce0dbb4343a193054d6d54b91a3c58b5bd8421cba8ae4c02044e01c6a9  n1.len
+d1be4784eaa16c9eebeaa428d3f0ac34d5ec214117927a910f677b2081ad7f29  n10.keys
+3ad5e724670b302913117b5036104100c6146eda90260a71b821a88c1a51ffda  n10.dig
+a4d483afd76d5201e38a6c23d42522d3ae880212fd0f9b202cc8619a37905b32  n10.len

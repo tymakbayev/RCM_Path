@@ -6,8 +6,6 @@ A2-A7 code is used unchanged; a7_run.checkpoint7 is wrapped at run time (module 
 from __future__ import annotations
 
 import copy
-import ctypes
-import ctypes.wintypes as wt
 import hashlib
 import json
 import random
@@ -22,6 +20,7 @@ import numpy as np
 
 import a2_pg as G
 import a6_pghash as PH
+import hoststats as H
 import a6_run as A6
 import a7_run as A7
 from a2_dyn import Model, load_extra, make_ops, ops_sha256
@@ -66,65 +65,14 @@ def impl_hashes() -> dict:
     return out
 
 
-# ------------------------------------------------------------------ memory and device (§3.2), Win32 via ctypes
-class _MemStat(ctypes.Structure):
-    _fields_ = [("dwLength", wt.DWORD), ("dwMemoryLoad", wt.DWORD), ("ullTotalPhys", ctypes.c_ulonglong),
-                ("ullAvailPhys", ctypes.c_ulonglong), ("ullTotalPageFile", ctypes.c_ulonglong),
-                ("ullAvailPageFile", ctypes.c_ulonglong), ("ullTotalVirtual", ctypes.c_ulonglong),
-                ("ullAvailVirtual", ctypes.c_ulonglong), ("ullAvailExtendedVirtual", ctypes.c_ulonglong)]
-
-
-class _PerfInfo(ctypes.Structure):
-    _fields_ = [("cb", wt.DWORD), ("CommitTotal", ctypes.c_size_t), ("CommitLimit", ctypes.c_size_t),
-                ("CommitPeak", ctypes.c_size_t), ("PhysicalTotal", ctypes.c_size_t),
-                ("PhysicalAvailable", ctypes.c_size_t), ("SystemCache", ctypes.c_size_t),
-                ("KernelTotal", ctypes.c_size_t), ("KernelPaged", ctypes.c_size_t),
-                ("KernelNonpaged", ctypes.c_size_t), ("PageSize", ctypes.c_size_t),
-                ("HandleCount", wt.DWORD), ("ProcessCount", wt.DWORD), ("ThreadCount", wt.DWORD)]
-
-
-class _DiskPerf(ctypes.Structure):
-    _fields_ = [("BytesRead", ctypes.c_longlong), ("BytesWritten", ctypes.c_longlong),
-                ("ReadTime", ctypes.c_longlong), ("WriteTime", ctypes.c_longlong), ("IdleTime", ctypes.c_longlong),
-                ("ReadCount", wt.DWORD), ("WriteCount", wt.DWORD), ("QueueDepth", wt.DWORD),
-                ("SplitCount", wt.DWORD), ("QueryTime", ctypes.c_longlong), ("StorageDeviceNumber", wt.DWORD),
-                ("StorageManagerName", wt.WCHAR * 8)]
-
-
-_K32 = ctypes.WinDLL("kernel32", use_last_error=True)
-_K32.CreateFileW.restype = wt.HANDLE
-_K32.CreateFileW.argtypes = [wt.LPCWSTR, wt.DWORD, wt.DWORD, wt.LPVOID, wt.DWORD, wt.DWORD, wt.HANDLE]
-_K32.DeviceIoControl.argtypes = [wt.HANDLE, wt.DWORD, wt.LPVOID, wt.DWORD, wt.LPVOID, wt.DWORD,
-                                 ctypes.POINTER(wt.DWORD), wt.LPVOID]
-_K32.CloseHandle.argtypes = [wt.HANDLE]
-
-
+# ------------------------------------------------------------------ memory and device (§3.2), see hoststats.py
 def disk_counters() -> dict | None:
-    """IOCTL_DISK_PERFORMANCE on the C: volume (no admin rights needed here); None if unavailable."""
-    h = _K32.CreateFileW(r"\\.\C:", 0, 3, None, 3, 0, None)
-    if h is None or h == wt.HANDLE(-1).value:
-        return None
-    try:
-        d = _DiskPerf()
-        ret = wt.DWORD()
-        if not _K32.DeviceIoControl(h, 0x70020, None, 0, ctypes.byref(d), ctypes.sizeof(d), ctypes.byref(ret), None):
-            return None
-        return {"read_count": int(d.ReadCount), "bytes_read": int(d.BytesRead), "read_time_100ns": int(d.ReadTime)}
-    finally:
-        _K32.CloseHandle(h)
+    """Device counters of the volume that holds the PostgreSQL data directory (C: on the reference stand)."""
+    return H.disk_counters(G.require_data_dir())
 
 
 def mem(where: str, bufs: dict | None = None) -> dict:
-    m = _MemStat()
-    m.dwLength = ctypes.sizeof(_MemStat)
-    p = _PerfInfo()
-    p.cb = ctypes.sizeof(_PerfInfo)
-    ok_m = bool(_K32.GlobalMemoryStatusEx(ctypes.byref(m)))
-    ok_p = bool(_K32.K32GetPerformanceInfo(ctypes.byref(p), p.cb))
-    return {"where": where, "t": time.time(),
-            "avail_phys_gb": m.ullAvailPhys / 2**30 if ok_m else None,
-            "total_phys_gb": m.ullTotalPhys / 2**30 if ok_m else None,
-            "system_cache_gb": p.SystemCache * p.PageSize / 2**30 if ok_p else None,
+    return {"where": where, "t": time.time(), **H.memory(),
             "rss": rss_mb(), "disk": disk_counters(), "pg_buffers": bufs}
 
 
@@ -1199,7 +1147,7 @@ def cmd_run() -> None:
     try:
         out["settings"] = {k: conn.execute(f"SHOW {k}").fetchone()[0] for k in SETTINGS}
         out["preconditions"] = preconditions(conn)
-        out["free_bytes_before"] = shutil.disk_usage("C:\\").free
+        out["free_bytes_before"] = shutil.disk_usage(G.require_data_dir()).free
         if out["free_bytes_before"] < MIN_FREE or not out["preconditions"]["block_size_ok"]:
             raise A7.Stop("НЕ ВЫПОЛНЕНО: мало места на C: или block_size не 8192")
         ensure_extensions(conn, ext)

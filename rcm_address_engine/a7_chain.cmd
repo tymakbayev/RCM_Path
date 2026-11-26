@@ -1,7 +1,8 @@
 @echo off
 rem A7 chain (protocol §3): selfcheck -> N1 r1 -> N1 r2 -> N10; any error stops the chain
-cd /d C:\gams\test\rcm_address_engine
-set PY=C:\gams\test\rcm_address_engine\.venv-pg\Scripts\python.exe
+cd /d "%~dp0"
+rem PY = the project venv interpreter (README); the reference stand used .venv-pg\Scripts\python.exe
+if not defined PY set PY=python
 %PY% -u a7_run.py selfcheck > results\a7_selfcheck.log 2>&1 || exit /b 1
 %PY% -u a7_run.py dynamics N1 r1 > results\a7_n1_r1.log 2>&1 || exit /b 2
 %PY% -u a7_run.py dynamics N1 r2 > results\a7_n1_r2.log 2>&1 || exit /b 3
