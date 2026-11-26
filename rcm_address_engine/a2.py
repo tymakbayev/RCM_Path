@@ -38,6 +38,7 @@ class Server:
         self.started = not G.pg_running()
         if self.started:
             G.pg_ctl("start")
+        G.check_cluster()  # SQL and pg_ctl address the same cluster, checked before any measurement
         G.ensure_db()
         return self
 

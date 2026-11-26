@@ -17,6 +17,7 @@ from pathlib import Path
 
 import numpy as np
 import psycopg
+import psycopg.sql
 
 import a2_core as C
 
@@ -50,7 +51,31 @@ def require_data_dir() -> str:
     return PG_DATA
 
 
+def same_path(a: str, b: str) -> bool:
+    return os.path.normcase(os.path.realpath(a)) == os.path.normcase(os.path.realpath(b))
+
+
+_CLUSTER_CHECKED = False
+
+
+def check_cluster() -> None:
+    """The SQL connection (PGHOST/PGPORT) must reach the cluster that pg_ctl controls and whose volume is measured
+    (RCM_PG_DATA); otherwise cold-start numbers and free-space checks would describe another server. Checked once per
+    process, before any measurement: a2.Server on entry, A7/A8 at start-up."""
+    global _CLUSTER_CHECKED
+    if _CLUSTER_CHECKED:
+        return
+    with connect("postgres") as c:
+        served = c.execute("SELECT current_setting('data_directory')").fetchone()[0]
+    if not same_path(served, require_data_dir()):
+        raise RuntimeError(f"PGHOST/PGPORT reach the cluster in {served!r}, but RCM_PG_DATA is {PG_DATA!r}: "
+                           "point both at the same dedicated local test cluster")
+    _CLUSTER_CHECKED = True
+
+
 def pg_ctl(action: str) -> None:
+    if action in ("stop", "restart"):
+        check_cluster()  # no-op after the start-up check
     cmd = [str(PG_CTL), "-D", require_data_dir(), "-l", PG_LOG, "-w"]
     cmd += [action] + (["-m", "fast"] if action in ("stop", "restart") else [])
     # no pipes: the server inherits pg_ctl's handles, and a captured pipe would never close (hang seen in P0)
@@ -73,7 +98,7 @@ def connect(db: str = DB, autocommit: bool = True) -> psycopg.Connection:
 def ensure_db() -> None:
     with connect("postgres") as c:
         if not c.execute("SELECT 1 FROM pg_database WHERE datname = %s", (DB,)).fetchone():
-            c.execute(f"CREATE DATABASE {DB}")
+            c.execute(psycopg.sql.SQL("CREATE DATABASE {}").format(psycopg.sql.Identifier(DB)))  # RCM_DB is free text
 
 
 def show_all(conn) -> dict:

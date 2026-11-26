@@ -1080,7 +1080,8 @@ def scenario_suite(mutant: str | None = None) -> dict:
 
 
 IMPL_FILES = ("a6_lsm.py", "a6_run.py", "a6_pghash.py", "a6_selftest_lsm.py", "a5_lsm.py", "a5_run.py", "a4_lsm.py",
-              "a4_run.py", "a2_core.py", "a2_pg.py", "a2_dyn.py", "a2_runs.py", "a2_gen.py", "a2_selftest_core.py", "a2.py")
+              "a4_run.py", "a2_core.py", "a2_pg.py", "a2_dyn.py", "a2_runs.py", "a2_gen.py", "a2_selftest_core.py", "a2.py",
+              "corpus.py", "hoststats.py")  # the last two: portability commit (generator, host counters)
 # preconditions a mutant's witness depends on (R4): an unmet precondition makes that mutant's result НЕ УСТАНОВЛЕНО
 PRECOND = {
     "b": ["precondition: (b) witness had 4 distinct pages"],

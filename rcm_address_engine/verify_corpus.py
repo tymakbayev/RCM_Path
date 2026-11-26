@@ -1,4 +1,6 @@
-"""Check that a2_gen.py reproduces the reference record streams byte for byte (results/data_manifest.sha256).
+"""Check that a2_gen.py reproduces the reference arrays byte for byte (results/data_manifest.sha256): keys, payload
+digests (sha256[:16]) and payload lengths of every record. The COPY text (seq, v, escaping) is not part of this
+check; it was compared with the original generator separately (commit message of the review fixes).
 
 Usage: python verify_corpus.py [small|n1|n10] [--workers 6]
   small  stream positions [0, 100 000)      seconds

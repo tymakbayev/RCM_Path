@@ -1149,7 +1149,7 @@ def cmd_run() -> None:
         out["preconditions"] = preconditions(conn)
         out["free_bytes_before"] = shutil.disk_usage(G.require_data_dir()).free
         if out["free_bytes_before"] < MIN_FREE or not out["preconditions"]["block_size_ok"]:
-            raise A7.Stop("НЕ ВЫПОЛНЕНО: мало места на C: или block_size не 8192")
+            raise A7.Stop("НЕ ВЫПОЛНЕНО: мало места на томе данных PostgreSQL или block_size не 8192")
         ensure_extensions(conn, ext)
         out["extensions"] = ext
         out["mem_start"] = mem("start")
@@ -1185,6 +1185,7 @@ def cmd_run() -> None:
 
 
 if __name__ == "__main__":
+    G.check_cluster()  # SQL and RCM_PG_DATA address the same cluster (free space, device counters)
     if len(sys.argv) >= 2 and sys.argv[1] == "selfcheck":
         cmd_selfcheck()
     elif len(sys.argv) >= 2 and sys.argv[1] == "run":

@@ -1027,9 +1027,9 @@ def cmd_dynamics(size: str, rep: str) -> None:
     free = shutil.disk_usage(G.require_data_dir()).free
     out["free_bytes_before"] = free
     if size == "N10" and free < MIN_FREE_N10:
-        out["status"] = "НЕ ВЫПОЛНЕНО: мало места на C:"
+        out["status"] = "НЕ ВЫПОЛНЕНО: мало места на томе данных PostgreSQL"
         G.write_json(RES / f"{name}.json", out)
-        raise SystemExit(f"free {free / 1e9:.1f} GB < {MIN_FREE_N10 / 1e9:.0f} GB")
+        raise SystemExit(f"free {free / 1e9:.1f} GB < {MIN_FREE_N10 / 1e9:.0f} GB on the volume of {G.PG_DATA}")
     bits = L.bits_for(n, L.SIGMA)
     ctx = Ctx(tag, 1 << bits, None)
     ctx.work = {}
@@ -1098,6 +1098,7 @@ def cmd_dynamics(size: str, rep: str) -> None:
 
 
 if __name__ == "__main__":
+    G.check_cluster()  # SQL and RCM_PG_DATA address the same cluster (free-space check)
     if sys.argv[1] == "selfcheck":
         cmd_selfcheck()
     elif sys.argv[1] == "dynamics":

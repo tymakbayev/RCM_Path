@@ -106,8 +106,11 @@ def memory() -> dict:
 def disk_counters(path: str) -> dict | None:
     """Cumulative reads of the volume that holds `path`: {read_count, bytes_read, read_time_100ns}; None if unavailable.
 
-    Windows: IOCTL_DISK_PERFORMANCE on the volume (no admin rights needed on the reference stand).
-    Linux: /proc/diskstats line of the device that holds `path` (sectors of 512 bytes, read time in ms)."""
+    Windows: IOCTL_DISK_PERFORMANCE on the drive letter of `path` (no admin rights needed on the reference stand).
+    A volume mounted into a folder, a junction to another volume or a network path is NOT resolved to its own
+    volume: the counters would describe the drive letter, so keep the data directory on a plain local drive.
+    Linux: /proc/diskstats line of the device that holds `path` (sectors of 512 bytes, read time in ms). For
+    LVM/dm this is the logical device, not necessarily the physical disk; tmpfs has no line (None)."""
     if IS_WIN:
         drive = os.path.splitdrive(os.path.abspath(path))[0] or "C:"
         h = _K32.CreateFileW("\\\\.\\" + drive, 0, 3, None, 3, 0, None)
