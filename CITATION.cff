@@ -1,6 +1,6 @@
 cff-version: 1.2.0
 message: "При использовании кода или результатов ссылайтесь на репозиторий в следующем виде."
-title: "RCM Path: вычисляемая адресация строк для PostgreSQL (RCM Address Engine, эксперименты A2-A8)"
+title: "RCM Path: вычисляемая адресация записей в PostgreSQL (RCM Address Engine, эксперименты A2-A8)"
 authors:
   - name: "Abu"
     alias: "tymakbayev"
