@@ -13,8 +13,8 @@ b94ac2ce0dbb4343a193054d6d54b91a3c58b5bd8421cba8ae4c02044e01c6a9  n1.len
 d1be4784eaa16c9eebeaa428d3f0ac34d5ec214117927a910f677b2081ad7f29  n10.keys
 3ad5e724670b302913117b5036104100c6146eda90260a71b821a88c1a51ffda  n10.dig
 a4d483afd76d5201e38a6c23d42522d3ae880212fd0f9b202cc8619a37905b32  n10.len
-# dyn = stream positions [10000000, 10400000): data/dyn.copy (COPY text, stdout of a2_gen) and data/dyn.* arrays —
-# the fresh keys and payloads of the insert stream of A2/A3 dynamics and A4–A8. Create: python prepare_data.py
+# dyn = stream positions [10000000, 10400000): data/dyn.copy (COPY text, stdout of a2_gen) and data/dyn.* arrays:
+# the fresh keys and payloads of the insert stream of A2/A3 dynamics and A4-A8. Create: python prepare_data.py
 0e522a59d1a3f05ec26abd940b79289bef28a34faa95f804a80d7e44cb43d5cc  dyn.copy
 13193cd919eccde22b89a4c64d497b9b1a4a75801e7171670b254637c5a1c11a  dyn.keys
 ac6ed48ad70501c9fece7cdd298477b351b34b07e10a61760e7d98ee4553fa99  dyn.dig

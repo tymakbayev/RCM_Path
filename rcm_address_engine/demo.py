@@ -3,7 +3,7 @@
     python demo.py [--rows 1000000] [--lookups 20000] [--keep]
 
 Что делает:
-1. загружает в новую таблицу rcm_demo_<номер> N записей тем же генератором, что и эксперименты A2–A8 (ключ uuid,
+1. загружает в новую таблицу rcm_demo_<номер> N записей тем же генератором, что и эксперименты A2-A8 (ключ uuid,
    JSON-полезная нагрузка; около 0,65 ГБ на 1 млн строк);
 2. строит обычный B-tree по ключу и адрес RCM (rcm.build) по той же таблице;
 3. ищет одни и те же ключи обоими способами, чередуя порядок, и сверяет каждый ответ с эталоном генератора;
@@ -12,13 +12,13 @@
 5. удаляет свою таблицу и свои файлы (если не задан --keep).
 
 Оба способа выполняются с plan_cache_mode = force_custom_plan (план строится по фактическим параметрам, как в
-EXPLAIN), и демо проверяет, что запрос адреса действительно идёт через Tid Range Scan, а B-tree — через индекс.
+EXPLAIN), и демо проверяет, что запрос адреса действительно идёт через Tid Range Scan, а B-tree через индекс.
 
 Нужно: PostgreSQL 17+ (EXPLAIN SERIALIZE), существующая база из RCM_DB (или право её создать) и право создавать в
-ней таблицы; суперпользователь, pg_ctl и перезапуск сервера не нужны. Подключение — PGHOST, PGPORT, PGUSER,
+ней таблицы; суперпользователь, pg_ctl и перезапуск сервера не нужны. Подключение: PGHOST, PGPORT, PGUSER,
 PGPASSWORD (README). Каждый запуск работает со своей новой таблицей и своей временной папкой.
 
-Собрано из функций, на которых получены результаты A2–A8 (a2_pg.load, a2_pg.explain, a2_pg.index_size,
+Собрано из функций, на которых получены результаты A2-A8 (a2_pg.load, a2_pg.explain, a2_pg.index_size,
 a2_runs.absent_keys, a2_runs.sha16), и rcm.py. Проверено на PostgreSQL 18.7 (README).
 
 Copyright (c) 2026 Abu (github.com/tymakbayev). Лицензия MIT, см. LICENSE.
@@ -76,7 +76,7 @@ def connect():
 
 def lookups(conn, addr, btree_sql: str, keys: list[bytes], digests: list[bytes] | None) -> dict:
     """Каждый ключ ищется обоими способами; порядок чередуется (чётные: адрес первым), чтобы первый не прогревал
-    страницу второму в одну сторону. digests is None — ключи отсутствуют, правильный ответ None у обоих."""
+    страницу второму в одну сторону. digests is None: ключи отсутствуют, правильный ответ None у обоих."""
     t_addr, t_bt, wrong = [], [], 0
     for i, kb in enumerate(keys):
         u = uuid.UUID(bytes=kb)
@@ -101,8 +101,8 @@ def lookups(conn, addr, btree_sql: str, keys: list[bytes], digests: list[bytes] 
 
 def buffers(conn, addr, btree_sql: str, keys: list[bytes]) -> dict:
     """Обращения к буферам на поиск по EXPLAIN (ANALYZE, BUFFERS, SERIALIZE): верхний узел исполнителя, как в A2
-    (a2_pg.explain), и отдельно — сериализация результата. Если по адресу ключа нет, запроса нет — 0 обращений.
-    Заодно проверяются планы: адрес — Tid Range Scan, B-tree — Index Scan."""
+    (a2_pg.explain), и отдельно сериализация результата. Если по адресу ключа нет, запроса нет и обращений 0.
+    Заодно проверяются планы: у адреса Tid Range Scan, у B-tree Index Scan."""
     a, a_ser, b, b_ser, plans = [], [], [], [], {"address": {}, "btree": {}}
     for kb in keys:
         q = addr.query(conn, kb)
@@ -203,7 +203,7 @@ def main() -> int:
             shutil.rmtree(work, ignore_errors=True)
     bp_, ba_ = out["buffers_present"]["plans"], out["buffers_absent"]["plans"]
     plans_ok = (set(bp_["address"]) == {"Tid Range Scan"}  # у существующих ключей план адреса обязателен
-                and set(ba_["address"]) <= {"Tid Range Scan"}  # у отсутствующих — пусто, если все отсеяны без SQL
+                and set(ba_["address"]) <= {"Tid Range Scan"}  # у отсутствующих пусто, если все отсеяны без SQL
                 and set(bp_["btree"]) | set(ba_["btree"]) <= {"Index Scan", "Index Only Scan"})
     out["plans_ok"] = plans_ok
     OUT.parent.mkdir(exist_ok=True)
@@ -236,7 +236,7 @@ def report(o: dict) -> None:
     print(f"Планы, ключ есть: адрес {bp['plans']['address']}, B-tree {bp['plans']['btree']}; "
           f"ключа нет: адрес {ba['plans']['address'] or 'без SQL'}, B-tree {ba['plans']['btree']}"
           + ("" if o["plans_ok"] else "  <- НЕ ТОТ ПЛАН: сравнение задержек недействительно"))
-    print("Задержка — в клиенте на Python, тёплый кэш; буферы — только PostgreSQL, без чтения адреса.")
+    print("Задержка измерена в клиенте на Python при тёплом кэше; буферы только PostgreSQL, без чтения адреса.")
     print(f"Результат: {OUT}")
 
 

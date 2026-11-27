@@ -1,6 +1,6 @@
 """Самопроверка rcm.py без PostgreSQL: разбор COPY binary, сборка и чтение адреса, логика get() на поддельном
-подключении, формы SQL. Запуск: python rcm_selftest.py  (код выхода 0 — всё верно).
-Проверка на живом PostgreSQL — rcm_pgtest.py."""
+подключении, формы SQL. Запуск: python rcm_selftest.py  (код выхода 0: всё верно).
+Проверка на работающем PostgreSQL: rcm_pgtest.py."""
 
 from __future__ import annotations
 

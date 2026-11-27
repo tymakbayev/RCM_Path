@@ -3,8 +3,8 @@
     python rcm_pgtest.py [--rows 20000]
 
 Создаёт в базе RCM_DB таблицы с уникальными именами rcm_t_<номер>_*, проверяет и удаляет их. Нужны PostgreSQL 17+
-(EXPLAIN SERIALIZE) и право создавать таблицы; суперпользователь не нужен. Подключение — PGHOST, PGPORT, PGUSER, PGPASSWORD, RCM_DB.
-Код выхода 0 — все проверки прошли.
+(EXPLAIN SERIALIZE) и право создавать таблицы; суперпользователь не нужен. Подключение: PGHOST, PGPORT, PGUSER, PGPASSWORD, RCM_DB.
+Код выхода 0: все проверки прошли.
 
 Copyright (c) 2026 Abu (github.com/tymakbayev). Лицензия MIT, см. LICENSE.
 """
