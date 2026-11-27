@@ -1,0 +1,107 @@
+{
+ "rows": 200000,
+ "table": {
+  "name": "rcm_demo_14236_90fdc6",
+  "pages": 15304,
+  "main_bytes": 125370368
+ },
+ "server_version_num": 180007,
+ "settings": {
+  "shared_buffers": "128MB",
+  "block_size": "8192",
+  "plan_cache_mode": "force_custom_plan"
+ },
+ "host": {
+  "platform": "Windows-10-10.0.19045-SP0",
+  "machine": "AMD64",
+  "cpus": 12,
+  "python": "3.10.10"
+ },
+ "load": {
+  "copy_s": 14.96455590000005,
+  "vacuum_s": 0.2641270000003715
+ },
+ "btree": {
+  "index_s": 0.24354520000088087,
+  "analyze_s": 0.08430450000014389,
+  "total_s": 0.327850200001194,
+  "bytes": 6332416,
+  "bytes_per_row": 31.66208
+ },
+ "address": {
+  "bytes": 638752,
+  "bytes_per_row": 3.19376,
+  "read_s": 0.2636122999992949,
+  "unique_s": 0.0418307999989338,
+  "build_s": 0.07126910000079079,
+  "verify_s": 0.08310270000038145,
+  "r_bits": 14,
+  "verified_rows": 200000,
+  "total_s": 0.4624285999998392
+ },
+ "present": {
+  "address_us": {
+   "p50": 159.5,
+   "p95": 253.1,
+   "mean": 176.32331000000002,
+   "n": 20000
+  },
+  "btree_us": {
+   "p50": 121.2,
+   "p95": 194.7,
+   "mean": 134.584695,
+   "n": 20000
+  },
+  "wrong": 0,
+  "no_sql": 0,
+  "keys": 20000
+ },
+ "absent": {
+  "address_us": {
+   "p50": 26.0,
+   "p95": 47.9,
+   "mean": 28.45658,
+   "n": 5000
+  },
+  "btree_us": {
+   "p50": 109.9,
+   "p95": 177.5,
+   "mean": 121.86386,
+   "n": 5000
+  },
+  "wrong": 0,
+  "no_sql": 4984,
+  "keys": 5000
+ },
+ "buffers_present": {
+  "address": 1.0,
+  "btree": 4.0,
+  "address_serialize": 0.0,
+  "btree_serialize": 0.0,
+  "plans": {
+   "address": {
+    "Tid Range Scan": 300
+   },
+   "btree": {
+    "Index Scan": 300
+   }
+  },
+  "n": 300
+ },
+ "buffers_absent": {
+  "address": 0.006666666666666667,
+  "btree": 3.0,
+  "address_serialize": 0.0,
+  "btree_serialize": 0.0,
+  "plans": {
+   "address": {
+    "Tid Range Scan": 2
+   },
+   "btree": {
+    "Index Scan": 300
+   }
+  },
+  "n": 300
+ },
+ "plans_ok": true
+}

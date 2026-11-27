@@ -1,6 +1,6 @@
 cff-version: 1.2.0
-message: "If you use this software or its results, please cite it as below."
-title: "RCM Path: a computed address layer for PostgreSQL (RCM Address Engine, experiments A2-A8)"
+message: "Если вы используете этот код или его результаты, пожалуйста, цитируйте его так."
+title: "RCM Path: вычисляемый адресный слой для PostgreSQL (RCM Address Engine, эксперименты A2–A8)"
 authors:
   - name: "Abu"
     alias: "tymakbayev"
@@ -9,12 +9,12 @@ license: MIT
 date-released: 2026-11-27
 keywords:
   - PostgreSQL
-  - index
-  - minimal perfect hashing
-  - hash-based addressing
+  - индекс
+  - минимальная совершенная хеш-функция
+  - вычисляемая адресация
   - LSM
   - sidecar
 abstract: >-
-  A sidecar address layer that computes the heap page of a PostgreSQL row from its key (minimal perfect hash cascade,
-  8-bit fingerprint, page number; about 3-5 bytes per key instead of a ~31-byte B-tree), with the frozen protocols,
-  code, raw results and reports of experiments A2-A8 on 1 and 10 million rows.
+  Адресный слой рядом с PostgreSQL, который вычисляет страницу кучи строки по её ключу (каскад минимальной
+  совершенной хеш-функции, отпечаток 8 бит, номер страницы; около 3–5 байт на ключ против ~31 у B-tree), вместе с
+  зафиксированными протоколами, кодом, сырыми результатами и отчётами экспериментов A2–A8 на 1 и 10 млн строк.

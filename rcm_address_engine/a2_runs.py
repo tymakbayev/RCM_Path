@@ -18,7 +18,7 @@ import a2_core as C
 import a2_pg as G
 
 ROOT = Path(__file__).resolve().parent
-RES = ROOT / "results"
+RES = ROOT.parent / "results"  # layout: results/ at the top of the repository
 DATA = ROOT / "data"
 SEED_A, SEED_B = 0xA2A2_0001, 0xA2B2_0001
 PY = Path(sys.executable)

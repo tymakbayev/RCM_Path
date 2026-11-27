@@ -1,0 +1,107 @@
+{
+ "rows": 5000,
+ "table": {
+  "name": "rcm_demo_9740_33c42c",
+  "pages": 392,
+  "main_bytes": 3211264
+ },
+ "server_version_num": 180007,
+ "settings": {
+  "shared_buffers": "128MB",
+  "block_size": "8192",
+  "plan_cache_mode": "force_custom_plan"
+ },
+ "host": {
+  "platform": "Windows-10-10.0.19045-SP0",
+  "machine": "AMD64",
+  "cpus": 12,
+  "python": "3.10.10"
+ },
+ "load": {
+  "copy_s": 11.186647000000448,
+  "vacuum_s": 0.0462972000004811
+ },
+ "btree": {
+  "index_s": 0.00541249999878346,
+  "analyze_s": 0.008920199999920442,
+  "total_s": 0.01433299999916926,
+  "bytes": 180224,
+  "bytes_per_row": 36.0448
+ },
+ "address": {
+  "bytes": 13600,
+  "bytes_per_row": 2.72,
+  "read_s": 0.013151999999536201,
+  "unique_s": 0.0008060999989538686,
+  "build_s": 0.008104700000330922,
+  "verify_s": 0.008832499999698484,
+  "r_bits": 9,
+  "verified_rows": 5000,
+  "total_s": 0.031768900000315625
+ },
+ "present": {
+  "address_us": {
+   "p50": 150.5,
+   "p95": 271.025,
+   "mean": 171.32595,
+   "n": 2000
+  },
+  "btree_us": {
+   "p50": 113.6,
+   "p95": 203.02499999999998,
+   "mean": 131.05180000000001,
+   "n": 2000
+  },
+  "wrong": 0,
+  "no_sql": 0,
+  "keys": 2000
+ },
+ "absent": {
+  "address_us": {
+   "p50": 25.0,
+   "p95": 40.84999999999995,
+   "mean": 26.8026,
+   "n": 500
+  },
+  "btree_us": {
+   "p50": 106.1,
+   "p95": 168.10999999999999,
+   "mean": 116.18480000000001,
+   "n": 500
+  },
+  "wrong": 0,
+  "no_sql": 498,
+  "keys": 500
+ },
+ "buffers_present": {
+  "address": 1.0,
+  "btree": 3.0,
+  "address_serialize": 0.0,
+  "btree_serialize": 0.0,
+  "plans": {
+   "address": {
+    "Tid Range Scan": 300
+   },
+   "btree": {
+    "Index Scan": 300
+   }
+  },
+  "n": 300
+ },
+ "buffers_absent": {
+  "address": 0.006666666666666667,
+  "btree": 2.0,
+  "address_serialize": 0.0,
+  "btree_serialize": 0.0,
+  "plans": {
+   "address": {
+    "Tid Range Scan": 2
+   },
+   "btree": {
+    "Index Scan": 300
+   }
+  },
+  "n": 300
+ },
+ "plans_ok": true
+}

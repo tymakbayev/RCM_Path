@@ -31,7 +31,7 @@ from a2_runs import DATA, RES, absent_keys, log, sha16
 from a5_run import clean, rss_mb
 
 ROOT = Path(__file__).resolve().parent
-PROTOCOL = ROOT / "A7_protocol.md"
+PROTOCOL = ROOT.parent / "docs" / "experiments" / "A7_protocol.md"
 COLS = A6.COLS
 VACUUMS = (240_000, 480_000)
 CP_AT = (0, 100_000, 200_000, 300_000, 400_000, 500_000)

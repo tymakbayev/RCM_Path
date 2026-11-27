@@ -28,7 +28,7 @@ from a2_runs import DATA, RES, log, sha16
 from a5_run import rss_mb
 
 ROOT = Path(__file__).resolve().parent
-PROTOCOL = ROOT / "A8_protocol.md"
+PROTOCOL = ROOT.parent / "docs" / "experiments" / "A8_protocol.md"
 THR = 1.30
 BLOCK = 8192
 PER_LEAF = 6

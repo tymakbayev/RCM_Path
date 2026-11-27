@@ -25,7 +25,7 @@ COUNTS = {"small": 100_000, "n1": 1_000_000, "n10": 10_000_000}
 
 def manifest() -> dict[str, str]:
     out = {}
-    for line in (ROOT / "results" / "data_manifest.sha256").read_text(encoding="utf-8").splitlines():
+    for line in (ROOT.parent / "results" / "data_manifest.sha256").read_text(encoding="utf-8").splitlines():
         if line.strip() and not line.startswith("#"):
             digest, name = line.split()
             out[name] = digest

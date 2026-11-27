@@ -26,6 +26,8 @@ N_EXPLAIN = 2_000
 
 # ------------------------------------------------------------------ operation stream (seed 13)
 def load_extra(path: Path) -> list[tuple[bytes, str]]:
+    if not Path(path).exists():  # portability: the reference runs made dyn.copy by hand (see prepare_data.py)
+        raise SystemExit(f"нет {path}: сначала запустите python prepare_data.py (README, «Как повторить эксперименты»)")
     out = []
     with open(path, "rb") as f:
         for line in f:

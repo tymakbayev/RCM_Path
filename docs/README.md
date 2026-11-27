@@ -1,44 +1,29 @@
-# Method
+# Документация
 
-[`LLM_engineering_research_T.A.Astana2026.pdf`](LLM_engineering_research_T.A.Astana2026.pdf): the author's essay on
-how this research was done (in Russian). Its title translates as "From 'nobody does it this way' to an executable
-hypothesis: how to use several LLMs for engineering research". It is published unchanged, in the edition of
-2026-10-03. sha256 `2639e1524e75e06637198d80815e60658cc269e4b655a1292740d8ed2b8e2f01`.
+| Документ | О чём |
+|---|---|
+| [results.md](results.md) | все результаты A2–A8: сводная таблица, что установлено и что нет, условия работы прототипа, стенд |
+| [integration.md](integration.md) | подключение к своей таблице: API `rcm.py`, что поддерживается, что означает адрес, статус интеграции |
+| [design.md](design.md) | как устроен адрес и как от этапа к этапу решалась динамика |
+| [reproduce.md](reproduce.md) | как повторить эксперименты: стенд, настройка, шаги, что проверено после подготовки к публикации |
+| [experiments/](experiments/) | протоколы, приложения и отчёты A2–A8 и этапа 1 — в том виде, в каком велись |
+| [theory/](theory/README.md) | модель RCM Path «генератор + траектория + остаток», из которой выросла идея |
+| [method/](method/README.md) | эссе автора о методе исследования: несколько LLM, эксперимент как арбитр |
 
-The essay describes these practices:
+## Протоколы и отчёты
 
-- **Assume → Build → Break**: assume the required properties are achievable, build an honest prototype, then try to
-  refute it.
-- **Models propose, the human routes, experiments decide.** Several models (GPT, Claude, Gemini, Qwen, DeepSeek) were
-  orchestrated by hand.
-- **Negative results are part of the knowledge.**
+| | Протокол | Приложения | Отчёт |
+|---|---|---|---|
+| Этап 1 | [STAGE1_postgresql_branch.md](experiments/STAGE1_postgresql_branch.md) (действующий), [STAGE1.md](experiments/STAGE1.md) (вариант «своё хранилище») | | |
+| A2 | [A2_protocol.md](experiments/A2_protocol.md); черновик [A2_protocol_ownstore_draft.md](experiments/A2_protocol_ownstore_draft.md) | [A2_addendum_2026-11-16.md](experiments/A2_addendum_2026-11-16.md) | [a2_report.md](experiments/a2_report.md) |
+| A3 | [A3_protocol.md](experiments/A3_protocol.md) | | [a3_report.md](experiments/a3_report.md) |
+| A4 | [A4_protocol.md](experiments/A4_protocol.md) | | [a4_report.md](experiments/a4_report.md) |
+| A5 | [A5_protocol.md](experiments/A5_protocol.md) | [A5_addendum_2026-11-16.md](experiments/A5_addendum_2026-11-16.md) | [a5_report.md](experiments/a5_report.md) |
+| A6 | [A6_protocol.md](experiments/A6_protocol.md) | [A6_addendum_2026-11-16.md](experiments/A6_addendum_2026-11-16.md) | [a6_report.md](experiments/a6_report.md) |
+| A7 | [A7_protocol.md](experiments/A7_protocol.md) | [A7_addendum_2026-11-16.md](experiments/A7_addendum_2026-11-16.md) | [a7_report.md](experiments/a7_report.md) |
+| A8 | [A8_protocol.md](experiments/A8_protocol.md) | [A8_addendum_2026-11-17.md](experiments/A8_addendum_2026-11-17.md) | прогон на 10M не выполнен |
 
-It also covers where the method is dangerous: biased selection by the human, false consensus of models, unsuitable
-comparisons, and shared errors of the code and of its test.
-
-Its worked example is the earlier, content-compression stage of the same project (JARVIS-LM experiments E20–E23). The
-E20–E23 numbers come from the results of that time, which are not part of this repository. The address engine
-(experiments A2–A8) came later and follows the same practice: frozen protocols, a second model as reviewer, and
-failures reported as failures.
-
-Copyright (c) 2026 Abu (github.com/tymakbayev).
-
----
-
-# Метод
-
-`LLM_engineering_research_T.A.Astana2026.pdf` — эссе автора о том, как велось это исследование: «От "так никто не
-делает" к исполняемой гипотезе: как использовать несколько LLM для инженерных исследований». Публикуется без
-изменений, в редакции от 2026-10-03.
-
-Принципы, которые в нём описаны:
-
-- Assume → Build → Break;
-- модели предлагают, человек направляет, эксперимент решает;
-- ручная оркестрация разнородных моделей;
-- отрицательные результаты — часть знания.
-
-Там же разобрано, где метод опасен.
-
-Сквозной пример эссе — более ранний этап проекта: сжатие содержимого, эксперименты JARVIS-LM E20–E23. Их числа взяты
-из результатов того времени, которых в этом репозитории нет. Адресный движок (A2–A8) сделан позже по той же практике.
+Протоколы зафиксированы по sha256 до прогонов (хеши — в [`results/`](../results/README.md)) и не менялись; более
+поздние факты — в датированных приложениях. Пути внутри протоколов и отчётов (`results/…`, `rcm_address_engine/…`)
+указаны так, как было на стенде: сейчас результаты лежат в [`results/`](../results/README.md) в корне репозитория,
+а документы — здесь, в `docs/experiments/`.

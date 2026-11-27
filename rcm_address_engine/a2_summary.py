@@ -3,7 +3,7 @@ import json
 import sys
 from pathlib import Path
 
-d = json.loads((Path(__file__).parent / "results" / f"a2_static_{sys.argv[1]}.json").read_text(encoding="utf-8"))
+d = json.loads((Path(__file__).parent.parent / "results" / f"a2_static_{sys.argv[1]}.json").read_text(encoding="utf-8"))
 print("rows", d["rows"], "pages", d["table"]["pages"], "rows/page %.2f" % d["table"]["rows_per_page"],
       "toast", d["table"]["toast_rows"])
 print("A build:", {k: d["A"]["build"][k] for k in ("bytes_per_row", "levels", "exceptions", "c1_errors", "r_bits",

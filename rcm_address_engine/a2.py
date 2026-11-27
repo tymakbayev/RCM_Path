@@ -19,14 +19,15 @@ import a2_core as C
 import a2_pg as G
 
 ROOT = Path(__file__).resolve().parent
-RES = ROOT / "results"
+RES = ROOT.parent / "results"  # layout: results/ and docs/experiments/ at the top of the repository
+DOCS = ROOT.parent / "docs" / "experiments"
 DATA = ROOT / "data"
 PROTOCOL_SHA = "e68edb6cfb5101a9dbd23baae02eb22a50a19a086dbe8462865b79e457150c36"
 SEED_A, SEED_B = 0xA2A2_0001, 0xA2B2_0001
 
 
 def check_protocol() -> None:
-    sha = hashlib.sha256((ROOT / "A2_protocol.md").read_bytes()).hexdigest()
+    sha = hashlib.sha256((DOCS / "A2_protocol.md").read_bytes()).hexdigest()
     if sha != PROTOCOL_SHA:
         raise SystemExit(f"protocol changed: {sha}")
 
@@ -180,7 +181,7 @@ if __name__ == "__main__":
         a2_runs.cmd_open_probe(sys.argv[2], sys.argv[3])
     elif cmd == "dynamics-a3":
         import hashlib as _h
-        sha = _h.sha256((ROOT / "A3_protocol.md").read_bytes()).hexdigest()
+        sha = _h.sha256((DOCS / "A3_protocol.md").read_bytes()).hexdigest()
         frozen = (RES / "a3_protocol.sha256").read_text().split()[0]
         if sha != frozen:
             raise SystemExit(f"A3 protocol changed: {sha}")

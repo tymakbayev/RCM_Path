@@ -10,3 +10,5 @@ __pycache__/
 *token*.txt
 pwfile.txt
 .env
+# output of demo.py on your machine (share it in an issue; reference runs: results/demo_reference_*.json)
+results/demo_result.json

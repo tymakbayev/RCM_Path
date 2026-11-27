@@ -23,7 +23,7 @@ from a2_runs import DATA, RES, log, sha16
 from a4_run import A4System, Control, moving_update, wide_payload
 
 ROOT = Path(__file__).resolve().parent
-PROTOCOL = ROOT / "A5_protocol.md"
+PROTOCOL = ROOT.parent / "docs" / "experiments" / "A5_protocol.md"
 PY = Path(sys.executable)
 VACUUMS = (240_000, 480_000)
 CP_EVERY = 50_000

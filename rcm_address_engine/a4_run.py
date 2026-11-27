@@ -23,7 +23,7 @@ from a2_dyn import BATCH, OPS, Model, checkpoint, load_extra, make_ops, ops_sha2
 from a2_runs import DATA, RES, absent_keys, log, sha16
 
 ROOT = Path(__file__).resolve().parent
-PROTOCOL = ROOT / "A4_protocol.md"
+PROTOCOL = ROOT.parent / "docs" / "experiments" / "A4_protocol.md"
 PY = Path(sys.executable)
 VACUUMS = (240_000, 480_000)
 CP_EVERY = 50_000

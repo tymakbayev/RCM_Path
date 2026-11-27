@@ -1,22 +1,23 @@
 ---
-name: Results
-about: Share the results of a run on your hardware
-title: "Results: <experiment> <size> on <CPU / storage>"
+name: Результаты
+about: Поделиться результатами прогона на своём железе
+title: "Результаты: <эксперимент или демо> <размер> на <процессор / накопитель>"
 labels: results
 ---
 
-**Experiment and command** (for example `a8_run.py run`, `a6_run.py dynamics N10`):
+**Что запускали** (например, `demo.py --rows 1000000`, `a8_run.py run`, `a6_run.py dynamics N10`):
 
-**Commit** (`git rev-parse HEAD`):
+**Коммит** (`git rev-parse HEAD`):
 
-**Hardware**: CPU, RAM, storage (model, NVMe/SATA, free space on the data volume):
+**Железо**: процессор, память, накопитель (модель, NVMe/SATA, свободное место на томе данных):
 
-**OS**:
+**ОС**:
 
-**PostgreSQL**: version, and any settings you changed from the defaults (or attach `SHOW ALL`):
+**PostgreSQL**: версия и настройки, которые вы меняли (или приложите вывод `SHOW ALL`):
 
-**Self-check**: did `<runner> selfcheck` pass on this stand? (`all_ok` in the self-check JSON)
+**Самопроверка**: прошла ли `python <скрипт> selfcheck` на этом стенде (`all_ok` в её JSON)? Для демо — что напечатал
+`rcm_selftest.py`.
 
-**Files**: attach the JSON and log files written to `rcm_address_engine/results/` by this run.
+**Файлы**: приложите JSON и логи, которые прогон записал в `results/` (у демо — `results/demo_result.json`).
 
-**Notes**: anything unusual (other load on the machine, errors, restarts):
+**Заметки**: всё необычное (другая нагрузка на машине, ошибки, рестарты):
